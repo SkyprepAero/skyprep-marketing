@@ -23,10 +23,10 @@ export const services: Service[] = [
   },
   {
     id: "subject-wise",
-    name: "Subject Wise",
+    name: "Individual Subject Training",
     href: "/services/subject-wise",
     description: "Specialized training for individual aviation subjects",
-    whatsappMessage: "Hi SkyPrep Aero! I'm interested in your Subject Wise training program. Can you please provide more details?"
+    whatsappMessage: "Hi SkyPrep Aero! I'm interested in your Individual Subject Training program. Can you please provide more details?"
   }
 ];
 
@@ -49,4 +49,10 @@ export const getWhatsAppUrl = (serviceId: string): string => {
   const message = service?.whatsappMessage || "Hi SkyPrep Aero! I'm interested in your aviation training programs. Can you please provide more details?";
   const encodedMessage = encodeURIComponent(message);
   return `https://wa.me/${whatsappNumber.replace(/[^0-9]/g, '')}?text=${encodedMessage}`;
+};
+
+export const getWhatsAppButtonText = (serviceId: string): string => {
+  const service = getServiceById(serviceId);
+  const serviceName = service?.name || "program";
+  return `Contact us on WhatsApp about ${serviceName}`;
 };
