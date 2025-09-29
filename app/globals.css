@@ -35,9 +35,29 @@
 
 /* Dark mode removed intentionally */
 
+html {
+  overflow-x: hidden;
+}
+
 body {
   background: var(--background);
   color: var(--foreground);
+  overflow-x: hidden;
+}
+
+/* Prevent horizontal overflow */
+* {
+  box-sizing: border-box;
+}
+
+/* Prevent horizontal scroll on sections */
+section {
+  overflow-x: hidden;
+}
+
+/* Ensure proper containment for full-bleed sections */
+.full-bleed > * {
+  max-width: 100%;
 }
 
 /* Layout helpers */
@@ -63,7 +83,9 @@ body {
   width: 100vw;
   margin-left: calc(50% - 50vw);
   margin-right: calc(50% - 50vw);
-  overflow: hidden;
+  position: relative;
+  left: 0;
+  right: 0;
 }
 
 .video-cover {

@@ -1,6 +1,7 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
+import { services } from "@/config/services";
 
 export function ServicesDropdown() {
   const [open, setOpen] = useState(false);
@@ -33,15 +34,17 @@ export function ServicesDropdown() {
           role="menu"
           className="absolute right-0 mt-2 w-56 rounded-lg border border-slate-700 bg-[#0b2636] text-slate-100 shadow-lg p-1 z-50"
         >
-          <Link href="/courses" className="block px-3 py-2 rounded-md hover:bg-white/10" role="menuitem">
-            Pilot Coaching
-          </Link>
-          <Link href="/courses" className="block px-3 py-2 rounded-md hover:bg-white/10" role="menuitem">
-            IFR Training
-          </Link>
-          <Link href="/courses" className="block px-3 py-2 rounded-md hover:bg-white/10" role="menuitem">
-            Checkride Prep
-          </Link>
+          {services.map((service) => (
+            <Link
+              key={service.id}
+              href={service.href}
+              className="block px-3 py-2 rounded-md hover:bg-white/10"
+              role="menuitem"
+              onClick={() => setOpen(false)}
+            >
+              {service.name}
+            </Link>
+          ))}
         </div>
       )}
     </div>
