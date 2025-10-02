@@ -9,7 +9,7 @@ type LogoProps = {
   className?: string;
 };
 
-export function Logo({ href = "/", size = 36, withText = true, className }: LogoProps) {
+export function Logo({ href = "/", size = 45, withText = true, className }: LogoProps) {
   const image = (
     <div className={`flex items-center gap-2 ${className || ""}`}>
       <Image src={siteConfig.logo} alt="SkyPrep logo" width={size} height={size} priority />

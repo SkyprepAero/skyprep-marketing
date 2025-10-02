@@ -8,6 +8,7 @@ import { ServicesDropdown } from "@/components/ServicesDropdown";
 export function Navbar() {
   const pathname = usePathname();
   const isActive = (href: string) => pathname === href || pathname.startsWith(href + "/");
+  const isHomePage = pathname === "/";
   const [mobileOpen, setMobileOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
@@ -40,9 +41,11 @@ export function Navbar() {
         className={`${
           isMobile 
             ? 'fixed top-0 left-0 right-0' 
-            : isScrolled 
-              ? 'fixed top-0' 
-              : 'relative'
+            : isHomePage && !isScrolled && !isMobile
+              ? 'absolute top-0 left-0 right-0'
+              : isScrolled 
+                ? 'fixed top-0' 
+                : 'relative'
         } z-50 text-white transition-all duration-800 ease-[cubic-bezier(0.25,0.46,0.45,0.94)] ${
           isMobile 
             ? '' 
@@ -51,31 +54,39 @@ export function Navbar() {
               : 'translate-y-0 opacity-100'
         }`}
         style={{ 
-          backgroundColor: isMobile 
-            ? '#0b2636' 
-            : isScrolled 
-              ? 'rgba(11, 38, 54, 0.75)' 
-              : '#0b2636',
-          backdropFilter: isMobile 
-            ? 'none' 
-            : isScrolled 
-              ? 'blur(20px) saturate(180%)' 
-              : 'none',
+          backgroundColor: isHomePage && !isScrolled && !isMobile
+            ? 'transparent'
+            : isMobile 
+              ? '#0b2636' 
+              : isScrolled 
+                ? 'rgba(11, 38, 54, 0.75)' 
+                : '#0b2636',
+          backdropFilter: isHomePage && !isScrolled && !isMobile
+            ? 'none'
+            : isMobile 
+              ? 'none' 
+              : isScrolled 
+                ? 'blur(20px) saturate(180%)' 
+                : 'none',
           borderRadius: isMobile 
             ? '0px' 
             : isScrolled 
               ? '50px' 
               : '0px',
-          border: isMobile 
-            ? 'none' 
-            : isScrolled 
-              ? '1px solid rgba(255, 255, 255, 0.1)' 
-              : 'none',
-          boxShadow: isMobile 
-            ? 'none' 
-            : isScrolled 
-              ? '0 8px 32px rgba(0, 0, 0, 0.15), 0 1px 0 rgba(255, 255, 255, 0.1)' 
-              : 'none',
+          border: isHomePage && !isScrolled && !isMobile
+            ? 'none'
+            : isMobile 
+              ? 'none' 
+              : isScrolled 
+                ? '1px solid rgba(255, 255, 255, 0.1)' 
+                : 'none',
+          boxShadow: isHomePage && !isScrolled && !isMobile
+            ? 'none'
+            : isMobile 
+              ? 'none' 
+              : isScrolled 
+                ? '0 8px 32px rgba(0, 0, 0, 0.15), 0 1px 0 rgba(255, 255, 255, 0.1)' 
+                : 'none',
           width: isMobile 
             ? '100%' 
             : isScrolled 
@@ -112,14 +123,14 @@ export function Navbar() {
               : 'container mx-auto px-6 h-24'
         } flex items-center justify-between gap-6 transition-all duration-800 ease-[cubic-bezier(0.25,0.46,0.45,0.94)]`}>
           <div className="flex items-center transition-all duration-800 ease-[cubic-bezier(0.25,0.46,0.45,0.94)]">
-            <Logo size={isMobile ? 32 : isScrolled ? 40 : 90} withText={false} />
+            <Logo size={isMobile ? 32 : isScrolled ? 60 : 90} withText={false} />
           </div>
           
           {/* Desktop nav */}
           <div className="hidden md:flex items-center gap-6 lg:gap-12 transition-all duration-800 ease-[cubic-bezier(0.25,0.46,0.45,0.94)]">
             {!isScrolled && (
               <nav
-                className="flex items-center gap-2 text-[15px] px-3 py-2 rounded-lg border border-slate-700 bg-white/5 shadow-sm transition-all duration-800 ease-[cubic-bezier(0.25,0.46,0.45,0.94)]"
+                className="flex items-center gap-2 text-[15px] px-3 py-2 transition-all duration-800 ease-[cubic-bezier(0.25,0.46,0.45,0.94)]"
                 aria-label="Primary"
               >
                 <ServicesDropdown />
@@ -188,22 +199,15 @@ export function Navbar() {
             </svg>
           </button>
         </div>
-        {!isScrolled && (
-          <div
-            className="h-2 w-full"
-            style={{
-              backgroundImage:
-                "repeating-linear-gradient(135deg, rgba(255,255,255,0.08) 0 10px, transparent 10px 20px), repeating-linear-gradient(-135deg, rgba(255,255,255,0.08) 0 10px, transparent 10px 20px)",
-              backgroundColor: "#0b2636",
-              opacity: 0.9,
-            }}
-          />
-        )}
       </header>
 
       {/* Mobile panel */}
       {mobileOpen && (
-        <div className={`${isMobile ? 'fixed left-0 right-0' : 'md:hidden fixed left-1/2 transform -translate-x-1/2'} z-40 bg-[#0b2636]/75 backdrop-blur-xl border border-white/10 shadow-2xl transition-all duration-300 ${
+        <div className={`${isMobile ? 'fixed left-0 right-0' : 'md:hidden fixed left-1/2 transform -translate-x-1/2'} z-40 ${
+          isHomePage && !isScrolled && !isMobile 
+            ? 'bg-transparent backdrop-blur-none border-none shadow-none' 
+            : 'bg-[#0b2636]/75 backdrop-blur-xl border border-white/10 shadow-2xl'
+        } transition-all duration-300 ${
           isMobile 
             ? 'top-16' 
             : isScrolled 
