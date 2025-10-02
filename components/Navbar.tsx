@@ -133,7 +133,7 @@ export function Navbar() {
                 className="flex items-center gap-2 text-[15px] px-3 py-2 transition-all duration-800 ease-[cubic-bezier(0.25,0.46,0.45,0.94)]"
                 aria-label="Primary"
               >
-                <ServicesDropdown />
+                <ServicesDropdown isHomePage={isHomePage} isScrolled={isScrolled} />
                 <Link
                   href="/contact"
                   className={`${isActive("/contact") ? "bg-white/15 ring-1 ring-white/20" : "hover:bg-white/10"} px-3 py-2 rounded-md text-slate-100 transition-colors`}
@@ -150,7 +150,7 @@ export function Navbar() {
             )}
             {isScrolled && (
               <nav className="flex items-center gap-6 lg:gap-12 transition-all duration-800 ease-[cubic-bezier(0.25,0.46,0.45,0.94)]" aria-label="Primary">
-                <ServicesDropdown />
+                <ServicesDropdown isHomePage={isHomePage} isScrolled={isScrolled} />
                 <Link
                   href="/contact"
                   className={`text-[15px] font-medium transition-all duration-300 hover:text-white ${

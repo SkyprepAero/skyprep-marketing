@@ -3,7 +3,12 @@ import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { services } from "@/config/services";
 
-export function ServicesDropdown() {
+interface ServicesDropdownProps {
+  isHomePage?: boolean;
+  isScrolled?: boolean;
+}
+
+export function ServicesDropdown({ isHomePage = false, isScrolled = false }: ServicesDropdownProps) {
   const [open, setOpen] = useState(false);
   const ref = useRef<HTMLDivElement | null>(null);
   const hoverTimeoutRef = useRef<NodeJS.Timeout | null>(null);
@@ -65,7 +70,11 @@ export function ServicesDropdown() {
         </svg>
       </button>
       <div
-        className={`absolute right-0 mt-3 w-72 rounded-2xl border border-white/20 bg-[#0b2636]/90 backdrop-blur-2xl text-slate-100 shadow-2xl p-3 z-50 transition-all duration-500 ease-out ${
+        className={`absolute right-0 mt-3 w-72 rounded-2xl border border-white/20 ${
+          isHomePage && !isScrolled 
+            ? 'bg-black/30 backdrop-blur-xl' 
+            : 'bg-[#0b2636]/90 backdrop-blur-2xl'
+        } text-slate-100 shadow-2xl p-3 z-50 transition-all duration-500 ease-out ${
           open 
             ? 'opacity-100 translate-y-0 scale-100' 
             : 'opacity-0 translate-y-2 scale-95 pointer-events-none'
