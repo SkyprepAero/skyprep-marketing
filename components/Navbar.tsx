@@ -119,11 +119,11 @@ export function Navbar() {
           isMobile 
             ? 'container mx-auto px-4 h-16' 
             : isScrolled 
-              ? 'px-6 sm:px-12 md:px-20 py-5' 
+              ? 'px-6 sm:px-12 md:px-20 h-16' 
               : 'container mx-auto px-6 h-24'
         } flex items-center justify-between gap-6 transition-all duration-800 ease-[cubic-bezier(0.25,0.46,0.45,0.94)]`}>
           <div className="flex items-center transition-all duration-800 ease-[cubic-bezier(0.25,0.46,0.45,0.94)]">
-            <Logo size={isMobile ? 32 : isScrolled ? 60 : 90} withText={false} />
+            <Logo className="mt-4" size={isMobile ? 32 : isScrolled ? 95 : 150} withText={false} />
           </div>
           
           {/* Desktop nav */}
