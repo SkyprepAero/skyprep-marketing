@@ -174,7 +174,7 @@ export function PilotStepper() {
         </div>
 
         <div className="space-y-4">
-          <h4 className="text-lg font-medium text-slate-900">What you'll learn:</h4>
+          <h4 className="text-lg font-medium text-slate-900">What you&apos;ll learn:</h4>
           <ul className="space-y-3">
             {currentStep.points.map((point, index) => (
               <li key={index} className="flex items-start gap-3">
@@ -210,7 +210,7 @@ export function PilotStepper() {
                 <div>
                   <h4 className="text-green-900 font-semibold text-lg">Congratulations! 🎉</h4>
                   <p className="text-green-700 text-sm mt-1">
-                    You've visited all 5 steps of your pilot training journey! You now have a complete understanding of the process and are ready to become a certified pilot with SkyPrep's expert guidance.
+                    You&apos;ve visited all 5 steps of your pilot training journey! You now have a complete understanding of the process and are ready to become a certified pilot with SkyPrep&apos;s expert guidance.
                   </p>
                 </div>
               </div>

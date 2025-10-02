@@ -25,7 +25,6 @@ apiClient.interceptors.response.use(
   (error: AxiosError) => {
     // Centralized error handling & logging
     if (error.response) {
-      // eslint-disable-next-line no-console
       console.error("API Error:", {
         url: error.config?.url,
         status: error.response.status,

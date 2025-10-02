@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 import { ScrollAnimation } from "../app/home/components/ScrollAnimation";
 
 type Testimonial = {
@@ -83,7 +83,7 @@ function TestimonialCard({ testimonial }: { testimonial: Testimonial }) {
 
       {/* Quote */}
       <blockquote className="text-slate-700 text-sm leading-relaxed mb-4 font-medium flex-1 break-words overflow-wrap-anywhere hyphens-auto" style={{ wordBreak: 'break-word', overflowWrap: 'break-word' }}>
-        "{testimonial.quote}"
+        &ldquo;{testimonial.quote}&rdquo;
       </blockquote>
 
       {/* Achievement Badge */}
