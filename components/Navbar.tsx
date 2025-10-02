@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Logo } from "@/components/Logo";
 import { ServicesDropdown } from "@/components/ServicesDropdown";
 
@@ -9,94 +9,254 @@ export function Navbar() {
   const pathname = usePathname();
   const isActive = (href: string) => pathname === href || pathname.startsWith(href + "/");
   const [mobileOpen, setMobileOpen] = useState(false);
-  return (
-      <header
-      className="sticky top-0 z-50 text-white"
-      style={{ backgroundColor: "#0b2636" }}
-    >
-      <div className="container h-20 flex items-center gap-6">
-        <div className="flex items-center">
-          <Logo size={90} withText={false} />
-        </div>
-        {/* Desktop nav */}
-        <div className="hidden md:flex items-center gap-4 ml-auto">
-          <nav
-            className="flex items-center gap-2 text-[15px] px-3 py-2 rounded-lg border border-slate-700 bg-white/5 shadow-sm"
-            aria-label="Primary"
-          >
-            <ServicesDropdown />
-            <Link
-              href="/contact"
-              className={`${isActive("/contact") ? "bg-white/15 ring-1 ring-white/20" : "hover:bg-white/10"} px-3 py-2 rounded-md text-slate-100 transition-colors`}
-            >
-              Contact Us
-            </Link>
-            <Link
-              href="/about"
-              className={`${isActive("/about") ? "bg-white/15 ring-1 ring-white/20" : "hover:bg-white/10"} px-3 py-2 rounded-md text-slate-100 transition-colors`}
-            >
-              About Us
-            </Link>
-          </nav>
-          <Link
-            href="/enquiry"
-            className={`px-5 py-2 rounded-md font-medium shadow-sm hover:opacity-95 ${
-              isActive("/enquiry") ? "ring-2 ring-amber-300" : ""
-            }`}
-            style={{
-              background: "linear-gradient(90deg, #f59e0b, #fbbf24)",
-              color: "#0f172a",
-            }}
-          >
-            Enquiry
-          </Link>
-        </div>
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
 
-        {/* Mobile hamburger */}
-        <button
-          className="md:hidden ml-auto inline-flex items-center justify-center w-10 h-10 rounded-md hover:bg-white/10 focus-ring"
-          aria-label="Open menu"
-          aria-expanded={mobileOpen}
-          onClick={() => setMobileOpen((v) => !v)}
-        >
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-            <path d="M4 6h16M4 12h16M4 18h16" strokeWidth="2" strokeLinecap="round" />
-          </svg>
-        </button>
-      </div>
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollTop = window.scrollY;
+      setIsScrolled(scrollTop > 80);
+    };
+
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+
+    // Check initial screen size
+    handleResize();
+
+    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('resize', handleResize);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+  return (
+    <>
+
+      {/* Responsive header - morphing on desktop, fixed on mobile */}
+      <header
+        className={`${
+          isMobile 
+            ? 'fixed top-0 left-0 right-0' 
+            : isScrolled 
+              ? 'fixed top-0' 
+              : 'relative'
+        } z-50 text-white transition-all duration-800 ease-[cubic-bezier(0.25,0.46,0.45,0.94)] ${
+          isMobile 
+            ? '' 
+            : isScrolled 
+              ? 'translate-y-4 opacity-100' 
+              : 'translate-y-0 opacity-100'
+        }`}
+        style={{ 
+          backgroundColor: isMobile 
+            ? '#0b2636' 
+            : isScrolled 
+              ? 'rgba(11, 38, 54, 0.75)' 
+              : '#0b2636',
+          backdropFilter: isMobile 
+            ? 'none' 
+            : isScrolled 
+              ? 'blur(20px) saturate(180%)' 
+              : 'none',
+          borderRadius: isMobile 
+            ? '0px' 
+            : isScrolled 
+              ? '50px' 
+              : '0px',
+          border: isMobile 
+            ? 'none' 
+            : isScrolled 
+              ? '1px solid rgba(255, 255, 255, 0.1)' 
+              : 'none',
+          boxShadow: isMobile 
+            ? 'none' 
+            : isScrolled 
+              ? '0 8px 32px rgba(0, 0, 0, 0.15), 0 1px 0 rgba(255, 255, 255, 0.1)' 
+              : 'none',
+          width: isMobile 
+            ? '100%' 
+            : isScrolled 
+              ? 'auto' 
+              : '100%',
+          maxWidth: isMobile 
+            ? 'none' 
+            : isScrolled 
+              ? '100vw' 
+              : 'none',
+          minWidth: isMobile 
+            ? 'none' 
+            : isScrolled 
+              ? '1000px' 
+              : 'none',
+          left: isMobile 
+            ? 'auto' 
+            : '50%',
+          transform: isMobile 
+            ? 'none' 
+            : 'translateX(-50%)',
+          margin: isMobile 
+            ? '0' 
+            : isScrolled 
+              ? '16px 0' 
+              : '0',
+        }}
+      >
+        <div className={`${
+          isMobile 
+            ? 'container mx-auto px-4 h-16' 
+            : isScrolled 
+              ? 'px-6 sm:px-12 md:px-20 py-5' 
+              : 'container mx-auto px-6 h-24'
+        } flex items-center justify-between gap-6 transition-all duration-800 ease-[cubic-bezier(0.25,0.46,0.45,0.94)]`}>
+          <div className="flex items-center transition-all duration-800 ease-[cubic-bezier(0.25,0.46,0.45,0.94)]">
+            <Logo size={isMobile ? 32 : isScrolled ? 40 : 90} withText={false} />
+          </div>
+          
+          {/* Desktop nav */}
+          <div className="hidden md:flex items-center gap-6 lg:gap-12 transition-all duration-800 ease-[cubic-bezier(0.25,0.46,0.45,0.94)]">
+            {!isScrolled && (
+              <nav
+                className="flex items-center gap-2 text-[15px] px-3 py-2 rounded-lg border border-slate-700 bg-white/5 shadow-sm transition-all duration-800 ease-[cubic-bezier(0.25,0.46,0.45,0.94)]"
+                aria-label="Primary"
+              >
+                <ServicesDropdown />
+                <Link
+                  href="/contact"
+                  className={`${isActive("/contact") ? "bg-white/15 ring-1 ring-white/20" : "hover:bg-white/10"} px-3 py-2 rounded-md text-slate-100 transition-colors`}
+                >
+                  Contact Us
+                </Link>
+                <Link
+                  href="/about"
+                  className={`${isActive("/about") ? "bg-white/15 ring-1 ring-white/20" : "hover:bg-white/10"} px-3 py-2 rounded-md text-slate-100 transition-colors`}
+                >
+                  About Us
+                </Link>
+              </nav>
+            )}
+            {isScrolled && (
+              <nav className="flex items-center gap-6 lg:gap-12 transition-all duration-800 ease-[cubic-bezier(0.25,0.46,0.45,0.94)]" aria-label="Primary">
+                <ServicesDropdown />
+                <Link
+                  href="/contact"
+                  className={`text-[15px] font-medium transition-all duration-300 hover:text-white ${
+                    isActive("/contact") ? "text-white" : "text-slate-300"
+                  }`}
+                >
+                  Contact Us
+                </Link>
+                <Link
+                  href="/about"
+                  className={`text-[15px] font-medium transition-all duration-300 hover:text-white ${
+                    isActive("/about") ? "text-white" : "text-slate-300"
+                  }`}
+                >
+                  About Us
+                </Link>
+              </nav>
+            )}
+            
+            <Link
+              href="/enquiry"
+              className={`px-6 py-2.5 rounded-full font-semibold text-sm transition-all duration-700 ease-out hover:scale-105 hover:shadow-lg ${
+                isActive("/enquiry") ? "ring-2 ring-amber-300" : ""
+              }`}
+              style={{
+                background: "linear-gradient(135deg, #f59e0b, #fbbf24)",
+                color: "#0f172a",
+                boxShadow: "0 4px 14px 0 rgba(245, 158, 11, 0.25)",
+              }}
+            >
+              Enquiry
+            </Link>
+          </div>
+
+          {/* Mobile hamburger */}
+          <button
+            className={`${isMobile ? 'inline-flex' : 'md:hidden'} items-center justify-center rounded-lg hover:bg-white/10 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-white/20 ${
+              isMobile ? 'w-8 h-8' : isScrolled ? 'w-8 h-8' : 'w-10 h-10'
+            }`}
+            aria-label="Open menu"
+            aria-expanded={mobileOpen}
+            onClick={() => setMobileOpen((v) => !v)}
+          >
+            <svg width={isMobile ? "20" : isScrolled ? "20" : "24"} height={isMobile ? "20" : isScrolled ? "20" : "24"} viewBox="0 0 24 24" fill="none" stroke="currentColor" className="text-slate-300">
+              <path d="M4 6h16M4 12h16M4 18h16" strokeWidth="2" strokeLinecap="round" />
+            </svg>
+          </button>
+        </div>
+        {!isScrolled && (
+          <div
+            className="h-2 w-full"
+            style={{
+              backgroundImage:
+                "repeating-linear-gradient(135deg, rgba(255,255,255,0.08) 0 10px, transparent 10px 20px), repeating-linear-gradient(-135deg, rgba(255,255,255,0.08) 0 10px, transparent 10px 20px)",
+              backgroundColor: "#0b2636",
+              opacity: 0.9,
+            }}
+          />
+        )}
+      </header>
 
       {/* Mobile panel */}
       {mobileOpen && (
-        <div className="md:hidden fixed inset-x-0 top-20 z-50 bg-[#0b2636] text-slate-100 border-t border-slate-700 shadow-xl">
-          <nav className="container py-4 grid gap-2" aria-label="Mobile">
-            <div className="flex items-center justify-between">
-              <span className="text-sm opacity-70">Menu</span>
-            </div>
+        <div className={`${isMobile ? 'fixed left-0 right-0' : 'md:hidden fixed left-1/2 transform -translate-x-1/2'} z-40 bg-[#0b2636]/75 backdrop-blur-xl border border-white/10 shadow-2xl transition-all duration-300 ${
+          isMobile 
+            ? 'top-16' 
+            : isScrolled 
+              ? 'top-20 rounded-2xl' 
+              : 'top-24 rounded-none'
+        }`}
+        style={{
+          width: isMobile 
+            ? '100vw' 
+            : isScrolled 
+              ? 'calc(100vw - 2rem)' 
+              : '100vw',
+          maxWidth: isMobile 
+            ? 'none' 
+            : isScrolled 
+              ? '500px' 
+              : 'none',
+        }}
+        >
+          <nav className="px-6 py-6 grid gap-4" aria-label="Mobile">
             <Link
               href="/courses"
-              className="px-3 py-3 rounded-md hover:bg-white/10"
+              className="text-slate-300 hover:text-white transition-colors py-2"
               onClick={() => setMobileOpen(false)}
             >
               Services
             </Link>
             <Link
               href="/contact"
-              className={`${isActive("/contact") ? "bg-white/15 ring-1 ring-white/20" : "hover:bg-white/10"} px-3 py-3 rounded-md`}
+              className={`py-2 transition-colors ${
+                isActive("/contact") ? "text-white" : "text-slate-300 hover:text-white"
+              }`}
               onClick={() => setMobileOpen(false)}
             >
               Contact Us
             </Link>
             <Link
               href="/about"
-              className={`${isActive("/about") ? "bg-white/15 ring-1 ring-white/20" : "hover:bg-white/10"} px-3 py-3 rounded-md`}
+              className={`py-2 transition-colors ${
+                isActive("/about") ? "text-white" : "text-slate-300 hover:text-white"
+              }`}
               onClick={() => setMobileOpen(false)}
             >
               About Us
             </Link>
             <Link
               href="/enquiry"
-              className="mt-1 px-4 py-3 rounded-md font-medium"
-              style={{ background: "linear-gradient(90deg, #f59e0b, #fbbf24)", color: "#0f172a" }}
+              className="mt-2 px-6 py-3 rounded-full font-semibold text-center"
+              style={{ 
+                background: "linear-gradient(135deg, #f59e0b, #fbbf24)", 
+                color: "#0f172a",
+                boxShadow: "0 4px 14px 0 rgba(245, 158, 11, 0.25)",
+              }}
               onClick={() => setMobileOpen(false)}
             >
               Enquiry
@@ -104,16 +264,7 @@ export function Navbar() {
           </nav>
         </div>
       )}
-      <div
-        className="h-2 w-full"
-        style={{
-          backgroundImage:
-            "repeating-linear-gradient(135deg, rgba(255,255,255,0.08) 0 10px, transparent 10px 20px), repeating-linear-gradient(-135deg, rgba(255,255,255,0.08) 0 10px, transparent 10px 20px)",
-          backgroundColor: "#0b2636",
-          opacity: 0.9,
-        }}
-      />
-    </header>
+    </>
   );
 }
 

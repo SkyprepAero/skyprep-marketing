@@ -126,7 +126,7 @@ function ContactFormContent() {
       <div className="flex items-center gap-3 pt-2">
         <button
           type="submit"
-          className="inline-flex px-5 py-3 rounded-md font-medium shadow-sm hover:opacity-95"
+              className="inline-flex px-5 py-3 rounded-md font-medium shadow-sm hover:opacity-95 hover-lift"
           style={{
             background: "linear-gradient(90deg, #f59e0b, #fbbf24)",
             color: "#0f172a",
@@ -248,7 +248,7 @@ export function ContactForm() {
         <div className="flex items-center gap-3 pt-2">
           <button
             type="submit"
-            className="inline-flex px-5 py-3 rounded-md font-medium shadow-sm hover:opacity-95"
+              className="inline-flex px-5 py-3 rounded-md font-medium shadow-sm hover:opacity-95 hover-lift"
             style={{
               background: "linear-gradient(90deg, #f59e0b, #fbbf24)",
               color: "#0f172a",

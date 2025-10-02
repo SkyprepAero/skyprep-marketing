@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { generateMetadata } from "@/lib/seo";
 import { AviationBackground } from "@/components/AviationBackground";
-import { services, getServiceById } from "@/config/services";
 import { ContactForm } from "@/components/ContactForm";
 
 export const metadata: Metadata = generateMetadata({
@@ -62,12 +61,12 @@ export default function ContactPage() {
 
         <div className="container-wide relative">
           <div className="max-w-3xl">
-            <h1 className="text-4xl md:text-5xl font-semibold tracking-tight bg-clip-text text-transparent leading-[1.15] pb-1"
+            <h1 className="text-4xl md:text-5xl font-semibold tracking-tight bg-clip-text text-transparent leading-[1.15] pb-1 animate-fade-in-up"
                 style={{ backgroundImage: "linear-gradient(90deg, var(--brand-200), var(--brand-300))" }}>
-              Let’s file your flight plan
+              Let's file your flight plan
             </h1>
-            <p className="mt-4 text-slate-700 text-lg md:text-xl max-w-2xl">
-              Tell us where you’re at and where you want to go. We’ll get you a clear
+            <p className="mt-4 text-slate-700 text-lg md:text-xl max-w-2xl animate-fade-in-up animate-delay-200">
+              Tell us where you're at and where you want to go. We'll get you a clear
               route from first lesson to checkride—with timelines, study plan, and next actions.
             </p>
           </div>

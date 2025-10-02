@@ -1,23 +1,88 @@
-import home from "@/content/home.json";
 import { GroundTabs } from "@/components/GroundTabs";
 import { TestimonialsMarquee } from "@/components/TestimonialsMarquee";
+import { VideoHero } from "@/components/VideoHero";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "SkyPrep - Lorem Ipsum Dolor | Aviation Training Excellence",
+  description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Expert aviation training with proven results.",
+  keywords: ["aviation training", "pilot training", "flight school", "aviation education", "pilot certification"],
+  openGraph: {
+    title: "SkyPrep - Lorem Ipsum Dolor",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Expert aviation training with proven results.",
+    type: "website",
+    url: "https://skyprep.com",
+    images: [
+      {
+        url: "/logo.png",
+        width: 1200,
+        height: 630,
+        alt: "SkyPrep Aviation Training",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "SkyPrep - Lorem Ipsum Dolor",
+    description: "Expert aviation training with proven results.",
+    images: ["/logo.png"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+};
 
 export default function Home() {
-  const videoId = home.heroVideoId;
-  const videoSrc = `https://www.youtube-nocookie.com/embed/${videoId}?autoplay=1&mute=1&controls=0&playsinline=1&loop=1&playlist=${videoId}&rel=0&modestbranding=1&fs=0&disablekb=1&iv_load_policy=3`;
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "EducationalOrganization",
+    "name": "SkyPrep",
+    "description": "Expert aviation training with proven results. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "url": "https://skyprep.com",
+    "logo": "https://skyprep.com/logo.png",
+    "sameAs": [
+      "https://twitter.com/skyprep",
+      "https://facebook.com/skyprep",
+      "https://linkedin.com/company/skyprep"
+    ],
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Aviation Training Programs",
+      "itemListElement": [
+        {
+          "@type": "Course",
+          "name": "Pilot Training",
+          "description": "Complete pilot training program"
+        },
+        {
+          "@type": "Course", 
+          "name": "Ground School",
+          "description": "Aviation ground school training"
+        }
+      ]
+    }
+  };
+
   return (
     <>
-      <section className="relative overflow-hidden full-bleed video-cover h-[42vh] md:h-[50vh]">
-        <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-black/0 z-10" />
-        <iframe
-          className="video-embed"
-          src={videoSrc}
-          title="SkyPrep Hero"
-          allow="autoplay; encrypted-media; picture-in-picture"
-          allowFullScreen
-        />
-        <div className="absolute inset-x-0 bottom-0 z-20 p-6 md:p-10 text-white"></div>
-      </section>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      />
+      <VideoHero 
+        title="Lorem Ipsum Dolor"
+        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        buttonText="Get Started"
+        buttonHref="/enquiry"
+      />
 
       {/* Flight plan - full-bleed WOW band */}
       <section
@@ -48,18 +113,18 @@ export default function Home() {
             {/* Left: Headline & bullets */}
             <div>
               <h2
-                className="text-4xl md:text-6xl font-semibold tracking-tight bg-clip-text text-transparent"
+                className="text-4xl md:text-6xl font-semibold tracking-tight bg-clip-text text-transparent animate-fade-in-up"
                 style={{
                   backgroundImage: "linear-gradient(90deg, var(--brand-200), var(--brand-300))",
                 }}
               >
                 How to become a pilot
               </h2>
-              <p className="mt-6 text-slate-700 max-w-2xl text-lg md:text-xl">
+              <p className="mt-6 text-slate-700 max-w-2xl text-lg md:text-xl animate-fade-in-up animate-delay-200">
                 A clear, end‑to‑end path from discovery call to your checkride. Know exactly what to
                 do, when, and why — without the chaos.
               </p>
-              <p className="mt-3 text-slate-600 max-w-2xl">
+              <p className="mt-3 text-slate-600 max-w-2xl animate-fade-in-up animate-delay-300">
                 Each week we translate the plan into simple actions: what to study, which drills to
                 run, and how to prep for the next sortie—so progress stays obvious and momentum
                 stays high.

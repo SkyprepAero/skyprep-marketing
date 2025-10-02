@@ -18,13 +18,13 @@ export default function CohortsPage() {
         <AviationBackground className="opacity-60" />
         <div className="container-wide relative z-10">
           <div className="text-center">
-            <h1 className="text-6xl md:text-7xl font-bold text-slate-900 mb-8">
+            <h1 className="text-6xl md:text-7xl font-bold text-slate-900 mb-8 animate-fade-in-up">
               Aviation
               <span className="block bg-gradient-to-r from-primary-200 to-primary-300 bg-clip-text text-transparent">
                 Cohorts
               </span>
             </h1>
-            <p className="text-xl md:text-2xl text-slate-600 max-w-4xl mx-auto leading-relaxed">
+            <p className="text-xl md:text-2xl text-slate-600 max-w-4xl mx-auto leading-relaxed animate-fade-in-up animate-delay-200">
               Join our comprehensive 5-month cohort program designed for collaborative learning, peer support, 
               and effective DGCA exam preparation. Master key aviation subjects alongside fellow aviators.
             </p>

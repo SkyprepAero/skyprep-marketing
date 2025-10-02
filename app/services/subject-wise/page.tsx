@@ -18,13 +18,13 @@ export default function SubjectWisePage() {
         <AviationBackground className="opacity-60" />
         <div className="container-wide relative z-10">
           <div className="text-center">
-            <h1 className="text-6xl md:text-7xl font-bold text-slate-900 mb-8 leading-tight">
+            <h1 className="text-6xl md:text-7xl font-bold text-slate-900 mb-8 leading-tight animate-fade-in-up">
               Individual Subject
               <span className="block bg-gradient-to-r from-primary-200 to-primary-300 bg-clip-text text-transparent leading-tight">
                 Training
               </span>
             </h1>
-            <p className="text-xl md:text-2xl text-slate-600 max-w-4xl mx-auto leading-relaxed">
+            <p className="text-xl md:text-2xl text-slate-600 max-w-4xl mx-auto leading-relaxed animate-fade-in-up animate-delay-200">
               Master individual aviation subjects with focused, specialized training courses designed for targeted learning and skill development.
             </p>
           </div>

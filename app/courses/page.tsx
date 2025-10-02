@@ -3,7 +3,7 @@ import { generateMetadata as buildPageMetadata } from "@/lib/seo";
 import { CourseJsonLd } from "./schema";
 import { AviationBackground } from "@/components/AviationBackground";
 import Link from "next/link";
-import { services, getContactUrl, getWhatsAppUrl, getWhatsAppButtonText } from "@/config/services";
+import { services, getWhatsAppUrl, getWhatsAppButtonText } from "@/config/services";
 
 export const metadata: Metadata = buildPageMetadata({
   title: "Aviation Training Courses - SkyPrep Aero",
@@ -56,13 +56,13 @@ export default function CoursesPage() {
         <AviationBackground className="opacity-60" />
         <div className="container-wide relative z-10">
           <div className="text-center">
-            <h1 className="text-6xl md:text-7xl font-bold text-slate-900 mb-8 leading-tight">
+            <h1 className="text-6xl md:text-7xl font-bold text-slate-900 mb-8 leading-tight animate-fade-in-up">
               Aviation Training
               <span className="block bg-gradient-to-r from-primary-200 to-primary-300 bg-clip-text text-transparent leading-tight">
                 Courses
               </span>
             </h1>
-            <p className="text-xl md:text-2xl text-slate-600 max-w-4xl mx-auto leading-relaxed">
+            <p className="text-xl md:text-2xl text-slate-600 max-w-4xl mx-auto leading-relaxed animate-fade-in-up animate-delay-200">
               Explore our comprehensive range of aviation training programs designed to help you achieve your piloting goals.
             </p>
           </div>
@@ -73,8 +73,8 @@ export default function CoursesPage() {
       <section className="py-20 full-bleed">
         <div className="container-wide">
           <div className="text-center mb-16">
-            <h2 className="text-5xl font-bold text-slate-900 mb-6">Available Programs</h2>
-            <p className="text-xl text-slate-600 max-w-3xl mx-auto">
+            <h2 className="text-5xl font-bold text-slate-900 mb-6 animate-fade-in-up">Available Programs</h2>
+            <p className="text-xl text-slate-600 max-w-3xl mx-auto animate-fade-in-up animate-delay-200">
               Choose the training program that best fits your learning style and career goals
             </p>
           </div>
@@ -83,8 +83,8 @@ export default function CoursesPage() {
             {services.map((service) => {
               const details = courseDetails[service.id as keyof typeof courseDetails];
               return (
-                <div key={service.id} className="bg-white rounded-3xl p-8 shadow-xl border border-slate-200 hover:shadow-2xl transition-all duration-300">
-                  <div className="w-16 h-16 mx-auto mb-6 rounded-full bg-gradient-to-br from-primary-200 to-primary-300 flex items-center justify-center">
+                <div key={service.id} className="bg-white rounded-3xl p-8 shadow-xl border border-slate-200 hover:shadow-2xl transition-all duration-300 hover-lift animate-scale-in">
+                  <div className="w-16 h-16 mx-auto mb-6 rounded-full bg-gradient-to-br from-primary-200 to-primary-300 flex items-center justify-center hover-scale">
                     {details.icon}
                   </div>
                   <h3 className="text-2xl font-bold text-slate-900 mb-4 text-center">{details.title}</h3>
@@ -116,12 +116,12 @@ export default function CoursesPage() {
                   </div>
 
                   <div className="text-center space-y-3">
-                    <Link
-                      href={service.href}
-                      className="block w-full px-6 py-3 rounded-lg font-semibold border-2 border-primary-300 text-primary-300 hover:bg-primary-300 hover:text-white transition-colors duration-200"
-                    >
-                      Learn More & Enroll
-                    </Link>
+                     <Link
+                       href={service.href}
+                       className="block w-full px-6 py-3 rounded-lg font-semibold border-2 border-primary-300 text-primary-300 hover:bg-primary-300 hover:text-white transition-all duration-200 hover-glow"
+                     >
+                       Learn More & Enroll
+                     </Link>
                     <a
                       href={getWhatsAppUrl(service.id)}
                       target="_blank"
@@ -145,17 +145,17 @@ export default function CoursesPage() {
       <section className="py-20 relative overflow-hidden full-bleed">
         <AviationBackground className="opacity-40" />
         <div className="container-wide relative z-10">
-          <div className="text-center">
-            <h2 className="text-5xl font-bold text-slate-900 mb-8">
+            <div className="text-center">
+            <h2 className="text-5xl font-bold text-slate-900 mb-8 animate-fade-in-up">
               Ready to Start Your Aviation Journey?
             </h2>
-            <p className="text-xl md:text-2xl text-slate-600 mb-12 max-w-4xl mx-auto">
+            <p className="text-xl md:text-2xl text-slate-600 mb-12 max-w-4xl mx-auto animate-fade-in-up animate-delay-200">
               Choose the program that best fits your learning style and career goals. Our expert instructors are ready to guide you every step of the way.
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
               <Link
                 href="/contact"
-                className="px-12 py-5 rounded-xl font-semibold text-white shadow-lg hover:shadow-xl transition-all duration-200 text-lg"
+                className="px-12 py-5 rounded-xl font-semibold text-white shadow-lg hover:shadow-xl transition-all duration-200 text-lg hover-lift animate-fade-in-up animate-delay-300"
                 style={{
                   background: "linear-gradient(90deg, #f59e0b, #fbbf24)",
                   color: "#0f172a",
@@ -165,7 +165,7 @@ export default function CoursesPage() {
               </Link>
               <Link
                 href="/about"
-                className="px-12 py-5 rounded-xl font-semibold border-2 border-slate-300 text-slate-700 hover:bg-slate-50 transition-colors duration-200 text-lg"
+                className="px-12 py-5 rounded-xl font-semibold border-2 border-slate-300 text-slate-700 hover:bg-slate-50 transition-all duration-200 text-lg hover-lift animate-fade-in-up animate-delay-400"
               >
                 Learn About Us
               </Link>
