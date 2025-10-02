@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@import "../styles/gradients.css";
 
 /* Brand tokens */
 :root {
@@ -288,4 +289,59 @@ section {
 @keyframes scrollX {
   0% { transform: translateX(0); }
   100% { transform: translateX(-50%); }
+}
+
+/* Lottie Animation Customizations */
+.aviation-lottie {
+  /* Enhanced aviation blue color scheme */
+  filter: hue-rotate(210deg) saturate(1.3) brightness(1.2) contrast(1.1) !important;
+}
+
+.aviation-lottie svg {
+  /* Apply aviation colors to SVG elements */
+  color: #0080FF !important;
+}
+
+.aviation-lottie svg path {
+  /* Ensure paths use aviation blue */
+  fill: #0080FF !important;
+  stroke: #0066CC !important;
+}
+
+.aviation-lottie svg circle {
+  /* Apply aviation colors to circles */
+  fill: #00BFFF !important;
+  stroke: #0080FF !important;
+}
+
+/* Lottie animation performance optimizations */
+.lottie-container {
+  will-change: transform, opacity;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
+
+.background-animation {
+  will-change: transform, opacity;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
+
+/* Aviation-themed Lottie color overrides */
+.aviation-lottie [fill="#000000"],
+.aviation-lottie [fill="#000"],
+.aviation-lottie [fill="black"] {
+  fill: #0080FF !important;
+}
+
+.aviation-lottie [fill="#ffffff"],
+.aviation-lottie [fill="#fff"],
+.aviation-lottie [fill="white"] {
+  fill: #00BFFF !important;
+}
+
+.aviation-lottie [fill="#cccccc"],
+.aviation-lottie [fill="#ccc"],
+.aviation-lottie [fill="gray"] {
+  fill: #4FC3F7 !important;
 }

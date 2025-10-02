@@ -1,0 +1,116 @@
+/**
+ * Aviation Excellence Gradient System
+ * 
+ * Reusable gradient variables and utilities for consistent text styling
+ * throughout the SkyPrep application.
+ */
+
+:root {
+  /* Primary Aviation Blue Gradient */
+  --gradient-aviation-primary: linear-gradient(135deg, #0080FF 0%, #0066CC 50%, #004499 100%);
+  
+  /* Aviation Excellence Gradient (from image reference) */
+  --gradient-aviation-excellence: linear-gradient(135deg, #0080FF 0%, #0066CC 100%);
+  
+  /* Secondary Aviation Gradients */
+  --gradient-aviation-secondary: linear-gradient(135deg, #00BFFF 0%, #0080FF 100%);
+  --gradient-aviation-accent: linear-gradient(135deg, #4FC3F7 0%, #0080FF 100%);
+  
+  /* Sky-themed Gradients */
+  --gradient-sky-light: linear-gradient(135deg, #87CEEB 0%, #00BFFF 100%);
+  --gradient-sky-dark: linear-gradient(135deg, #4682B4 0%, #0066CC 100%);
+  
+  /* Professional Gradients */
+  --gradient-professional: linear-gradient(135deg, #0066CC 0%, #004499 100%);
+  --gradient-enterprise: linear-gradient(135deg, #003366 0%, #0066CC 100%);
+}
+
+/* Gradient Text Utility Classes */
+.gradient-text-primary {
+  background: var(--gradient-aviation-primary);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+.gradient-text-excellence {
+  background: var(--gradient-aviation-excellence);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+.gradient-text-secondary {
+  background: var(--gradient-aviation-secondary);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+.gradient-text-accent {
+  background: var(--gradient-aviation-accent);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+.gradient-text-sky-light {
+  background: var(--gradient-sky-light);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+.gradient-text-sky-dark {
+  background: var(--gradient-sky-dark);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+.gradient-text-professional {
+  background: var(--gradient-professional);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+.gradient-text-enterprise {
+  background: var(--gradient-enterprise);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+/* Hover Effects for Gradient Text */
+.gradient-text-hover:hover {
+  background-size: 120% 120%;
+  transition: background-size 0.3s ease;
+}
+
+/* Animation Classes */
+.gradient-animate {
+  background-size: 200% 200%;
+  animation: gradient-shift 3s ease infinite;
+}
+
+@keyframes gradient-shift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Responsive Gradient Text */
+@media (max-width: 768px) {
+  .gradient-text-responsive {
+    background-size: 150% 150%;
+  }
+}
