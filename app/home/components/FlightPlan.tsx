@@ -1,4 +1,4 @@
-import { GroundTabs } from "@/components/GroundTabs";
+import { PilotStepper } from "@/components/PilotStepper";
 import { ScrollAnimation } from "./ScrollAnimation";
 
 export function FlightPlan() {
@@ -27,90 +27,43 @@ export function FlightPlan() {
       />
 
         <div className="container-wide relative">
-          <div className="grid gap-12 md:grid-cols-[1.1fr_1.4fr] items-start">
-            {/* Left: Headline & bullets */}
-            <ScrollAnimation animationType="fadeInLeft" delay={200}>
-              <div>
-                <h2 className="text-4xl md:text-6xl font-semibold tracking-tight gradient-text-primary">
-                  How to become a pilot
-                </h2>
-                <p className="mt-6 text-slate-700 max-w-2xl text-lg md:text-xl">
-                  A clear, end‑to‑end path from discovery call to your checkride. Know exactly what to
-                  do, when, and why — without the chaos.
-                </p>
-                <p className="mt-3 text-slate-600 max-w-2xl">
-                  Each week we translate the plan into simple actions: what to study, which drills to
-                  run, and how to prep for the next sortie—so progress stays obvious and momentum
-                  stays high.
-                </p>
+          {/* Header Section */}
+          <ScrollAnimation animationType="fadeInUp" delay={200}>
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-6xl font-semibold tracking-tight gradient-text-primary">
+                How to become a pilot
+              </h2>
+              <p className="mt-6 text-slate-700 max-w-3xl mx-auto text-lg md:text-xl">
+                A clear, end‑to‑end path from discovery call to your checkride. Know exactly what to
+                do, when, and why — without the chaos.
+              </p>
+              <p className="mt-3 text-slate-600 max-w-3xl mx-auto">
+                Each week we translate the plan into simple actions: what to study, which drills to
+                run, and how to prep for the next sortie—so progress stays obvious and momentum
+                stays high.
+              </p>
 
-                {/* Stat pills */}
-                <div className="mt-8 flex flex-wrap gap-3">
-                  {["Discovery call", "Medical & documents", "Ground + Flight path"].map((pill) => (
-                    <span
-                      key={pill}
-                      className="inline-flex items-center gap-2 rounded-full border border-[--color-border] bg-[--color-background] px-4 py-2 text-sm md:text-base"
-                    >
-                      <span
-                        className="h-2 w-2 rounded-full"
-                        style={{
-                          background: "linear-gradient(90deg, var(--brand-200), var(--brand-300))",
-                        }}
-                      />
-                      {pill}
-                    </span>
-                  ))}
-                </div>
-
-                {/* Quick subject links */}
-                <div className="mt-6 flex flex-wrap gap-2">
-                  {[
-                    { label: "Requirements", href: "/guides/become-a-pilot" },
-                    { label: "Medical", href: "/guides/become-a-pilot" },
-                    { label: "Training path", href: "/guides/become-a-pilot" },
-                    { label: "Costs", href: "/guides/become-a-pilot" },
-                    { label: "Timeline", href: "/guides/become-a-pilot" },
-                    { label: "Checkride", href: "/guides/become-a-pilot" },
-                  ].map((link) => (
-                    <a
-                      key={link.label}
-                      href={link.href}
-                      className="inline-flex items-center rounded-md border border-[--color-border] bg-[--color-background] px-4 py-1.5 text-sm md:text-base hover:bg-[--color-muted]"
-                    >
-                      {link.label}
-                    </a>
-                  ))}
-                </div>
-
-                <div className="mt-10 flex gap-4">
-                  <a
-                    href="/guides/become-a-pilot"
-                    className="inline-flex px-6 py-3 rounded-md font-medium hover:bg-[--color-muted] border border-[--color-border] text-base"
-                  >
-                    Read more
-                  </a>
-                  <a
-                    href="/enquiry"
-                    className="inline-flex px-6 py-3 rounded-md font-medium shadow-sm hover:opacity-95 text-base"
-                    style={{
-                      background: "linear-gradient(90deg, #f59e0b, #fbbf24)",
-                      color: "#0f172a",
-                    }}
-                  >
-                    Talk to a coach
-                  </a>
-                </div>
+              {/* Quick action buttons */}
+              <div className="mt-10 flex justify-center">
+                <a
+                  href="/enquiry"
+                  className="inline-flex px-6 py-3 rounded-md font-medium shadow-sm hover:opacity-95 text-base"
+                  style={{
+                    background: "linear-gradient(90deg, #f59e0b, #fbbf24)",
+                    color: "#0f172a",
+                  }}
+                >
+                  Talk to a coach
+                </a>
               </div>
-            </ScrollAnimation>
+            </div>
+          </ScrollAnimation>
 
-            {/* Right: Interactive subject tabs */}
-            <ScrollAnimation animationType="fadeInRight" delay={400}>
-              <div>
-                <GroundTabs />
-              </div>
-            </ScrollAnimation>
+          {/* Stepper Component */}
+          <ScrollAnimation animationType="fadeInUp" delay={400}>
+            <PilotStepper />
+          </ScrollAnimation>
         </div>
-      </div>
     </section>
   );
 }
