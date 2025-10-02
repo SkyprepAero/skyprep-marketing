@@ -14,11 +14,11 @@ export const metadata: Metadata = {
 
 export default function DGCARequirements() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50 full-bleed">
       {/* Hero Section */}
-      <section className="relative py-20 bg-gradient-to-r from-blue-900 to-indigo-900 text-white">
-        <div className="container mx-auto px-6">
-          <div className="max-w-4xl mx-auto text-center">
+      <section className="relative py-20 bg-gradient-to-r from-blue-900 to-indigo-900 text-white w-full">
+        <div className="w-full px-6">
+          <div className="max-w-6xl mx-auto text-center">
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
               DGCA Requirements
             </h1>
@@ -30,9 +30,9 @@ export default function DGCARequirements() {
       </section>
 
       {/* Content Section */}
-      <section className="py-16">
-        <div className="container mx-auto px-6">
-          <div className="max-w-4xl mx-auto">
+      <section className="py-16 w-full">
+        <div className="w-full px-6">
+          <div className="max-w-6xl mx-auto">
             {/* Lorem Ipsum Content */}
             <div className="prose prose-lg max-w-none">
               <h2 className="text-3xl font-bold mb-6 text-gray-800">
