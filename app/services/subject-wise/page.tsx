@@ -354,7 +354,7 @@ export default function SubjectWisePage() {
                   href="/services/1-to-1-coaching"
                   className="px-12 py-5 rounded-xl font-semibold border-2 border-slate-300 text-slate-700 hover:bg-slate-50 transition-colors duration-200 text-lg"
                 >
-                  Explore 1-to-1 Coaching
+                  Explore One to One Coaching
                 </Link>
               </div>
               <div>

@@ -7,9 +7,9 @@ import { services, getWhatsAppUrl, getWhatsAppButtonText } from "@/config/servic
 
 export const metadata: Metadata = buildPageMetadata({
   title: "Aviation Training Courses - SkyPrep Aero",
-  description: "Explore our comprehensive aviation training programs including 1-to-1 coaching, cohort programs, and individual subject training.",
+  description: "Explore our comprehensive aviation training programs including one to one coaching, cohort programs, and individual subject training.",
   canonicalPath: "/courses",
-  keywords: ["aviation courses", "pilot coaching", "flight training", "1 to 1 coaching", "aviation cohorts", "individual subject training"],
+  keywords: ["aviation courses", "pilot coaching", "flight training", "one to one coaching", "aviation cohorts", "individual subject training"],
 });
 
 export default function CoursesPage() {

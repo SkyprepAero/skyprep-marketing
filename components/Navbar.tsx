@@ -3,7 +3,22 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState, useEffect } from "react";
 import { Logo } from "@/components/Logo";
-import { ServicesDropdown } from "@/components/ServicesDropdown";
+import { NavDropdown } from "@/components/NavDropdown";
+import { services } from "@/config/services";
+
+// Services dropdown data
+const servicesItems = [
+  {
+    id: "medical",
+    name: "Medical",
+    href: "/services/medical",
+  },
+  {
+    id: "computer-number",
+    name: "Computer Number",
+    href: "/services/computer-number",
+  }
+];
 
 export function Navbar() {
   const pathname = usePathname();
@@ -59,7 +74,7 @@ export function Navbar() {
             : isMobile 
               ? '#0b2636' 
               : isScrolled 
-                ? 'rgba(11, 38, 54, 0.75)' 
+                ? 'rgba(11, 38, 54, 0.85)' 
                 : '#0b2636',
           backdropFilter: isHomePage && !isScrolled && !isMobile
             ? 'none'
@@ -71,21 +86,21 @@ export function Navbar() {
           borderRadius: isMobile 
             ? '0px' 
             : isScrolled 
-              ? '50px' 
+              ? '16px' 
               : '0px',
           border: isHomePage && !isScrolled && !isMobile
             ? 'none'
             : isMobile 
               ? 'none' 
               : isScrolled 
-                ? '1px solid rgba(255, 255, 255, 0.1)' 
+                ? '1px solid rgba(255, 255, 255, 0.15)' 
                 : 'none',
           boxShadow: isHomePage && !isScrolled && !isMobile
             ? 'none'
             : isMobile 
               ? 'none' 
               : isScrolled 
-                ? '0 8px 32px rgba(0, 0, 0, 0.15), 0 1px 0 rgba(255, 255, 255, 0.1)' 
+                ? '0 8px 32px rgba(0, 0, 0, 0.2), 0 1px 0 rgba(255, 255, 255, 0.1)' 
                 : 'none',
           width: isMobile 
             ? '100%' 
@@ -95,12 +110,12 @@ export function Navbar() {
           maxWidth: isMobile 
             ? 'none' 
             : isScrolled 
-              ? '100vw' 
+              ? '95vw' 
               : 'none',
           minWidth: isMobile 
             ? 'none' 
             : isScrolled 
-              ? '1000px' 
+              ? '320px' 
               : 'none',
           left: isMobile 
             ? 'auto' 
@@ -111,7 +126,7 @@ export function Navbar() {
           margin: isMobile 
             ? '0' 
             : isScrolled 
-              ? '16px 0' 
+              ? '20px auto' 
               : '0',
         }}
       >
@@ -119,53 +134,89 @@ export function Navbar() {
           isMobile 
             ? 'container mx-auto px-4 h-16' 
             : isScrolled 
-              ? 'px-6 sm:px-12 md:px-20 h-16' 
+              ? 'px-4 sm:px-8 md:px-12 lg:px-16 xl:px-20 h-16' 
               : 'container mx-auto px-6 h-24'
-        } flex items-center justify-between gap-6 transition-all duration-800 ease-[cubic-bezier(0.25,0.46,0.45,0.94)]`}>
+        } flex items-center justify-between gap-2 sm:gap-4 md:gap-6 lg:gap-8 xl:gap-12 transition-all duration-800 ease-[cubic-bezier(0.25,0.46,0.45,0.94)]`}>
           <div className="flex items-center transition-all duration-800 ease-[cubic-bezier(0.25,0.46,0.45,0.94)]">
             <Logo className="mt-4" size={isMobile ? 32 : isScrolled ? 95 : 150} withText={false} />
           </div>
           
           {/* Desktop nav */}
-          <div className="hidden md:flex items-center gap-6 lg:gap-12 transition-all duration-800 ease-[cubic-bezier(0.25,0.46,0.45,0.94)]">
+          <div className="hidden md:flex items-center gap-2 sm:gap-3 md:gap-4 lg:gap-6 xl:gap-8 transition-all duration-800 ease-[cubic-bezier(0.25,0.46,0.45,0.94)]">
             {!isScrolled && (
               <nav
-                className="flex items-center gap-2 text-[15px] px-3 py-2 transition-all duration-800 ease-[cubic-bezier(0.25,0.46,0.45,0.94)]"
+                className="flex items-center gap-1 lg:gap-2 text-[14px] lg:text-[15px] px-2 lg:px-3 py-2 transition-all duration-800 ease-[cubic-bezier(0.25,0.46,0.45,0.94)]"
                 aria-label="Primary"
               >
-                <ServicesDropdown isHomePage={isHomePage} isScrolled={isScrolled} />
                 <Link
-                  href="/contact"
-                  className={`${isActive("/contact") ? "bg-white/15 ring-1 ring-white/20" : "hover:bg-white/10"} px-3 py-2 rounded-md text-slate-100 transition-colors`}
+                  href="/"
+                  className={`${isActive("/") ? "bg-white/15 ring-1 ring-white/20" : "hover:bg-white/10"} px-2 lg:px-3 py-2 rounded-md text-slate-100 transition-colors text-sm lg:text-base`}
                 >
-                  Contact Us
+                  Home
                 </Link>
                 <Link
                   href="/about"
-                  className={`${isActive("/about") ? "bg-white/15 ring-1 ring-white/20" : "hover:bg-white/10"} px-3 py-2 rounded-md text-slate-100 transition-colors`}
+                  className={`${isActive("/about") ? "bg-white/15 ring-1 ring-white/20" : "hover:bg-white/10"} px-2 lg:px-3 py-2 rounded-md text-slate-100 transition-colors text-sm lg:text-base whitespace-nowrap`}
                 >
                   About Us
+                </Link>
+                <NavDropdown 
+                  title="Courses" 
+                  items={services} 
+                  isHomePage={isHomePage} 
+                  isScrolled={isScrolled} 
+                />
+                <NavDropdown 
+                  title="Services" 
+                  items={servicesItems} 
+                  isHomePage={isHomePage} 
+                  isScrolled={isScrolled} 
+                />
+                <Link
+                  href="/contact"
+                  className={`${isActive("/contact") ? "bg-white/15 ring-1 ring-white/20" : "hover:bg-white/10"} px-2 lg:px-3 py-2 rounded-md text-slate-100 transition-colors text-sm lg:text-base whitespace-nowrap`}
+                >
+                  Contact Us
                 </Link>
               </nav>
             )}
             {isScrolled && (
-              <nav className="flex items-center gap-6 lg:gap-12 transition-all duration-800 ease-[cubic-bezier(0.25,0.46,0.45,0.94)]" aria-label="Primary">
-                <ServicesDropdown isHomePage={isHomePage} isScrolled={isScrolled} />
+              <nav className="flex items-center gap-2 sm:gap-3 md:gap-4 lg:gap-6 xl:gap-8 transition-all duration-800 ease-[cubic-bezier(0.25,0.46,0.45,0.94)]" aria-label="Primary">
                 <Link
-                  href="/contact"
-                  className={`text-[15px] font-medium transition-all duration-300 hover:text-white ${
-                    isActive("/contact") ? "text-white" : "text-slate-300"
+                  href="/"
+                  className={`text-[14px] lg:text-[15px] font-medium transition-all duration-300 hover:text-white ${
+                    isActive("/") ? "text-white" : "text-slate-300"
                   }`}
                 >
-                  Contact Us
+                  Home
                 </Link>
                 <Link
                   href="/about"
-                  className={`text-[15px] font-medium transition-all duration-300 hover:text-white ${
+                  className={`text-[14px] lg:text-[15px] font-medium transition-all duration-300 hover:text-white whitespace-nowrap ${
                     isActive("/about") ? "text-white" : "text-slate-300"
                   }`}
                 >
                   About Us
+                </Link>
+                <NavDropdown 
+                  title="Courses" 
+                  items={services} 
+                  isHomePage={isHomePage} 
+                  isScrolled={isScrolled} 
+                />
+                <NavDropdown 
+                  title="Services" 
+                  items={servicesItems} 
+                  isHomePage={isHomePage} 
+                  isScrolled={isScrolled} 
+                />
+                <Link
+                  href="/contact"
+                  className={`text-[14px] lg:text-[15px] font-medium transition-all duration-300 hover:text-white whitespace-nowrap ${
+                    isActive("/contact") ? "text-white" : "text-slate-300"
+                  }`}
+                >
+                  Contact Us
                 </Link>
               </nav>
             )}
@@ -206,12 +257,12 @@ export function Navbar() {
         <div className={`${isMobile ? 'fixed left-0 right-0' : 'md:hidden fixed left-1/2 transform -translate-x-1/2'} z-40 ${
           isHomePage && !isScrolled && !isMobile 
             ? 'bg-transparent backdrop-blur-none border-none shadow-none' 
-            : 'bg-[#0b2636]/75 backdrop-blur-xl border border-white/10 shadow-2xl'
+            : 'bg-[#0b2636]/85 backdrop-blur-xl border border-white/15 shadow-2xl'
         } transition-all duration-300 ${
           isMobile 
             ? 'top-16' 
             : isScrolled 
-              ? 'top-20 rounded-2xl' 
+              ? 'top-20 rounded-xl' 
               : 'top-24 rounded-none'
         }`}
         style={{
@@ -229,20 +280,13 @@ export function Navbar() {
         >
           <nav className="px-6 py-6 grid gap-4" aria-label="Mobile">
             <Link
-              href="/courses"
-              className="text-slate-300 hover:text-white transition-colors py-2"
-              onClick={() => setMobileOpen(false)}
-            >
-              Services
-            </Link>
-            <Link
-              href="/contact"
+              href="/"
               className={`py-2 transition-colors ${
-                isActive("/contact") ? "text-white" : "text-slate-300 hover:text-white"
+                isActive("/") ? "text-white" : "text-slate-300 hover:text-white"
               }`}
               onClick={() => setMobileOpen(false)}
             >
-              Contact Us
+              Home
             </Link>
             <Link
               href="/about"
@@ -252,6 +296,20 @@ export function Navbar() {
               onClick={() => setMobileOpen(false)}
             >
               About Us
+            </Link>
+            <Link
+              href="/courses"
+              className="text-slate-300 hover:text-white transition-colors py-2"
+              onClick={() => setMobileOpen(false)}
+            >
+              Courses
+            </Link>
+            <Link
+              href="/services"
+              className="text-slate-300 hover:text-white transition-colors py-2"
+              onClick={() => setMobileOpen(false)}
+            >
+              Services
             </Link>
             <Link
               href="/enquiry"

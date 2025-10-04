@@ -5,7 +5,8 @@ export function WhyChooseSkyPrep() {
     {
       title: "Personalized Coaching",
       description: "One-on-one coaching sessions with experienced instructors who provide personalized guidance, feedback, and support throughout your pilot training journey.",
-      points: ["Individual coaching sessions", "Personalized feedback", "Custom study plans", "Progress monitoring", "Exam preparation support", "Career guidance"],
+      points: ["Individual coaching sessions", "Progress tracking and analytics",
+        "Flexible scheduling options",  "Custom study plans", "Progress monitoring", "Exam preparation support", "Career guidance"],
       icon: (
         <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden>
           <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2M12 3a4 4 0 1 1 0 8 4 4 0 0 1 0-8z" />
@@ -18,12 +19,11 @@ export function WhyChooseSkyPrep() {
       title: "Complete Study Materials",
       description: "Access to comprehensive study materials, practice tests, and exam preparation resources designed for pilot training success.",
       points: [
-        "Complete Air Law to HPL study guides",
-        "Practice test banks with 1000+ questions",
+        "24/7 access to all study materials",
+        "Practice test banks",
         "Memory aids and flashcards",
         "Exam drill packs and test series",
-        "Video lessons and tutorials",
-        "Mobile-friendly study platform"
+        "Video lessons and tutorials (Coming Soon)",
       ],
       icon: (
         <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden>
@@ -45,31 +45,13 @@ export function WhyChooseSkyPrep() {
       gradient: "from-green-500 to-emerald-500",
       bgColor: "bg-green-50",
     },
-    {
-      title: "Flexible Learning Perks",
-      description: "Study at your own pace with unlimited access to materials, progress tracking, and flexible scheduling that fits your lifestyle.",
-      points: [
-        "24/7 access to all study materials",
-        "Progress tracking and analytics",
-        "Flexible scheduling options",
-        "Mobile-friendly web platform",
-        "Unlimited practice test attempts",
-        "Lifetime access to materials"
-      ],
-      icon: (
-        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden>
-          <path d="M3 5h18v2H3V5zm0 6h12v2H3v-2zm0 6h18v2H3v-2z" />
-        </svg>
-      ),
-      gradient: "from-purple-500 to-pink-500",
-      bgColor: "bg-purple-50",
-    },
+  
   ];
 
   const stats = [
     { number: "100%", label: "Online Learning" },
     { number: "Custom", label: "Learning Path" },
-    { number: "1-on-1", label: "Personalized Coaching" },
+    { number: "One to One", label: "Personalized Coaching" },
     { number: "Flexible", label: "Your Schedule" },
   ];
 
@@ -177,15 +159,15 @@ export function WhyChooseSkyPrep() {
           </div>
         </ScrollAnimation>
 
-        {/* Features Grid */}
-        <div className="grid lg:grid-cols-2 gap-8">
+        {/* Features Grid - Optimized for 3 items */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
           {features.map((feature, index) => (
             <ScrollAnimation 
               key={feature.title} 
               animationType="fadeInUp" 
               delay={800 + (index * 200)}
             >
-              <div className="group relative bg-white rounded-3xl p-8 shadow-lg hover:shadow-xl transition-all duration-500 hover:-translate-y-2 border border-slate-100">
+              <div className="group relative bg-white rounded-3xl p-8 shadow-lg hover:shadow-xl transition-all duration-500 hover:-translate-y-2 border border-slate-100 h-full flex flex-col">
                 {/* Icon */}
                 <div className={`inline-flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-r ${feature.gradient} text-white mb-6 group-hover:scale-110 transition-transform duration-300`}>
                   {feature.icon}
@@ -196,7 +178,7 @@ export function WhyChooseSkyPrep() {
                   {feature.title}
                 </h3>
                 
-                <p className="text-slate-600 text-lg leading-relaxed mb-6">
+                <p className="text-slate-600 text-lg leading-relaxed mb-6 flex-grow">
                   {feature.description}
                 </p>
 

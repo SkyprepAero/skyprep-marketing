@@ -78,14 +78,14 @@ export default function Home() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
         <VideoHero 
-          title="Professional Pilot Training Excellence"
-          description="Master your aviation journey with SkyPrep's comprehensive pilot training programs. From ground school to checkride, we provide expert guidance, professional certification support, and proven pathways to your aviation career."
+          title="Shaping Aviators With Precision"
+          description=""
           buttonText="Start Your Aviation Journey"
           buttonHref="/enquiry"
         />
 
-              <FlightPlan />
               <MissionVision />
+              <FlightPlan />
               <DGCARequirements />
               <WhyChooseSkyPrep />
 
@@ -188,11 +188,10 @@ export default function Home() {
         <div className="container-wide relative">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-6xl font-bold tracking-tight gradient-text-primary mb-6 leading-tight">
-              What pilots say
+Success Stories
             </h2>
             <p className="text-xl md:text-2xl text-slate-700 max-w-4xl mx-auto leading-relaxed">
-              Real outcomes from real aviators—built on clear briefs, focused drills, and feedback that
-              sticks.
+              Real outcomes from real aviators.
             </p>
           </div>
           <TestimonialsMarquee />

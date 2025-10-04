@@ -9,10 +9,10 @@ export interface Service {
 export const services: Service[] = [
   {
     id: "1-to-1-coaching",
-    name: "1 to 1 Coaching",
+    name: "One to One Coaching",
     href: "/services/1-to-1-coaching",
     description: "Personalized one-on-one aviation coaching",
-    whatsappMessage: "Hi SkyPrep Aero! I'm interested in your 1-to-1 Coaching program. Can you please provide more details?"
+    whatsappMessage: "Hi SkyPrep Aero! I'm interested in your One to One Coaching program. Can you please provide more details?"
   },
   {
     id: "cohorts",

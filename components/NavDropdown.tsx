@@ -1,14 +1,27 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
-import { services } from "@/config/services";
 
-interface ServicesDropdownProps {
+interface DropdownItem {
+  id: string;
+  name: string;
+  href: string;
+  description?: string;
+}
+
+interface NavDropdownProps {
+  title: string;
+  items: DropdownItem[];
   isHomePage?: boolean;
   isScrolled?: boolean;
 }
 
-export function ServicesDropdown({ isHomePage = false, isScrolled = false }: ServicesDropdownProps) {
+export function NavDropdown({ 
+  title, 
+  items, 
+  isHomePage = false, 
+  isScrolled = false 
+}: NavDropdownProps) {
   const [open, setOpen] = useState(false);
   const ref = useRef<HTMLDivElement | null>(null);
   const hoverTimeoutRef = useRef<NodeJS.Timeout | null>(null);
@@ -52,12 +65,12 @@ export function ServicesDropdown({ isHomePage = false, isScrolled = false }: Ser
       onMouseLeave={handleMouseLeave}
     >
       <button
-        className="flex items-center gap-2 px-4 py-2 rounded-full hover:bg-white/10 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-white/20 text-[15px] font-medium text-slate-300 hover:text-white"
+        className="flex items-center gap-1 lg:gap-2 px-2 lg:px-4 py-2 rounded-full hover:bg-white/10 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-white/20 text-[14px] lg:text-[15px] font-medium text-slate-300 hover:text-white whitespace-nowrap"
         aria-haspopup="menu"
         aria-expanded={open}
         onClick={handleClick}
       >
-        Services
+        {title}
         <svg 
           width="14" 
           height="14" 
@@ -84,10 +97,10 @@ export function ServicesDropdown({ isHomePage = false, isScrolled = false }: Ser
         }}
         role="menu"
       >
-        {services.map((service, index) => (
+        {items.map((item, index) => (
           <Link
-            key={service.id}
-            href={service.href}
+            key={item.id}
+            href={item.href}
             className={`block px-5 py-4 rounded-xl hover:bg-gradient-to-r hover:from-white/10 hover:to-white/5 transition-all duration-300 text-sm font-medium hover:text-white group ${
               open ? 'animate-in slide-in-from-top-2 fade-in-0' : ''
             }`}
@@ -99,7 +112,7 @@ export function ServicesDropdown({ isHomePage = false, isScrolled = false }: Ser
           >
             <div className="flex items-center justify-between">
               <span className="group-hover:translate-x-1 transition-transform duration-300">
-                {service.name}
+                {item.name}
               </span>
               <svg 
                 width="16" 
@@ -118,6 +131,3 @@ export function ServicesDropdown({ isHomePage = false, isScrolled = false }: Ser
     </div>
   );
 }
-
-
-
