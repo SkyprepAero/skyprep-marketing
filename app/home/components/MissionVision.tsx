@@ -275,7 +275,7 @@ export function MissionVision() {
                   </svg>
                 </div>
                 <h4 className="text-lg font-bold text-slate-800 mb-2">Excellence</h4>
-                <p className="text-slate-600 leading-relaxed">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <p className="text-slate-600 leading-relaxed">Your pathway to success. At SkyPrep Aero , excellence is our standard. Our expert-designed program equips you with the knowledge, confidence, and skills to ace your exams and launch your aviation career.</p>
               </div>
               
               <div className="group bg-white/80 backdrop-blur-xl border border-blue-200/50 rounded-2xl p-4 hover:bg-white hover:border-blue-300 transition-all duration-500 hover:scale-105 shadow-lg hover:shadow-xl">
@@ -286,7 +286,7 @@ export function MissionVision() {
                   </svg>
                 </div>
                 <h4 className="text-lg font-bold text-slate-800 mb-2">Integrity</h4>
-                <p className="text-slate-600 leading-relaxed">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.</p>
+                <p className="text-slate-600 leading-relaxed">Built on values that define every great pilot—honesty, responsibility, and professionalism. At SkyPrep Aero, your trust fuels our commitment to shaping aviators with integrity.</p>
               </div>
               
               <div className="group bg-white/80 backdrop-blur-xl border border-blue-200/50 rounded-2xl p-4 hover:bg-white hover:border-blue-300 transition-all duration-500 hover:scale-105 shadow-lg hover:shadow-xl">
@@ -297,7 +297,7 @@ export function MissionVision() {
                   </svg>
                 </div>
                 <h4 className="text-lg font-bold text-slate-800 mb-2">Innovation</h4>
-                <p className="text-slate-600 leading-relaxed">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis.</p>
+                <p className="text-slate-600 leading-relaxed">The future of flight is here. SkyPrep’s Aero  CPL Ground Class combines authentic DGCA-pattern tests with AI-powered analysis to pinpoint your weak areas and boost performance—making complex concepts simple and learning truly engaging.</p>
               </div>
             </div>
           </div>

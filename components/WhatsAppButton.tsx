@@ -7,7 +7,7 @@ export function WhatsAppButton() {
 
   // WhatsApp message - customize this as needed
   const whatsappMessage = "Hi! I'm interested in SkyPrep's pilot training programs. Can you help me get started?";
-  const phoneNumber = "+919876543210"; // Replace with your actual WhatsApp number
+  const phoneNumber = "+919588611284"; // Replace with your actual WhatsApp number
   
   const handleWhatsAppClick = () => {
     const encodedMessage = encodeURIComponent(whatsappMessage);

@@ -21,13 +21,14 @@ export const services: Service[] = [
     description: "Group training programs with structured learning",
     whatsappMessage: "Hi SkyPrep Aero! I'm interested in joining your Cohorts program. Can you please provide more details?"
   },
-  {
-    id: "subject-wise",
-    name: "Individual Subject Training",
-    href: "/services/subject-wise",
-    description: "Specialized training for individual aviation subjects",
-    whatsappMessage: "Hi SkyPrep Aero! I'm interested in your Individual Subject Training program. Can you please provide more details?"
-  }
+  // Temporarily commented out - will be needed later
+  // {
+  //   id: "subject-wise",
+  //   name: "Individual Subject Training",
+  //   href: "/services/subject-wise",
+  //   description: "Specialized training for individual aviation subjects",
+  //   whatsappMessage: "Hi SkyPrep Aero! I'm interested in your Individual Subject Training program. Can you please provide more details?"
+  // }
 ];
 
 export const whatsappNumber = "+919588611284";

@@ -137,8 +137,7 @@ export function WhyChooseSkyPrep() {
           
           <ScrollAnimation animationType="fadeInUp" delay={400}>
             <p className="text-xl md:text-2xl text-slate-700 max-w-4xl mx-auto leading-relaxed">
-              Learn at your own pace with personalized online coaching—study when it fits your schedule, 
-              get one-on-one guidance, and build confidence with a flexible path designed just for you.
+            At SkyPrep, we make your aviation journey simpler and more effective with personalized ground school coaching. Learn at your own pace, anytime and anywhere, with expert one-on-one guidance, flexible study plans, and modern teaching methods. Our goal is to help you build strong knowledge, confidence, and exam success—shaping you into a future-ready pilot.
             </p>
           </ScrollAnimation>
         </div>
