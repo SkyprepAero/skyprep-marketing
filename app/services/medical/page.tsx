@@ -3,6 +3,7 @@ import { generateMetadata as buildPageMetadata } from "@/lib/seo";
 import { AviationBackground } from "@/components/AviationBackground";
 import { ScrollAnimation } from "@/app/home/components/ScrollAnimation";
 import Link from "next/link";
+import { whatsappNumber } from "@/config/services";
 
 export const metadata: Metadata = buildPageMetadata({
   title: "DGCA Medical Appointment Assistance - Medical Certification Made Easy",
@@ -11,7 +12,7 @@ export const metadata: Metadata = buildPageMetadata({
 });
 
 export default function MedicalPage() {
-  const whatsappUrl = "https://wa.me/919588611284?text=Hi%20SkyPrep%20Aero!%20I'm%20interested%20in%20DGCA%20Medical%20Appointment%20Assistance.%20Can%20you%20please%20provide%20more%20details?";
+  const whatsappUrl = `https://wa.me/${whatsappNumber}?text=Hi%20SkyPrep%20Aero!%20I'm%20interested%20in%20DGCA%20Medical%20Appointment%20Assistance.%20Can%20you%20please%20provide%20more%20details?`;
 
   return (
     <div className="relative">
@@ -172,7 +173,7 @@ export default function MedicalPage() {
 
                     <div className="flex gap-3">
                       <a
-                        href="https://wa.me/919588611284?text=Hi%20SkyPrep%20Aero!%20I'm%20interested%20in%20DGCA%20Class%202%20Medical%20Appointment%20Assistance.%20Can%20you%20please%20provide%20more%20details?"
+                        href="https://wa.me/918788162210?text=Hi%20SkyPrep%20Aero!%20I'm%20interested%20in%20DGCA%20Class%202%20Medical%20Appointment%20Assistance.%20Can%20you%20please%20provide%20more%20details?"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="flex-1 bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-xl font-semibold text-center transition-all duration-200 flex items-center justify-center gap-2 hover:scale-105"
@@ -249,7 +250,7 @@ export default function MedicalPage() {
 
                     <div className="flex gap-3">
                       <a
-                        href="https://wa.me/919588611284?text=Hi%20SkyPrep%20Aero!%20I'm%20interested%20in%20DGCA%20Class%201%20Medical%20Appointment%20Assistance.%20Can%20you%20please%20provide%20more%20details?"
+                        href="https://wa.me/918788162210?text=Hi%20SkyPrep%20Aero!%20I'm%20interested%20in%20DGCA%20Class%201%20Medical%20Appointment%20Assistance.%20Can%20you%20please%20provide%20more%20details?"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="flex-1 bg-amber-600 hover:bg-amber-700 text-white px-6 py-3 rounded-xl font-semibold text-center transition-all duration-200 flex items-center justify-center gap-2 hover:scale-105"

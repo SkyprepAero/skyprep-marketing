@@ -31,7 +31,7 @@ export const services: Service[] = [
   // }
 ];
 
-export const whatsappNumber = "+919588611284";
+export const whatsappNumber = "+918788162210";
 
 export const getServiceById = (id: string): Service | undefined => {
   return services.find(service => service.id === id);

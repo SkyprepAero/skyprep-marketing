@@ -1,17 +1,16 @@
 "use client";
 
 import { useState } from 'react';
-
+import { whatsappNumber } from '@/config/services';
 export function WhatsAppButton() {
   const [isHovered, setIsHovered] = useState(false);
 
   // WhatsApp message - customize this as needed
   const whatsappMessage = "Hi! I'm interested in SkyPrep's pilot training programs. Can you help me get started?";
-  const phoneNumber = "+919588611284"; // Replace with your actual WhatsApp number
-  
+ 
   const handleWhatsAppClick = () => {
     const encodedMessage = encodeURIComponent(whatsappMessage);
-    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+    const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
     window.open(whatsappUrl, '_blank');
   };
 
