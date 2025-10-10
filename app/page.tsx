@@ -183,7 +183,7 @@ export default function ComingSoon() {
           preload="auto"
           style={{ pointerEvents: 'none' }}
         >
-          <source src="/takeoff_coming_soon.mp4" type="video/mp4" />
+          <source src="https://media.skyprepaero.com/takeoff_coming_soon.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
         </div>
