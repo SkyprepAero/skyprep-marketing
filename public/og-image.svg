@@ -1,0 +1,82 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Background gradient -->
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f172a;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#1e293b;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#334155;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Text gradient -->
+    <linearGradient id="textGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#60a5fa;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ffffff;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Accent gradient -->
+    <linearGradient id="accentGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#3b82f6;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#8b5cf6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#f59e0b;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Offer badge gradient -->
+    <linearGradient id="offerGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#f59e0b;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#fbbf24;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bgGradient)" />
+  
+  <!-- Subtle decorative elements -->
+  <circle cx="150" cy="100" r="60" fill="url(#accentGradient)" opacity="0.08" />
+  <circle cx="1050" cy="530" r="80" fill="url(#accentGradient)" opacity="0.06" />
+  <circle cx="1000" cy="150" r="40" fill="url(#accentGradient)" opacity="0.1" />
+  <circle cx="200" cy="500" r="50" fill="url(#accentGradient)" opacity="0.07" />
+  
+  
+  <!-- Main title -->
+  <text x="100" y="250" font-family="Arial, sans-serif" font-size="76" font-weight="900" fill="url(#textGradient)" letter-spacing="-2px">
+    SkyPrep Aero
+  </text>
+  
+  <!-- Subtitle -->
+  <text x="100" y="300" font-family="Arial, sans-serif" font-size="32" font-weight="600" fill="#94a3b8" letter-spacing="-0.5px">
+    Shaping Aviators with Precision
+  </text>
+  
+  <!-- Launch status badge -->
+  <g transform="translate(100, 340)">
+    <rect x="0" y="0" width="320" height="55" rx="27" fill="url(#accentGradient)" opacity="0.2" />
+    <rect x="3" y="3" width="314" height="49" rx="24" fill="url(#accentGradient)" opacity="0.3" />
+    <text x="160" y="36" font-family="Arial, sans-serif" font-size="26" font-weight="bold" fill="white" text-anchor="middle">
+      🚀 Launching Soon
+    </text>
+  </g>
+  
+  <!-- Offer badge -->
+  <g transform="translate(100, 420)">
+    <rect x="0" y="0" width="300" height="45" rx="22" fill="url(#offerGradient)" opacity="0.95" />
+    <rect x="3" y="3" width="294" height="39" rx="19" fill="url(#offerGradient)" opacity="0.9" />
+    <text x="150" y="30" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="#1f2937" text-anchor="middle">
+      🎉 14% OFF Launch Offer
+    </text>
+  </g>
+  
+  <!-- Bottom text -->
+  <text x="100" y="500" font-family="Arial, sans-serif" font-size="22" font-weight="500" fill="#64748b">
+    Professional Pilot Training • DGCA Prep • Aviation Coaching
+  </text>
+  
+  <!-- Website URL -->
+  <text x="100" y="550" font-family="Arial, sans-serif" font-size="20" font-weight="400" fill="#94a3b8">
+    skyprepaero.com
+  </text>
+  
+  <!-- Subtle corner accent -->
+  <circle cx="1150" cy="80" r="25" fill="url(#accentGradient)" opacity="0.1" />
+  <circle cx="50" cy="550" r="20" fill="url(#accentGradient)" opacity="0.08" />
+</svg>

@@ -1,6 +1,6 @@
 /** @type {import('next-sitemap').IConfig} */
 module.exports = {
-  siteUrl: process.env.NEXT_PUBLIC_SITE_URL || 'https://www.skyprep.co',
+  siteUrl: process.env.NEXT_PUBLIC_SITE_URL || 'https://www.skyprepaero.com',
   generateRobotsTxt: true,
   sitemapSize: 5000,
   exclude: ['/privacy', '/terms'],

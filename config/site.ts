@@ -1,8 +1,8 @@
 export const siteConfig = {
-  name: "SkyPrep Aviation Coaching",
+  name: "SkyPrep Aero Aviation  Coaching",
   description:
     "Personalized aviation coaching, courses, and resources for aspiring and professional pilots.",
-  url: "https://www.skyprep.co", // update when deploying
+  url: "https://www.skyprepaero.com", // update when deploying
   ogImage: "/og.png",
   logo: "/logo.png",
   social: {
