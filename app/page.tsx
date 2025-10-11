@@ -5,21 +5,7 @@ import Image from 'next/image';
 import { FaLinkedin, FaInstagram, FaWhatsapp, FaEnvelope, FaPhoneAlt, FaTimes, FaCheck, FaPlane, FaGraduationCap, FaUsers } from 'react-icons/fa';
 import { WhatsAppButton } from '@/components/WhatsAppButton';
 
-interface TimeLeft {
-  days: number;
-  hours: number;
-  minutes: number;
-  seconds: number;
-}
-
 export default function ComingSoon() {
-  const targetDate = new Date('2025-10-20T18:37:00').getTime();
-  const [timeLeft, setTimeLeft] = useState<TimeLeft>({
-    days: 0,
-    hours: 0,
-    minutes: 0,
-    seconds: 0,
-  });
   const [mounted, setMounted] = useState(false);
   const [showEmailPopup, setShowEmailPopup] = useState(false);
   const [isClosing, setIsClosing] = useState(false);
@@ -29,23 +15,6 @@ export default function ComingSoon() {
 
   useEffect(() => {
     setMounted(true);
-    
-    const calculateTimeLeft = () => {
-      const now = new Date().getTime();
-      const difference = targetDate - now;
-
-      if (difference > 0) {
-        setTimeLeft({
-          days: Math.floor(difference / (1000 * 60 * 60 * 24)),
-          hours: Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)),
-          minutes: Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60)),
-          seconds: Math.floor((difference % (1000 * 60)) / 1000),
-        });
-      }
-    };
-
-    calculateTimeLeft();
-    const timer = setInterval(calculateTimeLeft, 1000);
 
     // Show email popup after 5 seconds
     const popupTimer = setTimeout(() => {
@@ -77,10 +46,9 @@ export default function ComingSoon() {
     setTimeout(setupVideo, 100);
 
     return () => {
-      clearInterval(timer);
       clearTimeout(popupTimer);
     };
-  }, [targetDate]);
+  }, []);
 
   const handleClosePopup = () => {
     setIsClosing(true);
@@ -171,21 +139,16 @@ export default function ComingSoon() {
       />
       
       <div className="fixed inset-0 w-screen h-screen bg-slate-900 overflow-hidden">
-        {/* Local Video Background */}
+        {/* YouTube Video Background */}
         <div className="absolute inset-0 w-full h-full overflow-hidden">
-        <video
+        <iframe
           id="background-video"
-          className="absolute top-1/2 left-1/2 w-full h-full object-cover -translate-x-1/2 -translate-y-1/2 scale-110"
-          autoPlay
-          muted
-          loop
-          playsInline
-          preload="auto"
+          className="absolute top-1/2 left-1/2 w-[100vw] h-[100vh] min-w-[177.77vh] min-h-[56.25vw] -translate-x-1/2 -translate-y-1/2 scale-150"
+          src="https://www.youtube.com/embed/OOCW7J-Vz8k?autoplay=1&mute=1&loop=1&playlist=OOCW7J-Vz8k&controls=0&showinfo=0&rel=0&modestbranding=1&playsinline=1&enablejsapi=1&iv_load_policy=3&cc_load_policy=0&fs=0&disablekb=1"
+          title="Aviation Background Video - SkyPrep Aero"
+          allow="autoplay; encrypted-media"
           style={{ pointerEvents: 'none' }}
-        >
-          <source src="https://media.skyprepaero.com/takeoff_coming_soon.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
+        />
         </div>
 
         {/* Animated Gradient Overlay */}
@@ -202,13 +165,13 @@ export default function ComingSoon() {
         <div className="absolute inset-0 opacity-[0.015] bg-noise"></div>
 
         {/* Logo - Top Left */}
-        <div className="absolute top-4 left-4 sm:top-6 sm:left-6 z-40 animate-fade-in">
+        <div className="absolute top-2 left-2 sm:top-4 sm:left-4 z-40 animate-fade-in">
           <div className="relative group">
             <div className="absolute inset-0 bg-blue-500/20 rounded-full blur-2xl group-hover:bg-blue-500/30 transition-all duration-500"></div>
-            <div className="relative w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 lg:w-32 lg:h-32">
+            <div className="relative w-14 h-14 sm:w-20 sm:h-20 md:w-24 md:h-24">
               <Image 
-                width={128}
-                height={128}
+                width={96}
+                height={96}
                 src="/logo.png" 
                 alt="SkyPrepAero Aviation Coaching" 
                 className="object-contain drop-shadow-2xl"
@@ -218,38 +181,44 @@ export default function ComingSoon() {
         </div>
 
         {/* Main Content Container */}
-        <div className="relative h-screen w-screen flex flex-col items-center justify-start md:justify-center px-4 sm:px-6 max-w-screen max-h-screen overflow-hidden pt-16 sm:pt-20">
+        <div className="relative h-screen w-screen flex flex-col items-center justify-center px-4 sm:px-6 max-w-screen max-h-screen overflow-hidden py-4">
           
           {/* Hero Section */}
-          <div className="text-center mb-6 sm:mb-8 animate-fade-in pt-20 md:pt-0">
+          <div className="text-center mb-4 sm:mb-6 animate-fade-in">
             {/* Title with gradient */}
-            <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black text-transparent bg-clip-text bg-gradient-to-r from-white via-blue-100 to-white mb-3 tracking-tight animate-slide-up leading-tight">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-transparent bg-clip-text bg-gradient-to-r from-white via-blue-100 to-white mb-2 sm:mb-3 tracking-tight animate-slide-up leading-tight">
               SkyPrep Aero
             </h1>
             
             {/* Tagline */}
-            <p className="text-lg sm:text-xl md:text-2xl text-blue-200/90 font-medium tracking-wide mb-4 animate-slide-up animation-delay-100">
+            <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-blue-200/90 font-medium tracking-wide mb-3 sm:mb-4 animate-slide-up animation-delay-100">
               Shaping Aviators with Precision
             </p>
             
             {/* Animated divider */}
-            <div className="flex items-center justify-center gap-3 mb-4">
-              <div className="h-px w-12 bg-gradient-to-r from-transparent to-amber-400"></div>
+            <div className="flex items-center justify-center gap-3 mb-3 sm:mb-4">
+              <div className="h-px w-12 sm:w-16 bg-gradient-to-r from-transparent to-amber-400"></div>
               <div className="flex gap-1">
                 <div className="w-1.5 h-1.5 rounded-full bg-amber-400 animate-pulse"></div>
                 <div className="w-1.5 h-1.5 rounded-full bg-blue-400 animate-pulse animation-delay-200"></div>
                 <div className="w-1.5 h-1.5 rounded-full bg-amber-400 animate-pulse animation-delay-400"></div>
               </div>
-              <div className="h-px w-12 bg-gradient-to-l from-transparent to-amber-400"></div>
+              <div className="h-px w-12 sm:w-16 bg-gradient-to-l from-transparent to-amber-400"></div>
             </div>
             
-            <p className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-white via-blue-200 via-amber-200 to-white animate-gradient-text tracking-wider leading-tight pb-2">
+            <p className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-white via-blue-200 via-amber-200 to-white animate-gradient-text tracking-wider leading-tight pb-2 mb-3 sm:mb-4">
               Launching Soon
             </p>
+
+            {/* Launch Offer Badge */}
+            <div className="inline-flex items-center gap-2 sm:gap-3 bg-gradient-to-r from-amber-500/30 to-orange-500/30 border-2 border-amber-400/50 rounded-full px-4 sm:px-6 py-2 sm:py-3 backdrop-blur-xl shadow-2xl hover:scale-105 transition-all duration-300 mb-4 sm:mb-6">
+              <span className="text-xl sm:text-2xl">🎉</span>
+              <span className="text-white font-bold text-sm sm:text-lg md:text-xl">14% OFF Launch Offer</span>
+            </div>
           </div>
 
           {/* Premium Countdown Timer */}
-          <div className="w-full max-w-4xl mb-6 sm:mb-8 animate-slide-up animation-delay-200">
+        {/*  <div className="w-full max-w-4xl mb-6 sm:mb-8 animate-slide-up animation-delay-200">
             <div className="grid grid-cols-4 gap-2 sm:gap-3 md:gap-4 lg:gap-6">
               {[
                 { label: 'Days', value: timeLeft.days },
@@ -258,12 +227,11 @@ export default function ComingSoon() {
                 { label: 'Seconds', value: timeLeft.seconds },
               ].map((item) => (
                 <div key={item.label} className="relative group">
-                  {/* Glow effect */}
+                 
                   <div className="absolute inset-0 bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-xl sm:rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500 opacity-0 group-hover:opacity-100"></div>
                   
-                  {/* Glass card */}
                   <div className="relative bg-white/15 backdrop-blur-2xl rounded-xl sm:rounded-2xl p-2 sm:p-4 md:p-6 lg:p-8 border border-white/20 shadow-2xl hover:border-white/30 hover:bg-white/20 transition-all duration-500 hover:scale-105 hover:-translate-y-1">
-                    {/* Gradient border effect */}
+                   
                     <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-blue-500/0 via-purple-500/0 to-amber-500/0 group-hover:from-blue-500/20 group-hover:via-purple-500/20 group-hover:to-amber-500/20 transition-all duration-500"></div>
                     
                     <div className="relative">
@@ -278,39 +246,39 @@ export default function ComingSoon() {
                 </div>
               ))}
             </div>
-          </div>
+          </div>*/}
 
-          {/* Services Grid */}
-          <div className="w-full max-w-4xl mb-6 sm:mb-8 animate-slide-up animation-delay-400">
-            <p className="text-center text-base sm:text-lg md:text-xl text-blue-100/80 mb-6 font-light">
+          {/* Enhanced Services Grid */}
+          <div className="w-full max-w-5xl mb-4 sm:mb-6 animate-slide-up animation-delay-200">
+            <p className="text-center text-base sm:text-lg md:text-xl text-blue-100/90 mb-4 sm:mb-6 font-light">
               Your journey to the skies begins here
             </p>
-            <div className="grid grid-cols-3 gap-3 sm:gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4 md:gap-6">
               {[
                 { 
                   title: 'DGCA Prep', 
-                  desc: 'Expert guidance',
-                  icon: <FaPlane className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 text-blue-400" />
+                  desc: 'Expert guidance for all aviation exams',
+                  icon: <FaPlane className="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 text-blue-400" />
                 },
                 { 
                   title: 'FocusONE', 
-                  desc: 'Personalized training',
-                  icon: <FaGraduationCap className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 text-amber-400" />
+                  desc: 'Personalized one-on-one training',
+                  icon: <FaGraduationCap className="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 text-amber-400" />
                 },
                 { 
                   title: 'Group Cohorts', 
-                  desc: 'Learn together',
-                  icon: <FaUsers className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 text-purple-400" />
+                  desc: 'Collaborative learning experience',
+                  icon: <FaUsers className="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 text-purple-400" />
                 }
               ].map((service, index) => (
                 <div key={index} className="relative group">
-                  <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-purple-500/10 rounded-xl blur-lg group-hover:blur-xl transition-all duration-300 opacity-0 group-hover:opacity-100"></div>
-                  <div className="relative bg-white/15 backdrop-blur-2xl rounded-xl p-3 sm:p-4 md:p-5 border border-white/20 hover:border-white/30 hover:bg-white/20 transition-all duration-300 hover:scale-105">
-                    <div className="mb-3 flex justify-center group-hover:scale-110 transition-transform duration-300">
+                  <div className="absolute inset-0 bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500 opacity-0 group-hover:opacity-100"></div>
+                  <div className="relative bg-white/20 backdrop-blur-3xl rounded-2xl p-4 sm:p-6 md:p-8 border border-white/30 hover:border-white/40 hover:bg-white/25 transition-all duration-500 hover:scale-105 hover:-translate-y-2 shadow-2xl">
+                    <div className="mb-3 sm:mb-4 flex justify-center group-hover:scale-110 transition-transform duration-300">
                       {service.icon}
                     </div>
-                    <div className="text-white font-bold text-xs sm:text-sm md:text-base mb-1 text-center">{service.title}</div>
-                    <div className="text-blue-200/70 text-[10px] sm:text-xs text-center">{service.desc}</div>
+                    <div className="text-white font-black text-sm sm:text-base md:text-lg mb-1 sm:mb-2 text-center">{service.title}</div>
+                    <div className="text-blue-100/80 text-xs sm:text-sm text-center leading-relaxed">{service.desc}</div>
                   </div>
                 </div>
               ))}
@@ -322,22 +290,22 @@ export default function ComingSoon() {
             {/* Email */}
             <a 
               href="mailto:teams@skyprepaero.com" 
-              className="inline-flex items-center gap-2 text-blue-300/90 hover:text-white transition-all duration-300 text-sm sm:text-base mb-4 hover:scale-105"
+              className="inline-flex items-center gap-2 text-blue-300/90 hover:text-white transition-all duration-300 text-xs sm:text-sm mb-2 sm:mb-3 hover:scale-105"
             >
-              <FaEnvelope className="text-base sm:text-lg" />
+              <FaEnvelope className="text-sm" />
               <span>teams@skyprepaero.com</span>
             </a>
             
             {/* Social Media Icons */}
-            <div className="flex gap-4 sm:gap-5 justify-center items-center mb-3">
+            <div className="flex gap-3 sm:gap-4 justify-center items-center mb-2 sm:mb-3">
               <a 
                 href="https://x.com/theSkyPrep" 
                 target="_blank" 
                 rel="noopener noreferrer" 
-                className="text-gray-400 hover:text-white transition-all duration-300 hover:scale-125 hover:-translate-y-1"
+                className="text-gray-400 hover:text-white transition-all duration-300 hover:scale-110"
                 aria-label="X (formerly Twitter)"
               >
-                <svg className="w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10" fill="currentColor" viewBox="0 0 24 24">
+                <svg className="w-5 h-5 sm:w-6 sm:h-6" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
                 </svg>
               </a>
@@ -345,28 +313,28 @@ export default function ComingSoon() {
                 href="https://www.linkedin.com/company/theskyprep" 
                 target="_blank" 
                 rel="noopener noreferrer" 
-                className="text-blue-600 hover:text-blue-500 transition-all duration-300 hover:scale-125 hover:-translate-y-1"
+                className="text-blue-600 hover:text-blue-500 transition-all duration-300 hover:scale-110"
                 aria-label="LinkedIn"
               >
-                <FaLinkedin className="text-2xl sm:text-3xl" />
+                <FaLinkedin className="text-xl sm:text-2xl" />
               </a>
               <a 
                 href="https://www.instagram.com/skyprepaero/" 
                 target="_blank" 
                 rel="noopener noreferrer" 
-                className="text-pink-500 hover:text-pink-400 transition-all duration-300 hover:scale-125 hover:-translate-y-1"
+                className="text-pink-500 hover:text-pink-400 transition-all duration-300 hover:scale-110"
                 aria-label="Instagram"
               >
-                <FaInstagram className="text-2xl sm:text-3xl" />
+                <FaInstagram className="text-xl sm:text-2xl" />
               </a>
               <a 
                 href="https://wa.me/918788162210" 
                 target="_blank" 
                 rel="noopener noreferrer" 
-                className="text-green-500 hover:text-green-400 transition-all duration-300 hover:scale-125 hover:-translate-y-1"
+                className="text-green-500 hover:text-green-400 transition-all duration-300 hover:scale-110"
                 aria-label="WhatsApp"
               >
-                <FaWhatsapp className="text-2xl sm:text-3xl" />
+                <FaWhatsapp className="text-xl sm:text-2xl" />
               </a>
             </div>
 
@@ -375,9 +343,9 @@ export default function ComingSoon() {
               href="tel:+918788162210" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 text-blue-400 hover:text-blue-300 transition-all duration-300 text-sm sm:text-base hover:scale-105"
+              className="inline-flex items-center gap-2 text-blue-400 hover:text-blue-300 transition-all duration-300 text-xs sm:text-sm hover:scale-105"
             >
-              <FaPhoneAlt className="text-base sm:text-lg" />
+              <FaPhoneAlt className="text-sm" />
               <span>+91 8788162210</span>
             </a>
           </div>
@@ -388,9 +356,9 @@ export default function ComingSoon() {
       <WhatsAppButton />
 
       {/* Copyright Footer */}
-      <div className="fixed bottom-0 left-0 z-30">
-        <div className="px-4 sm:px-6 py-3">
-          <div className="text-white/60 text-xs font-medium">
+      <div className="fixed bottom-0 right-0 z-30 pointer-events-none">
+        <div className="px-2 sm:px-4 py-2">
+          <div className="text-white/60 text-[10px] sm:text-xs font-medium">
             © {new Date().getFullYear()} SkyPrep Aero. All rights reserved.
           </div>
         </div>
