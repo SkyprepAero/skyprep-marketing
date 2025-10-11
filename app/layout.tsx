@@ -16,7 +16,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://www.skyprepaero.com'),
   title: "SkyPrep Aero Aviation Coaching | Professional Pilot Training - Launching Soon",
-  description: "SkyPrep Aero Aviation Coaching is launching soon! Expert pilot training, DGCA exam preparation, one-on-one coaching, and group cohorts for aspiring aviators. Your journey to the skies begins here.",
+  description: "Expert pilot training & DGCA exam prep for aspiring aviators. One-on-one coaching, group cohorts & personalized aviation training. Launching soon!",
   keywords: [
     "aviation training",
     "pilot training", 
@@ -90,10 +90,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en" suppressHydrationWarning className="bg-slate-900" style={{ backgroundColor: '#0f172a' }}>
       <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
-        <meta name="theme-color" content="#0ea5e9" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5, viewport-fit=cover" />
+        <meta name="theme-color" content="#0f172a" />
         <meta name="format-detection" content="telephone=yes" />
         <meta httpEquiv="x-ua-compatible" content="ie=edge" />
         
@@ -111,8 +111,9 @@ export default function RootLayout({
         <link rel="dns-prefetch" href="https://www.youtube.com" />
       </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-slate-900`}
         suppressHydrationWarning
+        style={{ backgroundColor: '#0f172a' }}
       >
       {/* Google Analytics */}
         <Script

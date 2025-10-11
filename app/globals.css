@@ -3,8 +3,8 @@
 
 /* Brand tokens */
 :root {
-  --background: #ffffff;
-  --foreground: #0f172a; /* slate-900 */
+  --background: #0f172a; /* slate-900 - dark background */
+  --foreground: #ffffff; /* white text */
 
   /* Brand palette: aviation blues/pastels */
   --brand-100: #C6EAEE; /* sky mist */
@@ -40,8 +40,10 @@ html {
   overflow: hidden;
   width: 100vw;
   height: 100vh;
+  min-height: 100vh;
   max-width: 100vw;
   max-height: 100vh;
+  position: fixed;
 }
 
 body {
@@ -50,15 +52,59 @@ body {
   overflow: hidden;
   width: 100vw;
   height: 100vh;
+  min-height: 100vh;
   max-width: 100vw;
   max-height: 100vh;
   margin: 0;
   padding: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
 }
 
 /* Prevent horizontal overflow */
 * {
   box-sizing: border-box;
+}
+
+/* Ensure no white gaps anywhere */
+#__next,
+[id^="__next"],
+main {
+  background-color: #0f172a;
+  min-height: 100vh;
+  width: 100%;
+}
+
+/* Force dark background on root */
+:root {
+  background-color: #0f172a !important;
+}
+
+/* Remove any white gaps on iOS/mobile browsers */
+html::before,
+html::after,
+body::before,
+body::after {
+  display: none;
+}
+
+/* Safe area padding for notched devices */
+@supports (padding: env(safe-area-inset-bottom)) {
+  html,
+  body {
+    padding-top: env(safe-area-inset-top);
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+}
+
+/* Prevent rubber band scrolling on mobile */
+html,
+body {
+  overscroll-behavior: none;
+  -webkit-overflow-scrolling: touch;
 }
 
 /* Animations */
