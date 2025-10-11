@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import { FaLinkedin, FaInstagram, FaWhatsapp, FaEnvelope, FaPhoneAlt, FaTimes, FaCheck, FaPlane, FaGraduationCap, FaUsers } from 'react-icons/fa';
 import { WhatsAppButton } from '@/components/WhatsAppButton';
+import { LazyYouTube } from '@/components/LazyYouTube';
 
 // Uncomment this interface when you need the countdown timer
 // interface TimeLeft {
@@ -55,30 +56,6 @@ export default function ComingSoon() {
     const popupTimer = setTimeout(() => {
       setShowEmailPopup(true);
     }, 5000);
-
-    // Local video playback control - set speed to 2x
-    const setupVideo = () => {
-      const videoElement = document.getElementById('background-video') as HTMLVideoElement;
-      if (videoElement) {
-        // Wait for video to be loaded
-        videoElement.addEventListener('loadedmetadata', () => {
-          videoElement.playbackRate = 2.0;
-        });
-        
-        // Set speed when video starts playing
-        videoElement.addEventListener('play', () => {
-          videoElement.playbackRate = 2.0;
-        });
-        
-        // If video is already loaded, set speed immediately
-        if (videoElement.readyState >= 2) {
-          videoElement.playbackRate = 2.0;
-        }
-      }
-    };
-    
-    // Run after a short delay to ensure DOM is ready
-    setTimeout(setupVideo, 100);
 
     return () => {
       // clearInterval(timer); // Uncomment when using countdown timer
@@ -175,16 +152,9 @@ export default function ComingSoon() {
       />
       
       <div className="fixed inset-0 w-screen h-screen min-h-screen bg-slate-900 overflow-hidden" style={{ position: 'fixed', top: 0, left: 0, right: 0, bottom: 0 }}>
-        {/* YouTube Video Background */}
+        {/* YouTube Video Background - Lazy Loaded */}
         <div className="absolute inset-0 w-full h-full overflow-hidden">
-        <iframe
-          id="background-video"
-          className="absolute top-1/2 left-1/2 w-[100vw] h-[100vh] min-w-[177.77vh] min-h-[56.25vw] -translate-x-1/2 -translate-y-1/2 scale-150"
-          src="https://www.youtube.com/embed/OOCW7J-Vz8k?autoplay=1&mute=1&loop=1&playlist=OOCW7J-Vz8k&controls=0&showinfo=0&rel=0&modestbranding=1&playsinline=1&enablejsapi=1&iv_load_policy=3&cc_load_policy=0&fs=0&disablekb=1"
-          title="Aviation Background Video - SkyPrep Aero"
-          allow="autoplay; encrypted-media"
-          style={{ pointerEvents: 'none' }}
-        />
+          <LazyYouTube videoId="OOCW7J-Vz8k" title="Aviation Background Video - SkyPrep Aero" />
         </div>
 
         {/* Animated Gradient Overlay */}
@@ -313,7 +283,7 @@ export default function ComingSoon() {
                     <div className="mb-1.5 sm:mb-3 md:mb-4 flex justify-center group-hover:scale-110 transition-transform duration-300">
                       {service.icon}
                     </div>
-                    <h3 className="text-white font-black text-xs sm:text-sm md:text-base lg:text-lg mb-0.5 sm:mb-1 md:mb-2 text-center">{service.title}</h3>
+                    <p className="text-white font-black text-xs sm:text-sm md:text-base lg:text-lg mb-0.5 sm:mb-1 md:mb-2 text-center">{service.title}</p>
                     <p className="text-blue-100/80 text-[10px] sm:text-xs md:text-sm text-center leading-relaxed">{service.desc}</p>
                   </div>
                 </div>
@@ -417,6 +387,7 @@ export default function ComingSoon() {
             <button
               onClick={handleClosePopup}
               className="absolute top-2 right-2 sm:top-4 sm:right-4 text-white/60 hover:text-white transition-all duration-300 hover:scale-110 z-10 bg-black/20 hover:bg-black/40 rounded-full p-1.5 sm:p-2 backdrop-blur-sm"
+              aria-label="Close newsletter popup"
             >
               <FaTimes className="w-3 h-3 sm:w-4 sm:h-4" />
             </button>
@@ -428,18 +399,18 @@ export default function ComingSoon() {
                   <div className="flex items-center gap-2 sm:gap-3 md:gap-4 mb-3 sm:mb-4 md:mb-5">
                     <div className="relative">
                       {/* Main icon - simplified */}
-                      <div className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 bg-gradient-to-br from-blue-400/30 to-purple-500/30 rounded-lg sm:rounded-xl flex items-center justify-center flex-shrink-0 shadow-lg border border-white/20">
+                      <div className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 bg-gradient-to-br from-blue-400/30 to-purple-500/30 rounded-lg sm:rounded-xl flex items-center justify-center flex-shrink-0 shadow-lg border border-white/20" aria-hidden="true">
                         <FaEnvelope className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 text-white" />
                       </div>
                       
                       {/* Simple notification dot */}
-                      <div className="absolute -top-0.5 -right-0.5 sm:-top-1 sm:-right-1 w-2 h-2 sm:w-3 sm:h-3 bg-gradient-to-r from-amber-400 to-orange-400 rounded-full animate-pulse"></div>
+                      <div className="absolute -top-0.5 -right-0.5 sm:-top-1 sm:-right-1 w-2 h-2 sm:w-3 sm:h-3 bg-gradient-to-r from-amber-400 to-orange-400 rounded-full animate-pulse" aria-hidden="true"></div>
                     </div>
                     
                     <div className="flex-1">
-                      <h3 className="text-sm sm:text-base md:text-lg font-bold text-white leading-tight mb-0.5 sm:mb-1">
+                      <p className="text-sm sm:text-base md:text-lg font-bold text-white leading-tight mb-0.5 sm:mb-1">
                         🚀 Get Early Access
-                      </h3>
+                      </p>
                       <p className="text-blue-100/90 text-xs sm:text-sm font-medium">
                         Be first to launch & get 14% off! ✈️
                       </p>
@@ -475,6 +446,7 @@ export default function ComingSoon() {
                       type="submit"
                       disabled={isSubmitting}
                       className="group relative w-full py-2 sm:py-3 md:py-4 bg-gradient-to-r from-blue-500 via-purple-500 to-blue-600 text-white font-bold rounded-xl sm:rounded-2xl hover:from-blue-600 hover:via-purple-600 hover:to-blue-700 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2 sm:gap-3 text-xs sm:text-sm shadow-2xl hover:shadow-blue-500/25 hover:scale-[1.02] active:scale-[0.98] overflow-hidden border border-white/20"
+                      aria-label="Subscribe to newsletter for launch notification"
                     >
                       {/* Animated background */}
                       <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
@@ -525,14 +497,14 @@ export default function ComingSoon() {
                 <div className="text-center py-2 sm:py-3 md:py-4">
                   <div className="relative inline-block mb-2 sm:mb-3 md:mb-4">
                     {/* Success icon - simplified */}
-                    <div className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 bg-gradient-to-br from-green-400/40 to-emerald-500/40 rounded-xl sm:rounded-2xl flex items-center justify-center shadow-xl border border-white/30">
+                    <div className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 bg-gradient-to-br from-green-400/40 to-emerald-500/40 rounded-xl sm:rounded-2xl flex items-center justify-center shadow-xl border border-white/30" aria-hidden="true">
                       <FaCheck className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 text-white" />
                     </div>
                   </div>
                   
-                  <h3 className="text-base sm:text-lg md:text-xl font-bold text-white mb-1 sm:mb-2">
+                  <p className="text-base sm:text-lg md:text-xl font-bold text-white mb-1 sm:mb-2">
                     Welcome Aboard! 🎉
-                  </h3>
+                  </p>
                   <p className="text-green-100/90 text-xs sm:text-sm font-medium mb-2 sm:mb-3 md:mb-4">
                     You&apos;re locked in for 14% off at launch!
                   </p>

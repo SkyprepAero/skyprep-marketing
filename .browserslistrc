@@ -1,0 +1,7 @@
+# Modern browsers only - avoids legacy JavaScript polyfills
+>0.2%
+not dead
+not op_mini all
+not ie 11
+not ie_mob 11
+
