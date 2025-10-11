@@ -8,6 +8,8 @@ const geistSans = Geist({
   subsets: ["latin"],
   display: 'swap',
   preload: true,
+  fallback: ['system-ui', 'arial'],
+  adjustFontFallback: true,
 });
 
 const geistMono = Geist_Mono({
@@ -15,6 +17,8 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
   display: 'swap',
   preload: true,
+  fallback: ['monospace'],
+  adjustFontFallback: true,
 });
 
 export const metadata: Metadata = {
@@ -110,22 +114,30 @@ export default function RootLayout({
         <link rel="manifest" href="/site.webmanifest" />
         
         {/* Preconnect to external domains for better performance */}
-        <link rel="preconnect" href="https://www.youtube.com" crossOrigin="anonymous" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link rel="preconnect" href="https://www.youtube-nocookie.com" crossOrigin="anonymous" />
         <link rel="preconnect" href="https://www.googletagmanager.com" crossOrigin="anonymous" />
-        <link rel="dns-prefetch" href="https://www.youtube.com" />
+        <link rel="dns-prefetch" href="https://www.youtube-nocookie.com" />
         <link rel="dns-prefetch" href="https://i.ytimg.com" />
+        
+        {/* Preload critical assets */}
+        <link rel="preload" href="/logo.png" as="image" type="image/png" />
+        
+        {/* Resource hints for better loading */}
+        <link rel="modulepreload" as="script" />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-slate-900`}
         suppressHydrationWarning
         style={{ backgroundColor: '#0f172a' }}
       >
-      {/* Google Analytics */}
+      {/* Google Analytics - Deferred for better performance */}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-BNCBFYVNKJ"
-          strategy="afterInteractive"
+          strategy="lazyOnload"
         />
-        <Script id="google-analytics" strategy="afterInteractive">
+        <Script id="google-analytics" strategy="lazyOnload">
           {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}

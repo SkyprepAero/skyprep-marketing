@@ -1,7 +1,13 @@
 # Modern browsers only - avoids legacy JavaScript polyfills
->0.2%
+# Targets ES2020+ capable browsers
+last 2 Chrome versions
+last 2 Firefox versions
+last 2 Safari versions
+last 2 Edge versions
 not dead
-not op_mini all
 not ie 11
 not ie_mob 11
+not op_mini all
+not android < 5
+not samsung < 9
 
