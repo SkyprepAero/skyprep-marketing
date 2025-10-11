@@ -37,31 +37,21 @@
 /* Dark mode removed intentionally */
 
 html {
-  overflow: hidden;
   width: 100vw;
-  height: 100vh;
   min-height: 100vh;
   max-width: 100vw;
-  max-height: 100vh;
-  position: fixed;
+  margin: 0;
+  padding: 0;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  overflow: hidden;
   width: 100vw;
-  height: 100vh;
   min-height: 100vh;
   max-width: 100vw;
-  max-height: 100vh;
   margin: 0;
   padding: 0;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
 }
 
 /* Prevent horizontal overflow */
@@ -100,17 +90,19 @@ body::after {
   }
 }
 
-/* Allow pull-to-refresh but prevent rubber band scrolling */
+/* Enable pull-to-refresh on mobile */
 html {
   overscroll-behavior-x: none;
-  overscroll-behavior-y: auto;
+  overscroll-behavior-y: contain; /* allows pull-to-refresh */
   -webkit-overflow-scrolling: touch;
+  overflow-y: auto; /* enable vertical scrolling for pull-to-refresh */
 }
 
 body {
   overscroll-behavior-x: none;
-  overscroll-behavior-y: auto;
+  overscroll-behavior-y: contain; /* allows pull-to-refresh */
   -webkit-overflow-scrolling: touch;
+  overflow-y: auto; /* enable vertical scrolling for pull-to-refresh */
 }
 
 /* Animations */

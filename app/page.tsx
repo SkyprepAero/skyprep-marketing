@@ -151,27 +151,27 @@ export default function ComingSoon() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
       
-      <div className="fixed inset-0 w-screen h-screen min-h-screen bg-slate-900 overflow-hidden" style={{ position: 'fixed', top: 0, left: 0, right: 0, bottom: 0 }}>
+      <div className="relative w-screen min-h-screen bg-slate-900 overflow-x-hidden" style={{ minHeight: '100vh' }}>
         {/* YouTube Video Background - Lazy Loaded */}
-        <div className="absolute inset-0 w-full h-full overflow-hidden">
+        <div className="fixed inset-0 w-full h-full overflow-hidden">
           <LazyYouTube videoId="OOCW7J-Vz8k" title="Aviation Background Video - SkyPrep Aero" />
         </div>
 
         {/* Animated Gradient Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-br from-slate-900/95 via-blue-900/90 to-slate-900/75 animate-gradient"></div>
+        <div className="fixed inset-0 bg-gradient-to-br from-slate-900/95 via-blue-900/90 to-slate-900/75 animate-gradient pointer-events-none"></div>
         
         {/* Animated Mesh Gradient */}
-        <div className="absolute inset-0 opacity-30">
+        <div className="fixed inset-0 opacity-30 pointer-events-none">
           <div className="absolute top-0 -left-4 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-blob"></div>
           <div className="absolute top-0 -right-4 w-72 h-72 bg-amber-400 rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-blob animation-delay-2000"></div>
           <div className="absolute -bottom-8 left-20 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-blob animation-delay-4000"></div>
         </div>
 
         {/* Glassmorphic Noise Texture */}
-        <div className="absolute inset-0 opacity-[0.015] bg-noise"></div>
+        <div className="fixed inset-0 opacity-[0.015] bg-noise pointer-events-none"></div>
 
         {/* Logo - Top Left */}
-        <div className="absolute top-1 left-1 sm:top-3 sm:left-3 z-40 animate-fade-in">
+        <div className="fixed top-1 left-1 sm:top-3 sm:left-3 z-40 animate-fade-in">
           <div className="relative group">
             <div className="absolute inset-0 bg-blue-500/20 rounded-full blur-xl group-hover:bg-blue-500/30 transition-all duration-500"></div>
             <div className="relative w-10 h-10 sm:w-16 sm:h-16 md:w-20 md:h-20">
@@ -187,7 +187,7 @@ export default function ComingSoon() {
         </div>
 
         {/* Main Content Container */}
-        <div className="relative h-screen w-screen flex flex-col items-center justify-center px-3 sm:px-4 md:px-6 max-w-screen max-h-screen overflow-hidden py-2 sm:py-3">
+        <div className="relative min-h-screen w-screen flex flex-col items-center justify-center px-3 sm:px-4 md:px-6 py-16 sm:py-20">
           
           {/* Hero Section */}
           <div className="text-center mb-2 sm:mb-4 md:mb-6 animate-fade-in">
