@@ -100,10 +100,16 @@ body::after {
   }
 }
 
-/* Prevent rubber band scrolling on mobile */
-html,
+/* Allow pull-to-refresh but prevent rubber band scrolling */
+html {
+  overscroll-behavior-x: none;
+  overscroll-behavior-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
 body {
-  overscroll-behavior: none;
+  overscroll-behavior-x: none;
+  overscroll-behavior-y: auto;
   -webkit-overflow-scrolling: touch;
 }
 

@@ -326,14 +326,14 @@ export default function ComingSoon() {
             {/* Email */}
             <a 
               href="mailto:teams@skyprepaero.com" 
-              className="inline-flex items-center gap-1 sm:gap-2 text-blue-300/90 hover:text-white transition-all duration-300 text-[10px] sm:text-xs md:text-sm mb-1.5 sm:mb-2 md:mb-3 hover:scale-105"
+              className="inline-flex items-center gap-1.5 sm:gap-2 text-white hover:text-blue-200 transition-all duration-300 text-xs sm:text-sm md:text-base font-semibold mb-2 sm:mb-3 md:mb-4 hover:scale-105 bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/20 hover:border-blue-400/50 rounded-lg sm:rounded-xl px-3 sm:px-4 md:px-5 py-1.5 sm:py-2 md:py-2.5 shadow-lg hover:shadow-blue-500/20"
             >
-              <FaEnvelope className="text-xs sm:text-sm" />
+              <FaEnvelope className="text-sm sm:text-base md:text-lg text-blue-400" />
               <span>teams@skyprepaero.com</span>
             </a>
             
             {/* Social Media Icons */}
-            <div className="flex gap-2 sm:gap-3 md:gap-4 justify-center items-center mb-1.5 sm:mb-2 md:mb-3">
+            <div className="flex gap-2 sm:gap-3 md:gap-4 justify-center items-center mb-2 sm:mb-3 md:mb-4">
               <a 
                 href="https://x.com/theSkyPrep" 
                 target="_blank" 
@@ -379,9 +379,9 @@ export default function ComingSoon() {
               href="tel:+918788162210" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-1 sm:gap-2 text-blue-400 hover:text-blue-300 transition-all duration-300 text-[10px] sm:text-xs md:text-sm hover:scale-105"
+              className="inline-flex items-center gap-1.5 sm:gap-2 text-white hover:text-green-200 transition-all duration-300 text-xs sm:text-sm md:text-base font-semibold hover:scale-105 bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/20 hover:border-green-400/50 rounded-lg sm:rounded-xl px-3 sm:px-4 md:px-5 py-1.5 sm:py-2 md:py-2.5 shadow-lg hover:shadow-green-500/20"
             >
-              <FaPhoneAlt className="text-xs sm:text-sm" />
+              <FaPhoneAlt className="text-sm sm:text-base md:text-lg text-green-400" />
               <span>+91 8788162210</span>
             </a>
           </div>
