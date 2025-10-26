@@ -67,8 +67,8 @@ export default function ElogbookPage() {
               </div>
               <h2 className="text-4xl md:text-5xl font-bold text-slate-800 mb-6">Digital Flight Record System</h2>
               <p className="text-xl text-slate-600 max-w-4xl mx-auto leading-relaxed">
-                The eLogbook is a digital flight record system maintained through DGCA's eGCA portal, 
-                designed to store, verify, and track every pilot's flight hours and experience online.
+                The eLogbook is a digital flight record system maintained through DGCA&apos;s eGCA portal, 
+                designed to store, verify, and track every pilot&apos;s flight hours and experience online.
               </p>
               <p className="text-lg text-slate-500 max-w-3xl mx-auto leading-relaxed mt-6">
                 All pilots — from Student Pilots to CPL and ATPL holders — are required to maintain this log 
@@ -410,7 +410,7 @@ export default function ElogbookPage() {
                 Get Your eLogbook Filed Today
               </h2>
               <p className="text-xl md:text-2xl text-slate-600 mb-12 max-w-4xl mx-auto leading-relaxed">
-                Keep your flight record clean, verified, and DGCA-ready with SkyPrep Aero's eLogbook support service. 
+                Keep your flight record clean, verified, and DGCA-ready with SkyPrep Aero&apos;s eLogbook support service. 
                 Let us take care of the technical side — while you focus on your flying hours!
               </p>
               <ScrollAnimation animationType="scaleIn" delay={400}>
