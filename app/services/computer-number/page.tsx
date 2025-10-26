@@ -7,7 +7,7 @@ import { getContactUrl, getWhatsAppUrl, getWhatsAppButtonText } from "@/config/s
 
 export const metadata: Metadata = buildPageMetadata({
   title: "DGCA Computer Number Assistance - SkyPrep Aero",
-  description: "Get comprehensive support for your DGCA Computer Number (DCN) application. We assist with documentation, process coordination, and personalized guidance.",
+  description: "Get comprehensive support for your DGCA Computer Number (CN) application. We assist with documentation, process coordination, and personalized guidance.",
   canonicalPath: "/services/computer-number",
 });
 
@@ -31,7 +31,7 @@ export default function ComputerNumberPage() {
                 </span>
               </h1>
               <p className="text-xl md:text-2xl text-slate-600 max-w-4xl mx-auto leading-relaxed">
-                At SkyPrep Aero, we recognize that obtaining a DGCA Computer Number (DCN) is a critical 
+                At SkyPrep Aero, we recognize that obtaining a DGCA Computer Number (CN) is a critical 
                 first step for every aspiring pilot in India. Our mission is to simplify this journey 
                 and provide end-to-end support to ensure a seamless experience.
               </p>
@@ -257,7 +257,7 @@ export default function ComputerNumberPage() {
                 <div className="w-3 h-3 bg-blue-500 rounded-full animate-pulse" />
                 <span className="text-blue-800 text-sm font-semibold">Our Process</span>
               </div>
-              <h2 className="text-4xl md:text-5xl font-bold text-slate-800 mb-6">How We Help You Get Your DCN</h2>
+              <h2 className="text-4xl md:text-5xl font-bold text-slate-800 mb-6">How We Help You Get Your CN</h2>
               <p className="text-xl text-slate-600 max-w-3xl mx-auto">
                 With SkyPrep Aero, you can focus on your aviation aspirations while we manage the documentation and procedural formalities.
               </p>
@@ -353,7 +353,7 @@ export default function ComputerNumberPage() {
                       }}
                     >
                       <span className="flex items-center gap-3">
-                        Start Your DCN Application
+                        Start Your CN Application
                         <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" fill="currentColor" viewBox="0 0 24 24">
                           <path d="M12 2l9 4.9V17c0 .55-.45 1-1 1h-1v-6l-7 3.8L5 12v6H4c-.55 0-1-.45-1-1V6.9L12 2z"/>
                         </svg>

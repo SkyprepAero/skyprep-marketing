@@ -25,16 +25,23 @@ export const services: Service[] = [
     id: "computer-number",
     name: "DGCA Computer Number Assistance",
     href: "/services/computer-number",
-    description: "Comprehensive support for DGCA Computer Number (DCN) application process",
+    description: "Comprehensive support for DGCA Computer Number (CN) application process",
     whatsappMessage: "Hi SkyPrep Aero! I'm interested in your DGCA Computer Number Assistance service. Can you please provide more details?"
   },
   {
     id: "elogbook",
     name: "eLogbook Filing Assistance",
     href: "/services/elogbook",
-    description: "Complete eLogbook filing and management assistance on DGCA's eGCA portal",
+    description: "Complete eLogbook filing and management assistance on DGCA's portal",
     whatsappMessage: "Hi SkyPrep Aero! I'm interested in your eLogbook Filing Assistance service. Can you please provide more details?"
   },
+  {
+    id: "conversion-training",
+    name: "Conversion Training",
+    href: "/services/conversion-training",
+    description: "Convert your foreign flight training to DGCA-approved licenses",
+    whatsappMessage: "Hi SkyPrep Aero! I'm interested in your Conversion Training service. Can you please provide more details?"
+  }
    
   // Temporarily commented out - will be needed later
   // {

@@ -22,6 +22,11 @@ const servicesItems = [
     id: "elogbook",
     name: "eLogbook",
     href: "/services/elogbook",
+  },
+  {
+    id: "conversion-training",
+    name: "Conversion Training",
+    href: "/services/conversion-training",
   }
 ];
 
