@@ -325,25 +325,25 @@ export default function ElogbookPage() {
           </ScrollAnimation>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <ScrollAnimation animationType="fadeInUp" delay={400}>
-              <div className="group text-center p-8 bg-white/90 backdrop-blur-xl rounded-2xl shadow-lg border border-blue-200/50 hover:shadow-2xl transition-all duration-500 hover:scale-105">
-                <div className="relative">
-                  <div className="w-20 h-20 mx-auto mb-6 rounded-2xl bg-gradient-to-br from-blue-500 to-sky-500 flex items-center justify-center shadow-xl group-hover:scale-110 transition-transform duration-300">
-                    <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
-                    </svg>
+              <ScrollAnimation animationType="fadeInUp" delay={400}>
+                <div className="group text-center p-8 bg-white/90 backdrop-blur-xl rounded-2xl shadow-lg border border-blue-200/50 hover:shadow-2xl transition-all duration-500 hover:scale-105 h-full flex flex-col">
+                  <div className="relative">
+                    <div className="w-20 h-20 mx-auto mb-6 rounded-2xl bg-gradient-to-br from-blue-500 to-sky-500 flex items-center justify-center shadow-xl group-hover:scale-110 transition-transform duration-300">
+                      <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                      </svg>
+                    </div>
+                    <div className="absolute inset-0 w-20 h-20 mx-auto rounded-2xl border-2 border-blue-400/30 animate-pulse" />
                   </div>
-                  <div className="absolute inset-0 w-20 h-20 mx-auto rounded-2xl border-2 border-blue-400/30 animate-pulse" />
+                  <h3 className="text-2xl font-bold text-slate-900 mb-4 group-hover:text-blue-700 transition-colors duration-300">Conversion Students</h3>
+                  <p className="text-slate-600 text-lg leading-relaxed flex-grow">
+                    Are you a pilot returning to India from the USA, New Zealand, South Africa, Canada, UK, Maldives, or the Philippines? Our expert team ensures your eLogbook is accurately filled and fully compliant with DGCA requirements.
+                  </p>
                 </div>
-                <h3 className="text-2xl font-bold text-slate-900 mb-4 group-hover:text-blue-700 transition-colors duration-300">Student Pilot License (SPL)</h3>
-                <p className="text-slate-600 text-lg leading-relaxed">
-                  Student Pilot License (SPL) holders starting their aviation journey
-                </p>
-              </div>
-            </ScrollAnimation>
+              </ScrollAnimation>
 
             <ScrollAnimation animationType="fadeInUp" delay={600}>
-              <div className="group text-center p-8 bg-white/90 backdrop-blur-xl rounded-2xl shadow-lg border border-sky-200/50 hover:shadow-2xl transition-all duration-500 hover:scale-105">
+              <div className="group text-center p-8 bg-white/90 backdrop-blur-xl rounded-2xl shadow-lg border border-sky-200/50 hover:shadow-2xl transition-all duration-500 hover:scale-105 h-full flex flex-col">
                 <div className="relative">
                   <div className="w-20 h-20 mx-auto mb-6 rounded-2xl bg-gradient-to-br from-sky-500 to-cyan-500 flex items-center justify-center shadow-xl group-hover:scale-110 transition-transform duration-300">
                     <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -353,14 +353,14 @@ export default function ElogbookPage() {
                   <div className="absolute inset-0 w-20 h-20 mx-auto rounded-2xl border-2 border-sky-400/30 animate-pulse" />
                 </div>
                 <h3 className="text-2xl font-bold text-slate-900 mb-4 group-hover:text-sky-700 transition-colors duration-300">Commercial Pilot License (CPL)</h3>
-                <p className="text-slate-600 text-lg leading-relaxed">
-                  Commercial Pilot License (CPL) trainees advancing their careers
+                <p className="text-slate-600 text-lg leading-relaxed flex-grow">
+                  Commercial Pilot License (CPL) trainees advancing their careers with comprehensive eLogbook management. We help you maintain accurate flight records throughout your CPL training, ensuring all solo flights, cross-country flights, and instrument training hours are properly documented.
                 </p>
               </div>
             </ScrollAnimation>
 
             <ScrollAnimation animationType="fadeInUp" delay={800}>
-              <div className="group text-center p-8 bg-white/90 backdrop-blur-xl rounded-2xl shadow-lg border border-emerald-200/50 hover:shadow-2xl transition-all duration-500 hover:scale-105">
+              <div className="group text-center p-8 bg-white/90 backdrop-blur-xl rounded-2xl shadow-lg border border-emerald-200/50 hover:shadow-2xl transition-all duration-500 hover:scale-105 h-full flex flex-col">
                 <div className="relative">
                   <div className="w-20 h-20 mx-auto mb-6 rounded-2xl bg-gradient-to-br from-emerald-500 to-green-500 flex items-center justify-center shadow-xl group-hover:scale-110 transition-transform duration-300">
                     <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -370,14 +370,14 @@ export default function ElogbookPage() {
                   <div className="absolute inset-0 w-20 h-20 mx-auto rounded-2xl border-2 border-emerald-400/30 animate-pulse" />
                 </div>
                 <h3 className="text-2xl font-bold text-slate-900 mb-4 group-hover:text-emerald-700 transition-colors duration-300">License Renewal</h3>
-                <p className="text-slate-600 text-lg leading-relaxed">
-                  License renewal candidates maintaining their certifications
+                <p className="text-slate-600 text-lg leading-relaxed flex-grow">
+                  License renewal candidates maintaining their certifications with proper eLogbook documentation. We assist in organizing and updating your flight records to meet DGCA renewal requirements, ensuring all recent flight hours, recurrent training, and proficiency checks are accurately recorded.
                 </p>
               </div>
             </ScrollAnimation>
 
             <ScrollAnimation animationType="fadeInUp" delay={1000}>
-              <div className="group text-center p-8 bg-white/90 backdrop-blur-xl rounded-2xl shadow-lg border border-amber-200/50 hover:shadow-2xl transition-all duration-500 hover:scale-105">
+              <div className="group text-center p-8 bg-white/90 backdrop-blur-xl rounded-2xl shadow-lg border border-amber-200/50 hover:shadow-2xl transition-all duration-500 hover:scale-105 h-full flex flex-col">
                 <div className="relative">
                   <div className="w-20 h-20 mx-auto mb-6 rounded-2xl bg-gradient-to-br from-amber-500 to-orange-500 flex items-center justify-center shadow-xl group-hover:scale-110 transition-transform duration-300">
                     <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -387,8 +387,8 @@ export default function ElogbookPage() {
                   <div className="absolute inset-0 w-20 h-20 mx-auto rounded-2xl border-2 border-amber-400/30 animate-pulse" />
                 </div>
                 <h3 className="text-2xl font-bold text-slate-900 mb-4 group-hover:text-amber-700 transition-colors duration-300">Experienced Pilots</h3>
-                <p className="text-slate-600 text-lg leading-relaxed">
-                  Experienced pilots transitioning to the digital system
+                <p className="text-slate-600 text-lg leading-relaxed flex-grow">
+                  Experienced pilots transitioning to the digital system with comprehensive eLogbook migration and management. We help veteran pilots convert their traditional paper logbooks to digital format, ensuring all historical flight data is accurately transferred and properly categorized.
                 </p>
               </div>
             </ScrollAnimation>

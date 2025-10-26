@@ -310,7 +310,7 @@ export default function ConversionTrainingPage() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             <ScrollAnimation animationType="fadeInUp" delay={400}>
-              <div className="group text-center p-8 bg-white/90 backdrop-blur-xl rounded-2xl shadow-lg border border-blue-200/50 hover:shadow-2xl transition-all duration-500 hover:scale-105">
+              <div className="group text-center p-8 bg-white/90 backdrop-blur-xl rounded-2xl shadow-lg border border-blue-200/50 hover:shadow-2xl transition-all duration-500 hover:scale-105 h-full flex flex-col">
                 <div className="relative">
                   <div className="w-20 h-20 mx-auto mb-6 rounded-2xl bg-gradient-to-br from-blue-500 to-sky-500 flex items-center justify-center shadow-xl group-hover:scale-110 transition-transform duration-300">
                     <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -320,14 +320,14 @@ export default function ConversionTrainingPage() {
                   <div className="absolute inset-0 w-20 h-20 mx-auto rounded-2xl border-2 border-blue-400/30 animate-pulse" />
                 </div>
                 <h3 className="text-2xl font-bold text-slate-900 mb-4 group-hover:text-blue-700 transition-colors duration-300">United States (FAA)</h3>
-                <p className="text-slate-600 text-lg leading-relaxed">
+                <p className="text-slate-600 text-lg leading-relaxed flex-grow">
                   Convert your FAA licenses and training hours to DGCA standards
                 </p>
               </div>
             </ScrollAnimation>
 
             <ScrollAnimation animationType="fadeInUp" delay={600}>
-              <div className="group text-center p-8 bg-white/90 backdrop-blur-xl rounded-2xl shadow-lg border border-sky-200/50 hover:shadow-2xl transition-all duration-500 hover:scale-105">
+              <div className="group text-center p-8 bg-white/90 backdrop-blur-xl rounded-2xl shadow-lg border border-sky-200/50 hover:shadow-2xl transition-all duration-500 hover:scale-105 h-full flex flex-col">
                 <div className="relative">
                   <div className="w-20 h-20 mx-auto mb-6 rounded-2xl bg-gradient-to-br from-sky-500 to-cyan-500 flex items-center justify-center shadow-xl group-hover:scale-110 transition-transform duration-300">
                     <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -337,14 +337,14 @@ export default function ConversionTrainingPage() {
                   <div className="absolute inset-0 w-20 h-20 mx-auto rounded-2xl border-2 border-sky-400/30 animate-pulse" />
                 </div>
                 <h3 className="text-2xl font-bold text-slate-900 mb-4 group-hover:text-sky-700 transition-colors duration-300">Canada (Transport Canada)</h3>
-                <p className="text-slate-600 text-lg leading-relaxed">
+                <p className="text-slate-600 text-lg leading-relaxed flex-grow">
                   Convert your Canadian flight training and licenses to Indian standards
                 </p>
               </div>
             </ScrollAnimation>
 
             <ScrollAnimation animationType="fadeInUp" delay={800}>
-              <div className="group text-center p-8 bg-white/90 backdrop-blur-xl rounded-2xl shadow-lg border border-emerald-200/50 hover:shadow-2xl transition-all duration-500 hover:scale-105">
+              <div className="group text-center p-8 bg-white/90 backdrop-blur-xl rounded-2xl shadow-lg border border-emerald-200/50 hover:shadow-2xl transition-all duration-500 hover:scale-105 h-full flex flex-col">
                 <div className="relative">
                   <div className="w-20 h-20 mx-auto mb-6 rounded-2xl bg-gradient-to-br from-emerald-500 to-green-500 flex items-center justify-center shadow-xl group-hover:scale-110 transition-transform duration-300">
                     <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -354,14 +354,14 @@ export default function ConversionTrainingPage() {
                   <div className="absolute inset-0 w-20 h-20 mx-auto rounded-2xl border-2 border-emerald-400/30 animate-pulse" />
                 </div>
                 <h3 className="text-2xl font-bold text-slate-900 mb-4 group-hover:text-emerald-700 transition-colors duration-300">South Africa (SACAA)</h3>
-                <p className="text-slate-600 text-lg leading-relaxed">
+                <p className="text-slate-600 text-lg leading-relaxed flex-grow">
                   Convert your SACAA licenses and training to DGCA requirements
                 </p>
               </div>
             </ScrollAnimation>
 
             <ScrollAnimation animationType="fadeInUp" delay={1000}>
-              <div className="group text-center p-8 bg-white/90 backdrop-blur-xl rounded-2xl shadow-lg border border-amber-200/50 hover:shadow-2xl transition-all duration-500 hover:scale-105">
+              <div className="group text-center p-8 bg-white/90 backdrop-blur-xl rounded-2xl shadow-lg border border-amber-200/50 hover:shadow-2xl transition-all duration-500 hover:scale-105 h-full flex flex-col">
                 <div className="relative">
                   <div className="w-20 h-20 mx-auto mb-6 rounded-2xl bg-gradient-to-br from-amber-500 to-orange-500 flex items-center justify-center shadow-xl group-hover:scale-110 transition-transform duration-300">
                     <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -371,14 +371,14 @@ export default function ConversionTrainingPage() {
                   <div className="absolute inset-0 w-20 h-20 mx-auto rounded-2xl border-2 border-amber-400/30 animate-pulse" />
                 </div>
                 <h3 className="text-2xl font-bold text-slate-900 mb-4 group-hover:text-amber-700 transition-colors duration-300">New Zealand (CAANZ)</h3>
-                <p className="text-slate-600 text-lg leading-relaxed">
+                <p className="text-slate-600 text-lg leading-relaxed flex-grow">
                   Convert your CAANZ licenses and training to Indian aviation standards
                 </p>
               </div>
             </ScrollAnimation>
 
             <ScrollAnimation animationType="fadeInUp" delay={1200}>
-              <div className="group text-center p-8 bg-white/90 backdrop-blur-xl rounded-2xl shadow-lg border border-purple-200/50 hover:shadow-2xl transition-all duration-500 hover:scale-105">
+              <div className="group text-center p-8 bg-white/90 backdrop-blur-xl rounded-2xl shadow-lg border border-purple-200/50 hover:shadow-2xl transition-all duration-500 hover:scale-105 h-full flex flex-col">
                 <div className="relative">
                   <div className="w-20 h-20 mx-auto mb-6 rounded-2xl bg-gradient-to-br from-purple-500 via-pink-500 to-purple-600 flex items-center justify-center shadow-xl group-hover:scale-110 transition-transform duration-300">
                     <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -388,14 +388,14 @@ export default function ConversionTrainingPage() {
                   <div className="absolute inset-0 w-20 h-20 mx-auto rounded-2xl border-2 border-purple-400/30 animate-pulse" />
                 </div>
                 <h3 className="text-2xl font-bold text-slate-900 mb-4 group-hover:text-purple-700 transition-colors duration-300">Philippines (CAAP)</h3>
-                <p className="text-slate-600 text-lg leading-relaxed">
+                <p className="text-slate-600 text-lg leading-relaxed flex-grow">
                   Convert your CAAP licenses and training to DGCA requirements
                 </p>
               </div>
             </ScrollAnimation>
 
             <ScrollAnimation animationType="fadeInUp" delay={1400}>
-              <div className="group text-center p-8 bg-white/90 backdrop-blur-xl rounded-2xl shadow-lg border border-green-200/50 hover:shadow-2xl transition-all duration-500 hover:scale-105">
+              <div className="group text-center p-8 bg-white/90 backdrop-blur-xl rounded-2xl shadow-lg border border-green-200/50 hover:shadow-2xl transition-all duration-500 hover:scale-105 h-full flex flex-col">
                 <div className="relative">
                   <div className="w-20 h-20 mx-auto mb-6 rounded-2xl bg-gradient-to-br from-green-500 via-teal-500 to-green-600 flex items-center justify-center shadow-xl group-hover:scale-110 transition-transform duration-300">
                     <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -405,7 +405,7 @@ export default function ConversionTrainingPage() {
                   <div className="absolute inset-0 w-20 h-20 mx-auto rounded-2xl border-2 border-green-400/30 animate-pulse" />
                 </div>
                 <h3 className="text-2xl font-bold text-slate-900 mb-4 group-hover:text-green-700 transition-colors duration-300">Australia (CASA)</h3>
-                <p className="text-slate-600 text-lg leading-relaxed">
+                <p className="text-slate-600 text-lg leading-relaxed flex-grow">
                   Convert your CASA licenses and training to Indian aviation standards
                 </p>
               </div>
