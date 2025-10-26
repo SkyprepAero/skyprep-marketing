@@ -8,7 +8,7 @@ import { getContactUrl, getWhatsAppUrl, getWhatsAppButtonText } from "@/config/s
 export const metadata: Metadata = buildPageMetadata({
   title: "Aviation Cohorts - Group Training Programs",
   description: "Join our structured cohort programs for collaborative learning, peer support, and comprehensive aviation training.",
-  canonicalPath: "/services/cohorts",
+  canonicalPath: "/courses/cohorts",
 });
 
 export default function CohortsPage() {
@@ -405,7 +405,7 @@ export default function CohortsPage() {
                     </span>
                   </Link>
                   <Link
-                    href="/services/1-to-1-coaching"
+                    href="/courses/1-to-1-coaching"
                     className="group px-12 py-5 rounded-xl font-semibold border-2 border-slate-300 text-slate-700 hover:bg-slate-50 hover:border-blue-300 transition-all duration-300 text-lg hover:scale-105"
                   >
                     <span className="flex items-center gap-3">

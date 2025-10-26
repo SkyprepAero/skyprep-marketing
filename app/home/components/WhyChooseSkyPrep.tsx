@@ -51,7 +51,7 @@ export function WhyChooseSkyPrep() {
   const stats = [
     { number: "100%", label: "Online Learning" },
     { number: "Custom", label: "Learning Path" },
-    { number: "One to One", label: "Personalized Coaching" },
+    { number: "FocusONE", label: "Personalized Coaching" },
     { number: "Flexible", label: "Your Schedule" },
   ];
 

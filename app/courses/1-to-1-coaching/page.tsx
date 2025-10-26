@@ -8,7 +8,7 @@ import { getContactUrl, getWhatsAppUrl, getWhatsAppButtonText } from "@/config/s
 export const metadata: Metadata = buildPageMetadata({
   title: "FocusONE Mentorship Program - Personalized Aviation Training",
   description: "Get personalized online training with focused attention and help with specific aviation subjects.",
-  canonicalPath: "/services/1-to-1-coaching",
+    canonicalPath: "/courses/1-to-1-coaching",
 });
 
 export default function OneToOneCoachingPage() {
@@ -426,7 +426,7 @@ export default function OneToOneCoachingPage() {
                       </span>
                     </Link>
                     <Link
-                      href="/services/cohorts"
+                      href="/courses/cohorts"
                       className="group px-12 py-5 rounded-xl font-semibold border-2 border-slate-300 text-slate-700 hover:bg-slate-50 hover:border-blue-300 transition-all duration-300 text-lg hover:scale-105"
                     >
                       <span className="flex items-center gap-3">

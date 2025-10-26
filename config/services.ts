@@ -9,10 +9,10 @@ export interface Service {
 export const services: Service[] = [
   {
     id: "1-to-1-coaching",
-    name: "One to One Coaching",
+    name: "FocusONE",
     href: "/services/1-to-1-coaching",
     description: "Personalized one-on-one aviation coaching",
-    whatsappMessage: "Hi SkyPrep Aero! I'm interested in your One to One Coaching program. Can you please provide more details?"
+    whatsappMessage: "Hi SkyPrep Aero! I'm interested in your FocusONE program. Can you please provide more details?"
   },
   {
     id: "cohorts",
@@ -21,6 +21,21 @@ export const services: Service[] = [
     description: "Group training programs with structured learning",
     whatsappMessage: "Hi SkyPrep Aero! I'm interested in joining your Cohorts program. Can you please provide more details?"
   },
+  {
+    id: "computer-number",
+    name: "DGCA Computer Number Assistance",
+    href: "/services/computer-number",
+    description: "Comprehensive support for DGCA Computer Number (DCN) application process",
+    whatsappMessage: "Hi SkyPrep Aero! I'm interested in your DGCA Computer Number Assistance service. Can you please provide more details?"
+  },
+  {
+    id: "elogbook",
+    name: "eLogbook Filing Assistance",
+    href: "/services/elogbook",
+    description: "Complete eLogbook filing and management assistance on DGCA's eGCA portal",
+    whatsappMessage: "Hi SkyPrep Aero! I'm interested in your eLogbook Filing Assistance service. Can you please provide more details?"
+  },
+   
   // Temporarily commented out - will be needed later
   // {
   //   id: "subject-wise",
@@ -29,6 +44,24 @@ export const services: Service[] = [
   //   description: "Specialized training for individual aviation subjects",
   //   whatsappMessage: "Hi SkyPrep Aero! I'm interested in your Individual Subject Training program. Can you please provide more details?"
   // }
+];
+
+// Courses array - only actual training courses
+export const courses: Service[] = [
+  {
+    id: "1-to-1-coaching",
+    name: "FocusONE",
+    href: "/courses/1-to-1-coaching",
+    description: "Personalized one-on-one aviation coaching",
+    whatsappMessage: "Hi SkyPrep Aero! I'm interested in your FocusONE program. Can you please provide more details?"
+  },
+  {
+    id: "cohorts",
+    name: "Cohorts",
+    href: "/courses/cohorts",
+    description: "Group training programs with structured learning",
+    whatsappMessage: "Hi SkyPrep Aero! I'm interested in joining your Cohorts program. Can you please provide more details?"
+  }
 ];
 
 export const whatsappNumber = "+918788162210";

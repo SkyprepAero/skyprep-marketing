@@ -7,15 +7,15 @@ import { services, getWhatsAppUrl, getWhatsAppButtonText } from "@/config/servic
 
 export const metadata: Metadata = buildPageMetadata({
   title: "Aviation Training Courses - SkyPrep Aero",
-  description: "Explore our comprehensive aviation training programs including one to one coaching, cohort programs, and individual subject training.",
+  description: "Explore our comprehensive aviation training programs including FocusONE coaching, cohort programs, and individual subject training.",
   canonicalPath: "/courses",
-  keywords: ["aviation courses", "pilot coaching", "flight training", "one to one coaching", "aviation cohorts", "individual subject training"],
+  keywords: ["aviation courses", "pilot coaching", "flight training", "FocusONE coaching", "aviation cohorts", "individual subject training"],
 });
 
 export default function CoursesPage() {
   const courseDetails = {
     "1-to-1-coaching": {
-      title: "One-to-One Mentorship Program",
+      title: "FocusONE Mentorship Program",
       description: "Personalized online training perfect for students needing focused attention or help with specific subjects.",
       features: ["Individual Live Sessions", "Choose Your Time", "Additional Learning Material", "Doubt-Clearing Sessions"],
       subjects: ["Air Regulation", "Air Meteorology", "Air Navigation"],
@@ -80,7 +80,11 @@ export default function CoursesPage() {
           </div>
 
           <div className="grid lg:grid-cols-3 gap-8">
-            {services.map((service) => {
+            {services.filter(service => 
+              service.id === "1-to-1-coaching" || 
+              service.id === "cohorts" || 
+              service.id === "subject-wise"
+            ).map((service) => {
               const details = courseDetails[service.id as keyof typeof courseDetails];
               return (
                 <div key={service.id} className="bg-white rounded-3xl p-8 shadow-xl border border-slate-200 hover:shadow-2xl transition-all duration-300 hover-lift animate-scale-in">

@@ -68,7 +68,11 @@ function ContactFormContent() {
               defaultValue={selectedService?.name || "General"}
             >
               <option>General</option>
-              {services.map((service) => (
+              {services.filter(service => 
+                service.id === "1-to-1-coaching" || 
+                service.id === "cohorts" || 
+                service.id === "subject-wise"
+              ).map((service) => (
                 <option key={service.id} value={service.name}>
                   {service.name}
                 </option>
@@ -201,7 +205,11 @@ export function ContactForm() {
                 defaultValue="General"
               >
                 <option>General</option>
-                {services.map((service) => (
+                {services.filter(service => 
+                  service.id === "1-to-1-coaching" || 
+                  service.id === "cohorts" || 
+                  service.id === "subject-wise"
+                ).map((service) => (
                   <option key={service.id} value={service.name}>
                     {service.name}
                   </option>

@@ -4,7 +4,7 @@ import { usePathname } from "next/navigation";
 import { useState, useEffect } from "react";
 import { Logo } from "@/components/Logo";
 import { NavDropdown } from "@/components/NavDropdown";
-import { services } from "@/config/services";
+import { services, courses } from "@/config/services";
 
 // Services dropdown data
 const servicesItems = [
@@ -17,6 +17,11 @@ const servicesItems = [
     id: "computer-number",
     name: "Computer Number",
     href: "/services/computer-number",
+  },
+  {
+    id: "elogbook",
+    name: "eLogbook",
+    href: "/services/elogbook",
   }
 ];
 
@@ -162,7 +167,7 @@ export function Navbar() {
                 </Link>
                 <NavDropdown 
                   title="Courses" 
-                  items={services} 
+                  items={courses} 
                   isHomePage={isHomePage} 
                   isScrolled={isScrolled} 
                 />
