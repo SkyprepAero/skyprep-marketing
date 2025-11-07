@@ -1,6 +1,12 @@
 import { TestimonialsMarquee } from "@/components/TestimonialsMarquee";
 import { VideoHero } from "@/components/VideoHero";
-import { DGCARequirements, WhyChooseSkyPrep, FlightPlan, MissionVision, MentorsShowcase } from "@/app/home/components";
+import {
+  DGCARequirements,
+  WhyChooseSkyPrep,
+  MissionVision,
+  MentorsShowcase,
+  JobOpportunities,
+} from "@/app/home/components";
 import { courses } from "@/config/services";
 import { siteConfig } from "@/config/site";
 import { generateMetadata, buildUrl } from "@/lib/seo";
@@ -66,6 +72,7 @@ export default function Home() {
               <WhyChooseSkyPrep />
               <DGCARequirements />
               {/* <FlightPlan /> */}
+              <JobOpportunities />
 
       {/* Testimonials (full-bleed, auto-scrolling) */}
       <section className="full-bleed py-16 md:py-24 bg-gradient-to-br from-amber-50 via-slate-50 to-blue-50 relative overflow-hidden">

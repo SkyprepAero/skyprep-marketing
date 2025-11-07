@@ -18,7 +18,7 @@ type Mentor = {
 
 const mentors: Mentor[] = [
   {
-    name: "SFO Soniya Singh",
+    name: "Soniya Singh",
     title: "Senior First Officer, Boeing 737 Fleet, another tag",
     headline:
       "Professional excellence forged across 3,000+ flight hours and eight years of airline operations.",

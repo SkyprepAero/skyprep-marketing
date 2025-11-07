@@ -10,6 +10,7 @@ export { DGCARequirements } from './DGCARequirements';
 export { WhyChooseSkyPrep } from './WhyChooseSkyPrep';
 export { FlightPlan } from './FlightPlan';
 export { MissionVision } from './MissionVision';
+export { JobOpportunities } from './JobOpportunities';
 export { ScrollAnimation } from './ScrollAnimation';
 export { RequirementCard } from './RequirementCard';
 export { MentorsShowcase } from './MentorsShowcase';
