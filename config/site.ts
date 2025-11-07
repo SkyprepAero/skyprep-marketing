@@ -11,7 +11,7 @@ export const siteConfig = {
     instagram: "https://www.instagram.com/skyprepaero/",
     youtube: "https://www.youtube.com/@skyprep",
   },
-  contactEmail: "teams@gmail.com",
+  contactEmail: "teams@skyprepaero.com",
 } as const;
 
 export type SiteConfig = typeof siteConfig;
