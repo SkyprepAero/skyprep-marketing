@@ -4,7 +4,7 @@ import { usePathname } from "next/navigation";
 import { useState, useEffect } from "react";
 import { Logo } from "@/components/Logo";
 import { NavDropdown } from "@/components/NavDropdown";
-import { services, courses } from "@/config/services";
+import { courses } from "@/config/services";
 
 // Services dropdown data
 const servicesItems = [
@@ -148,7 +148,7 @@ export function Navbar() {
               : 'container mx-auto px-6 h-24'
         } flex items-center justify-between gap-2 sm:gap-4 md:gap-6 lg:gap-8 xl:gap-12 transition-all duration-800 ease-[cubic-bezier(0.25,0.46,0.45,0.94)]`}>
           <div className="flex items-center transition-all duration-800 ease-[cubic-bezier(0.25,0.46,0.45,0.94)]">
-            <Logo className="mt-4" size={isMobile ? 32 : isScrolled ? 55: 70} withText={false} />
+            <Logo  size={isMobile ? 32 : isScrolled ? 55: 70} withText={false} />
           </div>
           
           {/* Desktop nav */}
@@ -210,7 +210,7 @@ export function Navbar() {
                 </Link>
                 <NavDropdown 
                   title="Courses" 
-                  items={services} 
+                  items={courses} 
                   isHomePage={isHomePage} 
                   isScrolled={isScrolled} 
                 />
