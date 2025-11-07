@@ -12,3 +12,4 @@ export { FlightPlan } from './FlightPlan';
 export { MissionVision } from './MissionVision';
 export { ScrollAnimation } from './ScrollAnimation';
 export { RequirementCard } from './RequirementCard';
+export { MentorsShowcase } from './MentorsShowcase';
