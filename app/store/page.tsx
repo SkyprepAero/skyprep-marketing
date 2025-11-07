@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { generateMetadata } from "@/lib/seo";
+import { storeItems } from "@/content/store";
 
 export const metadata: Metadata = generateMetadata({
   title: "Store",
@@ -10,18 +11,14 @@ export const metadata: Metadata = generateMetadata({
 });
 
 export default function StorePage() {
-  const items = [
-    { slug: "ifr-briefing-cards", title: "IFR Briefing Cards" },
-    { slug: "weight-balance-sheet", title: "Weight & Balance Sheet" },
-  ];
   return (
     <section className="space-y-6">
       <h1 className="text-3xl font-semibold">Store</h1>
       <ul className="grid gap-4">
-        {items.map((p) => (
-          <li key={p.slug} className="border border-[--color-border] rounded-md p-4">
-            <Link href={`/store/${p.slug}`} className="font-medium hover:underline">
-              {p.title}
+        {storeItems.map((item) => (
+          <li key={item.slug} className="border border-[--color-border] rounded-md p-4">
+            <Link href={`/store/${item.slug}`} className="font-medium hover:underline">
+              {item.name}
             </Link>
           </li>
         ))}

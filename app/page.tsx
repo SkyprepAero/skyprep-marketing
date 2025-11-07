@@ -1,74 +1,51 @@
 import { TestimonialsMarquee } from "@/components/TestimonialsMarquee";
 import { VideoHero } from "@/components/VideoHero";
 import { DGCARequirements, WhyChooseSkyPrep, FlightPlan, MissionVision } from "@/app/home/components";
-import type { Metadata } from "next";
+import { courses } from "@/config/services";
+import { siteConfig } from "@/config/site";
+import { generateMetadata, buildUrl } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "SkyPrep - Professional Pilot Training | Expert Flight School",
-  description: "Master your aviation journey with SkyPrep's expert pilot training programs. Professional flight school offering comprehensive pilot courses, ground training, and career guidance for aspiring pilots.",
-  keywords: ["aviation training", "pilot training", "flight school", "aviation education", "pilot certification"],
-  openGraph: {
-    title: "SkyPrep - Professional Pilot Training | Expert Flight School",
-    description: "Master your aviation journey with SkyPrep's expert pilot training programs. Professional flight school offering comprehensive pilot courses.",
-    type: "website",
-    url: "https://skyprep.com",
-    images: [
-      {
-        url: "/logo.png",
-        width: 1200,
-        height: 630,
-        alt: "SkyPrep Aviation Training",
-      },
-    ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "SkyPrep - Professional Pilot Training | Expert Flight School",
-    description: "Master your aviation journey with expert pilot training programs and professional certification.",
-    images: ["/logo.png"],
-  },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      "max-video-preview": -1,
-      "max-image-preview": "large",
-      "max-snippet": -1,
-    },
-  },
-};
+export const metadata = generateMetadata({
+  title: "Professional Pilot Training | Expert Flight School",
+  description:
+    "Master your aviation journey with SkyPrep's expert pilot training programs. Professional flight school offering comprehensive pilot courses, ground training, and career guidance for aspiring pilots.",
+  keywords: [
+    "aviation training",
+    "pilot training",
+    "flight school",
+    "aviation education",
+    "pilot certification",
+  ],
+  canonicalPath: "/",
+});
 
 export default function Home() {
+  const socialLinks = Object.values(siteConfig.social) as string[];
+  const offerCatalogItems = courses.map((course) => ({
+    "@type": "Course",
+    name: course.name,
+    description: course.description,
+    url: buildUrl(course.href),
+  }));
+
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "EducationalOrganization",
-    "name": "SkyPrep",
-    "description": "Professional pilot training excellence with comprehensive aviation programs. Expert flight school offering professional guidance from ground school to checkride.",
-    "url": "https://skyprep.com",
-    "logo": "https://skyprep.com/logo.png",
-    "sameAs": [
-      "https://twitter.com/skyprep",
-      "https://facebook.com/skyprep",
-      "https://linkedin.com/company/skyprep"
-    ],
+    name: siteConfig.name,
+    description:
+      "Professional pilot training excellence with comprehensive aviation programs. Expert flight school offering professional guidance from ground school to checkride.",
+    url: siteConfig.url,
+    logo: buildUrl(siteConfig.logo),
+    sameAs: socialLinks,
     "hasOfferCatalog": {
       "@type": "OfferCatalog",
       "name": "Aviation Training Programs",
-      "itemListElement": [
-        {
-          "@type": "Course",
-          "name": "Pilot Training",
-          "description": "Complete pilot training program"
-        },
-        {
-          "@type": "Course", 
-          "name": "Ground School",
-          "description": "Aviation ground school training"
-        }
-      ]
-    }
+      "itemListElement": offerCatalogItems,
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "IN",
+    },
   };
 
   return (
@@ -79,7 +56,7 @@ export default function Home() {
       />
         <VideoHero 
           title="Shaping Aviators With Precision"
-          description=""
+          description="Accelerate your aviation career with DGCA-aligned coaching, live mentorship, and analytics-driven training support."
           buttonText="Start Your Aviation Journey"
           buttonHref="/enquiry"
         />

@@ -1,16 +1,22 @@
 import type { Metadata } from "next";
+import { generateMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "DGCA Requirements - Complete Flight Training Guide | SkyPrep",
-  description: "Comprehensive guide to DGCA flight training requirements including flight hours, medical standards, written exams, and practical training for commercial pilot license.",
-  keywords: ["DGCA requirements", "flight training", "commercial pilot license", "aviation training", "pilot certification"],
+export const metadata: Metadata = generateMetadata({
+  title: "DGCA Requirements - Complete Flight Training Guide",
+  description:
+    "Comprehensive guide to DGCA flight training requirements including flight hours, medical standards, written exams, and practical training for commercial pilot license.",
+  canonicalPath: "/dgca-requirements",
+  keywords: [
+    "DGCA requirements",
+    "flight training",
+    "commercial pilot license",
+    "aviation training",
+    "pilot certification",
+  ],
   openGraph: {
-    title: "DGCA Requirements - Complete Flight Training Guide",
-    description: "Comprehensive guide to DGCA flight training requirements for commercial pilot license.",
-    type: "website",
-    url: "https://skyprep.com/dgca-requirements",
+    type: "article",
   },
-};
+});
 
 export default function DGCARequirements() {
   return (

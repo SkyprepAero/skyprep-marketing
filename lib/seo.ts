@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { siteConfig } from "@/config/site";
+import { getPageKeywords } from "@/content/pageKeywords";
 
 type BaseSEOInput = {
   title?: string;
@@ -11,21 +12,48 @@ type BaseSEOInput = {
 };
 
 export function buildUrl(pathname?: string) {
+  if (!pathname) {
+    const base = siteConfig.url?.replace(/\/$/, "") || "";
+    return base || "/";
+  }
+
+  if (/^https?:\/\//i.test(pathname)) {
+    return pathname;
+  }
+
   const base = siteConfig.url?.replace(/\/$/, "") || "";
-  const path = (pathname || "/").startsWith("/") ? pathname : `/${pathname || ""}`;
+  const path = pathname.startsWith("/") ? pathname : `/${pathname}`;
   return `${base}${path}`;
 }
 
 export function generateMetadata(input: BaseSEOInput = {}): Metadata {
   const title = input.title ? `${input.title} | ${siteConfig.name}` : siteConfig.name;
   const description = input.description || siteConfig.description;
-  const canonical = buildUrl(input.canonicalPath || "/");
-  const keywords = input.keywords || [
+  const canonicalPath = input.canonicalPath || "/";
+  const canonical = buildUrl(canonicalPath);
+  const defaultKeywords = [
     "aviation coaching",
     "pilot training",
     "flight courses",
     "aviation blog",
+    "skyprep",
+    "skyprep aero",
+    "aviation ground classes",
+    "aviation coaching classes",
+    "dgca ground school",
   ];
+  const keywords = input.keywords || getPageKeywords(canonicalPath) || defaultKeywords;
+
+  const iconUrl = buildUrl(siteConfig.logo);
+  const ogImageUrl = buildUrl(siteConfig.ogImage);
+  let metadataBase: URL | undefined;
+  if (siteConfig.url) {
+    try {
+      metadataBase = new URL(siteConfig.url);
+    } catch (error) {
+      console.warn("Invalid siteConfig.url supplied to generateMetadata", error);
+    }
+  }
 
   return {
     title,
@@ -33,16 +61,16 @@ export function generateMetadata(input: BaseSEOInput = {}): Metadata {
     keywords,
     alternates: { canonical },
     icons: {
-      icon: siteConfig.logo,
-      shortcut: siteConfig.logo,
-      apple: siteConfig.logo,
+      icon: iconUrl,
+      shortcut: iconUrl,
+      apple: iconUrl,
     },
     openGraph: {
       title,
       description,
       url: canonical,
       siteName: siteConfig.name,
-      images: [{ url: siteConfig.ogImage }],
+      images: [{ url: ogImageUrl }],
       type: "website",
       ...input.openGraph,
     },
@@ -50,10 +78,10 @@ export function generateMetadata(input: BaseSEOInput = {}): Metadata {
       card: "summary_large_image",
       title,
       description,
-      images: [siteConfig.ogImage],
+      images: [ogImageUrl],
       ...input.twitter,
     },
-    metadataBase: new URL(siteConfig.url),
+    metadataBase,
   } satisfies Metadata;
 }
 
@@ -64,13 +92,17 @@ export function jsonLdCourse(course: {
   url: string;
   provider?: { name: string; url?: string };
 }) {
+  const providerUrl = course.provider?.url ? buildUrl(course.provider.url) : siteConfig.url;
   return {
     "@context": "https://schema.org",
     "@type": "Course",
     name: course.name,
     description: course.description,
-    url: course.url,
-    provider: course.provider || { name: siteConfig.name, url: siteConfig.url },
+    url: buildUrl(course.url),
+    provider: {
+      name: course.provider?.name || siteConfig.name,
+      url: providerUrl,
+    },
   };
 }
 
@@ -87,7 +119,7 @@ export function jsonLdArticle(article: {
     "@type": "Article",
     headline: article.headline,
     description: article.description,
-    url: article.url,
+    url: buildUrl(article.url),
     datePublished: article.datePublished,
     dateModified: article.dateModified || article.datePublished,
     author: article.authorName
@@ -112,7 +144,7 @@ export function jsonLdProduct(product: {
           price: product.price.toFixed(2),
           priceCurrency: product.currency,
           availability: "https://schema.org/InStock",
-          url: product.url,
+          url: buildUrl(product.url),
         }
       : undefined;
 
@@ -122,8 +154,8 @@ export function jsonLdProduct(product: {
     name: product.name,
     description: product.description,
     sku: product.sku,
-    url: product.url,
-    image: product.image ? [product.image] : undefined,
+    url: buildUrl(product.url),
+    image: product.image ? [buildUrl(product.image)] : undefined,
     offers,
     brand: { "@type": "Brand", name: siteConfig.name },
   };

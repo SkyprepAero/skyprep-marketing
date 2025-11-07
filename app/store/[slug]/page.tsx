@@ -1,25 +1,17 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { buildUrl, generateMetadata as buildPageMetadata, jsonLdProduct } from "@/lib/seo";
+import { generateMetadata as buildPageMetadata, jsonLdProduct } from "@/lib/seo";
+import { storeItems } from "@/content/store";
 
 type Props = { params: Promise<{ slug: string }> };
 
+const products = storeItems.reduce<Record<string, (typeof storeItems)[number]>>((acc, item) => {
+  acc[item.slug] = item;
+  return acc;
+}, {});
+
 async function getProduct(slug: string) {
-  const items: Record<string, { name: string; description: string; price?: number; currency?: string }> = {
-    "ifr-briefing-cards": {
-      name: "IFR Briefing Cards",
-      description: "Durable, cockpit-ready IFR briefing cards for quick reference.",
-      price: 19.99,
-      currency: "USD",
-    },
-    "weight-balance-sheet": {
-      name: "Weight & Balance Sheet",
-      description: "Reusable W&B sheet for quick calculations and cross-checks.",
-      price: 9.99,
-      currency: "USD",
-    },
-  };
-  return items[slug];
+  return products[slug];
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
@@ -30,6 +22,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: product.name,
     description: product.description,
     canonicalPath: `/store/${slug}`,
+    keywords: product.keywords,
     openGraph: { type: "website" },
   });
 }
@@ -42,7 +35,7 @@ export default async function ProductPage({ params }: Props) {
   const jsonLd = jsonLdProduct({
     name: product.name,
     description: product.description,
-    url: buildUrl(`/store/${slug}`),
+    url: `/store/${slug}`,
     price: product.price,
     currency: product.currency,
   });

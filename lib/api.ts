@@ -1,6 +1,6 @@
 import axios, { AxiosError, AxiosInstance } from "axios";
 
-const baseURL = process.env.NEXT_PUBLIC_API_BASE_URL || "https://api.skyprep.co";
+const baseURL = process.env.NEXT_PUBLIC_API_BASE_URL || "https://api.skyprepaero.com";
 
 export const apiClient: AxiosInstance = axios.create({
   baseURL,

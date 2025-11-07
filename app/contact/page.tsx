@@ -5,6 +5,7 @@ import { ContactForm } from "@/components/ContactForm";
 import { ScrollAnimation } from "@/app/home/components/ScrollAnimation";
 import Link from "next/link";
 import { whatsappNumber } from "@/config/services";
+import { contactEmail } from "@/config/site";
 
 export const metadata: Metadata = generateMetadata({
   title: "Contact",
@@ -109,7 +110,7 @@ export default function ContactPage() {
                       </div>
                       <div>
                         <div className="font-semibold text-slate-900 text-lg mb-1">Email</div>
-                        <a href="mailto:theskyprep@gmail.com" className="text-cyan-600 hover:text-cyan-700 underline-offset-4 hover:underline text-lg">theskyprep@gmail.com</a>
+                        <a href={`mailto:${contactEmail}`} className="text-cyan-600 hover:text-cyan-700 underline-offset-4 hover:underline text-lg">{contactEmail}</a>
                       </div>
                     </li>
                     <li className="flex items-start gap-4 group/item">

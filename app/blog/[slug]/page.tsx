@@ -1,54 +1,46 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { generateMetadata as buildPageMetadata, jsonLdArticle, buildUrl } from "@/lib/seo";
+import { generateMetadata as buildPageMetadata, jsonLdArticle } from "@/lib/seo";
+import { blogPosts } from "@/content/blog";
 
 type Props = { params: Promise<{ slug: string }> };
 
-// Placeholder content fetch (SSG with fallback or SSR can be added later)
-async function getPost(slug: string) {
-  const posts: Record<string, { title: string; description: string; body: string }> = {
-    "preflight-checklists": {
-      title: "Preflight Checklists that Work",
-      description: "Practical preflight steps to improve safety and reduce workload.",
-      body: "This is a placeholder article body.",
-    },
-    "ifr-essentials": {
-      title: "IFR Essentials for Busy Pilots",
-      description: "Core IFR concepts and habits to stay proficient.",
-      body: "This is a placeholder article body.",
-    },
-  };
-  return posts[slug];
-}
+const articles = blogPosts.reduce<Record<string, (typeof blogPosts)[number]>>((acc, post) => {
+  acc[post.slug] = post;
+  return acc;
+}, {});
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
-  const post = await getPost(slug);
+  const post = articles[slug];
   if (!post) return buildPageMetadata({ title: "Article" });
   return buildPageMetadata({
     title: post.title,
     description: post.description,
     canonicalPath: `/blog/${slug}`,
+    keywords: post.keywords,
     openGraph: { type: "article" },
   });
 }
 
 export default async function BlogArticlePage({ params }: Props) {
   const { slug } = await params;
-  const post = await getPost(slug);
+  const post = articles[slug];
   if (!post) return notFound();
 
   const jsonLd = jsonLdArticle({
     headline: post.title,
     description: post.description,
-    url: buildUrl(`/blog/${slug}`),
+    url: `/blog/${slug}`,
+    datePublished: post.datePublished,
+    dateModified: post.dateModified,
   });
 
   return (
     <article className="prose prose-slate dark:prose-invert max-w-none">
       <h1>{post.title}</h1>
       <p className="text-slate-600">{post.description}</p>
-      <div className="mt-6">{post.body}</div>
+      <div className="mt-6">This blog content will be loaded from the database.</div>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
     </article>
   );
