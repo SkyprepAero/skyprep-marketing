@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Script from "next/script";
+import { Suspense } from "react";
 import { Geist, Geist_Mono } from "next/font/google";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
@@ -60,7 +61,9 @@ export default function RootLayout({
         ) : null}
         <LoaderProvider>
           {IS_ANALYTICS_ENABLED ? (
-            <AnalyticsTracker measurementId={GA_MEASUREMENT_ID as string} />
+            <Suspense fallback={null}>
+              <AnalyticsTracker measurementId={GA_MEASUREMENT_ID as string} />
+            </Suspense>
           ) : null}
           <Navbar />
           <main className="flex-1 pt-16 md:pt-0">
