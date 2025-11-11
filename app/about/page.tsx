@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { generateMetadata as buildPageMetadata } from "@/lib/seo";
 import { AviationBackground } from "@/components/AviationBackground";
 import { ScrollAnimation } from "@/app/home/components/ScrollAnimation";
@@ -183,47 +184,27 @@ export default function AboutPage() {
             </ScrollAnimation>
             <ScrollAnimation animationType="fadeInRight" delay={400}>
               <div className="relative group">
-                {/* Main Aviation Education Icon */}
-                <div className="aspect-square rounded-4xl bg-gradient-to-br from-sky-500 via-blue-600 to-indigo-600 p-12 flex items-center justify-center shadow-[0_50px_120px_-60px_rgba(56,189,248,0.45)] group-hover:scale-105 transition-transform duration-500">
-                  <svg className="w-40 h-40 text-white" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M12 2l9 4.9V17c0 .55-.45 1-1 1h-1v-6l-7 3.8L5 12v6H4c-.55 0-1-.45-1-1V6.9L12 2z"/>
-                  </svg>
+                <div className="aspect-square rounded-4xl shadow-[0_50px_120px_-60px_rgba(56,189,248,0.45)]">
+                  <div className="relative h-full w-full overflow-hidden rounded-4xl transition-transform duration-500 group-hover:scale-105">
+                    <Image
+                      src="/media/images/aboutusplane.jpg"
+                      alt="SkyPrep Aero aircraft in flight"
+                      fill
+                      className="object-cover"
+                      sizes="(max-width: 1024px) 100vw, 50vw"
+                      priority
+                    />
+                    <div className="absolute inset-0 rounded-4xl bg-gradient-to-br from-slate-950/20 via-slate-900/10 to-blue-900/30" />
+                  </div>
                 </div>
-                
+
                 {/* India Education Values Icon */}
                 <div className="absolute -top-6 -right-6 w-32 h-32 rounded-full bg-gradient-to-br from-amber-400 to-orange-500 flex items-center justify-center shadow-xl group-hover:scale-110 transition-transform duration-500">
                   <svg className="w-16 h-16 text-white" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
-                </svg>
-                </div>
-                
-                {/* Mentorship Icon */}
-                <div className="absolute -bottom-4 -left-4 w-20 h-20 rounded-full bg-gradient-to-br from-emerald-400 to-green-500 flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-500">
-                  <svg className="w-10 h-10 text-white" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
+                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
                   </svg>
                 </div>
-                
-                {/* Future Vision Icon */}
-                <div className="absolute top-1/2 -left-8 w-16 h-16 rounded-full bg-gradient-to-br from-purple-400 to-pink-500 flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-500">
-                  <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-                  </svg>
-                </div>
-                
-                {/* Learning Path Icon */}
-                <div className="absolute -top-2 -left-2 w-12 h-12 rounded-full bg-gradient-to-br from-cyan-400 to-blue-500 flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-500">
-                  <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
-                  </svg>
-                </div>
-                
-                {/* Success Achievement Icon */}
-                <div className="absolute bottom-1/4 -right-2 w-14 h-14 rounded-full bg-gradient-to-br from-yellow-400 to-amber-500 flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-500">
-                  <svg className="w-7 h-7 text-white" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                  </svg>
-                </div>
+
               </div>
             </ScrollAnimation>
           </div>
