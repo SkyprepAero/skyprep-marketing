@@ -1,5 +1,6 @@
 import Link from "next/link";
 import type { Metadata } from "next";
+import type React from "react";
 
 import { AviationBackground } from "@/components/AviationBackground";
 import { ScrollAnimation } from "@/app/home/components/ScrollAnimation";
@@ -20,12 +21,15 @@ const curatedServiceIds = [
 
 type CuratedServiceId = (typeof curatedServiceIds)[number];
 
-const serviceDetails: Record<CuratedServiceId, {
-  badge: string;
-  summary: string;
-  highlights: string[];
-  icon: JSX.Element;
-}> = {
+const serviceDetails: Record<
+  CuratedServiceId,
+  {
+    badge: string;
+    summary: string;
+    highlights: string[];
+    icon: React.ReactNode;
+  }
+> = {
   medical: {
     badge: "Medical Clearance Support",
     summary:
