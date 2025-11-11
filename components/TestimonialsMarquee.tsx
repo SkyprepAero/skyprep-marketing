@@ -64,42 +64,43 @@ const DATA: Testimonial[] = [
 
 function TestimonialCard({ testimonial }: { testimonial: Testimonial }) {
   return (
-    <div className="group relative bg-white rounded-3xl p-6 shadow-lg hover:shadow-xl transition-all duration-500 hover:-translate-y-2 border border-slate-100 w-[380px] max-w-[380px] flex-shrink-0 flex flex-col min-w-0 max-h-none overflow-visible">
-      {/* Quote Icon */}
-      <div className="absolute top-4 right-4 w-6 h-6 text-amber-500 opacity-20">
+    <div className="group relative flex max-w-[380px] min-w-[280px] flex-col overflow-visible rounded-3xl border border-white/12 bg-white/[0.08] p-6 text-slate-100 shadow-[0_30px_90px_-55px_rgba(15,23,42,0.85)] backdrop-blur transition-all duration-500 hover:-translate-y-2 hover:border-white/30 hover:shadow-[0_45px_130px_-60px_rgba(56,189,248,0.6)]">
+      <div className="absolute top-4 right-4 w-6 h-6 text-amber-300/50">
         <svg viewBox="0 0 24 24" fill="currentColor">
-          <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h4v10h-10z"/>
+          <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h4v10h-10z" />
         </svg>
       </div>
 
-      {/* Rating */}
-      <div className="flex items-center gap-1 mb-3">
+      <div className="mb-3 flex items-center gap-1">
         {Array.from({ length: 5 }).map((_, i) => (
-          <svg key={i} width="16" height="16" viewBox="0 0 24 24" fill="currentColor" className="text-amber-500">
+          <svg key={i} width="16" height="16" viewBox="0 0 24 24" fill="currentColor" className={`transition ${i < testimonial.rating ? "text-amber-300" : "text-slate-500/40"}`}>
             <path d="M12 2l3 6 6 .9-4.5 4.1 1 6-5.5-3-5.5 3 1-6L3 8.9 9 8l3-6z" />
           </svg>
         ))}
       </div>
 
-      {/* Quote */}
-      <blockquote className="text-slate-700 text-sm leading-relaxed mb-4 font-medium flex-1 break-words overflow-wrap-anywhere hyphens-auto" style={{ wordBreak: 'break-word', overflowWrap: 'break-word' }}>
+      <blockquote className="flex-1 text-sm font-medium leading-relaxed text-slate-200/85">
         &ldquo;{testimonial.quote}&rdquo;
       </blockquote>
 
-      {/* Achievement Badge */}
-      <div className="inline-flex items-center gap-2 bg-gradient-to-r from-amber-50 to-orange-50 border border-amber-200 rounded-full px-3 py-1.5 mb-4 flex-shrink-0 min-w-0">
-        <div className="w-1.5 h-1.5 bg-amber-500 rounded-full flex-shrink-0"></div>
-        <span className="text-amber-800 text-xs font-semibold break-words overflow-wrap-anywhere" style={{ wordBreak: 'break-word', overflowWrap: 'break-word' }}>{testimonial.achievement}</span>
+      <div className="mt-4 inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/10 px-3 py-1.5 text-xs font-semibold uppercase tracking-[0.3em] text-amber-200/90">
+        <span className="h-1.5 w-1.5 rounded-full bg-amber-300" />
+        <span className="truncate" title={testimonial.achievement}>
+          {testimonial.achievement}
+        </span>
       </div>
 
-      {/* Author */}
-      <div className="flex items-center gap-3 flex-shrink-0 min-w-0">
-        <div className="w-10 h-10 rounded-full bg-gradient-to-r from-blue-500 to-cyan-500 flex items-center justify-center text-white font-bold text-sm flex-shrink-0">
+      <div className="mt-4 flex items-center gap-3">
+        <div className="flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-br from-sky-500 to-blue-600 text-sm font-bold text-white shadow-lg shadow-black/30">
           {testimonial.avatar}
         </div>
-        <div className="min-w-0 flex-1">
-          <h4 className="font-semibold text-slate-900 text-sm break-words overflow-wrap-anywhere" style={{ wordBreak: 'break-word', overflowWrap: 'break-word' }}>{testimonial.name}</h4>
-          <p className="text-slate-600 text-xs break-words overflow-wrap-anywhere" style={{ wordBreak: 'break-word', overflowWrap: 'break-word' }}>{testimonial.role}</p>
+        <div className="min-w-0">
+          <h4 className="truncate text-sm font-semibold text-white" title={testimonial.name}>
+            {testimonial.name}
+          </h4>
+          <p className="truncate text-xs text-slate-300/80" title={testimonial.role}>
+            {testimonial.role}
+          </p>
         </div>
       </div>
     </div>
@@ -192,15 +193,15 @@ export function TestimonialsMarquee() {
       {/* Trust Indicators */}
       <div className="mt-16 text-center">
         <ScrollAnimation animationType="fadeInUp" delay={1000}>
-          <div className="inline-flex items-center gap-8 bg-gradient-to-r from-slate-50 to-blue-50 rounded-2xl px-8 py-6 border border-slate-200">
+          <div className="inline-flex items-center gap-8 rounded-2xl border border-white/15 bg-white/[0.08] px-8 py-6 shadow-[0_30px_90px_-55px_rgba(15,23,42,0.85)] backdrop-blur transition-all duration-500 hover:-translate-y-2 hover:border-white/30 hover:shadow-[0_45px_130px_-60px_rgba(56,189,248,0.6)]">
             <div className="text-center">
-              <div className="text-2xl font-bold text-slate-900">100%</div>
-              <div className="text-sm text-slate-600">Satisfaction Rate</div>
+              <div className="text-2xl font-bold text-white">100%</div>
+              <div className="text-sm text-slate-300/80">Satisfaction Rate</div>
             </div>
-            <div className="w-px h-8 bg-slate-300"></div>
+            <div className="h-8 w-px bg-white/15" />
             <div className="text-center">
-              <div className="text-2xl font-bold text-slate-900">{formattedRating}</div>
-              <div className="text-sm text-slate-600">Average Rating</div>
+              <div className="text-2xl font-bold text-white">{formattedRating}</div>
+              <div className="text-sm text-slate-300/80">Average Rating</div>
             </div>
           </div>
         </ScrollAnimation>

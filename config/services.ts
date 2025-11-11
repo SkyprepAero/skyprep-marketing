@@ -22,6 +22,13 @@ export const services: Service[] = [
     whatsappMessage: "Hi SkyPrep Aero! I'm interested in joining your Cohorts program. Can you please provide more details?"
   },
   {
+    id: "medical",
+    name: "DGCA Medical Assistance",
+    href: "/services/medical",
+    description: "End-to-end guidance for DGCA Class 1 & Class 2 medical clearances with preferred AMEs.",
+    whatsappMessage: "Hi SkyPrep Aero! I need help with DGCA medical clearances. Can you please guide me?"
+  },
+  {
     id: "computer-number",
     name: "DGCA Computer Number Assistance",
     href: "/services/computer-number",

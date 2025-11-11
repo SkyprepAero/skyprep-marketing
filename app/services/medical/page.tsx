@@ -15,23 +15,41 @@ export default function MedicalPage() {
   const whatsappUrl = `https://wa.me/${whatsappNumber}?text=Hi%20SkyPrep%20Aero!%20I'm%20interested%20in%20DGCA%20Medical%20Appointment%20Assistance.%20Can%20you%20please%20provide%20more%20details?`;
 
   return (
-    <div className="relative">
+    <div className="full-bleed relative bg-slate-950 text-slate-100">
       {/* Hero Section */}
-      <section className="relative py-24 overflow-hidden full-bleed">
-        <AviationBackground className="opacity-60" />
+      <section className="relative py-24 overflow-hidden full-bleed bg-gradient-to-br from-slate-950 via-slate-950/95 to-blue-950/80">
+        <div className="pointer-events-none absolute inset-0">
+          <div className="absolute -top-36 left-0 h-96 w-96 rounded-full bg-sky-500/25 blur-[140px]" />
+          <div className="absolute -bottom-32 right-0 h-[380px] w-[380px] rounded-full bg-emerald-400/18 blur-[160px]" />
+          <div
+            className="absolute inset-0 opacity-45"
+            style={{
+              backgroundImage:
+                "radial-gradient(circle at 15% 20%, rgba(56,189,248,0.35) 0%, transparent 55%), radial-gradient(circle at 82% 82%, rgba(16,185,129,0.22) 0%, transparent 60%), radial-gradient(circle at 50% 50%, rgba(15,23,42,0.9) 0%, transparent 70%)",
+            }}
+          />
+          <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.045)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.04)_1px,transparent_1px)] bg-[size:80px_80px]" />
+        </div>
+        <AviationBackground className="opacity-12" />
         <div className="container-wide relative z-10">
           <ScrollAnimation animationType="fadeInUp" delay={200}>
             <div className="text-center">
-              <h1 className="text-5xl md:text-7xl font-bold text-slate-900 mb-8 leading-tight">
+              <div className="inline-flex items-center gap-3 bg-white/10 backdrop-blur rounded-full px-8 py-3 mb-6 shadow-[0_25px_60px_-40px_rgba(56,189,248,0.45)] border border-white/15">
+                <div className="w-3 h-3 bg-sky-400 rounded-full animate-pulse" />
+                <span className="text-sm font-semibold uppercase tracking-[0.35em] text-slate-100/80">
+                  DGCA Medical Support
+                </span>
+              </div>
+              <h1 className="text-5xl md:text-7xl font-bold text-white mb-8 leading-tight">
                 DGCA Medical
-                <span className="block bg-gradient-to-r from-primary-200 to-primary-300 bg-clip-text text-transparent leading-tight">
+                <span className="block gradient-text-primary leading-tight">
                   Appointment Assistance
                 </span>
               </h1>
-              <p className="text-xl md:text-2xl text-slate-600 max-w-4xl mx-auto leading-relaxed mb-4">
+              <p className="text-xl md:text-2xl text-slate-200/85 max-w-4xl mx-auto leading-relaxed mb-4">
                 Get Your DGCA Medicals Done — Hassle-Free & On Time
               </p>
-              <p className="text-lg md:text-xl text-slate-500 max-w-3xl mx-auto leading-relaxed">
+              <p className="text-lg md:text-xl text-slate-200/80 max-w-3xl mx-auto leading-relaxed">
                 Before you take flight, ensure your health is cleared for the skies. At SkyPrep Aero, we help aspiring and licensed pilots schedule their DGCA Class 2 and Class 1 medical examinations with ease and convenience.
               </p>
             </div>
@@ -41,21 +59,24 @@ export default function MedicalPage() {
 
        {/* Introduction Section */}
        <section className="py-20 full-bleed relative overflow-hidden">
-         <div className="absolute inset-0 bg-gradient-to-br from-blue-50 via-sky-50 to-blue-100">
-           <div className="absolute inset-0 overflow-hidden">
-             <div className="absolute top-20 left-10 w-16 h-16 opacity-10">
-               <svg viewBox="0 0 100 100" className="w-full h-full text-blue-600">
-                 <path d="M50 10 L70 30 L90 35 L75 50 L90 65 L70 70 L50 90 L30 70 L10 65 L25 50 L10 35 L30 30 Z" fill="currentColor"/>
-               </svg>
-             </div>
-           </div>
+         <div className="pointer-events-none absolute inset-0">
+           <div className="absolute inset-0 bg-gradient-to-br from-slate-950 via-slate-900/92 to-blue-950/75" />
+           <div className="absolute top-16 left-8 h-64 w-64 rounded-full bg-sky-500/22 blur-[140px]" />
+           <div className="absolute bottom-10 right-12 h-72 w-72 rounded-full bg-emerald-400/15 blur-[150px]" />
+           <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.028)_1px,transparent_1px)] bg-[size:100px_100px]" />
          </div>
          
          <div className="container-wide relative z-10">
            <ScrollAnimation animationType="fadeInUp" delay={200}>
              <div className="text-center mb-16">
-               <h2 className="text-4xl md:text-5xl font-bold text-slate-800 mb-6">Medical Certification Made Simple</h2>
-               <p className="text-xl text-slate-600 max-w-3xl mx-auto">
+               <div className="inline-flex items-center gap-3 bg-white/10 backdrop-blur rounded-full px-8 py-3 mb-6 shadow-[0_25px_60px_-40px_rgba(56,189,248,0.45)] border border-white/15">
+                 <div className="w-3 h-3 bg-sky-400 rounded-full animate-pulse" />
+                 <span className="text-sm font-semibold uppercase tracking-[0.35em] text-slate-100/80">
+                   Medical Overview
+                 </span>
+               </div>
+               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">Medical Certification Made Simple</h2>
+               <p className="text-xl text-slate-200/80 max-w-3xl mx-auto">
                  Whether you&apos;re just starting with your Student Pilot License (SPL) or progressing toward your Commercial Pilot License (CPL), our team ensures your medical certification process is smooth, transparent, and stress-free.
                </p>
              </div>
@@ -106,8 +127,8 @@ export default function MedicalPage() {
             {/* Step 1: Choose Your Path */}
             <ScrollAnimation animationType="fadeInUp" delay={400}>
               <div className="text-center mb-16">
-                <div className="inline-flex items-center gap-2 bg-blue-600 text-white px-6 py-2 rounded-full text-sm font-semibold mb-8">
-                  <span className="w-6 h-6 bg-white/20 rounded-full flex items-center justify-center">1</span>
+                <div className="inline-flex items-center gap-2 bg-white/10 border border-white/20 text-slate-100 px-6 py-2 rounded-full text-xs font-semibold uppercase tracking-[0.3em] mb-8">
+                  <span className="w-6 h-6 bg-white/15 rounded-full flex items-center justify-center text-sm">1</span>
                   Choose Your Certification Level
                 </div>
                 <h3 className="text-3xl font-bold text-white mb-4">Which medical class do you need?</h3>
@@ -274,10 +295,10 @@ export default function MedicalPage() {
 
             {/* Process Steps */}
             <ScrollAnimation animationType="fadeInUp" delay={800}>
-              <div className="bg-white/5 backdrop-blur-xl rounded-2xl border border-white/10 p-8">
+              <div className="bg-white/[0.06] backdrop-blur-xl rounded-3xl border border-white/12 p-8">
                 <div className="text-center mb-8">
-                  <div className="inline-flex items-center gap-2 bg-green-600 text-white px-6 py-2 rounded-full text-sm font-semibold mb-4">
-                    <span className="w-6 h-6 bg-white/20 rounded-full flex items-center justify-center">2</span>
+                  <div className="inline-flex items-center gap-2 bg-white/10 border border-white/20 text-slate-100 px-6 py-2 rounded-full text-xs font-semibold uppercase tracking-[0.3em] mb-4">
+                    <span className="w-6 h-6 bg-white/15 rounded-full flex items-center justify-center text-sm">2</span>
                     Our Process
                   </div>
                   <h3 className="text-2xl font-bold text-white mb-2">How We Help You</h3>
@@ -324,25 +345,24 @@ export default function MedicalPage() {
 
       {/* Why Choose Us Section */}
       <section className="py-20 full-bleed relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-slate-50 via-blue-50 to-sky-100">
-          <div className="absolute inset-0 overflow-hidden">
-            <div className="absolute top-20 right-10 w-16 h-16 opacity-10">
-              <svg viewBox="0 0 100 100" className="w-full h-full text-blue-600">
-                <path d="M50 10 L70 30 L90 35 L75 50 L90 65 L70 70 L50 90 L30 70 L10 65 L25 50 L10 35 L30 30 Z" fill="currentColor"/>
-              </svg>
-            </div>
-          </div>
+        <div className="pointer-events-none absolute inset-0">
+          <div className="absolute inset-0 bg-gradient-to-br from-slate-950 via-slate-900/94 to-blue-950/75" />
+          <div className="absolute top-16 right-12 h-72 w-72 rounded-full bg-sky-500/20 blur-[140px]" />
+          <div className="absolute bottom-12 left-14 h-80 w-80 rounded-full bg-emerald-400/15 blur-[150px]" />
+          <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.028)_1px,transparent_1px)] bg-[size:90px_90px]" />
         </div>
         
         <div className="container-wide relative z-10">
           <ScrollAnimation animationType="fadeInUp" delay={200}>
             <div className="text-center mb-16">
-              <div className="inline-flex items-center gap-3 bg-white/80 backdrop-blur-sm rounded-full px-8 py-3 mb-6 shadow-lg border border-blue-200/50">
-                <div className="w-3 h-3 bg-blue-500 rounded-full animate-pulse" />
-                <span className="text-blue-800 text-sm font-semibold">Our Advantage</span>
+              <div className="inline-flex items-center gap-3 bg-white/10 backdrop-blur rounded-full px-8 py-3 mb-6 shadow-[0_25px_60px_-40px_rgba(56,189,248,0.45)] border border-white/15">
+                <div className="w-3 h-3 bg-sky-400 rounded-full animate-pulse" />
+                <span className="text-sm font-semibold uppercase tracking-[0.35em] text-slate-100/80">
+                  Our Advantage
+                </span>
               </div>
-              <h2 className="text-4xl md:text-5xl font-bold text-slate-800 mb-6">Why Choose SkyPrep Aero for Your Medical Appointments</h2>
-              <p className="text-xl text-slate-600 max-w-3xl mx-auto">
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">Why Choose SkyPrep Aero for Your Medical Appointments</h2>
+              <p className="text-xl text-slate-200/80 max-w-3xl mx-auto">
                 Comprehensive support throughout your medical certification journey
               </p>
             </div>
@@ -350,68 +370,68 @@ export default function MedicalPage() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             <ScrollAnimation animationType="fadeInUp" delay={400}>
-              <div className="group text-center p-8 bg-white/90 backdrop-blur-xl rounded-2xl shadow-lg border border-blue-200/50 hover:shadow-2xl transition-all duration-500 hover:scale-105 hover:border-blue-300 h-full flex flex-col">
+              <div className="group text-center p-8 bg-white/[0.08] backdrop-blur-xl rounded-3xl shadow-[0_45px_110px_-60px_rgba(15,23,42,1)] border border-white/12 hover:-translate-y-2 hover:border-white/25 hover:shadow-[0_55px_140px_-70px_rgba(56,189,248,0.65)] transition-all duration-500 h-full flex flex-col">
                 <div className="relative">
                   <div className="w-20 h-20 mx-auto mb-6 rounded-2xl bg-gradient-to-br from-blue-500 via-sky-500 to-blue-600 flex items-center justify-center shadow-xl group-hover:scale-110 transition-transform duration-300">
                     <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
                   </div>
-                  <div className="absolute inset-0 w-20 h-20 mx-auto rounded-2xl border-2 border-blue-400/30 animate-pulse" />
+                  <div className="absolute inset-0 w-20 h-20 mx-auto rounded-2xl border-2 border-white/20 animate-pulse" />
                 </div>
-                <h3 className="text-2xl font-bold text-slate-900 mb-4 group-hover:text-blue-700 transition-colors duration-300">End-to-End Guidance</h3>
-                <p className="text-slate-600 text-lg leading-relaxed flex-grow">
+                <h3 className="text-2xl font-bold text-white mb-4">End-to-End Guidance</h3>
+                <p className="text-slate-200/80 text-lg leading-relaxed flex-grow">
                   From registration to final DGCA approval, we guide you every step of the way
                 </p>
               </div>
             </ScrollAnimation>
 
             <ScrollAnimation animationType="fadeInUp" delay={500}>
-              <div className="group text-center p-8 bg-white/90 backdrop-blur-xl rounded-2xl shadow-lg border border-sky-200/50 hover:shadow-2xl transition-all duration-500 hover:scale-105 hover:border-sky-300 h-full flex flex-col">
+              <div className="group text-center p-8 bg-white/[0.08] backdrop-blur-xl rounded-3xl shadow-[0_45px_110px_-60px_rgba(15,23,42,1)] border border-white/12 hover:-translate-y-2 hover:border-white/25 hover:shadow-[0_55px_140px_-70px_rgba(56,189,248,0.65)] transition-all duration-500 h-full flex flex-col">
                 <div className="relative">
                   <div className="w-20 h-20 mx-auto mb-6 rounded-2xl bg-gradient-to-br from-sky-500 via-blue-500 to-sky-600 flex items-center justify-center shadow-xl group-hover:scale-110 transition-transform duration-300">
                     <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
                     </svg>
                   </div>
-                  <div className="absolute inset-0 w-20 h-20 mx-auto rounded-2xl border-2 border-sky-400/30 animate-pulse" />
+                  <div className="absolute inset-0 w-20 h-20 mx-auto rounded-2xl border-2 border-white/20 animate-pulse" />
                 </div>
-                <h3 className="text-2xl font-bold text-slate-900 mb-4 group-hover:text-sky-700 transition-colors duration-300">Verified DGCA Doctors</h3>
-                <p className="text-slate-600 text-lg leading-relaxed flex-grow">
+                <h3 className="text-2xl font-bold text-white mb-4">Verified DGCA Doctors</h3>
+                <p className="text-slate-200/80 text-lg leading-relaxed flex-grow">
                   Only certified and approved examiners authorized by DGCA
                 </p>
               </div>
             </ScrollAnimation>
 
             <ScrollAnimation animationType="fadeInUp" delay={600}>
-              <div className="group text-center p-8 bg-white/90 backdrop-blur-xl rounded-2xl shadow-lg border border-amber-200/50 hover:shadow-2xl transition-all duration-500 hover:scale-105 hover:border-amber-300 h-full flex flex-col">
+              <div className="group text-center p-8 bg-white/[0.08] backdrop-blur-xl rounded-3xl shadow-[0_45px_110px_-60px_rgba(15,23,42,1)] border border-white/12 hover:-translate-y-2 hover:border-white/25 hover:shadow-[0_55px_140px_-70px_rgba(56,189,248,0.65)] transition-all duration-500 h-full flex flex-col">
                 <div className="relative">
                   <div className="w-20 h-20 mx-auto mb-6 rounded-2xl bg-gradient-to-br from-amber-500 via-orange-500 to-amber-600 flex items-center justify-center shadow-xl group-hover:scale-110 transition-transform duration-300">
                     <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
                   </div>
-                  <div className="absolute inset-0 w-20 h-20 mx-auto rounded-2xl border-2 border-amber-400/30 animate-pulse" />
+                  <div className="absolute inset-0 w-20 h-20 mx-auto rounded-2xl border-2 border-white/20 animate-pulse" />
                 </div>
-                <h3 className="text-2xl font-bold text-slate-900 mb-4 group-hover:text-amber-700 transition-colors duration-300">Quick Scheduling</h3>
-                <p className="text-slate-600 text-lg leading-relaxed flex-grow">
+                <h3 className="text-2xl font-bold text-white mb-4">Quick Scheduling</h3>
+                <p className="text-slate-200/80 text-lg leading-relaxed flex-grow">
                   Priority booking and flexible slot options for your convenience
                 </p>
               </div>
             </ScrollAnimation>
 
             <ScrollAnimation animationType="fadeInUp" delay={700}>
-              <div className="group text-center p-8 bg-white/90 backdrop-blur-xl rounded-2xl shadow-lg border border-green-200/50 hover:shadow-2xl transition-all duration-500 hover:scale-105 hover:border-green-300 h-full flex flex-col">
+              <div className="group text-center p-8 bg-white/[0.08] backdrop-blur-xl rounded-3xl shadow-[0_45px_110px_-60px_rgba(15,23,42,1)] border border-white/12 hover:-translate-y-2 hover:border-white/25 hover:shadow-[0_55px_140px_-70px_rgba(56,189,248,0.65)] transition-all duration-500 h-full flex flex-col">
                 <div className="relative">
                   <div className="w-20 h-20 mx-auto mb-6 rounded-2xl bg-gradient-to-br from-green-500 via-emerald-500 to-green-600 flex items-center justify-center shadow-xl group-hover:scale-110 transition-transform duration-300">
                     <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
                     </svg>
                   </div>
-                  <div className="absolute inset-0 w-20 h-20 mx-auto rounded-2xl border-2 border-green-400/30 animate-pulse" />
+                  <div className="absolute inset-0 w-20 h-20 mx-auto rounded-2xl border-2 border-white/20 animate-pulse" />
                 </div>
-                <h3 className="text-2xl font-bold text-slate-900 mb-4 group-hover:text-green-700 transition-colors duration-300">Personalized Support</h3>
-                <p className="text-slate-600 text-lg leading-relaxed flex-grow">
+                <h3 className="text-2xl font-bold text-white mb-4">Personalized Support</h3>
+                <p className="text-slate-200/80 text-lg leading-relaxed flex-grow">
                   We help you choose the best center as per your location and convenience
                 </p>
               </div>

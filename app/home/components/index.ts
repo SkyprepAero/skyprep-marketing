@@ -14,3 +14,4 @@ export { JobOpportunities } from './JobOpportunities';
 export { ScrollAnimation } from './ScrollAnimation';
 export { RequirementCard } from './RequirementCard';
 export { MentorsShowcase } from './MentorsShowcase';
+export { TrainingTracks } from './TrainingTracks';

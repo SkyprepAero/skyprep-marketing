@@ -1,7 +1,6 @@
 "use client";
 
-import { useEffect } from "react";
-import home from "@/content/home.json";
+import Image from "next/image";
 
 interface VideoHeroProps {
   title: string;
@@ -11,56 +10,50 @@ interface VideoHeroProps {
 }
 
 export function VideoHero({ title, description, buttonText, buttonHref }: VideoHeroProps) {
-  const videoId = home.heroVideoId;
-  const videoSrc = `https://www.youtube-nocookie.com/embed/${videoId}?autoplay=1&mute=1&controls=0&playsinline=1&loop=1&playlist=${videoId}&rel=0&modestbranding=1&fs=0&disablekb=1&iv_load_policy=3&enablejsapi=1&vq=hd1080&quality=hd1080&fmt=22`;
-
-  useEffect(() => {
-    const iframe = document.getElementById('hero-video') as HTMLIFrameElement;
-    if (iframe) {
-      const handleLoad = () => {
-        try {
-          iframe.contentWindow?.postMessage('{"event":"command","func":"setPlaybackRate","args":[3]}', '*');
-        } catch (e) {
-          console.log('YouTube API not ready:', e);
-        }
-      };
-      
-      iframe.addEventListener('load', handleLoad);
-      return () => iframe.removeEventListener('load', handleLoad);
-    }
-  }, []);
-
   return (
-    <section className="relative overflow-hidden w-screen h-screen" style={{ marginLeft: 'calc(-50vw + 50%)', marginRight: 'calc(-50vw + 50%)' }}>
-      {/* Video Background */}
-      <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-black/40 z-10" />
-      <iframe
-        id="hero-video"
-        className="absolute inset-0 w-full h-full object-cover"
-        src={videoSrc}
-        title={title}
-        allow="autoplay; encrypted-media; picture-in-picture"
-        allowFullScreen
-        loading="eager"
-        aria-label={`${title} - ${description}`}
-      />
-      
-      {/* Content Overlay */}
-      <div className="absolute inset-0 z-20 flex items-center justify-center">
-        <div className="text-center text-white px-6 max-w-4xl">
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 animate-fade-in-up">
+    <section
+      className="relative w-screen overflow-hidden bg-slate-950"
+      style={{ marginLeft: "calc(-50vw + 50%)", marginRight: "calc(-50vw + 50%)" }}
+    >
+      <div className="absolute inset-0">
+        <Image
+          src="/media/images/background.jpg"
+          alt="SkyPrep cadets preparing for takeoff"
+          fill
+          priority
+          className="object-cover object-center"
+        />
+      </div>
+
+      <div className="absolute inset-0 bg-gradient-to-r from-slate-950/94 via-slate-950/70 to-slate-900/15" />
+      <div className="absolute inset-0 bg-gradient-to-r from-white/12 via-white/6 to-transparent mix-blend-soft-light" />
+
+      <div className="relative z-10 flex min-h-screen w-full flex-col justify-center px-6 py-20 text-white md:px-12 lg:px-20">
+        <div className="max-w-2xl space-y-8 text-left text-white drop-shadow-[0_10px_30px_rgba(0,0,0,0.55)] md:max-w-3xl">
+          <h1 className="text-4xl font-semibold leading-tight text-white md:text-6xl md:leading-[1.05]">
             {title}
           </h1>
-          <p className="text-xl md:text-2xl mb-8 animate-fade-in-up animate-delay-200 max-w-3xl mx-auto">
-            {description}
-          </p>
-          <a 
-            href={buttonHref}
-            className="inline-block px-8 py-4 bg-gradient-to-r from-amber-500 to-amber-600 text-black font-semibold rounded-lg hover:from-amber-600 hover:to-amber-700 transition-all duration-300 hover:scale-105 shadow-lg animate-fade-in-up animate-delay-400"
-            aria-label={`${buttonText} - ${title}`}
-          >
-            {buttonText}
-          </a>
+          <div className="space-y-5 text-base text-slate-100 md:text-lg">
+            <p className="text-slate-100/95">{description}</p>
+            <p className="text-slate-100/90">
+              From foundational ground training to advanced simulator sessions, we guide cadets through
+              every stage of their aviation journey, pairing industry-leading mentors with immersive,
+              outcome-focused learning.
+            </p>
+            <p className="text-slate-100/90">
+              Join a community obsessed with precision, discipline, and sky-high ambition—designed to help
+              you pass DGCA exams, ace airline selections, and step confidently into the cockpit.
+            </p>
+          </div>
+          <div>
+            <a
+              href={buttonHref}
+              className="inline-flex items-center justify-center rounded-full bg-gradient-to-r from-amber-400 via-amber-500 to-amber-600 px-8 py-3 text-sm font-semibold uppercase tracking-[0.35em] text-slate-900 shadow-[0_18px_38px_-26px_rgba(245,158,11,0.45)] transition-all duration-300 hover:scale-[1.03] hover:from-amber-500 hover:via-amber-600 hover:to-amber-700"
+              aria-label={`${buttonText} - ${title}`}
+            >
+              {buttonText}
+            </a>
+          </div>
         </div>
       </div>
     </section>

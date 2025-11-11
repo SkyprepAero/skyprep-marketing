@@ -6,6 +6,7 @@ import {
   MissionVision,
   MentorsShowcase,
   JobOpportunities,
+  TrainingTracks,
 } from "@/app/home/components";
 import { courses } from "@/config/services";
 import { siteConfig } from "@/config/site";
@@ -67,15 +68,16 @@ export default function Home() {
           buttonHref="/enquiry"
         />
 
-              <MissionVision />
+              <TrainingTracks />
               <MentorsShowcase />
               <WhyChooseSkyPrep />
               <DGCARequirements />
               {/* <FlightPlan /> */}
               <JobOpportunities />
+              <MissionVision />
 
       {/* Testimonials (full-bleed, auto-scrolling) */}
-      <section className="full-bleed py-16 md:py-24 bg-gradient-to-br from-amber-50 via-slate-50 to-blue-50 relative overflow-hidden">
+      <section className="full-bleed py-16 md:py-24 bg-gradient-to-br from-slate-950 via-slate-950/92 to-blue-950/70 relative overflow-hidden">
         {/* Enhanced Background Graphics */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           {/* Aircraft silhouettes */}
@@ -175,7 +177,7 @@ export default function Home() {
             <h2 className="text-4xl md:text-6xl font-bold tracking-tight gradient-text-primary mb-6 leading-tight">
 Success Stories
             </h2>
-            <p className="text-xl md:text-2xl text-slate-700 max-w-4xl mx-auto leading-relaxed">
+            <p className="text-xl md:text-2xl text-slate-200/80 max-w-4xl mx-auto leading-relaxed">
               Real outcomes from real aviators.
             </p>
           </div>
