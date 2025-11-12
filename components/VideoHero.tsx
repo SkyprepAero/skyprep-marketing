@@ -7,26 +7,42 @@ interface VideoHeroProps {
   description: string;
   buttonText: string;
   buttonHref: string;
+  sharedBackground?: boolean;
 }
 
-export function VideoHero({ title, description, buttonText, buttonHref }: VideoHeroProps) {
+export function VideoHero({
+  title,
+  description,
+  buttonText,
+  buttonHref,
+  sharedBackground = false,
+}: VideoHeroProps) {
   return (
     <section
-      className="relative w-screen overflow-hidden bg-slate-950"
-      style={{ marginLeft: "calc(-50vw + 50%)", marginRight: "calc(-50vw + 50%)" }}
+      className={`relative overflow-hidden ${
+        sharedBackground ? "w-full bg-transparent" : "w-screen bg-slate-950"
+      }`}
+      style={
+        sharedBackground
+          ? undefined
+          : { marginLeft: "calc(-50vw + 50%)", marginRight: "calc(-50vw + 50%)" }
+      }
     >
-      <div className="absolute inset-0">
-        <Image
-          src="/media/images/background.jpg"
-          alt="SkyPrep cadets preparing for takeoff"
-          fill
-          priority
-          className="object-cover object-center"
-        />
-      </div>
-
-      <div className="absolute inset-0 bg-gradient-to-r from-slate-950/94 via-slate-950/70 to-slate-900/15" />
-      <div className="absolute inset-0 bg-gradient-to-r from-white/12 via-white/6 to-transparent mix-blend-soft-light" />
+      {!sharedBackground && (
+        <>
+          <div className="absolute inset-0">
+            <Image
+              src="/media/images/background.jpg"
+              alt="SkyPrep cadets preparing for takeoff"
+              fill
+              priority
+              className="object-cover object-center"
+            />
+          </div>
+          <div className="absolute inset-0 bg-gradient-to-r from-slate-950/94 via-slate-950/70 to-slate-900/15" />
+          <div className="absolute inset-0 bg-gradient-to-r from-white/12 via-white/6 to-transparent mix-blend-soft-light" />
+        </>
+      )}
 
       <div className="relative z-10 flex min-h-screen w-full flex-col justify-center px-6 py-20 text-white md:px-12 lg:px-20">
         <div className="max-w-2xl space-y-8 text-left text-white drop-shadow-[0_10px_30px_rgba(0,0,0,0.55)] md:max-w-3xl">

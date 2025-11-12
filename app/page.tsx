@@ -61,14 +61,25 @@ export default function Home() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
-        <VideoHero 
-          title="Shaping Aviators With Precision"
-          description="Accelerate your aviation career with DGCA-aligned coaching, live mentorship, and analytics-driven training support."
-          buttonText="Start Your Aviation Journey"
-          buttonHref="/enquiry"
-        />
+      <section
+        className="relative full-bleed overflow-hidden bg-cover bg-center bg-no-repeat bg-fixed"
+        style={{ backgroundImage: "url('/media/images/background.jpg')" }}
+      >
+        <div className="absolute inset-0 bg-gradient-to-r from-slate-950/94 via-slate-950/70 to-slate-900/15" />
+        <div className="absolute inset-0 bg-gradient-to-r from-white/12 via-white/6 to-transparent mix-blend-soft-light" />
+        <div className="absolute inset-0 bg-slate-950/30" />
+        <div className="relative z-10">
+          <VideoHero
+            sharedBackground
+            title="Shaping Aviators With Precision"
+            description="Accelerate your aviation career with DGCA-aligned coaching, live mentorship, and analytics-driven training support."
+            buttonText="Start Your Aviation Journey"
+            buttonHref="/enquiry"
+          />
+          <TrainingTracks sharedBackground />
+        </div>
+      </section>
 
-              <TrainingTracks />
               <MentorsShowcase />
               <WhyChooseSkyPrep />
               <DGCARequirements />
