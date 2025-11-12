@@ -358,87 +358,122 @@ export default function ConversionTrainingPage() {
             </ScrollAnimation>
 
             <ScrollAnimation animationType="fadeInUp" delay={600}>
-              <div className="group text-center p-8 bg-white/90 backdrop-blur-xl rounded-2xl shadow-lg border border-sky-200/50 hover:shadow-2xl transition-all duration-500 hover:scale-105 h-full flex flex-col">
-                <div className="relative">
-                  <div className="w-20 h-20 mx-auto mb-6 rounded-2xl bg-gradient-to-br from-sky-500 to-cyan-500 flex items-center justify-center shadow-xl group-hover:scale-110 transition-transform duration-300">
-                    <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                    </svg>
-                  </div>
-                  <div className="absolute inset-0 w-20 h-20 mx-auto rounded-2xl border-2 border-sky-400/30 animate-pulse" />
+              <div className="group relative overflow-hidden rounded-2xl shadow-lg border border-sky-200/50 hover:shadow-2xl transition-all duration-500 hover:scale-105 h-full flex flex-col">
+                <video
+                  className="absolute inset-0 h-full w-full object-cover"
+                  src="/media/videos/canada.mp4"
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                />
+                <div className="absolute inset-0 bg-slate-900/75 transition-colors duration-300 group-hover:bg-slate-900/55" />
+                <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-slate-900/85 via-slate-900/40 to-transparent pointer-events-none" />
+                <div className="relative z-10 p-8 md:p-10 mt-auto text-left flex flex-col gap-4">
+                  <span className="inline-flex w-max items-center rounded-full bg-white/20 px-4 py-1 text-xs font-semibold uppercase tracking-[0.35em] text-white/90">
+                    TC
+                  </span>
+                  <h3 className="text-2xl md:text-3xl font-bold text-white">Canada (TC)</h3>
+                  <p className="text-slate-100/90 text-base md:text-lg leading-relaxed">
+                    Convert your Canadian flight training and licenses to Indian standards
+                  </p>
                 </div>
-                <h3 className="text-2xl font-bold text-slate-900 mb-4 group-hover:text-sky-700 transition-colors duration-300">Canada (Transport Canada)</h3>
-                <p className="text-slate-600 text-lg leading-relaxed flex-grow">
-                  Convert your Canadian flight training and licenses to Indian standards
-                </p>
               </div>
             </ScrollAnimation>
 
             <ScrollAnimation animationType="fadeInUp" delay={800}>
-              <div className="group text-center p-8 bg-white/90 backdrop-blur-xl rounded-2xl shadow-lg border border-emerald-200/50 hover:shadow-2xl transition-all duration-500 hover:scale-105 h-full flex flex-col">
-                <div className="relative">
-                  <div className="w-20 h-20 mx-auto mb-6 rounded-2xl bg-gradient-to-br from-emerald-500 to-green-500 flex items-center justify-center shadow-xl group-hover:scale-110 transition-transform duration-300">
-                    <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                    </svg>
-                  </div>
-                  <div className="absolute inset-0 w-20 h-20 mx-auto rounded-2xl border-2 border-emerald-400/30 animate-pulse" />
+              <div className="group relative overflow-hidden rounded-2xl shadow-lg border border-emerald-200/50 hover:shadow-2xl transition-all duration-500 hover:scale-105 h-full flex flex-col">
+                <video
+                  className="absolute inset-0 h-full w-full object-cover"
+                  src="/media/videos/southafrica.mp4"
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                />
+                <div className="absolute inset-0 bg-slate-900/75 transition-colors duration-300 group-hover:bg-slate-900/55" />
+                <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-slate-900/85 via-slate-900/40 to-transparent pointer-events-none" />
+                <div className="relative z-10 p-8 md:p-10 mt-auto text-left flex flex-col gap-4">
+                  <span className="inline-flex w-max items-center rounded-full bg-white/20 px-4 py-1 text-xs font-semibold uppercase tracking-[0.35em] text-white/90">
+                    SACAA
+                  </span>
+                  <h3 className="text-2xl md:text-3xl font-bold text-white">South Africa (SACAA)</h3>
+                  <p className="text-slate-100/90 text-base md:text-lg leading-relaxed">
+                    Convert your SACAA licenses and training to DGCA requirements
+                  </p>
                 </div>
-                <h3 className="text-2xl font-bold text-slate-900 mb-4 group-hover:text-emerald-700 transition-colors duration-300">South Africa (SACAA)</h3>
-                <p className="text-slate-600 text-lg leading-relaxed flex-grow">
-                  Convert your SACAA licenses and training to DGCA requirements
-                </p>
               </div>
             </ScrollAnimation>
 
             <ScrollAnimation animationType="fadeInUp" delay={1000}>
-              <div className="group text-center p-8 bg-white/90 backdrop-blur-xl rounded-2xl shadow-lg border border-amber-200/50 hover:shadow-2xl transition-all duration-500 hover:scale-105 h-full flex flex-col">
-                <div className="relative">
-                  <div className="w-20 h-20 mx-auto mb-6 rounded-2xl bg-gradient-to-br from-amber-500 to-orange-500 flex items-center justify-center shadow-xl group-hover:scale-110 transition-transform duration-300">
-                    <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                    </svg>
-                  </div>
-                  <div className="absolute inset-0 w-20 h-20 mx-auto rounded-2xl border-2 border-amber-400/30 animate-pulse" />
+              <div className="group relative overflow-hidden rounded-2xl shadow-lg border border-amber-200/50 hover:shadow-2xl transition-all duration-500 hover:scale-105 h-full flex flex-col">
+                <video
+                  className="absolute inset-0 h-full w-full object-cover"
+                  src="/media/videos/newzealand.mp4"
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                />
+                <div className="absolute inset-0 bg-slate-900/75 transition-colors duration-300 group-hover:bg-slate-900/55" />
+                <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-slate-900/85 via-slate-900/40 to-transparent pointer-events-none" />
+                <div className="relative z-10 p-8 md:p-10 mt-auto text-left flex flex-col gap-4">
+                  <span className="inline-flex w-max items-center rounded-full bg-white/20 px-4 py-1 text-xs font-semibold uppercase tracking-[0.35em] text-white/90">
+                    CAANZ
+                  </span>
+                  <h3 className="text-2xl md:text-3xl font-bold text-white">New Zealand (CAANZ)</h3>
+                  <p className="text-slate-100/90 text-base md:text-lg leading-relaxed">
+                    Convert your CAANZ licenses and training to Indian aviation standards
+                  </p>
                 </div>
-                <h3 className="text-2xl font-bold text-slate-900 mb-4 group-hover:text-amber-700 transition-colors duration-300">New Zealand (CAANZ)</h3>
-                <p className="text-slate-600 text-lg leading-relaxed flex-grow">
-                  Convert your CAANZ licenses and training to Indian aviation standards
-                </p>
               </div>
             </ScrollAnimation>
 
             <ScrollAnimation animationType="fadeInUp" delay={1200}>
-              <div className="group text-center p-8 bg-white/90 backdrop-blur-xl rounded-2xl shadow-lg border border-purple-200/50 hover:shadow-2xl transition-all duration-500 hover:scale-105 h-full flex flex-col">
-                <div className="relative">
-                  <div className="w-20 h-20 mx-auto mb-6 rounded-2xl bg-gradient-to-br from-purple-500 via-pink-500 to-purple-600 flex items-center justify-center shadow-xl group-hover:scale-110 transition-transform duration-300">
-                    <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                    </svg>
-                  </div>
-                  <div className="absolute inset-0 w-20 h-20 mx-auto rounded-2xl border-2 border-purple-400/30 animate-pulse" />
+              <div className="group relative overflow-hidden rounded-2xl shadow-lg border border-purple-200/50 hover:shadow-2xl transition-all duration-500 hover:scale-105 h-full flex flex-col">
+                <video
+                  className="absolute inset-0 h-full w-full object-cover"
+                  src="/media/videos/philippines.mp4"
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                />
+                <div className="absolute inset-0 bg-slate-900/75 transition-colors duration-300 group-hover:bg-slate-900/55" />
+                <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-slate-900/85 via-slate-900/40 to-transparent pointer-events-none" />
+                <div className="relative z-10 p-8 md:p-10 mt-auto text-left flex flex-col gap-4">
+                  <span className="inline-flex w-max items-center rounded-full bg-white/20 px-4 py-1 text-xs font-semibold uppercase tracking-[0.35em] text-white/90">
+                    CAAP
+                  </span>
+                  <h3 className="text-2xl md:text-3xl font-bold text-white">Philippines (CAAP)</h3>
+                  <p className="text-slate-100/90 text-base md:text-lg leading-relaxed">
+                    Convert your CAAP licenses and training to DGCA requirements
+                  </p>
                 </div>
-                <h3 className="text-2xl font-bold text-slate-900 mb-4 group-hover:text-purple-700 transition-colors duration-300">Philippines (CAAP)</h3>
-                <p className="text-slate-600 text-lg leading-relaxed flex-grow">
-                  Convert your CAAP licenses and training to DGCA requirements
-                </p>
               </div>
             </ScrollAnimation>
 
             <ScrollAnimation animationType="fadeInUp" delay={1400}>
-              <div className="group text-center p-8 bg-white/90 backdrop-blur-xl rounded-2xl shadow-lg border border-green-200/50 hover:shadow-2xl transition-all duration-500 hover:scale-105 h-full flex flex-col">
-                <div className="relative">
-                  <div className="w-20 h-20 mx-auto mb-6 rounded-2xl bg-gradient-to-br from-green-500 via-teal-500 to-green-600 flex items-center justify-center shadow-xl group-hover:scale-110 transition-transform duration-300">
-                    <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                    </svg>
-                  </div>
-                  <div className="absolute inset-0 w-20 h-20 mx-auto rounded-2xl border-2 border-green-400/30 animate-pulse" />
+              <div className="group relative overflow-hidden rounded-2xl shadow-lg border border-green-200/50 hover:shadow-2xl transition-all duration-500 hover:scale-105 h-full flex flex-col">
+                <video
+                  className="absolute inset-0 h-full w-full object-cover"
+                  src="/media/videos/australia.mp4"
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                />
+                <div className="absolute inset-0 bg-slate-900/75 transition-colors duration-300 group-hover:bg-slate-900/55" />
+                <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-slate-900/85 via-slate-900/40 to-transparent pointer-events-none" />
+                <div className="relative z-10 p-8 md:p-10 mt-auto text-left flex flex-col gap-4">
+                  <span className="inline-flex w-max items-center rounded-full bg-white/20 px-4 py-1 text-xs font-semibold uppercase tracking-[0.35em] text-white/90">
+                    CASA
+                  </span>
+                  <h3 className="text-2xl md:text-3xl font-bold text-white">Australia (CASA)</h3>
+                  <p className="text-slate-100/90 text-base md:text-lg leading-relaxed">
+                    Convert your CASA licenses and training to Indian aviation standards
+                  </p>
                 </div>
-                <h3 className="text-2xl font-bold text-slate-900 mb-4 group-hover:text-green-700 transition-colors duration-300">Australia (CASA)</h3>
-                <p className="text-slate-600 text-lg leading-relaxed flex-grow">
-                  Convert your CASA licenses and training to Indian aviation standards
-                </p>
               </div>
             </ScrollAnimation>
           </div>
@@ -446,19 +481,26 @@ export default function ConversionTrainingPage() {
       </section>
 
       {/* Call to Action */}
-      <section className="py-20 relative overflow-hidden full-bleed">
-        <AviationBackground className="opacity-40" />
+      <section className="py-20 relative overflow-hidden full-bleed bg-gradient-to-br from-slate-950 via-slate-900 to-blue-950">
+        <div className="pointer-events-none absolute inset-0">
+          <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.04)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.035)_1px,transparent_1px)] bg-[size:90px_90px] opacity-50" />
+          <div className="absolute -top-24 left-20 h-72 w-72 rounded-full bg-sky-500/18 blur-[140px]" />
+          <div className="absolute -bottom-24 right-24 h-80 w-80 rounded-full bg-amber-400/18 blur-[150px]" />
+        </div>
+        <AviationBackground className="opacity-12" />
         <div className="container-wide relative z-10">
           <ScrollAnimation animationType="fadeInUp" delay={200}>
             <div className="text-center">
-              <div className="inline-flex items-center gap-3 bg-white/80 backdrop-blur-sm rounded-full px-8 py-3 mb-6 shadow-lg border border-blue-200/50">
-                <div className="w-3 h-3 bg-blue-500 rounded-full animate-pulse" />
-                <span className="text-blue-800 text-sm font-semibold">Begin Your Conversion</span>
+              <div className="inline-flex items-center gap-3 bg-white/10 backdrop-blur rounded-full px-8 py-3 mb-6 shadow-[0_25px_60px_-40px_rgba(56,189,248,0.45)] border border-white/20">
+                <div className="w-3 h-3 bg-sky-400 rounded-full animate-pulse" />
+                <span className="text-sm font-semibold uppercase tracking-[0.35em] text-white">
+                  Begin Your Conversion
+                </span>
               </div>
-              <h2 className="text-4xl md:text-5xl font-bold text-slate-800 mb-8">
+              <h2 className="text-4xl md:text-5xl font-bold text-white drop-shadow-[0_16px_32px_rgba(15,23,42,0.7)] mb-8">
                 Begin Your Conversion Today
               </h2>
-              <p className="text-xl md:text-2xl text-slate-600 mb-12 max-w-4xl mx-auto leading-relaxed">
+              <p className="text-xl md:text-2xl text-slate-100/90 mb-12 max-w-4xl mx-auto leading-relaxed drop-shadow-[0_12px_30px_rgba(15,23,42,0.6)]">
                 Take your international experience to new heights in India. With SkyPrep Aero, you can complete your conversion flying at reputed DGCA-approved FTOs, with complete guidance from start to finish.
               </p>
               <ScrollAnimation animationType="scaleIn" delay={400}>
@@ -481,7 +523,7 @@ export default function ConversionTrainingPage() {
                     </Link>
                     <Link
                       href="/services/computer-number"
-                      className="group px-12 py-5 rounded-xl font-semibold border-2 border-slate-300 text-slate-700 hover:bg-slate-50 hover:border-blue-300 transition-all duration-300 text-lg hover:scale-105"
+                      className="group px-12 py-5 rounded-xl font-semibold border-2 border-white/25 text-white hover:bg-white/10 hover:border-sky-300/70 transition-all duration-300 text-lg hover:scale-105"
                     >
                       <span className="flex items-center gap-3">
                         Explore Computer Number
