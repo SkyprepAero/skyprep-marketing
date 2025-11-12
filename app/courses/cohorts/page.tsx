@@ -15,22 +15,37 @@ export default function CohortsPage() {
   return (
     <div className="relative bg-slate-950 text-slate-100">
       {/* Hero Section */}
-      <section className="relative py-28 overflow-hidden full-bleed bg-gradient-to-b from-slate-950 via-slate-950 to-blue-950">
-        <AviationBackground className="opacity-30 mix-blend-screen" />
+      <section className="relative py-28 overflow-hidden full-bleed bg-slate-950">
+        <div className="pointer-events-none absolute inset-0">
+          <div
+            className="absolute inset-0"
+            style={{
+              backgroundImage: "url('/media/images/cohorts.jpg')",
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+              filter: "grayscale(15%)",
+            }}
+          />
+          <div className="absolute inset-0 bg-gradient-to-br from-slate-950/80 via-slate-950/75 to-blue-950/80" />
+          <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.045)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.04)_1px,transparent_1px)] bg-[size:80px_80px] opacity-40" />
+        </div>
+        <AviationBackground className="opacity-25 mix-blend-screen" />
         <div className="container-wide relative z-10">
           <ScrollAnimation animationType="fadeInUp" delay={200}>
             <div className="text-center">
-              <div className="inline-flex items-center gap-3 bg-amber-500/15 backdrop-blur-sm rounded-full px-8 py-3 mb-6 shadow-lg border border-amber-500/40">
-                <div className="w-3 h-3 bg-amber-400 rounded-full animate-pulse" />
-                <span className="text-amber-200 text-sm font-semibold tracking-wide uppercase">Group Learning Programs</span>
+              <div className="inline-flex items-center gap-3 bg-black/55 backdrop-blur rounded-full px-8 py-3 mb-6 shadow-[0_25px_60px_-38px_rgba(15,23,42,0.8)] border border-amber-200/60">
+                <div className="w-3 h-3 bg-amber-200 rounded-full animate-pulse" />
+                <span className="text-amber-50 text-sm font-semibold tracking-[0.35em] uppercase">
+                  Group Learning Programs
+                </span>
               </div>
-              <h1 className="text-5xl md:text-7xl font-bold text-slate-100 mb-8 tracking-tight leading-none">
+              <h1 className="text-5xl md:text-7xl font-bold text-white drop-shadow-[0_20px_36px_rgba(15,23,42,0.75)] mb-8 tracking-tight leading-none">
                 Aviation{" "}
                 <span className="bg-gradient-to-r from-amber-400 via-amber-300 to-slate-100 bg-clip-text text-transparent">
                   Cohorts
                 </span>
               </h1>
-              <p className="text-lg md:text-2xl text-slate-300/90 max-w-4xl mx-auto leading-relaxed">
+              <p className="text-lg md:text-2xl text-white max-w-4xl mx-auto leading-relaxed drop-shadow-[0_12px_32px_rgba(15,23,42,0.65)]">
                 Join our comprehensive 4-month cohort program designed for collaborative learning, peer support, 
                 and effective DGCA exam preparation. Master key aviation subjects alongside fellow aviators.
               </p>

@@ -15,39 +15,48 @@ export default function ConversionTrainingPage() {
   return (
     <div className="full-bleed relative bg-slate-950 text-slate-100">
       {/* Hero Section */}
-      <section className="relative py-24 overflow-hidden full-bleed bg-gradient-to-br from-slate-950 via-slate-950/95 to-blue-950/80">
+      <section className="relative py-24 overflow-hidden full-bleed bg-slate-950">
         <div className="pointer-events-none absolute inset-0">
-          <div className="absolute -top-36 left-0 h-96 w-96 rounded-full bg-sky-500/25 blur-[140px]" />
-          <div className="absolute -bottom-32 right-0 h-[380px] w-[380px] rounded-full bg-emerald-400/18 blur-[160px]" />
           <div
-            className="absolute inset-0 opacity-45"
+            className="absolute inset-0"
             style={{
-              backgroundImage:
-                "radial-gradient(circle at 16% 20%, rgba(56,189,248,0.35) 0%, transparent 55%), radial-gradient(circle at 80% 82%, rgba(16,185,129,0.22) 0%, transparent 60%), radial-gradient(circle at 50% 50%, rgba(15,23,42,0.9) 0%, transparent 70%)",
+              backgroundImage: "url('/media/images/conversion.jpg')",
+              backgroundSize: "cover",
+              backgroundPosition: "bottom center",
+              filter: "grayscale(12%)",
             }}
           />
-          <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.045)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.04)_1px,transparent_1px)] bg-[size:80px_80px]" />
+          <div className="absolute inset-0 bg-gradient-to-br from-slate-950/85 via-slate-950/75 to-blue-950/80" />
+          <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.045)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.04)_1px,transparent_1px)] bg-[size:80px_80px] opacity-35" />
+          <div className="absolute -top-36 left-0 h-96 w-96 rounded-full bg-sky-500/25 blur-[140px]" />
+          <div className="absolute -bottom-32 right-0 h-[380px] w-[380px] rounded-full bg-emerald-400/18 blur-[160px]" />
         </div>
         <AviationBackground className="opacity-12" />
         <div className="container-wide relative z-10">
           <ScrollAnimation animationType="fadeInUp" delay={200}>
             <div className="text-center">
-              <div className="inline-flex items-center gap-3 bg-white/10 backdrop-blur rounded-full px-8 py-3 mb-6 shadow-[0_25px_60px_-40px_rgba(56,189,248,0.45)] border border-white/15">
-                <div className="w-3 h-3 bg-sky-400 rounded-full animate-pulse" />
-                <span className="text-sm font-semibold uppercase tracking-[0.35em] text-slate-100/80">
+              <div className="inline-flex items-center gap-3 bg-black/45 backdrop-blur rounded-full px-8 py-3 mb-6 shadow-[0_25px_60px_-38px_rgba(15,23,42,0.8)] border border-white/25">
+                <div className="w-3 h-3 bg-sky-300 rounded-full animate-pulse" />
+                <span className="text-sm font-semibold uppercase tracking-[0.35em] text-white">
                   Conversion Training
                 </span>
               </div>
-              <h1 className="text-6xl md:text-7xl font-bold text-white mb-8 leading-tight">
+              <h1 className="text-6xl md:text-7xl font-bold text-white drop-shadow-[0_18px_34px_rgba(15,23,42,0.7)] mb-8 leading-tight">
                 Conversion Flying
-                <span className="block gradient-text-primary leading-tight">
-                  in India
+                <span
+                  className="block leading-tight text-transparent bg-clip-text"
+                  style={{
+                    backgroundImage:
+                      "linear-gradient(180deg, #FF9933 0%, #FF9933 45%, #FFFFFF 45%, #FFFFFF 60%, #138808 62%, #138808 100%)",
+                  }}
+                >
+                   INDIA
                 </span>
               </h1>
-              <p className="text-xl md:text-2xl text-slate-200/85 max-w-4xl mx-auto leading-relaxed">
+              <p className="text-xl md:text-2xl text-white max-w-4xl mx-auto leading-relaxed drop-shadow-[0_12px_30px_rgba(15,23,42,0.65)]">
                 Convert Your Foreign Flight Hours Seamlessly
               </p>
-              <p className="text-lg md:text-xl text-slate-200/80 max-w-3xl mx-auto leading-relaxed mt-4">
+              <p className="text-lg md:text-xl text-white/95 max-w-3xl mx-auto leading-relaxed mt-4 drop-shadow-[0_10px_26px_rgba(15,23,42,0.6)]">
                 Trained abroad? Now bring your flying career home. At SkyPrep Aero, we assist pilots who have completed their flight training in USA, Canada, South Africa, New Zealand, the Philippines, or Australia to convert their foreign flying experience into DGCA-approved Indian licenses.
               </p>
             </div>
@@ -325,19 +334,26 @@ export default function ConversionTrainingPage() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             <ScrollAnimation animationType="fadeInUp" delay={400}>
-              <div className="group text-center p-8 bg-white/[0.08] backdrop-blur-xl rounded-3xl shadow-[0_45px_110px_-60px_rgba(15,23,42,1)] border border-white/12 hover:-translate-y-2 hover:border-white/25 hover:shadow-[0_55px_140px_-70px_rgba(56,189,248,0.65)] transition-all duration-500 h-full flex flex-col">
-                <div className="relative">
-                  <div className="w-20 h-20 mx-auto mb-6 rounded-2xl bg-gradient-to-br from-blue-500 to-sky-500 flex items-center justify-center shadow-xl group-hover:scale-110 transition-transform duration-300">
-                    <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                    </svg>
-                  </div>
-                  <div className="absolute inset-0 w-20 h-20 mx-auto rounded-2xl border-2 border-white/20 animate-pulse" />
+              <div className="group relative overflow-hidden rounded-2xl shadow-lg border border-sky-200/50 hover:shadow-2xl transition-all duration-500 hover:scale-105 h-full flex flex-col">
+                <video
+                  className="absolute inset-0 h-full w-full object-cover"
+                  src="/media/videos/usa.mp4"
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                />
+                <div className="absolute inset-0 bg-slate-900/75 transition-colors duration-300 group-hover:bg-slate-900/55" />
+                <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-slate-900/85 via-slate-900/40 to-transparent pointer-events-none" />
+                <div className="relative z-10 p-8 md:p-10 mt-auto text-left flex flex-col gap-4">
+                  <span className="inline-flex w-max items-center rounded-full bg-white/20 px-4 py-1 text-xs font-semibold uppercase tracking-[0.35em] text-white/90">
+                    FAA
+                  </span>
+                  <h3 className="text-2xl font-bold text-white md:text-3xl">United States (FAA)</h3>
+                  <p className="text-slate-100/90 text-base md:text-lg leading-relaxed">
+                    Convert your FAA licenses and training hours to DGCA standards
+                  </p>
                 </div>
-                <h3 className="text-2xl font-bold text-white mb-4">United States (FAA)</h3>
-                <p className="text-slate-200/80 text-lg leading-relaxed flex-grow">
-                  Convert your FAA licenses and training hours to DGCA standards
-                </p>
               </div>
             </ScrollAnimation>
 

@@ -17,6 +17,15 @@ export default function AboutPage() {
       {/* Hero Section */}
       <section className="relative py-24 overflow-hidden full-bleed bg-gradient-to-br from-slate-950 via-slate-950/95 to-blue-950/80">
         <div className="pointer-events-none absolute inset-0">
+          <div
+            className="absolute inset-0"
+            style={{
+              backgroundImage: "url('/media/images/engine.jpg')",
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+              opacity: 0.4,
+            }}
+          />
           <div className="absolute -top-40 left-0 h-96 w-96 rounded-full bg-sky-500/25 blur-[140px]" />
           <div className="absolute -bottom-32 right-0 h-[380px] w-[380px] rounded-full bg-amber-400/15 blur-[160px]" />
           <div
@@ -32,19 +41,19 @@ export default function AboutPage() {
         <div className="container-wide relative z-10">
           <ScrollAnimation animationType="fadeInUp" delay={200}>
             <div className="text-center">
-              <div className="inline-flex items-center gap-3 bg-white/10 backdrop-blur rounded-full px-8 py-3 mb-6 shadow-[0_25px_60px_-40px_rgba(56,189,248,0.45)] border border-white/15">
+              <div className="inline-flex items-center gap-3 bg-black/30 backdrop-blur rounded-full px-8 py-3 mb-6 shadow-[0_25px_60px_-40px_rgba(56,189,248,0.45)] border border-white/20">
                 <div className="w-3 h-3 bg-sky-400 rounded-full animate-pulse" />
-                <span className="text-sm font-semibold uppercase tracking-[0.35em] text-slate-100/80">
+                <span className="text-sm font-semibold uppercase tracking-[0.35em] text-white/90">
                   About SkyPrep Aero
                 </span>
               </div>
-              <h1 className="text-5xl md:text-7xl font-bold text-white mb-8 leading-tight">
+              <h1 className="text-5xl md:text-7xl font-bold text-white drop-shadow-[0_10px_25px_rgba(15,23,42,0.6)] mb-8 leading-tight">
                 Soaring to New Heights in
                 <span className="block gradient-text-primary">
                   Aviation Excellence
                 </span>
               </h1>
-              <p className="text-lg md:text-2xl text-slate-200/85 max-w-4xl mx-auto leading-relaxed">
+              <p className="text-lg md:text-2xl text-slate-100/95 max-w-4xl mx-auto leading-relaxed drop-shadow-[0_6px_18px_rgba(15,23,42,0.65)]">
                 At SkyPrep, we believe every pilot deserves access to world-class training,
                 expert mentorship, and the tools needed to achieve their aviation dreams.
                 Our mission is to elevate the aviation industry through innovative coaching and comprehensive education.

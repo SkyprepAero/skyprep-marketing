@@ -15,39 +15,42 @@ export default function ElogbookPage() {
   return (
     <div className="full-bleed relative bg-slate-950 text-slate-100">
       {/* Hero Section */}
-      <section className="relative py-24 overflow-hidden full-bleed bg-gradient-to-br from-slate-950 via-slate-950/95 to-blue-950/80">
+      <section className="relative py-24 overflow-hidden full-bleed bg-slate-950">
         <div className="pointer-events-none absolute inset-0">
-          <div className="absolute -top-36 left-0 h-96 w-96 rounded-full bg-sky-500/25 blur-[140px]" />
-          <div className="absolute -bottom-32 right-0 h-[380px] w-[380px] rounded-full bg-emerald-400/18 blur-[160px]" />
           <div
-            className="absolute inset-0 opacity-45"
+            className="absolute inset-0"
             style={{
-              backgroundImage:
-                "radial-gradient(circle at 16% 20%, rgba(56,189,248,0.35) 0%, transparent 55%), radial-gradient(circle at 80% 82%, rgba(16,185,129,0.22) 0%, transparent 60%), radial-gradient(circle at 50% 50%, rgba(15,23,42,0.9) 0%, transparent 70%)",
+              backgroundImage: "url('/media/images/logbook.jpg')",
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+              filter: "grayscale(10%)",
             }}
           />
-          <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.045)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.04)_1px,transparent_1px)] bg-[size:80px_80px]" />
+          <div className="absolute inset-0 bg-gradient-to-br from-slate-950/85 via-slate-950/75 to-blue-950/80" />
+          <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.045)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.04)_1px,transparent_1px)] bg-[size:80px_80px] opacity-35" />
+          <div className="absolute -top-36 left-0 h-96 w-96 rounded-full bg-sky-500/25 blur-[140px]" />
+          <div className="absolute -bottom-32 right-0 h-[380px] w-[380px] rounded-full bg-emerald-400/18 blur-[160px]" />
         </div>
         <AviationBackground className="opacity-12" />
         <div className="container-wide relative z-10">
           <ScrollAnimation animationType="fadeInUp" delay={200}>
             <div className="text-center">
-              <div className="inline-flex items-center gap-3 bg-white/10 backdrop-blur rounded-full px-8 py-3 mb-6 shadow-[0_25px_60px_-40px_rgba(56,189,248,0.45)] border border-white/15">
-                <div className="w-3 h-3 bg-sky-400 rounded-full animate-pulse" />
-                <span className="text-sm font-semibold uppercase tracking-[0.35em] text-slate-100/80">
+              <div className="inline-flex items-center gap-3 bg-black/45 backdrop-blur rounded-full px-8 py-3 mb-6 shadow-[0_25px_60px_-38px_rgba(15,23,42,0.8)] border border-white/25">
+                <div className="w-3 h-3 bg-sky-300 rounded-full animate-pulse" />
+                <span className="text-sm font-semibold uppercase tracking-[0.35em] text-white">
                   eLogbook Filing Assistance
                 </span>
               </div>
-              <h1 className="text-6xl md:text-7xl font-bold text-white mb-8 leading-tight">
+              <h1 className="text-6xl md:text-7xl font-bold text-white drop-shadow-[0_18px_34px_rgba(15,23,42,0.7)] mb-8 leading-tight">
                 eLogbook Filing
                 <span className="block gradient-text-primary leading-tight">
                   Assistance
                 </span>
               </h1>
-              <p className="text-xl md:text-2xl text-slate-200/85 max-w-4xl mx-auto leading-relaxed">
+              <p className="text-xl md:text-2xl text-white max-w-4xl mx-auto leading-relaxed drop-shadow-[0_12px_30px_rgba(15,23,42,0.65)]">
                 Simplify Your Flight Logging — The Smart Way
               </p>
-              <p className="text-lg md:text-xl text-slate-200/80 max-w-3xl mx-auto leading-relaxed mt-4">
+              <p className="text-lg md:text-xl text-white/95 max-w-3xl mx-auto leading-relaxed mt-4 drop-shadow-[0_10px_26px_rgba(15,23,42,0.6)]">
                 Managing your flight records is just as important as flying itself. At SkyPrep Aero, we provide complete assistance for eLogbook filing and management on the DGCA portal.
               </p>
             </div>
