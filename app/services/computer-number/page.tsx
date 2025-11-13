@@ -14,25 +14,18 @@ export const metadata: Metadata = buildPageMetadata({
 export default function ComputerNumberPage() {
   return (
     <div className="full-bleed relative bg-slate-950 text-slate-100">
-      {/* Hero Section */}
-      <section className="relative py-24 overflow-hidden full-bleed bg-slate-950">
-        <div className="pointer-events-none absolute inset-0">
-          <div
-            className="absolute inset-0"
-            style={{
-              backgroundImage: "url('/media/images/comp number.jpg')",
-              backgroundSize: "cover",
-              backgroundPosition: "center",
-              filter: "grayscale(10%)",
-            }}
-          />
-          <div className="absolute inset-0 bg-gradient-to-br from-slate-950/85 via-slate-950/75 to-blue-950/80" />
-          <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.045)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.04)_1px,transparent_1px)] bg-[size:80px_80px] opacity-35" />
-          <div className="absolute -top-36 left-0 h-96 w-96 rounded-full bg-sky-500/25 blur-[140px]" />
+      {/* Hero + Intro Shared Background */}
+      <section
+        className="relative full-bleed overflow-hidden bg-fixed bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: "url('/media/images/comp number.jpg')" }}
+      >
+        <div className="absolute inset-0 bg-gradient-to-br from-slate-950/85 via-slate-950/72 to-blue-950/78" />
+        <div className="absolute inset-0 bg-slate-950/20" />
+        <div className="absolute -top-36 left-0 h-96 w-96 rounded-full bg-sky-500/20 blur-[140px]" />
           <div className="absolute -bottom-32 right-0 h-[380px] w-[380px] rounded-full bg-emerald-400/18 blur-[160px]" />
-        </div>
         <AviationBackground className="opacity-12" />
-        <div className="container-wide relative z-10">
+
+        <div className="container-wide relative z-10 py-24">
           <ScrollAnimation animationType="fadeInUp" delay={200}>
             <div className="text-center">
               <div className="inline-flex items-center gap-3 bg-black/45 backdrop-blur rounded-full px-8 py-3 mb-6 shadow-[0_25px_60px_-38px_rgba(15,23,42,0.8)] border border-white/25">
@@ -55,20 +48,13 @@ export default function ComputerNumberPage() {
             </div>
           </ScrollAnimation>
         </div>
-      </section>
 
       {/* Introduction Section */}
-      <section className="py-20 full-bleed relative overflow-hidden">
-        <div className="pointer-events-none absolute inset-0">
-          <div className="absolute inset-0 bg-gradient-to-br from-slate-950 via-slate-900/94 to-blue-950/75" />
-          <div className="absolute top-16 left-10 h-72 w-72 rounded-full bg-sky-500/22 blur-[140px]" />
-          <div className="absolute bottom-12 right-12 h-80 w-80 rounded-full bg-emerald-400/15 blur-[150px]" />
-          <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.028)_1px,transparent_1px)] bg-[size:100px_100px]" />
-        </div>
-        
-        <div className="container-wide relative z-10">
+        <section className="relative z-10 py-20">
+          <div className="container-wide">
+            <div className="rounded-3xl border border-white/12 bg-slate-950/70 px-6 py-16 backdrop-blur-xl shadow-[0_45px_120px_-60px_rgba(15,23,42,0.85)] md:px-14">
           <ScrollAnimation animationType="fadeInUp" delay={200}>
-            <div className="text-center mb-16">
+                <div className="text-center">
               <div className="inline-flex items-center gap-3 bg-white/10 backdrop-blur rounded-full px-8 py-3 mb-6 shadow-[0_25px_60px_-40px_rgba(56,189,248,0.45)] border border-white/15">
                 <div className="w-3 h-3 bg-sky-400 rounded-full animate-pulse" />
                 <span className="text-sm font-semibold uppercase tracking-[0.35em] text-slate-100/80">
@@ -76,13 +62,15 @@ export default function ComputerNumberPage() {
                 </span>
               </div>
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">Your First Step to Aviation Success</h2>
-              <p className="text-xl text-slate-200/80 max-w-3xl mx-auto">
+                  <p className="text-xl text-slate-200/85 max-w-3xl mx-auto">
                 The process, which involves meticulous documentation and strict compliance with DGCA regulations, 
                 can often be complex and time-consuming. We simplify this journey for you.
               </p>
             </div>
           </ScrollAnimation>
         </div>
+          </div>
+        </section>
       </section>
 
       {/* Services Section */}

@@ -14,23 +14,18 @@ export const metadata: Metadata = buildPageMetadata({
 export default function CohortsPage() {
   return (
     <div className="relative bg-slate-950 text-slate-100">
-      {/* Hero Section */}
-      <section className="relative py-28 overflow-hidden full-bleed bg-slate-950">
-        <div className="pointer-events-none absolute inset-0">
-          <div
-            className="absolute inset-0"
-            style={{
-              backgroundImage: "url('/media/images/cohorts.jpg')",
-              backgroundSize: "cover",
-              backgroundPosition: "center",
-              filter: "grayscale(15%)",
-            }}
-          />
-          <div className="absolute inset-0 bg-gradient-to-br from-slate-950/80 via-slate-950/75 to-blue-950/80" />
-          <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.045)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.04)_1px,transparent_1px)] bg-[size:80px_80px] opacity-40" />
-        </div>
-        <AviationBackground className="opacity-25 mix-blend-screen" />
-        <div className="container-wide relative z-10">
+      {/* Hero + Benefits Shared Background */}
+      <section
+        className="relative full-bleed overflow-hidden bg-fixed bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: "url('/media/images/cohorts.jpg')" }}
+      >
+        <div className="absolute inset-0 bg-gradient-to-br from-slate-950/82 via-slate-950/72 to-blue-950/78" />
+        <div className="absolute inset-0 bg-slate-950/22" />
+        <div className="absolute -top-36 left-0 h-96 w-96 rounded-full bg-sky-500/20 blur-[140px]" />
+        <div className="absolute -bottom-32 right-0 h-[380px] w-[380px] rounded-full bg-emerald-400/18 blur-[160px]" />
+        <AviationBackground className="opacity-18 mix-blend-screen" />
+
+        <div className="container-wide relative z-10 py-28">
           <ScrollAnimation animationType="fadeInUp" delay={200}>
             <div className="text-center">
               <div className="inline-flex items-center gap-3 bg-black/55 backdrop-blur rounded-full px-8 py-3 mb-6 shadow-[0_25px_60px_-38px_rgba(15,23,42,0.8)] border border-amber-200/60">
@@ -52,32 +47,19 @@ export default function CohortsPage() {
             </div>
           </ScrollAnimation>
         </div>
-      </section>
 
       {/* Benefits Section */}
-      <section className="py-24 full-bleed relative overflow-hidden bg-gradient-to-br from-slate-950 via-slate-900 to-blue-950">
-        <div className="absolute inset-0 overflow-hidden opacity-40">
-          <div className="absolute top-20 left-10 w-24 h-24">
-            <svg viewBox="0 0 100 100" className="w-full h-full text-amber-400/30">
-              <path d="M50 10 L70 30 L90 35 L75 50 L90 65 L70 70 L50 90 L30 70 L10 65 L25 50 L10 35 L30 30 Z" fill="currentColor"/>
-            </svg>
-          </div>
-          <div className="absolute top-32 right-16 w-28 h-28">
-            <svg viewBox="0 0 100 100" className="w-full h-full text-blue-400/25">
-              <path d="M50 15 L65 35 L85 40 L70 55 L85 70 L65 75 L50 85 L35 75 L15 70 L30 55 L15 40 L35 35 Z" fill="currentColor"/>
-            </svg>
-          </div>
-        </div>
-
-        <div className="container-wide relative z-10">
+        <section className="relative z-10 py-24">
+          <div className="container-wide">
+            <div className="rounded-3xl border border-white/12 bg-slate-950/70 px-6 py-16 backdrop-blur-xl shadow-[0_45px_120px_-60px_rgba(15,23,42,0.85)] md:px-14">
           <ScrollAnimation animationType="fadeInUp" delay={200}>
             <div className="text-center mb-16">
               <div className="inline-flex items-center gap-3 bg-blue-500/10 backdrop-blur-sm rounded-full px-8 py-3 mb-6 shadow-lg border border-blue-400/40">
                 <div className="w-3 h-3 bg-blue-400 rounded-full animate-pulse" />
                 <span className="text-blue-200 text-sm font-semibold tracking-wide uppercase">Benefits</span>
               </div>
-              <h2 className="text-4xl md:text-5xl font-bold text-slate-100 mb-6 tracking-tight">Why Choose Cohort Learning?</h2>
-              <p className="text-lg md:text-xl text-slate-300/90 max-w-3xl mx-auto">
+                  <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 tracking-tight">Why Choose Cohort Learning?</h2>
+                  <p className="text-lg md:text-xl text-slate-200/85 max-w-3xl mx-auto">
                 Collaborative learning that accelerates your aviation journey
               </p>
             </div>
@@ -177,6 +159,8 @@ export default function CohortsPage() {
             </div>
           </ScrollAnimation>
         </div>
+          </div>
+        </section>
       </section>
 
       {/* Program Overview */}

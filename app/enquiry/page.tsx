@@ -89,9 +89,13 @@ export default function EnquiryPage() {
   return (
     <div className="full-bleed relative bg-slate-950 text-slate-100 overflow-x-hidden">
       {/* Hero */}
-      <section className="relative full-bleed overflow-hidden py-24 md:py-32">
+      <section
+        className="relative full-bleed overflow-hidden py-24 md:py-32 bg-fixed bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: "url('/media/images/enquiry.jpg')" }}
+      >
         <div className="pointer-events-none absolute inset-0">
-          <div className="absolute inset-0 bg-gradient-to-br from-slate-950 via-slate-950/95 to-blue-950/75" />
+          <div className="absolute inset-0 bg-gradient-to-br from-slate-950/88 via-slate-950/75 to-blue-950/78" />
+          <div className="absolute inset-0 bg-slate-950/25" />
           <div className="absolute -top-32 left-0 h-[420px] w-[420px] rounded-full bg-sky-500/25 blur-[160px]" />
           <div className="absolute -bottom-36 right-0 h-[420px] w-[420px] rounded-full bg-emerald-400/18 blur-[170px]" />
           <div
@@ -101,7 +105,6 @@ export default function EnquiryPage() {
                 "radial-gradient(circle at 18% 22%, rgba(56,189,248,0.32) 0%, transparent 55%), radial-gradient(circle at 82% 78%, rgba(16,185,129,0.24) 0%, transparent 60%), radial-gradient(circle at 50% 50%, rgba(15,23,42,0.9) 0%, transparent 70%)",
             }}
           />
-          <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.04)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.035)_1px,transparent_1px)] bg-[size:90px_90px]" />
         </div>
         <AviationBackground className="opacity-12" />
         <div className="container-wide relative z-10">
@@ -329,14 +332,14 @@ export default function EnquiryPage() {
                         <select
                           id="enquiry-goal"
                           name="goal"
-                          defaultValue="CPL / IR completion"
+                          defaultValue="CPL Ground Classes"
                           className="w-full appearance-none rounded-2xl border border-white/15 bg-white/5 px-4 py-3.5 pr-12 text-slate-100 transition-all duration-200 focus:border-sky-500 focus:outline-none focus:ring-4 focus:ring-sky-500/20"
                         >
-                          <option>CPL / IR completion</option>
-                          <option>DGCA exam readiness</option>
-                          <option>Airline selection prep</option>
-                          <option>Hour building strategy</option>
-                          <option>International license conversion</option>
+                          <option>CPL Ground Classes </option>
+                          <option>Medical Class I/ Class II</option>
+                          <option>ElogBook Filling</option>
+                          <option>Conversion Training</option>
+                          <option>Computer Number</option>
                           <option>Other (describe below)</option>
                         </select>
                         <svg

@@ -14,61 +14,41 @@ export const metadata: Metadata = buildPageMetadata({
 export default function OneToOneCoachingPage() {
   return (
     <div className="full-bleed relative bg-slate-950 text-slate-100">
-      {/* Hero Section */}
-      <section className="relative py-24 overflow-hidden full-bleed bg-gradient-to-br from-slate-950 via-slate-950/95 to-blue-950/80">
-        <div className="pointer-events-none absolute inset-0">
-          <div
-            className="absolute inset-0"
-            style={{
-              backgroundImage: "url('/media/images/focusone.jpg')",
-              backgroundSize: "cover",
-              backgroundPosition: "center",
-              opacity: 0.45,
-            }}
-          />
-          <div className="absolute -top-36 left-0 h-96 w-96 rounded-full bg-sky-500/25 blur-[140px]" />
+      {/* Hero + Benefits Shared Background */}
+      <section
+        className="relative full-bleed overflow-hidden bg-fixed bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: "url('/media/images/focusone.jpg')" }}
+      >
+        <div className="absolute inset-0 bg-gradient-to-br from-slate-950/85 via-slate-950/72 to-blue-950/78" />
+        <div className="absolute inset-0 bg-slate-950/20" />
+        <div className="absolute -top-36 left-0 h-96 w-96 rounded-full bg-sky-500/20 blur-[140px]" />
           <div className="absolute -bottom-32 right-0 h-[380px] w-[380px] rounded-full bg-emerald-400/18 blur-[160px]" />
-          <div
-            className="absolute inset-0 opacity-45"
-            style={{
-              backgroundImage:
-                "radial-gradient(circle at 14% 18%, rgba(56,189,248,0.35) 0%, transparent 55%), radial-gradient(circle at 78% 82%, rgba(16,185,129,0.22) 0%, transparent 60%), radial-gradient(circle at 50% 50%, rgba(15,23,42,0.9) 0%, transparent 70%)",
-            }}
-          />
-          <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.045)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.04)_1px,transparent_1px)] bg-[size:80px_80px]" />
-        </div>
         <AviationBackground className="opacity-12" />
-        <div className="container-wide relative z-10">
+
+        <div className="container-wide relative z-10 py-24">
           <ScrollAnimation animationType="fadeInUp" delay={200}>
             <div className="text-center">
-              <div className="inline-flex items-center gap-3 bg-black/45 backdrop-blur rounded-full px-8 py-3 mb-6 shadow-[0_25px_60px_-40px_rgba(15,23,42,0.65)] border border-white/30">
+              <div className="inline-flex items-center gap-3 bg-black/45 backdrop-blur rounded-full px-8 py-3 mb-6 shadow-[0_25px_60px_-38px_rgba(15,23,42,0.8)] border border-white/30">
                 <div className="w-3 h-3 bg-sky-400 rounded-full animate-pulse" />
                 <span className="text-sm font-semibold uppercase tracking-[0.35em] text-white">
                   FocusONE Program
                 </span>
               </div>
-              <h1 className="text-5xl md:text-7xl font-bold text-white drop-shadow-[0_16px_32px_rgba(15,23,42,0.7)] mb-8 leading-tight">
+              <h1 className="text-5xl md:text-7xl font-bold text-white drop-shadow-[0_18px_34px_rgba(15,23,42,0.7)] mb-8 leading-tight">
                 FocusONE
                 <span className="block gradient-text-primary leading-tight">Mentorship Program</span>
               </h1>
-              <p className="text-lg md:text-2xl text-white max-w-4xl mx-auto leading-relaxed drop-shadow-[0_10px_24px_rgba(15,23,42,0.65)]">
+              <p className="text-lg md:text-2xl text-white max-w-4xl mx-auto leading-relaxed drop-shadow-[0_12px_30px_rgba(15,23,42,0.65)]">
                 Guiding aspiring pilots with expertise and flexibility, Focused One lets students learn at their own pace, making it the perfect choice for career-focused individuals.
               </p>
             </div>
           </ScrollAnimation>
         </div>
-      </section>
 
       {/* Benefits Section */}
-      <section className="py-20 full-bleed relative overflow-hidden">
-        <div className="pointer-events-none absolute inset-0">
-          <div className="absolute inset-0 bg-gradient-to-br from-slate-950 via-slate-900/94 to-blue-950/75" />
-          <div className="absolute top-16 left-10 h-72 w-72 rounded-full bg-sky-500/22 blur-[140px]" />
-          <div className="absolute bottom-12 right-12 h-80 w-80 rounded-full bg-emerald-400/15 blur-[150px]" />
-          <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.035)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:90px_90px]" />
-        </div>
-
-        <div className="container-wide relative z-10">
+        <section className="relative z-10 py-20">
+          <div className="container-wide">
+            <div className="rounded-3xl border border-white/12 bg-slate-950/70 px-6 py-16 backdrop-blur-xl shadow-[0_45px_120px_-60px_rgba(15,23,42,0.85)] md:px-14">
           <ScrollAnimation animationType="fadeInUp" delay={200}>
             <div className="text-center mb-16">
               <div className="inline-flex items-center gap-3 bg-white/10 backdrop-blur rounded-full px-8 py-3 mb-6 shadow-[0_25px_60px_-40px_rgba(56,189,248,0.45)] border border-white/15">
@@ -156,6 +136,8 @@ export default function OneToOneCoachingPage() {
             </ScrollAnimation>
           </div>
         </div>
+          </div>
+        </section>
       </section>
 
       {/* Subjects Covered */}

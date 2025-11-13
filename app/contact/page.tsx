@@ -33,7 +33,6 @@ export default function ContactPage() {
                 "radial-gradient(circle at 18% 18%, rgba(56,189,248,0.35) 0%, transparent 55%), radial-gradient(circle at 80% 82%, rgba(16,185,129,0.22) 0%, transparent 60%), radial-gradient(circle at 50% 50%, rgba(15,23,42,0.9) 0%, transparent 70%)",
             }}
           />
-          <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.045)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.04)_1px,transparent_1px)] bg-[size:80px_80px]" />
         </div>
         <AviationBackground className="opacity-12" />
         <div className="container-wide relative z-10">
