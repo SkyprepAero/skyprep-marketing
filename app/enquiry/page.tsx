@@ -304,7 +304,7 @@ export default function EnquiryPage() {
                           id="enquiry-contact-pref"
                           name="contactPreference"
                           defaultValue="Anytime"
-                          className="w-full appearance-none rounded-2xl border border-white/15 bg-white/5 px-4 py-3.5 pr-12 text-slate-100 transition-all duration-200 focus:border-sky-500 focus:outline-none focus:ring-4 focus:ring-sky-500/20"
+                          className="w-full appearance-none rounded-2xl border border-white/15 bg-white/5 px-4 py-3.5 pr-12 text-slate-100 transition-all duration-200 focus:border-sky-500 focus:outline-none focus:ring-4 focus:ring-sky-500/20 [&>option]:bg-white [&>option]:text-slate-900"
                         >
                           <option>Anytime</option>
                           <option>Weekdays (9am - 1pm)</option>
@@ -333,7 +333,7 @@ export default function EnquiryPage() {
                           id="enquiry-goal"
                           name="goal"
                           defaultValue="CPL Ground Classes"
-                          className="w-full appearance-none rounded-2xl border border-white/15 bg-white/5 px-4 py-3.5 pr-12 text-slate-100 transition-all duration-200 focus:border-sky-500 focus:outline-none focus:ring-4 focus:ring-sky-500/20"
+                          className="w-full appearance-none rounded-2xl border border-white/15 bg-white/5 px-4 py-3.5 pr-12 text-slate-100 transition-all duration-200 focus:border-sky-500 focus:outline-none focus:ring-4 focus:ring-sky-500/20 [&>option]:bg-white [&>option]:text-slate-900"
                         >
                           <option>CPL Ground Classes </option>
                           <option>Medical Class I/ Class II</option>
@@ -361,7 +361,7 @@ export default function EnquiryPage() {
                           id="enquiry-timeline"
                           name="timeline"
                           defaultValue="0-3 months"
-                          className="w-full appearance-none rounded-2xl border border-white/15 bg-white/5 px-4 py-3.5 pr-12 text-slate-100 transition-all duration-200 focus:border-sky-500 focus:outline-none focus:ring-4 focus:ring-sky-500/20"
+                          className="w-full appearance-none rounded-2xl border border-white/15 bg-white/5 px-4 py-3.5 pr-12 text-slate-100 transition-all duration-200 focus:border-sky-500 focus:outline-none focus:ring-4 focus:ring-sky-500/20 [&>option]:bg-white [&>option]:text-slate-900"
                         >
                           <option>0-3 months</option>
                           <option>3-6 months</option>
