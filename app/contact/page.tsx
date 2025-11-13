@@ -17,8 +17,13 @@ export default function ContactPage() {
   return (
     <div className="full-bleed relative bg-slate-950 text-slate-100">
       {/* Hero Section */}
-      <section className="relative py-24 overflow-hidden full-bleed bg-gradient-to-br from-slate-950 via-slate-950/95 to-blue-950/80">
+      <section
+        className="relative py-24 overflow-hidden full-bleed bg-fixed bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: "url('/media/images/contact.jpg')" }}
+      >
         <div className="pointer-events-none absolute inset-0">
+          <div className="absolute inset-0 bg-gradient-to-br from-slate-950/88 via-slate-950/72 to-blue-950/78" />
+          <div className="absolute inset-0 bg-slate-950/25" />
           <div className="absolute -top-36 left-0 h-96 w-96 rounded-full bg-sky-500/25 blur-[140px]" />
           <div className="absolute -bottom-28 right-0 h-[360px] w-[360px] rounded-full bg-emerald-400/18 blur-[160px]" />
           <div
