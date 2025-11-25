@@ -7,36 +7,36 @@ import { whatsappNumber } from "@/config/services";
 
 const heroPillars = [
   {
-    title: "Orientation call",
-    subtitle: "We meet you where you are",
-    description: "A 20-minute briefing to understand your licenses, exams cleared, and the mission you’re on.",
+    title: "Aviation Discovery Call",
+    subtitle: "Pilot Discovery Call India",
+    description: "A 20-minute flight training consultation to understand your licenses, DGCA milestones cleared, and the mission you're on.",
   },
   {
-    title: "Actionable flight plan",
-    subtitle: "Roadmap in 24 hours",
-    description: "Expect a tailored path with recommended modules, prep windows, and simulator hours mapped to DGCA checks.",
+    title: "Roadmap Delivered in 24 Hours",
+    subtitle: "DGCA-Aligned Flight Plan",
+    description: "Get a customised CPL preparation plan with recommended modules, prep windows, and simulator hours mapping to DGCA checks.",
   },
   {
-    title: "Continuous support",
-    subtitle: "Cadet success desk",
-    description: "Weekly mentor check-ins and WhatsApp updates keep you aligned, accountable, and cockpit-ready.",
+    title: "Pilot Training Support Desk",
+    subtitle: "Cadet Success Desk",
+    description: "Weekly pilot mentorship sessions and WhatsApp updates keep you aligned with aviation timeline planning and cockpit-ready.",
   },
 ];
 
 const responseHighlights = [
   {
-    title: "Response within 4 hours",
-    description: "Cadet enquiries land directly with our training leads for a fast, detailed follow-up.",
+    title: "Roadmap Delivered in 24 Hours",
+    description: "DGCA pilot training enquiry lands directly with our training leads for fast, personalised aviation training plan follow-up.",
     gradient: "from-sky-500 via-blue-500 to-indigo-500",
   },
   {
-    title: "DGCA-aligned guidance",
-    description: "We translate your goals into a step-by-step plan mapped to DGCA milestones and airline expectations.",
+    title: "DGCA-Aligned, Mentor-Led Guidance",
+    description: "Step-by-step DGCA roadmap for aspiring pilots—goals translated into DGCA milestone guidance and airline selection support.",
     gradient: "from-emerald-400 via-emerald-500 to-teal-500",
   },
   {
-    title: "Confidential & no obligation",
-    description: "We treat every conversation as advisory. Share where you’re at—no hard sell, only clarity.",
+    title: "Confidential & Commitment-Free Consultation",
+    description: "Aviation mentoring service with no obligation. Share where you're at—no hard sell, only flight training advice and clarity.",
     gradient: "from-amber-400 via-amber-500 to-orange-500",
   },
 ];
@@ -44,17 +44,17 @@ const responseHighlights = [
 const focusAreas = [
   {
     title: "Cadet & Aspiring Pilot Intake",
-    points: ["CPL / IR roadmapping", "DGCA exam prep strategies", "Bridge programs for fresher cadets"],
+    points: ["CPL/IR planning support & roadmapping", "DGCA exam preparation support strategies", "Aviation guidance and action plan for cadet pilots"],
     iconClass: "text-sky-400",
   },
   {
     title: "Type Rating & Airline Readiness",
-    points: ["Mock airline interviews", "Simulator acclimatization", "Logbook & documentation checks"],
+    points: ["Airline readiness mentorship & mock interviews", "Simulator hours mapping & acclimatization", "Logbook & documentation checks"],
     iconClass: "text-amber-400",
   },
   {
     title: "Career Switch & Upskilling",
-    points: ["Hour-building routes", "Medical renewal support", "International conversion guidance"],
+    points: ["Hour-building routes for aviation career counselling", "Medical renewal support", "International conversion guidance"],
     iconClass: "text-emerald-400",
   },
 ];
@@ -62,25 +62,69 @@ const focusAreas = [
 const processSteps = [
   {
     label: "Share your current altitude",
-    detail: "Tell us about your licenses, exams cleared, and the timeline you’re chasing.",
+    detail: "Tell us about your licenses, DGCA milestones cleared, and the aviation timeline planning you're chasing.",
     timing: "Day 0",
   },
   {
-    label: "Receive a tailored flight plan",
-    detail: "Within 24 hours we send a structured roadmap covering modules, hours, and mentoring touch-points.",
+    label: "Receive a DGCA-aligned flight plan",
+    detail: "Within 24 hours we send a personalised aviation training plan covering CPL preparation modules, simulator hours, and mentoring touch-points.",
     timing: "Day 1",
   },
   {
     label: "Lock your next action",
-    detail: "Book a discovery call, enrol in a cohort, or start with a diagnostic session—your choice.",
+    detail: "Book a pilot discovery call India, enrol in a cohort, or start CPL training with a diagnostic session—your choice.",
     timing: "Day 2",
   },
 ];
 
 export const metadata: Metadata = buildPageMetadata({
-  title: "Enquiry",
-  description: "Tell us about your aviation goals and we’ll chart a personalised training flight plan.",
+  title: "Enquiry Desk | Personalised DGCA Training Roadmap & Aviation Consultation – SkyPrep Aero",
+  description: "Get a personalised DGCA-aligned flight training roadmap with mentor-led guidance. Submit your enquiry for CPL, IR, airline prep, or career planning. No spam—just clarity.",
   canonicalPath: "/enquiry",
+  keywords: [
+    // Primary Keywords
+    "DGCA pilot training enquiry",
+    "aviation training consultation",
+    "pilot training enquiry form",
+    "DGCA guidance and counselling",
+    "aviation mentorship enquiry",
+    "CPL ground classes enquiry",
+    "pilot training action plan",
+    "DGCA roadmap consultation",
+    "aviation career counselling India",
+    "flight training consultation",
+    // Secondary Keywords
+    "personalised aviation training plan",
+    "DGCA exam preparation support",
+    "airline readiness mentorship",
+    "aviation roadmap creation",
+    "pilot discovery call India",
+    "flight training advice",
+    "DGCA milestone guidance",
+    "CPL/IR planning support",
+    "aviation mentoring service",
+    "pilot training support desk",
+    // Long-Tail Keywords
+    "how to get a personalised DGCA training roadmap",
+    "aviation training enquiry with senior mentors",
+    "get a customised CPL preparation plan in India",
+    "step-by-step DGCA roadmap for aspiring pilots",
+    "pilot training consultation with airline instructors",
+    "aviation guidance and action plan for cadet pilots",
+    "how to start CPL ground classes with personalised plan",
+    "DGCA-aligned flight training action plan for beginners",
+    "aviation career counselling for CPL/IR/ATPL aspirants",
+    // LSI Keywords
+    "DGCA milestones",
+    "aviation discovery call",
+    "cadet pilot planning",
+    "personalised flight path",
+    "simulator hours mapping",
+    "CPL preparation modules",
+    "pilot mentorship sessions",
+    "aviation timeline planning",
+    "airline selection support",
+  ],
 });
 
 export default function EnquiryPage() {
@@ -116,28 +160,28 @@ export default function EnquiryPage() {
                   Enquiry Desk
                 </div>
                 <h1 className="text-5xl font-bold leading-tight text-white md:text-7xl md:leading-[1.05]">
-                  Let’s map your personalised flight training plan
+                  Enquiry Desk — Your Personalised DGCA Training Roadmap
                 </h1>
                 <div className="space-y-5 text-lg leading-relaxed text-slate-200/85">
                   <p>
-                    Share where you’re starting from, the checks you’re preparing for, and the runway you have
-                    ahead. We’ll respond with a precise action plan—covering training modules, budgeting, and
-                    mentoring touch-points—so you know exactly what comes next.
+                    Map your personalised flight training plan. Share where you're starting from, the DGCA milestones you're preparing for, and the runway you have
+                    ahead. We'll respond with a pilot training action plan—covering CPL preparation modules, simulator hours mapping, and
+                    aviation timeline planning—so you know exactly what comes next.
                   </p>
                   <p className="text-slate-200/75">
-                    Every submission is reviewed by senior mentors—not bots—so the guidance you receive back is
-                    contextual, actionable, and tailored to the aircraft you want to command.
+                    Aviation training enquiry with senior mentors—not bots—so the DGCA guidance and counselling you receive is
+                    contextual, actionable, and tailored to cadet pilot planning.
                   </p>
                 </div>
                 <div className="flex flex-wrap items-center gap-4 text-xs font-semibold uppercase tracking-[0.35em] text-slate-200/80">
                   <span className="inline-flex items-center gap-2 rounded-full border border-white/20 px-4 py-2 bg-white/5">
-                    Comprehensive roadmap
+                    DGCA Roadmap Consultation
                   </span>
                   <span className="inline-flex items-center gap-2 rounded-full border border-white/20 px-4 py-2 bg-white/5">
-                    Airline-ready mentorship
+                    Airline Readiness Mentorship
                   </span>
                   <span className="inline-flex items-center gap-2 rounded-full border border-white/20 px-4 py-2 bg-white/5">
-                    Confidential consult
+                    Confidential Consultation
                   </span>
                 </div>
                 <div className="flex flex-wrap items-center gap-3 pt-4">
@@ -216,7 +260,7 @@ export default function EnquiryPage() {
                       <path d="M12 2a10 10 0 1010 10A10.011 10.011 0 0012 2zm-.5 15l-5-5 1.41-1.41L11.5 13.17l6.59-6.59L19.5 8z" />
                     </svg>
                   </div>
-                  <h2 className="text-lg font-semibold text-white">{item.title}</h2>
+                  <h2 className="text-lg font-semibold text-white">How Our Enquiry Desk Works: {item.title}</h2>
                   <p className="mt-3 text-sm leading-relaxed text-slate-200/85">{item.description}</p>
                 </div>
               ))}
@@ -243,10 +287,10 @@ export default function EnquiryPage() {
                     Enquiry Form
                     <span className="h-2 w-2 rounded-full bg-sky-400 animate-pulse" />
                   </span>
-                  <h2 className="text-4xl font-bold text-white">Tell us about your mission</h2>
+                  <h2 className="text-4xl font-bold text-white">Enquiry Form: Tell Us About Your Mission</h2>
                   <p className="text-base leading-relaxed text-slate-200/80">
-                    Set the context once—our mentors prepare ahead of your call so you get specific, senior
-                    guidance from the first conversation.
+                    Pilot training enquiry form—set the context once. Our mentors prepare ahead of your aviation discovery call so you get specific, senior
+                    DGCA guidance from the first conversation.
                   </p>
                 </div>
 
@@ -428,10 +472,9 @@ export default function EnquiryPage() {
             <ScrollAnimation animationType="fadeInRight" delay={400}>
               <div className="space-y-8">
                 <div className="rounded-4xl bg-white/[0.08] p-8 shadow-[0_40px_120px_-70px_rgba(15,23,42,1)] backdrop-blur-2xl border border-white/12">
-                  <h3 className="text-xl font-semibold text-white">Where we add lift</h3>
+                  <h2 className="text-xl font-semibold text-white">Where We Add Lift (Who We Help)</h2>
                   <p className="mt-3 text-sm leading-relaxed text-slate-200/80">
-                    Every enquiry is routed to mentors specialising in the stage you are at. Here’s how we
-                    typically help cadets and career pilots alike.
+                    Every aviation mentorship enquiry is routed to mentors specialising in cadet pilot support, airline readiness coaching, and aviation upskilling.
                   </p>
                   <div className="mt-6 grid gap-5">
                     {focusAreas.map((item) => (
@@ -460,7 +503,7 @@ export default function EnquiryPage() {
                 </div>
 
                 <div className="rounded-4xl bg-gradient-to-br from-slate-950 via-slate-900/90 to-blue-950/75 p-8 text-slate-100 shadow-[0_40px_120px_-70px_rgba(15,23,42,1)] border border-white/12">
-                  <h3 className="text-xl font-semibold">What happens after you submit</h3>
+                  <h2 className="text-xl font-semibold">What Happens After You Submit</h2>
                   <ul className="mt-6 grid gap-5">
                     {processSteps.map((step, index) => (
                       <li key={step.label} className="flex gap-4">
@@ -488,7 +531,7 @@ export default function EnquiryPage() {
                     <svg className="h-4 w-4 text-emerald-400" viewBox="0 0 24 24" fill="currentColor" aria-hidden>
                       <path d="M20.285 6.708l-11.4 11.401-5.657-5.657 1.414-1.414 4.243 4.243 9.986-9.986z" />
                     </svg>
-                    Guidance is always complimentary until you’re ready to enrol.
+                    DGCA flight plan delivery and aviation roadmap within 24 hours. Guidance is always complimentary until you're ready to enrol.
                   </div>
                 </div>
 
@@ -529,11 +572,11 @@ export default function EnquiryPage() {
                 </span>
               </div>
               <h2 className="mt-8 text-4xl font-bold leading-tight text-white md:text-5xl">
-                We exist to get more disciplined, well-prepared pilots into the cockpit.
+                Ready to Take the Next Step?
               </h2>
               <p className="mt-6 text-lg leading-relaxed text-slate-200/80">
-                The itinerary we send is yours to action—whether you train with SkyPrep or elsewhere. Send an
-                enquiry, get your bearings, and take the next step with confidence.
+                Explore aviation courses and start CPL training with DGCA pilot guidance. The personalised flight path we send is yours to action—whether you train with SkyPrep or elsewhere. Send an
+                aviation training consultation, get your bearings, and take the next step with confidence.
               </p>
               <div className="mt-10 flex flex-col items-center justify-center gap-4">
                 <Link

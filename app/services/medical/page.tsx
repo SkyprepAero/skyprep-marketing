@@ -6,9 +6,52 @@ import Link from "next/link";
 import { whatsappNumber } from "@/config/services";
 
 export const metadata: Metadata = buildPageMetadata({
-  title: "DGCA Medical Appointment Assistance - Medical Certification Made Easy",
-  description: "Get your DGCA Class 1 and Class 2 medical examinations scheduled hassle-free. We assist with SPL, PPL, CPL medical appointments and documentation.",
+  title: "DGCA Medical Support | Class 1 & Class 2 Pilot Medical Appointments | SkyPrep Aero",
+  description: "Get DGCA Class 1 and Class 2 medical appointments hassle-free. SkyPrep Aero helps you book certified examiners, complete tests, and secure your pilot medical clearance on time.",
   canonicalPath: "/services/medical",
+  keywords: [
+    // Primary Keywords
+    "DGCA medical",
+    "DGCA Class 1 medical",
+    "DGCA Class 2 medical",
+    "DGCA medical appointment",
+    "Pilot medical examination India",
+    "DGCA medical assistance",
+    "Class 1 pilot medical check",
+    "Class 2 pilot medical check",
+    "DGCA medical booking",
+    "DGCA approved doctors",
+    // Secondary Keywords
+    "DGCA medical exam process",
+    "DGCA medical eligibility",
+    "pilot health clearance India",
+    "medical requirements for CPL",
+    "aviation medical India",
+    "SPL medical test DGCA",
+    "PPL medical India",
+    "DGCA-approved medical centers",
+    "pilot ECG test DGCA",
+    "aviation medical help",
+    // Long-Tail Keywords
+    "how to book DGCA Class 1 medical in India",
+    "DGCA medical requirements for aspiring pilots",
+    "Class 2 DGCA medical documents and process",
+    "DGCA pilot medical exam step-by-step guide",
+    "quickest way to schedule DGCA Class 1 medical",
+    "DGCA medical support for pilot students",
+    "where to get DGCA-approved medical examinations",
+    "SPL and CPL medical requirements explained",
+    // LSI Keywords
+    "aviation medical fitness",
+    "DGCA pilot health tests",
+    "medical examiner DGCA",
+    "vision requirements for pilots",
+    "ECG for pilots",
+    "X-ray pilot medical",
+    "hearing test aviation",
+    "medical certification India aviation",
+    "DGCA licensing process",
+  ],
 });
 
 export default function MedicalPage() {
@@ -43,16 +86,16 @@ export default function MedicalPage() {
                 </span>
               </div>
               <h1 className="text-5xl md:text-7xl font-bold text-white drop-shadow-[0_18px_34px_rgba(15,23,42,0.7)] mb-8 leading-tight">
-                DGCA Medical
+                DGCA Medical Appointment Assistance —
                 <span className="block gradient-text-primary leading-tight">
-                  Appointment Assistance
+                  Class 1 & Class 2 Medicals Made Easy
                 </span>
               </h1>
               <p className="text-xl md:text-2xl text-white max-w-4xl mx-auto leading-relaxed mb-4 drop-shadow-[0_12px_30px_rgba(15,23,42,0.65)]">
-                Get Your DGCA Medicals Done — Hassle-Free & On Time
+                Book Your DGCA Medical Appointment — Hassle-Free & On Time
               </p>
               <p className="text-lg md:text-xl text-white/95 max-w-3xl mx-auto leading-relaxed drop-shadow-[0_10px_26px_rgba(15,23,42,0.6)]">
-                Before you take flight, ensure your health is cleared for the skies. At SkyPrep Aero, we help aspiring and licensed pilots schedule their DGCA Class 2 and Class 1 medical examinations with ease and convenience.
+                Before you take flight, ensure your aviation medical fitness is cleared. At SkyPrep Aero, we help aspiring and licensed pilots schedule their DGCA Class 1 medical and Class 2 pilot medical check with DGCA approved doctors.
               </p>
             </div>
           </ScrollAnimation>
@@ -79,7 +122,7 @@ export default function MedicalPage() {
                </div>
                <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">Medical Certification Made Simple</h2>
                <p className="text-xl text-slate-200/80 max-w-3xl mx-auto">
-                 Whether you&apos;re just starting with your Student Pilot License (SPL) or progressing toward your Commercial Pilot License (CPL), our team ensures your medical certification process is smooth, transparent, and stress-free.
+                 Whether you&apos;re starting with SPL medical test DGCA or progressing toward medical requirements for CPL, our team ensures your DGCA medical certification India aviation process is smooth, transparent, and stress-free.
                </p>
              </div>
            </ScrollAnimation>
@@ -117,9 +160,9 @@ export default function MedicalPage() {
                 <div className="w-3 h-3 bg-blue-400 rounded-full animate-pulse" />
                 <span className="text-white text-sm font-semibold">Medical Certification Journey</span>
               </div>
-              <h2 className="text-5xl md:text-6xl font-bold text-white mb-6">Your Path to Medical Clearance</h2>
+              <h2 className="text-5xl md:text-6xl font-bold text-white mb-6">Your Path to DGCA Medical Clearance</h2>
               <p className="text-xl text-blue-100 max-w-3xl mx-auto">
-                Choose your certification level and let us guide you through the entire process
+                Choose your pilot medical examination India level and let us guide you through the DGCA pilot medical exam step-by-step
               </p>
             </div>
           </ScrollAnimation>
@@ -151,8 +194,8 @@ export default function MedicalPage() {
                         </svg>
                       </div>
                       <div>
-                        <h3 className="text-2xl font-bold text-white">Class 2 Medical</h3>
-                        <p className="text-blue-200 font-semibold">For SPL & PPL Aspirants</p>
+                        <h3 className="text-2xl font-bold text-white">Class 2 Medical for SPL & PPL Aspirants</h3>
+                        <p className="text-blue-200 font-semibold">Class 2 DGCA Medical | PPL Medical India</p>
                         <div className="flex items-center gap-2 text-blue-300 text-sm mt-1">
                           <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -228,8 +271,8 @@ export default function MedicalPage() {
                         </svg>
                       </div>
                       <div>
-                        <h3 className="text-2xl font-bold text-white">Class 1 Medical</h3>
-                        <p className="text-amber-200 font-semibold">For CPL & ATPL</p>
+                        <h3 className="text-2xl font-bold text-white">Class 1 Medical for CPL & ATPL Candidates</h3>
+                        <p className="text-amber-200 font-semibold">CPL Medical DGCA | Advanced Aviation Medical Tests</p>
                         <div className="flex items-center gap-2 text-amber-300 text-sm mt-1">
                           <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -303,8 +346,8 @@ export default function MedicalPage() {
                     <span className="w-6 h-6 bg-white/15 rounded-full flex items-center justify-center text-sm">2</span>
                     Our Process
                   </div>
-                  <h3 className="text-2xl font-bold text-white mb-2">How We Help You</h3>
-                  <p className="text-blue-200">From consultation to certification completion</p>
+                  <h3 className="text-2xl font-bold text-white mb-2">How We Help You Through the Medical Process</h3>
+                  <p className="text-blue-200">DGCA appointment booking, pilot medical scheduling, and aviation medical support</p>
                 </div>
 
                 <div className="grid md:grid-cols-3 gap-6">
@@ -315,7 +358,7 @@ export default function MedicalPage() {
                       </svg>
                     </div>
                     <h4 className="text-white font-semibold mb-2">1. Consultation</h4>
-                    <p className="text-blue-200 text-sm">We assess your requirements and guide you to the right medical class</p>
+                    <p className="text-blue-200 text-sm">We assess your DGCA medical eligibility and guide you to the right medical class</p>
                   </div>
 
                   <div className="text-center">
@@ -325,8 +368,8 @@ export default function MedicalPage() {
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                       </svg>
                     </div>
-                    <h4 className="text-white font-semibold mb-2">2. Appointment Booking</h4>
-                    <p className="text-blue-200 text-sm">We book your appointment with DGCA-approved medical centers</p>
+                    <h4 className="text-white font-semibold mb-2">2. DGCA Medical Booking</h4>
+                    <p className="text-blue-200 text-sm">We schedule your appointment with DGCA-approved medical centers and verified doctors</p>
                   </div>
 
                   <div className="text-center">
@@ -335,8 +378,8 @@ export default function MedicalPage() {
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                       </svg>
                     </div>
-                    <h4 className="text-white font-semibold mb-2">3. Certification</h4>
-                    <p className="text-blue-200 text-sm">Complete your medical examination and receive your certification</p>
+                    <h4 className="text-white font-semibold mb-2">3. Medical Certification</h4>
+                    <p className="text-blue-200 text-sm">Complete DGCA pilot health tests and receive your aviation health certificate</p>
                   </div>
                 </div>
               </div>
@@ -363,9 +406,9 @@ export default function MedicalPage() {
                   Our Advantage
                 </span>
               </div>
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">Why Choose SkyPrep Aero for Your Medical Appointments</h2>
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">Why Choose SkyPrep Aero for DGCA Medical Support</h2>
               <p className="text-xl text-slate-200/80 max-w-3xl mx-auto">
-                Comprehensive support throughout your medical certification journey
+                DGCA medical guidance with verified doctors and comprehensive medical exam support
               </p>
             </div>
           </ScrollAnimation>
@@ -381,9 +424,9 @@ export default function MedicalPage() {
                   </div>
                   <div className="absolute inset-0 w-20 h-20 mx-auto rounded-2xl border-2 border-white/20 animate-pulse" />
                 </div>
-                <h3 className="text-2xl font-bold text-white mb-4">End-to-End Guidance</h3>
+                <h3 className="text-2xl font-bold text-white mb-4">End-to-End DGCA Medical Guidance</h3>
                 <p className="text-slate-200/80 text-lg leading-relaxed flex-grow">
-                  From registration to final DGCA approval, we guide you every step of the way
+                  From registration to final DGCA licensing process approval, we provide complete DGCA medical assistance every step
                 </p>
               </div>
             </ScrollAnimation>
@@ -398,9 +441,9 @@ export default function MedicalPage() {
                   </div>
                   <div className="absolute inset-0 w-20 h-20 mx-auto rounded-2xl border-2 border-white/20 animate-pulse" />
                 </div>
-                <h3 className="text-2xl font-bold text-white mb-4">Verified DGCA Doctors</h3>
+                <h3 className="text-2xl font-bold text-white mb-4">Verified DGCA Approved Doctors</h3>
                 <p className="text-slate-200/80 text-lg leading-relaxed flex-grow">
-                  Only certified and approved examiners authorized by DGCA
+                  Only certified medical examiner DGCA authorized—where to get DGCA-approved medical examinations
                 </p>
               </div>
             </ScrollAnimation>
@@ -415,9 +458,9 @@ export default function MedicalPage() {
                   </div>
                   <div className="absolute inset-0 w-20 h-20 mx-auto rounded-2xl border-2 border-white/20 animate-pulse" />
                 </div>
-                <h3 className="text-2xl font-bold text-white mb-4">Quick Scheduling</h3>
+                <h3 className="text-2xl font-bold text-white mb-4">Quick DGCA Medical Scheduling</h3>
                 <p className="text-slate-200/80 text-lg leading-relaxed flex-grow">
-                  Priority booking and flexible slot options for your convenience
+                  Quickest way to schedule DGCA Class 1 medical with priority booking and flexible slot options
                 </p>
               </div>
             </ScrollAnimation>
@@ -432,9 +475,9 @@ export default function MedicalPage() {
                   </div>
                   <div className="absolute inset-0 w-20 h-20 mx-auto rounded-2xl border-2 border-white/20 animate-pulse" />
                 </div>
-                <h3 className="text-2xl font-bold text-white mb-4">Personalized Support</h3>
+                <h3 className="text-2xl font-bold text-white mb-4">Personalized Aviation Medical Help</h3>
                 <p className="text-slate-200/80 text-lg leading-relaxed flex-grow">
-                  We help you choose the best center as per your location and convenience
+                  DGCA medical support for pilot students—we help you choose the best DGCA-approved medical centers per your location
                 </p>
               </div>
             </ScrollAnimation>
@@ -468,10 +511,10 @@ export default function MedicalPage() {
                  <span className="text-white text-sm font-semibold">Take Action Now</span>
                </div>
                <h2 className="text-4xl md:text-6xl font-bold text-white mb-8 leading-tight">
-                 Book Your Appointment Today
+                 Book Your DGCA Medical Appointment Today
                </h2>
                <p className="text-xl md:text-2xl text-blue-100 mb-12 leading-relaxed">
-                 Take the first step toward your aviation career with confidence. Our team will connect you with DGCA-authorized examiners and guide you through every step — so you can focus on what truly matters: flying high.
+                 Take the first step toward pilot health clearance India with confidence. Our team will connect you with DGCA-authorized examiners for your pilot medical appointment and aviation health certificate — so you can focus on flying high.
                </p>
                
                <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">

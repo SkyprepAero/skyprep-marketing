@@ -62,12 +62,12 @@ export function MissionVision() {
           <div className="text-center mb-12">
             <div className="inline-flex items-center gap-3 rounded-full border border-white/15 bg-white/10 px-8 py-3 mb-6 shadow-[0_25px_60px_-40px_rgba(56,189,248,0.45)] backdrop-blur">
               <div className="w-3 h-3 rounded-full bg-sky-400 animate-pulse" />
-              <span className="text-sm font-semibold uppercase tracking-[0.35em] text-slate-100/80">Mission & Vision</span>
+              <span className="text-sm font-semibold uppercase tracking-[0.35em] text-slate-100/80">Mission, Vision & Core Values</span>
             </div>
             <h2 className="text-4xl md:text-6xl font-bold text-white leading-tight">
               Shaping the Future of
               <span className="block bg-gradient-to-r from-sky-400 via-emerald-400 to-amber-400 bg-clip-text text-transparent">
-                Aviation Excellence
+                Aviation Excellence in India
               </span>
             </h2>
           </div>
@@ -76,7 +76,7 @@ export function MissionVision() {
         <ScrollAnimation animationType="fadeInUp" delay={350}>
           <div className="mx-auto max-w-5xl rounded-4xl border border-white/12 bg-white/[0.08] p-8 md:p-10 text-center shadow-[0_45px_110px_-60px_rgba(15,23,42,0.9)] backdrop-blur">
             <p className="text-base leading-relaxed text-slate-200/85 md:text-lg">
-              At <span className="text-sky-300">SkyPrep Aero</span>, our mission and vision is to be the leading ground school that empowers aspiring aviators with knowledge, confidence, and skills. Through expert instruction, modern learning methods, and student-focused guidance, we build a strong foundation that helps future pilots clear exams with ease, grow into quality professionals, and soar toward successful aviation careers.
+              At <span className="text-sky-300">SkyPrep Aero</span>, our mission is to be India&apos;s leading aviation education institute empowering aspiring pilots with knowledge, confidence, and skills. Through expert DGCA coaching, modern learning methods, and student-focused guidance, we build a strong foundation that helps future pilots clear DGCA exams with ease, grow into quality professionals, and soar toward successful pilot career development.
             </p>
           </div>
         </ScrollAnimation>

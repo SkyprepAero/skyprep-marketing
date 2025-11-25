@@ -6,9 +6,51 @@ import Link from "next/link";
 import { getContactUrl, getWhatsAppUrl, getWhatsAppButtonText } from "@/config/services";
 
 export const metadata: Metadata = buildPageMetadata({
-  title: "Conversion Training - Convert Your Foreign Flight Hours to DGCA Licenses",
-  description: "Convert your foreign flight training from USA, Canada, South Africa, New Zealand, Philippines, or Australia into DGCA-approved Indian licenses with our comprehensive conversion support.",
+  title: "Conversion Flying India | Foreign Pilot License to DGCA Conversion Support",
+  description: "Convert your foreign flight hours and pilot license to DGCA standards seamlessly. Complete guidance for FAA, CASA, SACAA, CAANZ, CAAP conversions with FTO scheduling and documentation support.",
   canonicalPath: "/services/conversion-training",
+  keywords: [
+    // Primary Keywords
+    "DGCA conversion flying",
+    "foreign pilot license conversion India",
+    "FAA to DGCA conversion",
+    "CASA to DGCA license conversion",
+    "SACAA to DGCA license conversion",
+    "CAANZ to DGCA conversion",
+    "pilot conversion training India",
+    "DGCA license conversion process",
+    "international pilot conversion India",
+    "convert foreign flying hours DGCA",
+    // Secondary Keywords
+    "DGCA FTO conversion flying",
+    "eGCA conversion support",
+    "DGCA documentation help",
+    "foreign flight hours validation",
+    "India license conversion for pilots",
+    "DGCA exam preparation for conversion",
+    "CPL conversion India",
+    "ATPL conversion India",
+    "flying hour completion India",
+    "conversion flying requirements DGCA",
+    // Long-Tail Keywords
+    "how to convert FAA or foreign pilot license to DGCA in India",
+    "DGCA requirements for foreign-trained pilots",
+    "complete assistance for DGCA conversion flying",
+    "conversion flying for overseas trained pilots returning to India",
+    "steps to convert Canadian, Australian, or South African licenses to DGCA",
+    "DGCA conversion process with documentation and eGCA support",
+    "flying hour completion at DGCA-approved FTOs for conversion",
+    "DGCA theoretical exam preparation for foreign pilots",
+    // LSI Keywords
+    "DGCA validation",
+    "eGCA portal documentation",
+    "pilot license verification",
+    "international aviation licensing",
+    "flight record verification",
+    "DGCA-approved flying school",
+    "conversion check ride",
+    "India aviation licensing process",
+  ],
 });
 
 export default function ConversionTrainingPage() {
@@ -41,7 +83,7 @@ export default function ConversionTrainingPage() {
                 </span>
               </div>
               <h1 className="text-6xl md:text-7xl font-bold text-white drop-shadow-[0_18px_34px_rgba(15,23,42,0.7)] mb-8 leading-tight">
-                Conversion Flying
+                Conversion Flying India —
                 <span
                   className="block leading-tight text-transparent bg-clip-text"
                   style={{
@@ -49,14 +91,14 @@ export default function ConversionTrainingPage() {
                       "linear-gradient(180deg, #FF9933 0%, #FF9933 45%, #FFFFFF 45%, #FFFFFF 60%, #138808 62%, #138808 100%)",
                   }}
                 >
-                   INDIA
+                   Convert Your Foreign Pilot License to DGCA
                 </span>
               </h1>
               <p className="text-xl md:text-2xl text-white max-w-4xl mx-auto leading-relaxed drop-shadow-[0_12px_30px_rgba(15,23,42,0.65)]">
-                Convert Your Foreign Flight Hours Seamlessly
+                Convert Your Foreign Flight Hours Seamlessly — International Pilot Conversion India
               </p>
               <p className="text-lg md:text-xl text-white/95 max-w-3xl mx-auto leading-relaxed mt-4 drop-shadow-[0_10px_26px_rgba(15,23,42,0.6)]">
-                Trained abroad? Now bring your flying career home. At SkyPrep Aero, we assist pilots who have completed their flight training in USA, Canada, South Africa, New Zealand, the Philippines, or Australia to convert their foreign flying experience into DGCA-approved Indian licenses.
+                Trained abroad? Foreign pilot license conversion India made easy. At SkyPrep Aero, we assist pilots with FAA to DGCA conversion, CASA to DGCA license conversion, SACAA to DGCA, CAANZ to DGCA, and CAAP conversions into DGCA-approved Indian licenses.
               </p>
             </div>
           </ScrollAnimation>
@@ -80,15 +122,15 @@ export default function ConversionTrainingPage() {
                   What is Conversion Flying?
                 </span>
               </div>
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">Convert Your International Experience</h2>
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">What is Conversion Flying?</h2>
               <p className="text-xl text-slate-200/80 max-w-4xl mx-auto leading-relaxed">
-                Conversion flying is the process required by the Directorate General of Civil Aviation (DGCA) 
-                for pilots trained overseas to align their flight experience and documentation with Indian 
-                licensing standards.
+                DGCA license conversion process is required by the Directorate General of Civil Aviation 
+                for overseas trained pilots returning to India to align their flight record verification 
+                and documentation with Indian licensing standards.
               </p>
               <p className="text-lg text-slate-200/70 max-w-3xl mx-auto leading-relaxed mt-6">
-                It involves validation of your foreign flight records, DGCA theoretical exams, and mandatory 
-                flying hours at a DGCA-approved Flying Training Organization (FTO) in India.
+                It involves DGCA validation of foreign flight hours, DGCA theoretical exam preparation for foreign pilots, 
+                and flying hour completion at DGCA-approved FTOs for conversion in India.
               </p>
             </div>
           </ScrollAnimation>
@@ -113,9 +155,9 @@ export default function ConversionTrainingPage() {
                   Our Conversion Support
                 </span>
               </div>
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">Complete Conversion Support</h2>
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">Complete DGCA Conversion Support</h2>
               <p className="text-xl text-slate-200/80 max-w-3xl mx-auto">
-                We provide comprehensive assistance for your foreign license conversion process
+                Complete assistance for DGCA conversion flying with eGCA support and DGCA documentation help
               </p>
             </div>
           </ScrollAnimation>
@@ -133,7 +175,7 @@ export default function ConversionTrainingPage() {
                 </div>
                 <h3 className="text-2xl font-bold text-white mb-4">DGCA License Conversion Process</h3>
                 <p className="text-slate-200/80 text-lg leading-relaxed flex-grow">
-                  Step-by-step assistance on documentation, verification, and eligibility checks for your conversion process.
+                  Steps to convert Canadian, Australian, or South African licenses to DGCA—documentation, DGCA validation, and conversion eligibility checks.
                 </p>
               </div>
             </ScrollAnimation>
@@ -150,7 +192,7 @@ export default function ConversionTrainingPage() {
                 </div>
                 <h3 className="text-2xl font-bold text-white mb-4">Flying Hour Completion in India</h3>
                 <p className="text-slate-200/80 text-lg leading-relaxed flex-grow">
-                  Scheduling your remaining hours, skill tests, and check rides at DGCA-approved FTOs across India.
+                  Flying hour completion India with DGCA FTO conversion flying—scheduling remaining hours, skill tests, and conversion check rides at DGCA-approved flying schools.
                 </p>
               </div>
             </ScrollAnimation>
@@ -165,9 +207,9 @@ export default function ConversionTrainingPage() {
                   </div>
                   <div className="absolute inset-0 w-20 h-20 mx-auto rounded-2xl border-2 border-white/20 animate-pulse" />
                 </div>
-                <h3 className="text-2xl font-bold text-white mb-4">eGCA Profile & Documentation Help</h3>
+                <h3 className="text-2xl font-bold text-white mb-4">eGCA Documentation & Profile Assistance</h3>
                 <p className="text-slate-200/80 text-lg leading-relaxed flex-grow">
-                  Filing, verification, and coordination through the eGCA portal for seamless documentation.
+                  eGCA portal documentation filing, foreign flight hours validation, and eGCA conversion support for seamless processing.
                 </p>
               </div>
             </ScrollAnimation>
@@ -182,9 +224,9 @@ export default function ConversionTrainingPage() {
                   </div>
                   <div className="absolute inset-0 w-20 h-20 mx-auto rounded-2xl border-2 border-white/20 animate-pulse" />
                 </div>
-                <h3 className="text-2xl font-bold text-white mb-4">Exam Preparation & Support</h3>
+                <h3 className="text-2xl font-bold text-white mb-4">Exam Preparation & Ground Classes</h3>
                 <p className="text-slate-200/80 text-lg leading-relaxed flex-grow">
-                  Ground classes and preparation for Air Navigation, Air Regulation, and Meteorology if required.
+                  DGCA exam preparation for conversion—Air Navigation conversion class, Air Regulation DGCA conversion, and Meteorology exam prep for foreign pilots.
                 </p>
               </div>
             </ScrollAnimation>
@@ -199,9 +241,9 @@ export default function ConversionTrainingPage() {
                   </div>
                   <div className="absolute inset-0 w-20 h-20 mx-auto rounded-2xl border-2 border-white/20 animate-pulse" />
                 </div>
-                <h3 className="text-2xl font-bold text-white mb-4">Personalized Consultation</h3>
+                <h3 className="text-2xl font-bold text-white mb-4">Personalized Consultation for Your Conversion</h3>
                 <p className="text-slate-200/80 text-lg leading-relaxed flex-grow">
-                  We help evaluate your current logbook and guide you on exact requirements to meet DGCA conversion criteria.
+                  Logbook evaluation India with DGCA requirements for foreign-trained pilots—exact conversion flying requirements DGCA to meet criteria.
                 </p>
               </div>
             </ScrollAnimation>
@@ -227,9 +269,9 @@ export default function ConversionTrainingPage() {
                   Why Choose SkyPrep Aero
                 </span>
               </div>
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">Your Conversion Success Partners</h2>
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">Why Choose SkyPrep Aero</h2>
               <p className="text-xl text-slate-200/80 max-w-3xl mx-auto">
-                We ensure your international experience translates seamlessly into Indian aviation success
+                DGCA conversion experts with end-to-end pilot conversion support India for international aviation licensing
               </p>
             </div>
           </ScrollAnimation>
@@ -247,7 +289,7 @@ export default function ConversionTrainingPage() {
                 </div>
                 <h3 className="text-2xl font-bold text-white mb-4">Network with Leading FTOs</h3>
                 <p className="text-slate-200/80 text-lg leading-relaxed">
-                  Network with leading DGCA-approved FTOs across India for quality training and assessment.
+                  Network with DGCA-approved flying schools across India for DGCA FTO conversion flying and quality assessment.
                 </p>
               </div>
             </ScrollAnimation>
@@ -264,7 +306,7 @@ export default function ConversionTrainingPage() {
                 </div>
                 <h3 className="text-2xl font-bold text-white mb-4">Transparent Process</h3>
                 <p className="text-slate-200/80 text-lg leading-relaxed">
-                  Transparent and time-bound process tracking with regular updates on your conversion progress.
+                  Transparent India aviation licensing process with time-bound tracking and regular updates on your DGCA conversion.
                 </p>
               </div>
             </ScrollAnimation>
@@ -281,7 +323,7 @@ export default function ConversionTrainingPage() {
                 </div>
                 <h3 className="text-2xl font-bold text-white mb-4">All Foreign Licenses</h3>
                 <p className="text-slate-200/80 text-lg leading-relaxed">
-                  Assistance for all foreign licenses (FAA, CASA, SACAA, CAANZ, CAAP) with specialized expertise.
+                  FAA to DGCA, CASA to DGCA, SACAA to DGCA, CAANZ to DGCA, TC to DGCA, and CAAP to DGCA with specialized expertise.
                 </p>
               </div>
             </ScrollAnimation>
@@ -296,9 +338,9 @@ export default function ConversionTrainingPage() {
                   </div>
                   <div className="absolute inset-0 w-20 h-20 mx-auto rounded-2xl border-2 border-white/20 animate-pulse" />
                 </div>
-                <h3 className="text-2xl font-bold text-white mb-4">End-to-End Support</h3>
+                <h3 className="text-2xl font-bold text-white mb-4">End-to-End Conversion Support</h3>
                 <p className="text-slate-200/80 text-lg leading-relaxed">
-                  End-to-end support — from paperwork to flying assessment with complete guidance.
+                  End-to-end pilot conversion support India—from DGCA documentation help to conversion check ride with complete guidance.
                 </p>
               </div>
             </ScrollAnimation>
@@ -324,9 +366,9 @@ export default function ConversionTrainingPage() {
                   Ideal for Pilots Returning From
                 </span>
               </div>
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">International Training Destinations</h2>
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">International Training Destinations We Support</h2>
               <p className="text-xl text-slate-200/80 max-w-3xl mx-auto">
-                We assist pilots from top international flying schools worldwide
+                Conversion flying for overseas trained pilots returning to India from top international flying schools
               </p>
             </div>
           </ScrollAnimation>
@@ -350,7 +392,7 @@ export default function ConversionTrainingPage() {
                   </span>
                   <h3 className="text-2xl font-bold text-white md:text-3xl">United States (FAA)</h3>
                   <p className="text-slate-100/90 text-base md:text-lg leading-relaxed">
-                    Convert your FAA licenses and training hours to DGCA standards
+                    FAA to DGCA conversion—convert your FAA licenses and training hours to Indian standards
                   </p>
                 </div>
               </div>
@@ -374,7 +416,7 @@ export default function ConversionTrainingPage() {
                   </span>
                   <h3 className="text-2xl md:text-3xl font-bold text-white">Canada (TC)</h3>
                   <p className="text-slate-100/90 text-base md:text-lg leading-relaxed">
-                    Convert your Canadian flight training and licenses to Indian standards
+                    TC to DGCA conversion—convert your Canadian flight training and licenses to Indian standards
                   </p>
                 </div>
               </div>
@@ -398,7 +440,7 @@ export default function ConversionTrainingPage() {
                   </span>
                   <h3 className="text-2xl md:text-3xl font-bold text-white">South Africa (SACAA)</h3>
                   <p className="text-slate-100/90 text-base md:text-lg leading-relaxed">
-                    Convert your SACAA licenses and training to DGCA requirements
+                    SACAA to DGCA license conversion—convert your South African training to Indian requirements
                   </p>
                 </div>
               </div>
@@ -422,7 +464,7 @@ export default function ConversionTrainingPage() {
                   </span>
                   <h3 className="text-2xl md:text-3xl font-bold text-white">New Zealand (CAANZ)</h3>
                   <p className="text-slate-100/90 text-base md:text-lg leading-relaxed">
-                    Convert your CAANZ licenses and training to Indian aviation standards
+                    CAANZ to DGCA conversion—convert your New Zealand licenses to Indian aviation standards
                   </p>
                 </div>
               </div>
@@ -446,7 +488,7 @@ export default function ConversionTrainingPage() {
                   </span>
                   <h3 className="text-2xl md:text-3xl font-bold text-white">Philippines (CAAP)</h3>
                   <p className="text-slate-100/90 text-base md:text-lg leading-relaxed">
-                    Convert your CAAP licenses and training to DGCA requirements
+                    CAAP to DGCA conversion—convert your Philippines licenses and training to Indian requirements
                   </p>
                 </div>
               </div>
@@ -470,7 +512,7 @@ export default function ConversionTrainingPage() {
                   </span>
                   <h3 className="text-2xl md:text-3xl font-bold text-white">Australia (CASA)</h3>
                   <p className="text-slate-100/90 text-base md:text-lg leading-relaxed">
-                    Convert your CASA licenses and training to Indian aviation standards
+                    CASA to DGCA license conversion—convert your Australian training to Indian aviation standards
                   </p>
                 </div>
               </div>
@@ -500,7 +542,7 @@ export default function ConversionTrainingPage() {
                 Begin Your Conversion Today
               </h2>
               <p className="text-xl md:text-2xl text-slate-100/90 mb-12 max-w-4xl mx-auto leading-relaxed drop-shadow-[0_12px_30px_rgba(15,23,42,0.6)]">
-                Take your international experience to new heights in India. With SkyPrep Aero, you can complete your conversion flying at reputed DGCA-approved FTOs, with complete guidance from start to finish.
+                Start conversion flying with DGCA conversion application India. Complete your pilot conversion training India at reputed DGCA-approved FTOs with end-to-end pilot conversion support from start to finish.
               </p>
               <ScrollAnimation animationType="scaleIn" delay={400}>
                 <div className="flex flex-col items-center gap-6">

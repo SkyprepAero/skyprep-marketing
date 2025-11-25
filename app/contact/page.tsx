@@ -8,9 +8,49 @@ import { whatsappNumber } from "@/config/services";
 import { siteConfig } from "@/config/site";
 
 export const metadata: Metadata = generateMetadata({
-  title: "Contact",
-  description: "Get in touch for aviation coaching and training inquiries.",
+  title: "Contact SkyPrep Aero | Send an Enquiry for Pilot Training & DGCA Coaching",
+  description: "Contact SkyPrep Aero for personalized aviation guidance. Send your CPL, DGCA, or pilot training enquiry and get timelines, study plans, and expert support within 1 business day.",
   canonicalPath: "/contact",
+  keywords: [
+    // Primary Keywords
+    "SkyPrep Aero contact",
+    "pilot training contact",
+    "aviation coaching enquiry",
+    "DGCA training enquiry",
+    "contact aviation academy",
+    "CPL coaching contact",
+    "pilot course enquiry India",
+    "pilot mentorship contact",
+    "contact DGCA ground school",
+    "aviation training support",
+    // Secondary Keywords
+    "contact pilot instructors",
+    "aviation consultation call",
+    "book aviation guidance",
+    "flight training help",
+    "pilot study plan consultation",
+    "schedule aviation call",
+    "aviation support team India",
+    "email aviation academy",
+    // Long-Tail Keywords
+    "how to contact a DGCA coaching institute for pilot training",
+    "book a call for CPL training guidance India",
+    "enquire about DGCA ground classes and pilot mentorship",
+    "contact SkyPrep Aero for aviation training programs",
+    "personalised aviation study plan consultation India",
+    "how to start pilot training in India contact form",
+    "send aviation training enquiry online",
+    "get flight training guidance with timelines",
+    // LSI Keywords
+    "pilot support desk",
+    "CPL/IR enquiry",
+    "aviation coaching help",
+    "flight plan assistance",
+    "pilot application help",
+    "DGCA license guidance",
+    "aviation student support",
+    "pilot call scheduling",
+  ],
 });
 
 export default function ContactPage() {
@@ -39,14 +79,14 @@ export default function ContactPage() {
           <ScrollAnimation animationType="fadeInUp" delay={200}>
             <div className="text-center">
               <h1 className="text-5xl md:text-7xl font-bold text-white mb-8 leading-tight">
-                Let&apos;s File Your
+                Let&apos;s File Your Flight Plan —
                 <span className="block gradient-text-primary">
-                  Flight Plan
+                  Contact SkyPrep Aero
                 </span>
               </h1>
               <p className="text-lg md:text-2xl text-slate-200/85 max-w-4xl mx-auto leading-relaxed">
-                Tell us where you&apos;re at and where you want to go. We&apos;ll chart a clear 
-                route from first lesson to checkride—with timelines, study plan, and next actions.
+                Aviation enquiry made easy. Tell us where you&apos;re at and where you want to go. 
+                We&apos;ll chart a clear route with pilot training consultation, personalised study plans, and timelines.
               </p>
             </div>
           </ScrollAnimation>
@@ -68,7 +108,7 @@ export default function ContactPage() {
               <div className="group bg-white/[0.08] backdrop-blur-xl rounded-3xl p-10 shadow-[0_45px_110px_-60px_rgba(15,23,42,1)] border border-white/12 hover:-translate-y-2 hover:border-white/25 hover:shadow-[0_55px_140px_-70px_rgba(56,189,248,0.65)] transition-all duration-500">
                 <div className="mb-8">
                   <h2 className="text-3xl font-bold text-white mb-3">Send Us a Message</h2>
-                  <p className="text-slate-200/80 text-lg">We usually reply within one business day.</p>
+                  <p className="text-slate-200/80 text-lg">Aviation contact form — CPL enquiry form, pilot coaching enquiry. We usually reply within one business day.</p>
                 </div>
                 <ContactForm />
               </div>
@@ -79,7 +119,7 @@ export default function ContactPage() {
               <div className="space-y-6">
                 {/* Contact Methods */}
                 <div className="group bg-white/[0.08] backdrop-blur-xl rounded-3xl p-10 shadow-[0_45px_110px_-60px_rgba(15,23,42,1)] border border-white/12 hover:-translate-y-2 hover:border-white/25 hover:shadow-[0_55px_140px_-70px_rgba(56,189,248,0.65)] transition-all duration-500">
-                  <h3 className="text-2xl font-bold text-white mb-6">Reach Us Directly</h3>
+                  <h2 className="text-2xl font-bold text-white mb-6">Reach Us Directly</h2>
                   <ul className="grid gap-6">
                     <li className="flex items-start gap-4 group/item">
                       <div className="relative">
@@ -93,7 +133,7 @@ export default function ContactPage() {
                         <div className="absolute inset-0 h-14 w-14 rounded-2xl border-2 border-white/20 animate-pulse" />
                       </div>
                       <div>
-                        <div className="font-semibold text-slate-100 text-lg mb-1">Phone</div>
+                        <div className="font-semibold text-slate-100 text-lg mb-1">Phone — SkyPrep Contact Number</div>
                         <a href={`tel:${whatsappNumber}`} className="text-sky-300 hover:text-sky-200 underline-offset-4 hover:underline text-lg">{whatsappNumber}</a>
                       </div>
                     </li>
@@ -108,7 +148,7 @@ export default function ContactPage() {
                         <div className="absolute inset-0 h-14 w-14 rounded-2xl border-2 border-white/20 animate-pulse" />
                       </div>
                       <div>
-                        <div className="font-semibold text-slate-100 text-lg mb-1">Email</div>
+                        <div className="font-semibold text-slate-100 text-lg mb-1">Email — Email Aviation Academy</div>
                         <a href={`mailto:${siteConfig.contactEmail}`} className="text-cyan-300 hover:text-cyan-200 underline-offset-4 hover:underline text-lg">{siteConfig.contactEmail}</a>
                       </div>
                     </li>
@@ -123,7 +163,7 @@ export default function ContactPage() {
                         <div className="absolute inset-0 h-14 w-14 rounded-2xl border-2 border-white/20 animate-pulse" />
                       </div>
                       <div>
-                        <div className="font-semibold text-slate-100 text-lg mb-1">Location</div>
+                        <div className="font-semibold text-slate-100 text-lg mb-1">Location — Aviation Support Team India</div>
                         <div className="text-slate-200/80 text-lg">Pune, India • By appointment</div>
                       </div>
                     </li>
@@ -139,8 +179,8 @@ export default function ContactPage() {
                         <div className="absolute inset-0 h-14 w-14 rounded-2xl border-2 border-white/20 animate-pulse" />
                       </div>
                       <div>
-                        <div className="font-semibold text-slate-100 text-lg mb-1">Schedule a Call</div>
-                        <a href="https://calendly.com/theskyprep/new-meeting" target="_blank" rel="noopener noreferrer" className="text-amber-300 hover:text-amber-200 underline-offset-4 hover:underline text-lg">Book via Calendly</a>
+                        <div className="font-semibold text-slate-100 text-lg mb-1">Schedule a Call — Book Aviation Call India</div>
+                        <a href="https://calendly.com/theskyprep/new-meeting" target="_blank" rel="noopener noreferrer" className="text-amber-300 hover:text-amber-200 underline-offset-4 hover:underline text-lg">Book Pilot Training Appointment via Calendly</a>
                       </div>
                     </li>
                   </ul>
@@ -165,18 +205,18 @@ export default function ContactPage() {
 
                 {/* Helpful Details Card */}
                 <div className="group bg-white/[0.07] rounded-3xl p-8 shadow-[0_45px_110px_-60px_rgba(15,23,42,1)] border border-white/12 hover:-translate-y-2 hover:border-white/25 hover:shadow-[0_55px_140px_-70px_rgba(56,189,248,0.65)] transition-all duration-500">
-                  <h4 className="font-bold text-white text-xl mb-4 flex items-center gap-2">
+                  <h2 className="font-bold text-white text-xl mb-4 flex items-center gap-2">
                     <svg className="w-6 h-6 text-emerald-300" fill="currentColor" viewBox="0 0 24 24">
                       <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
                     </svg>
                     Helpful Details to Include
-                  </h4>
+                  </h2>
                   <ul className="grid gap-3 text-slate-200/80">
                     {[
-                      "Target license or rating (e.g. CPL, IR)",
-                      "Preferred training schedule (weekday/weekend)",
-                      "Any constraints (budget, medical, location)",
-                      "Best time to reach you (+91 contact hours)",
+                      "Target license or rating goals enquiry (e.g. CPL, IR)",
+                      "Pilot timeline consultation — preferred training schedule",
+                      "Any constraints (budget, medical, location) — DGCA advice support",
+                      "Best time to reach you for flight plan assistance",
                     ].map((item) => (
                       <li key={item} className="flex items-start gap-3">
                         <span className="mt-1.5 inline-block h-2 w-2 rounded-full bg-emerald-400 flex-shrink-0" />
@@ -210,7 +250,7 @@ export default function ContactPage() {
                 Ready to Start Your Journey?
               </h2>
               <p className="text-xl md:text-2xl text-slate-200/85 mb-12 max-w-4xl mx-auto leading-relaxed">
-                Explore our comprehensive training programs designed to help you achieve your aviation goals.
+                Explore our pilot training programs India and aviation courses. Contact SkyPrep Aero for DGCA coaching enquiry.
               </p>
               <ScrollAnimation animationType="scaleIn" delay={400}>
                 <div className="flex flex-col sm:flex-row gap-6 justify-center">

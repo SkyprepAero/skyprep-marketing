@@ -6,9 +6,45 @@ import Link from "next/link";
 import { getContactUrl, getWhatsAppUrl, getWhatsAppButtonText } from "@/config/services";
 
 export const metadata: Metadata = buildPageMetadata({
-  title: "DGCA Computer Number Assistance - SkyPrep Aero",
-  description: "Get comprehensive support for your DGCA Computer Number (CN) application. We assist with documentation, process coordination, and personalized guidance.",
+  title: "DGCA Computer Number Assistance | Documentation & Application Support",
+  description: "Get end-to-end DGCA Computer Number assistance with documentation, verification, guidance, and process coordination. Start your aviation journey with expert support.",
   canonicalPath: "/services/computer-number",
+  keywords: [
+    // Primary Keywords
+    "DGCA Computer Number assistance",
+    "DGCA Computer Number support",
+    "DGCA CN application help",
+    "Computer Number DGCA",
+    "DGCA pilot registration India",
+    "aviation CN application support",
+    "DGCA document verification",
+    "DGCA login & application guidance",
+    // Secondary Keywords
+    "how to apply DGCA Computer Number",
+    "DGCA document requirements",
+    "CN application documentation",
+    "DGCA verification issues",
+    "DGCA pilot eligibility",
+    "student pilot DGCA process",
+    "DGCA compliance guidance",
+    "DGCA portal assistance",
+    // Long-Tail Keywords
+    "how to get DGCA Computer Number step by step",
+    "DGCA CN application support for student pilots",
+    "complete documentation help for DGCA Computer Number",
+    "DGCA Computer Number requirements explained",
+    "DGCA submission support for aviation students",
+    "end-to-end assistance for DGCA Computer Number",
+    "DGCA CN verification guidance for pilots in India",
+    // LSI Keywords
+    "DGCA paperwork",
+    "aviation regulatory compliance",
+    "pilot documentation India",
+    "DGCA application errors",
+    "DGCA student pilot profile",
+    "DGCA entry process",
+    "aviation regulatory support",
+  ],
 });
 
 export default function ComputerNumberPage() {
@@ -35,15 +71,15 @@ export default function ComputerNumberPage() {
                 </span>
               </div>
               <h1 className="text-6xl md:text-7xl font-bold text-white drop-shadow-[0_18px_34px_rgba(15,23,42,0.7)] mb-8 leading-tight">
-                DGCA Computer Number
+                DGCA Computer Number Assistance —
                 <span className="block gradient-text-primary leading-tight">
-                  Assistance
+                  Complete Documentation & Application Support
                 </span>
               </h1>
               <p className="text-xl md:text-2xl text-white max-w-4xl mx-auto leading-relaxed drop-shadow-[0_12px_30px_rgba(15,23,42,0.65)]">
-                At SkyPrep Aero, we recognize that obtaining a DGCA Computer Number (CN) is a critical 
-                first step for every aspiring pilot in India. Our mission is to simplify this journey 
-                and provide end-to-end support to ensure a seamless experience.
+                At SkyPrep Aero, we provide end-to-end DGCA Computer Number assistance for DGCA pilot registration India. 
+                Get complete CN application help with documentation, verification, and DGCA portal assistance 
+                for a seamless student pilot DGCA process.
               </p>
             </div>
           </ScrollAnimation>
@@ -63,8 +99,8 @@ export default function ComputerNumberPage() {
               </div>
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">Your First Step to Aviation Success</h2>
                   <p className="text-xl text-slate-200/85 max-w-3xl mx-auto">
-                The process, which involves meticulous documentation and strict compliance with DGCA regulations, 
-                can often be complex and time-consuming. We simplify this journey for you.
+                The DGCA entry process involves meticulous CN application documentation and strict aviation regulatory compliance. 
+                We simplify how to get DGCA Computer Number step by step for you.
               </p>
             </div>
           </ScrollAnimation>
@@ -93,7 +129,7 @@ export default function ComputerNumberPage() {
               </div>
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">Comprehensive DGCA Computer Number Support</h2>
               <p className="text-xl text-slate-200/80 max-w-3xl mx-auto">
-                We provide complete assistance throughout your DGCA Computer Number application process
+                Complete DGCA CN application support for student pilots throughout your Computer Number DGCA application process
               </p>
             </div>
           </ScrollAnimation>
@@ -111,7 +147,7 @@ export default function ComputerNumberPage() {
                 </div>
                 <h3 className="text-2xl font-bold text-white mb-4">Documentation Support</h3>
                 <p className="text-slate-200/80 text-lg leading-relaxed flex-grow">
-                  We assist in preparing and verifying all required academic, medical, and identification documents to meet DGCA standards.
+                  Complete documentation help for DGCA Computer Number—we assist in preparing and verifying all DGCA document requirements to meet standards.
                 </p>
               </div>
             </ScrollAnimation>
@@ -128,7 +164,7 @@ export default function ComputerNumberPage() {
                 </div>
                 <h3 className="text-2xl font-bold text-white mb-4">Step-by-Step Guidance</h3>
                 <p className="text-slate-200/80 text-lg leading-relaxed flex-grow">
-                  Our team provides expert guidance throughout the DGCA Computer Number application process, ensuring accuracy and timely submission.
+                  Expert DGCA login & application guidance throughout the CN application process—how to apply DGCA Computer Number with accuracy and timely submission.
                 </p>
               </div>
             </ScrollAnimation>
@@ -143,9 +179,9 @@ export default function ComputerNumberPage() {
                   </div>
                   <div className="absolute inset-0 w-20 h-20 mx-auto rounded-2xl border-2 border-white/20 animate-pulse" />
                 </div>
-                <h3 className="text-2xl font-bold text-white mb-4">Process Coordination</h3>
+                <h3 className="text-2xl font-bold text-white mb-4">Application & Process Coordination</h3>
                 <p className="text-slate-200/80 text-lg leading-relaxed flex-grow">
-                  We liaise with DGCA authorities on your behalf, minimizing delays and avoiding common errors in the application process.
+                  Aviation CN application support with DGCA liaison on your behalf—minimizing DGCA application errors and avoiding delays in CN approval.
                 </p>
               </div>
             </ScrollAnimation>
@@ -160,9 +196,9 @@ export default function ComputerNumberPage() {
                   </div>
                   <div className="absolute inset-0 w-20 h-20 mx-auto rounded-2xl border-2 border-white/20 animate-pulse" />
                 </div>
-                <h3 className="text-2xl font-bold text-white mb-4">Personalized Assistance</h3>
+                <h3 className="text-2xl font-bold text-white mb-4">Personalized CN Assistance</h3>
                 <p className="text-slate-200/80 text-lg leading-relaxed flex-grow">
-                  Each student receives tailored support, including progress updates and prompt resolution of queries.
+                  Each DGCA student pilot profile receives tailored CN personalized support with progress updates and prompt resolution of DGCA verification issues.
                 </p>
               </div>
             </ScrollAnimation>
@@ -188,9 +224,9 @@ export default function ComputerNumberPage() {
                   Why SkyPrep Aero
                 </span>
               </div>
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">Why Choose SkyPrep Aero</h2>
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">Why Choose SkyPrep Aero for DGCA CN</h2>
               <p className="text-xl text-slate-200/80 max-w-3xl mx-auto">
-                Extensive experience in assisting aviation aspirants with DGCA compliance and in-depth understanding of DGCA requirements and procedures.
+                DGCA compliance experts with extensive experience in DGCA CN assistance and trusted DGCA Computer Number support for aviation aspirants.
               </p>
             </div>
           </ScrollAnimation>
@@ -206,9 +242,9 @@ export default function ComputerNumberPage() {
                   </div>
                   <div className="absolute inset-0 w-20 h-20 mx-auto rounded-2xl border-2 border-white/20 animate-pulse" />
                 </div>
-                <h3 className="text-2xl font-bold text-white mb-4">Extensive Experience</h3>
+                <h3 className="text-2xl font-bold text-white mb-4">DGCA CN Experience</h3>
                 <p className="text-slate-200/80 text-lg leading-relaxed">
-                  Extensive experience in assisting aviation aspirants with DGCA compliance and regulatory requirements.
+                  Extensive experience in DGCA submission support for aviation students with aviation regulatory compliance expertise.
                 </p>
               </div>
             </ScrollAnimation>
@@ -223,9 +259,9 @@ export default function ComputerNumberPage() {
                   </div>
                   <div className="absolute inset-0 w-20 h-20 mx-auto rounded-2xl border-2 border-white/20 animate-pulse" />
                 </div>
-                <h3 className="text-2xl font-bold text-white mb-4">In-Depth Understanding</h3>
+                <h3 className="text-2xl font-bold text-white mb-4">DGCA Requirements Expertise</h3>
                 <p className="text-slate-200/80 text-lg leading-relaxed">
-                  In-depth understanding of DGCA requirements and procedures, ensuring accurate and compliant applications.
+                  DGCA Computer Number requirements explained with in-depth understanding of DGCA pilot eligibility and procedures.
                 </p>
               </div>
             </ScrollAnimation>
@@ -240,9 +276,9 @@ export default function ComputerNumberPage() {
                   </div>
                   <div className="absolute inset-0 w-20 h-20 mx-auto rounded-2xl border-2 border-white/20 animate-pulse" />
                 </div>
-                <h3 className="text-2xl font-bold text-white mb-4">Professional Commitment</h3>
+                <h3 className="text-2xl font-bold text-white mb-4">Trusted DGCA Support</h3>
                 <p className="text-slate-200/80 text-lg leading-relaxed">
-                  Commitment to providing reliable, transparent, and professional guidance throughout your aviation journey.
+                  Trusted DGCA Computer Number support with reliable, transparent DGCA compliance guidance throughout your pilot documentation India journey.
                 </p>
               </div>
             </ScrollAnimation>
@@ -268,9 +304,9 @@ export default function ComputerNumberPage() {
                   Our Process
                 </span>
               </div>
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">How We Help You Get Your CN</h2>
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">How We Help You Get Your Computer Number</h2>
               <p className="text-xl text-slate-200/80 max-w-3xl mx-auto">
-                With SkyPrep Aero, you can focus on your aviation aspirations while we manage the documentation and procedural formalities.
+                CN application process India made simple—focus on your aviation aspirations while we manage all DGCA paperwork and procedural formalities.
               </p>
             </div>
           </ScrollAnimation>
@@ -284,10 +320,10 @@ export default function ComputerNumberPage() {
                     Complete Support
                   </span>
                 </div>
-                <h3 className="text-3xl font-bold text-white mb-6">End-to-End DGCA Computer Number Assistance</h3>
+                <h3 className="text-3xl font-bold text-white mb-6">End-to-End DGCA Compliance Support</h3>
                 <p className="text-lg text-slate-200/80 max-w-2xl mx-auto leading-relaxed">
-                  We ensure your DGCA Computer Number application is handled with precision and efficiency, 
-                  allowing you to focus on your aviation career goals.
+                  End-to-end assistance for DGCA Computer Number handled with precision—DGCA CN verification guidance for pilots in India 
+                  so you can focus on your aviation career goals.
                 </p>
               </div>
 
@@ -298,8 +334,8 @@ export default function ComputerNumberPage() {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                     </svg>
                   </div>
-                  <h4 className="text-lg font-bold text-white mb-2">Document Preparation</h4>
-                  <p className="text-slate-200/80 text-sm">Complete documentation support and verification</p>
+                  <h4 className="text-lg font-bold text-white mb-2">DGCA Document Preparation</h4>
+                  <p className="text-slate-200/80 text-sm">Complete CN documentation and DGCA document verification</p>
                 </div>
 
                 <div className="group text-center p-6 bg-white/[0.07] rounded-2xl border border-white/12 hover:-translate-y-2 hover:border-white/25 transition-all duration-300 hover:shadow-[0_45px_120px_-70px_rgba(56,189,248,0.6)]">
@@ -308,8 +344,8 @@ export default function ComputerNumberPage() {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
                   </div>
-                  <h4 className="text-lg font-bold text-white mb-2">Application Guidance</h4>
-                  <p className="text-slate-200/80 text-sm">Step-by-step application process guidance</p>
+                  <h4 className="text-lg font-bold text-white mb-2">CN Application Guidance</h4>
+                  <p className="text-slate-200/80 text-sm">DGCA Computer Number step by step guidance</p>
                 </div>
 
                 <div className="group text-center p-6 bg-white/[0.07] rounded-2xl border border-white/12 hover:-translate-y-2 hover:border-white/25 transition-all duration-300 hover:shadow-[0_45px_120px_-70px_rgba(56,189,248,0.6)]">
@@ -318,8 +354,8 @@ export default function ComputerNumberPage() {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
                     </svg>
                   </div>
-                  <h4 className="text-lg font-bold text-white mb-2">Process Coordination</h4>
-                  <p className="text-slate-200/80 text-sm">Liaison with DGCA authorities on your behalf</p>
+                  <h4 className="text-lg font-bold text-white mb-2">DGCA Application Coordination</h4>
+                  <p className="text-slate-200/80 text-sm">Aviation regulatory support and CN approval liaison</p>
                 </div>
 
                 <div className="group text-center p-6 bg-white/[0.07] rounded-2xl border border-white/12 hover:-translate-y-2 hover:border-white/25 transition-all duration-300 hover:shadow-[0_45px_120px_-70px_rgba(56,189,248,0.6)]">
@@ -328,8 +364,8 @@ export default function ComputerNumberPage() {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
                   </div>
-                  <h4 className="text-lg font-bold text-white mb-2">Personalized Support</h4>
-                  <p className="text-slate-200/80 text-sm">Tailored assistance with progress updates</p>
+                  <h4 className="text-lg font-bold text-white mb-2">CN Personalized Support</h4>
+                  <p className="text-slate-200/80 text-sm">DGCA student guidance with progress updates</p>
                 </div>
               </div>
             </div>
@@ -355,11 +391,11 @@ export default function ComputerNumberPage() {
                 </span>
               </div>
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-8">
-                Take the First Step Towards Your Aviation Career
+                Start Your DGCA Computer Number Application
               </h2>
               <p className="text-xl md:text-2xl text-slate-200/85 mb-12 max-w-4xl mx-auto leading-relaxed">
-                Take the first step towards your aviation career with confidence – let SkyPrep Aero guide 
-                you through the DGCA Computer Number process with precision and efficiency.
+                Apply for Computer Number with confidence—let SkyPrep Aero guide you through the DGCA CN application process 
+                with our trusted DGCA service and aviation regulatory support.
               </p>
               <ScrollAnimation animationType="scaleIn" delay={400}>
                 <div className="flex flex-col items-center gap-6">

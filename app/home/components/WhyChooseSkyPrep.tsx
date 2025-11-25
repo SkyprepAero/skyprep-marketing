@@ -3,17 +3,17 @@ import { ScrollAnimation } from "./ScrollAnimation";
 export function WhyChooseSkyPrep() {
   const features = [
     {
-      title: "Personalized Coaching",
+      title: "Personalised DGCA Coaching",
       description:
-        "One-on-one coaching sessions with experienced instructors who provide personalized guidance, feedback, and support throughout your pilot training journey.",
+        "1:1 pilot mentoring with airline captains providing personalised guidance, DGCA exam preparation support, and career guidance throughout your aviation journey.",
       points: [
         "Individual coaching sessions",
         "Progress tracking and analytics",
         "Flexible scheduling options",
-        "Custom study plans",
+        "Custom DGCA study plans",
         "Progress monitoring",
-        "Exam preparation support",
-        "Career guidance",
+        "DGCA exam preparation support",
+        "Aviation career guidance",
       ],
       icon: (
         <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden>
@@ -23,14 +23,14 @@ export function WhyChooseSkyPrep() {
       gradient: "from-sky-500 via-blue-500 to-indigo-500",
     },
     {
-      title: "Complete Study Materials",
+      title: "Complete DGCA Study Materials",
       description:
-        "Access to comprehensive study materials, practice tests, and exam preparation resources designed for pilot training success.",
+        "Comprehensive DGCA study materials, practice tests for navigation, meteorology, and regulations—designed for pilot exam success.",
       points: [
-        "24/7 access to all study materials",
-        "Practice test banks",
+        "24/7 access to DGCA study materials",
+        "DGCA practice test banks",
         "Memory aids and flashcards",
-        "Exam drill packs and test series",
+        "DGCA mock tests and test series",
         "Video lessons and tutorials (Coming Soon)",
       ],
       icon: (
@@ -41,15 +41,15 @@ export function WhyChooseSkyPrep() {
       gradient: "from-amber-500 via-amber-400 to-orange-500",
     },
     {
-      title: "Proven Success Methods",
+      title: "Proven DGCA Exam Strategy",
       description:
-        "Evidence-based learning techniques and proven study methods that maximize retention and build lasting knowledge for pilot certification.",
+        "Evidence-based learning with spaced repetition and active recall—proven methods to clear DGCA exams in first attempt.",
       points: [
-        "Spaced repetition learning",
+        "Spaced repetition DGCA learning",
         "Active recall techniques",
         "Progress tracking analytics",
         "Memory palace methods",
-        "Exam strategy coaching",
+        "DGCA exam strategy coaching",
         "Confidence building exercises",
       ],
       icon: (
@@ -80,15 +80,15 @@ export function WhyChooseSkyPrep() {
       <div className="container-wide relative z-10 text-slate-100">
         <div className="flex flex-col items-center gap-6 text-center">
           <span className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/10 px-5 py-2 text-xs font-semibold uppercase tracking-[0.35em] text-slate-100/80">
-            Why skyprep works
+            Why SkyPrep Works for Modern Cadets
             <span className="h-2 w-2 rounded-full bg-emerald-400 animate-pulse" />
           </span>
           <h2 className="max-w-4xl text-3xl font-semibold leading-tight text-white md:text-5xl">
-            Discipline, data and mentorship built for modern cadets
+            Complete DGCA Study Material & Proven Success Methods
           </h2>
           <p className="max-w-3xl text-base text-slate-200/80 md:text-lg">
-            We blend precision coaching, analytics and community to keep every check on glide slope—
-            from your first nav log to airline selection prep.
+            Pilot training analytics, custom DGCA study plans, and aviation discipline coaching—
+            from your first navigation log to airline interview preparation.
           </p>
         </div>
 
@@ -134,42 +134,42 @@ export function WhyChooseSkyPrep() {
         <ScrollAnimation animationType="fadeInUp" delay={900}>
           <div className="mt-16 grid gap-10 text-sm text-slate-200/80 md:grid-cols-[minmax(0,1.2fr)_minmax(0,1fr)]">
             <div className="rounded-4xl border border-white/10 bg-white/[0.07] p-10 shadow-[0_35px_90px_-55px_rgba(14,116,253,0.75)] backdrop-blur transition-all duration-500 hover:-translate-y-2 hover:border-white/30 hover:shadow-[0_45px_130px_-60px_rgba(56,189,248,0.6)]">
-              <h3 className="text-3xl font-semibold text-white md:text-4xl">Ground School Reinvented</h3>
+              <h3 className="text-3xl font-semibold text-white md:text-4xl">Ground School Reinvented for the Modern Aviator</h3>
               <p className="mt-4 text-base leading-relaxed text-slate-200/80">
-                Our ground school program blends traditional aviation fundamentals with modern instruction methods. We offer flexible
-                learning routes, tailored feedback, and actionable insights that transform complex DGCA subjects into achievable
-                milestones. Whether you&apos;re a fresh cadet or in advanced training, we meet you where you&apos;re at.
+                Our DGCA ground school India program blends traditional aviation fundamentals with modern learning methods. We offer adaptive CPL ground classes,
+                tailored feedback, and actionable insights that transform complex DGCA subjects into achievable
+                milestones. Whether you&apos;re a fresh cadet or in advanced pilot training, we meet you where you&apos;re at.
               </p>
               <ul className="mt-6 space-y-4 text-base text-slate-200/80">
                 <li className="flex items-start gap-3">
                   <span className="mt-[6px] inline-flex h-2 w-2 rounded-full bg-gradient-to-br from-blue-500 to-sky-500" />
-                  <span>Adaptive training plans to suit your pace and timeline</span>
+                  <span>Adaptive DGCA training plans to suit your pace and timeline</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="mt-[6px] inline-flex h-2 w-2 rounded-full bg-gradient-to-br from-amber-500 to-orange-500" />
-                  <span>Weekly accountability touchpoints to keep you on-course</span>
+                  <span>Weekly accountability touchpoints to keep you on-course for exams</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="mt-[6px] inline-flex h-2 w-2 rounded-full bg-gradient-to-br from-emerald-500 to-teal-500" />
-                  <span>Analytics-driven progress reports after every major checkpoint</span>
+                  <span>Analytics-driven progress reports after every checkpoint</span>
                 </li>
               </ul>
             </div>
             <div className="grid gap-6">
               {[
                 {
-                  title: "FocusONE Coaching",
-                  copy: "Elite 1:1 mentoring with senior captains mapping every sortie, sim and exam milestone.",
+                  title: "FocusONE: Personalised 1:1 Airline Captain Mentorship",
+                  copy: "Elite 1:1 DGCA coaching with airline captains mapping every sortie, sim and exam milestone.",
                   gradient: "from-sky-500/25 via-blue-500/10 to-sky-500/5",
                 },
                 {
-                  title: "Cohorts",
-                  copy: "Collaborative cohorts with structured milestones, peer accountability, and live doubt clearing.",
+                  title: "Cohort-Based DGCA Ground School",
+                  copy: "Collaborative aviation cohorts with structured milestones, peer accountability, and live doubt clearing.",
                   gradient: "from-amber-500/25 via-orange-500/10 to-amber-500/5",
                 },
                 {
-                  title: "Test Series",
-                  copy: "Intensive practice sessions, analytics, and action plans to improve exam performance with precision.",
+                  title: "DGCA Test Series With Analytics & Debriefs",
+                  copy: "Intensive DGCA mock tests, analytics, and action plans to clear exams in first attempt.",
                   gradient: "from-emerald-500/25 via-teal-500/10 to-emerald-500/5",
                 },
               ].map((card) => (

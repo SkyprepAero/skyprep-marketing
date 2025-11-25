@@ -6,9 +6,49 @@ import { ScrollAnimation } from "@/app/home/components/ScrollAnimation";
 import Link from "next/link";
 
 export const metadata: Metadata = buildPageMetadata({
-  title: "About Us",
-  description: "Learn about SkyPrep's mission, team, and commitment to aviation excellence.",
+  title: "About SkyPrep Aero | India's Premier DGCA Pilot Training & Aviation Coaching Institute",
+  description: "Learn about SkyPrep Aero's mission, expert mentors, and innovative DGCA-aligned training that shapes world-class aviators through personalised coaching and modern aviation education.",
   canonicalPath: "/about",
+  keywords: [
+    // Primary Keywords
+    "About SkyPrep Aero",
+    "Pilot training institute India",
+    "DGCA aviation academy",
+    "Aviation coaching institute",
+    "DGCA ground school India",
+    "Pilot mentorship India",
+    "CPL coaching institute",
+    "Best aviation coaching India",
+    "DGCA training academy",
+    // Secondary Keywords
+    "innovative aviation education",
+    "DGCA learning system",
+    "aviation analytics training",
+    "personalised pilot coaching",
+    "ground school instructors India",
+    "aviation team India",
+    "CPL theory preparation",
+    "aviation professional trainers",
+    "airline pilot mentors India",
+    // Long-Tail Keywords
+    "about the best DGCA pilot training institute in India",
+    "aviation academy with personalised coaching and mentorship",
+    "how SkyPrep Aero trains world-class DGCA pilots",
+    "aviation institute using AI analytics for DGCA test prep",
+    "pilot training academy with one-on-one mentorship",
+    "India's most innovative DGCA coaching program",
+    "aviation professionals and instructors at SkyPrep Aero",
+    "how SkyPrep Aero transforms DGCA ground school learning",
+    // LSI Keywords
+    "flight training background",
+    "aviation education excellence",
+    "pilot career development",
+    "aviation team credentials",
+    "DGCA syllabus mastery",
+    "aviation leadership",
+    "CPL instructor experience",
+    "aviation discipline & integrity",
+  ],
 });
 
 export default function AboutPage() {
@@ -35,15 +75,16 @@ export default function AboutPage() {
                 </span>
               </div>
               <h1 className="text-5xl md:text-7xl font-bold text-white drop-shadow-[0_18px_34px_rgba(15,23,42,0.7)] mb-8 leading-tight">
-                Soaring to New Heights in
+                About SkyPrep Aero — Shaping the Future of
                 <span className="block gradient-text-primary">
-                  Aviation Excellence
+                  Aviation Education
                 </span>
               </h1>
               <p className="text-lg md:text-2xl text-white max-w-4xl mx-auto leading-relaxed drop-shadow-[0_12px_32px_rgba(15,23,42,0.65)]">
-                At SkyPrep, we believe every pilot deserves access to world-class training,
-                expert mentorship, and the tools needed to achieve their aviation dreams.
-                Our mission is to elevate the aviation industry through innovative coaching and comprehensive education.
+                India&apos;s premier DGCA pilot training institute offering personalised coaching,
+                expert airline pilot mentorship, and innovative aviation education.
+                As India&apos;s leading aviation coaching institute, we shape world-class aviators 
+                through modern DGCA learning systems, AI-powered analytics, and comprehensive CPL ground classes.
               </p>
             </div>
           </ScrollAnimation>
@@ -81,7 +122,7 @@ export default function AboutPage() {
                     </div>
                     <h3 className="text-2xl font-bold text-white mb-4">Innovating Aviation Education</h3>
                     <p className="text-slate-200/80 text-lg leading-relaxed">
-                      At SkyPrep Aero, our mission is to redefine pilot training through technology, precision, and expertise. We integrate authentic DGCA-based learning systems and advanced analytics to deliver an efficient, result-oriented training experience.
+                      At SkyPrep Aero, our mission is to redefine pilot training through technology, precision, and expertise. We integrate authentic DGCA-based learning systems, AI analytics for DGCA test prep, and advanced aviation analytics training to deliver an efficient, result-oriented experience for aspiring commercial pilots.
                     </p>
                   </div>
 
@@ -96,7 +137,7 @@ export default function AboutPage() {
                     </div>
                     <h3 className="text-2xl font-bold text-white mb-4">Developing World-Class Aviators</h3>
                     <p className="text-slate-200/80 text-lg leading-relaxed">
-                      SkyPrep Aero is committed to nurturing skilled and knowledgeable pilots who meet global aviation standards. Our structured programs and expert mentorship ensure every student is prepared for excellence in both exams and real-world aviation careers.
+                      SkyPrep Aero is committed to nurturing skilled and knowledgeable pilots who meet global aviation standards. Our structured CPL coaching programs and personalised pilot coaching with airline pilot mentors ensure every student is prepared for aviation education excellence and successful pilot career development.
                     </p>
                   </div>
 
@@ -109,9 +150,9 @@ export default function AboutPage() {
                       </div>
                       <div className="absolute inset-0 w-20 h-20 mx-auto rounded-2xl border-2 border-white/20 animate-pulse" />
                     </div>
-                    <h3 className="text-2xl font-bold text-white mb-4">Upholding Integrity and Professionalism</h3>
+                    <h3 className="text-2xl font-bold text-white mb-4">Integrity at the Core of Pilot Training</h3>
                     <p className="text-slate-200/80 text-lg leading-relaxed">
-                      Integrity is the cornerstone of aviation—and of SkyPrep Aero. We foster a culture of accountability, discipline, and ethical conduct, shaping pilots who lead with responsibility and uphold the highest professional values.
+                      Integrity is the cornerstone of aviation—and of SkyPrep Aero. We foster a culture of accountability, aviation discipline & integrity, and ethical conduct, shaping pilots who lead with aviation leadership and uphold the highest professional values expected in the airline industry.
                     </p>
                   </div>
                 </div>
@@ -141,31 +182,31 @@ export default function AboutPage() {
                     <span className="text-sm font-semibold">Our Journey</span>
                   </div>
                   <h2 className="text-4xl md:text-5xl font-bold text-white mb-8 leading-tight">
-                    Transforming Aviation Education in India
+                    Our Journey — Transforming Aviation Education in India
                   </h2>
                   <div className="space-y-6 text-slate-200/85 text-lg leading-relaxed">
                     <div className="relative">
                       <div className="absolute left-0 top-0 w-1 h-full bg-gradient-to-b from-blue-500 to-sky-500 rounded-full"></div>
                       <p className="pl-6">
-                        SkyPrep Aero was founded with a vision to transform the way aviation education is delivered in India. 
+                        SkyPrep Aero was founded with a vision to transform DGCA ground school learning in India. 
                         We recognized that traditional ground classes often lacked personalization and adaptability, 
-                        leaving many aspiring pilots without the guidance they truly needed.
+                        leaving many aspiring pilots without the guidance they truly needed from experienced aviation professional trainers.
                       </p>
                     </div>
                     <div className="relative">
                       <div className="absolute left-0 top-0 w-1 h-full bg-gradient-to-b from-sky-500 to-indigo-500 rounded-full"></div>
                       <p className="pl-6">
-                        With this in mind, SkyPrep Aero was designed to bridge that gap—combining advanced learning methods 
-                        with the personal touch of India&apos;s traditional education values. Our goal is simple: to make quality 
-                        pilot training both effective and individualized.
+                        With this in mind, SkyPrep Aero was designed to bridge that gap—combining innovative DGCA learning systems 
+                        with the personal touch of India&apos;s traditional education values. As India&apos;s most innovative DGCA coaching program, 
+                        our goal is simple: to make quality CPL theory preparation both effective and individualized.
                       </p>
                     </div>
                     <div className="relative">
                       <div className="absolute left-0 top-0 w-1 h-full bg-gradient-to-b from-indigo-500 to-purple-500 rounded-full"></div>
                       <p className="pl-6">
-                        Through one-on-one mentorship, flexible learning schedules, and a results-driven approach, 
-                        SkyPrep Aero ensures every student receives the attention, clarity, and confidence they need to excel. 
-                        We&apos;re not just shaping pilots—we&apos;re shaping the future of aviation education in India.
+                        Through one-on-one mentorship with airline pilot mentors, flexible learning schedules, and a results-driven approach, 
+                        SkyPrep Aero ensures every student receives the attention, clarity, and confidence they need to achieve DGCA syllabus mastery. 
+                        We&apos;re not just shaping pilots—we&apos;re shaping the future of aviation education excellence in India.
                       </p>
                     </div>
                   </div>
@@ -220,9 +261,9 @@ export default function AboutPage() {
                   Our Team
                 </span>
               </div>
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">The Minds Behind SkyPrep Aero</h2>
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">The SkyPrep Aero Team — Meet Our Instructors & Leadership</h2>
               <p className="text-xl text-slate-200/80 max-w-3xl mx-auto">
-                Experienced aviation professionals dedicated to your success
+                Experienced ground school instructors and aviation professionals dedicated to your success
               </p>
             </div>
           </ScrollAnimation>
@@ -243,8 +284,8 @@ export default function AboutPage() {
                     <h3 className="text-2xl font-bold text-white mb-3">Capt Vimal Singh</h3>
                     <p className="text-sky-300 font-semibold mb-4 text-lg">Ground School Instructor</p>
                     <p className="text-slate-200/80 leading-relaxed">
-                      A certified Commercial Pilot trained in the USA, holding CPL licenses from both the FAA(USA) and DGCA(India). With global flying experience and a strong command of aviation standards,
-                      he is on course to join the airline industry while inspiring future pilots at SkyPrep Aero.
+                      A certified Commercial Pilot trained in the USA, holding CPL licenses from both the FAA(USA) and DGCA(India). With global flight training background and extensive CPL instructor experience,
+                      he brings aviation standards expertise and is on course to join the airline industry while inspiring future pilots at SkyPrep Aero.
                     </p>
                   </div>
                 </div>
@@ -262,9 +303,9 @@ export default function AboutPage() {
                   </div>
                   <div>
                     <h3 className="text-2xl font-bold text-white mb-3">Harsh Jamewar</h3>
-                    <p className="text-sky-300 font-semibold mb-4 text-lg">Admin</p>
+                    <p className="text-sky-300 font-semibold mb-4 text-lg">Admin & Flying School Coordinator</p>
                     <p className="text-slate-200/80 leading-relaxed">
-                      Serving as Admin & Flying School Coordinator at SkyPrep Aero, Harsh manages day-to-day operations and ensures smooth coordination with flight schools. He also oversees aviation-related services, providing support and guidance to students for a seamless training experience.
+                      Serving as Admin & Flying School Coordinator at SkyPrep Aero, Harsh manages day-to-day operations and ensures smooth coordination with flight schools across India. He oversees aviation-related services, providing pilot career development support and guidance to students for a seamless training experience.
                     </p>
                   </div>
                 </div>
@@ -282,9 +323,9 @@ export default function AboutPage() {
                   </div>
                   <div>
                     <h3 className="text-2xl font-bold text-white mb-3">Varun Singh</h3>
-                    <p className="text-emerald-300 font-semibold mb-4 text-lg">Technology Management</p>
+                    <p className="text-emerald-300 font-semibold mb-4 text-lg">Technology & Analytics Lead</p>
                     <p className="text-slate-200/80 leading-relaxed">
-                      Varun Singh has spearheaded the innovation of SkyPrep’s Test Series and AI Analytics, leveraging cutting-edge technology to make learning smarter, pinpoint weaknesses, and optimize performance for aspiring pilots.
+                      Varun Singh has spearheaded the innovation of SkyPrep&apos;s Test Series and AI Analytics for DGCA test prep, leveraging cutting-edge aviation analytics training technology to make learning smarter, pinpoint weaknesses, and optimize performance for aspiring pilots.
                     </p>
                   </div>
                 </div>
@@ -302,9 +343,9 @@ export default function AboutPage() {
                   </div>
                   <div>
                     <h3 className="text-2xl font-bold text-white mb-3">Prathmesh Shinde</h3>
-                    <p className="text-amber-300 font-semibold mb-4 text-lg">Assistant Ground Instructor</p>
+                    <p className="text-amber-300 font-semibold mb-4 text-lg">Founder & Assistant Ground Instructor</p>
                     <p className="text-slate-200/80 leading-relaxed">
-                      Mind behind SkyPrep Aero, Prathmesh Shinde is an aviation enthusiast committed to transforming pilot training in India with innovation, personalised learning, and a focus on student success.
+                      The mind behind SkyPrep Aero, Prathmesh Shinde is an aviation enthusiast committed to transforming DGCA ground school learning in India with innovation, personalised pilot coaching, and a dedicated focus on student success.
                     </p>
                   </div>
                 </div>
@@ -332,11 +373,11 @@ export default function AboutPage() {
                 </span>
               </div>
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-8">
-                Ready to Take Flight?
+                Ready to Begin Your Aviation Journey?
               </h2>
               <p className="text-xl md:text-2xl text-slate-200/85 mb-12 max-w-4xl mx-auto">
-                Join hundreds of successful pilots who have achieved their aviation goals with SkyPrep.
-                Your journey to the skies starts here.
+                Join hundreds of successful pilots who have achieved their aviation goals with India&apos;s best DGCA coaching institute.
+                Enroll in our aviation courses and start your pilot career development today.
               </p>
               <ScrollAnimation animationType="scaleIn" delay={400}>
                 <div className="flex flex-col sm:flex-row gap-6 justify-center">

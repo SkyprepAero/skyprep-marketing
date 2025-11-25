@@ -1,70 +1,111 @@
 "use client";
-import { useEffect, useRef } from "react";
-import { ScrollAnimation } from "../app/home/components/ScrollAnimation";
+import { useEffect, useRef, useState, useCallback } from "react";
 
 type Testimonial = {
   name: string;
-  role: string;
+  title: string;
   quote: string;
   rating: number;
-  achievement: string;
+  passedSubjects: string[];
   avatar: string;
+  photo?: string;
 };
 
 const DATA: Testimonial[] = [
   { 
-    name: "Rohit Sharma", 
-    role: "Private Pilot License", 
-    quote: "SkyPrep turned theory into confidence. The personalized briefs and drills made everything click—I walked into my written exam completely relaxed and passed on the first try.", 
+    name: "Viraj Ghanwat",
+    title: "CPL Completed NZ",
+    quote: "SkyPrep Aero receives very positive feedback as an aviation training ground school, particularly for its ground school courses. The ability to study at your own pace is seen as a significant advantage, especially for busy learners or those wanting to review material before exams.", 
     rating: 5, 
-    achievement: "Passed PPL Written in 1st Attempt",
-    avatar: "RS"
+    passedSubjects: ["Meteorology", "Regulations", "Navigation"],
+    avatar: "VG"
   },
   { 
-    name: "Maya Patel", 
-    role: "Commercial Pilot License", 
-    quote: "The one-on-one coaching was game-changing. Short, actionable debriefs after each flight showed me exactly what to focus on next. My flying improved dramatically.", 
+    name: "Vivek M",
+    title: "Airline Crew",
+    quote: "This class provided a clear and practical overview of how weather and regulatory frameworks impact aviation operations. It balanced theory with real-world applications, making it especially valuable for professionals working while studying.", 
     rating: 5, 
-    achievement: "Completed CPL 40% Faster",
-    avatar: "MP"
+    passedSubjects: ["Meteorology", "Regulations"],
+    avatar: "VM"
   },
   { 
-    name: "Arjun Singh", 
-    role: "Instrument Rating", 
-    quote: "IFR training was no longer scary. The procedures and communications became second nature—my workload dropped massively and I felt confident in any weather.", 
-    rating: 3, 
-    achievement: "Mastered IFR Procedures",
-    avatar: "AS"
-  },
-  { 
-    name: "Sana Ahmed", 
-    role: "Private Pilot License", 
-    quote: "The custom learning path was perfect for my schedule. No more guessing what to study next—everything was clearly planned and I could study at my own pace.", 
+    name: "Mrudini Katare",
+    title: "CPL Completed USA",
+    quote: "Very good instructors, they're really helpful and knowledgeable.", 
     rating: 5, 
-    achievement: "Balanced Work & Training",
-    avatar: "SA"
+    passedSubjects: ["Meteorology", "Regulations", "Navigation"],
+    avatar: "MK",
+    photo: "https://drive.google.com/thumbnail?id=1mDpnSteO5XBonCvGtthtUDutKa-oSqxO"
   },
   { 
-    name: "Dev Kumar", 
-    role: "Commercial Pilot License", 
-    quote: "The online platform made learning so convenient. I could study during my breaks at work and the one-on-one sessions fit perfectly into my busy schedule.", 
-    rating: 2, 
-    achievement: "Flexible Learning Schedule",
-    avatar: "DK"
-  },
-  { 
-    name: "Ishaan Verma", 
-    role: "Instrument Rating", 
-    quote: "The communication scripts and practice drills removed all the 'IFR fear factor'. I felt prepared for any scenario and my confidence soared.", 
+    name: "Vipin Memane",
+    title: "CPL Trainee South Africa",
+    quote: "I had an excellent experience with SkyPrep Aero. The ground classes were structured, clear, and taught by professionals who truly understand how to guide aspiring pilots. Among all the offerings, Focus One stood out as the best product for me.", 
     rating: 5, 
-    achievement: "Overcame IFR Anxiety",
-    avatar: "IV"
+    passedSubjects: ["Meteorology", "Regulations"],
+    avatar: "VM"
+  },
+  { 
+    name: "Sheetal Rawat",
+    title: "CPL Trainee South Africa",
+    quote: "SkyPrep Aero has been a game-changer in my aviation journey. I used the Focus One program, and it gave me exactly the structure, clarity, and revision technique I needed. Thanks to Focus One, I cleared all my papers in the very first attempt.", 
+    rating: 5, 
+    passedSubjects: ["Meteorology", "Regulations", "Navigation"],
+    avatar: "SR"
+  },
+  { 
+    name: "Shubham",
+    title: "CPL Completed USA",
+    quote: "SkyPrep Aero's Cohorts Program was exactly what I needed before starting my flying in the USA. The structured group learning, regular discussions, and mentor-led sessions helped me strengthen every concept.", 
+    rating: 5, 
+    passedSubjects: ["Meteorology", "Regulations"],
+    avatar: "SH"
+  },
+  { 
+    name: "Vishal Bharti",
+    title: "CPL Trainee India",
+    quote: "When I was struggling with my DGCA papers, SkyPrep Aero became the turning point in my preparation. The mentors explained every concept with such clarity that topics I once found difficult started making complete sense.", 
+    rating: 5, 
+    passedSubjects: ["Meteorology", "Regulations", "Navigation"],
+    avatar: "VB"
+  },
+  { 
+    name: "Prachi",
+    title: "DGCA Student",
+    quote: "One thing I absolutely love about SkyPrep Aero is the environment—it's positive, energetic, and instantly motivating. Every class feels like a place where you grow, get inspired, and stay focused on your goals.", 
+    rating: 5, 
+    passedSubjects: ["Meteorology", "Regulations"],
+    avatar: "PR"
+  },
+  { 
+    name: "Hrishikesh Algur",
+    title: "DGCA Student",
+    quote: "There was a phase when I genuinely felt like backing out of aviation. The stress, setbacks, and self-doubt were getting overwhelming. That's when SkyPrep Aero stepped in. Their guidance, support, and the way they kept motivating me made all the difference. They helped me rebuild my confidence and reminded me why I started this journey in the first place. I'm still in aviation today because SkyPrep didn't let me give up.", 
+    rating: 5, 
+    passedSubjects: ["Meteorology", "Regulations", "Navigation"],
+    avatar: "HA"
+  },
+  { 
+    name: "Aishwarya Patil",
+    title: "CPL Completed USA",
+    quote: "I was completely confused about where to start—flying schools, medicals, computer number, and the entire process felt overwhelming. SkyPrep Aero helped me find the perfect solutions to every doubt I had. They guided me step-by-step, cleared all my confusion, and made the whole journey feel simple and achievable. I'm truly grateful for their support and clarity during a time when I felt lost.", 
+    rating: 5, 
+    passedSubjects: ["Meteorology", "Regulations", "Navigation"],
+    avatar: "AP"
+  },
+  { 
+    name: "Atharva Panigai",
+    title: "DGCA Student / IT Industry",
+    quote: "Managing aviation studies alongside a full-time IT job felt impossible until I connected with SkyPrep Aero. Their guidance, clarity, and structured approach made it so much easier to balance work and preparation. Even with my busy schedule, they helped me stay consistent, understand concepts clearly, and move forward without confusion. SkyPrep truly understands the challenges of working professionals and supports you at every step.", 
+    rating: 5, 
+    passedSubjects: ["Meteorology", "Regulations", "Navigation"],
+    avatar: "AP"
   }
 ];
 
 function TestimonialCard({ testimonial }: { testimonial: Testimonial }) {
   return (
-    <div className="group relative flex max-w-[380px] min-w-[280px] flex-col overflow-visible rounded-3xl border border-white/12 bg-white/[0.08] p-6 text-slate-100 shadow-[0_30px_90px_-55px_rgba(15,23,42,0.85)] backdrop-blur transition-all duration-500 hover:-translate-y-2 hover:border-white/30 hover:shadow-[0_45px_130px_-60px_rgba(56,189,248,0.6)]">
+    <div className="group relative flex w-[400px] flex-col overflow-visible rounded-3xl border border-white/12 bg-white/[0.08] p-6 text-slate-100 shadow-[0_30px_90px_-55px_rgba(15,23,42,0.85)] backdrop-blur transition-all duration-500 hover:-translate-y-2 hover:border-white/30 hover:shadow-[0_45px_130px_-60px_rgba(56,189,248,0.6)]">
       <div className="absolute top-4 right-4 w-6 h-6 text-amber-300/50">
         <svg viewBox="0 0 24 24" fill="currentColor">
           <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h4v10h-10z" />
@@ -83,23 +124,40 @@ function TestimonialCard({ testimonial }: { testimonial: Testimonial }) {
         &ldquo;{testimonial.quote}&rdquo;
       </blockquote>
 
-      <div className="mt-4 inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/10 px-3 py-1.5 text-xs font-semibold uppercase tracking-[0.3em] text-amber-200/90">
-        <span className="h-1.5 w-1.5 rounded-full bg-amber-300" />
-        <span className="truncate" title={testimonial.achievement}>
-          {testimonial.achievement}
-        </span>
-      </div>
+      {testimonial.passedSubjects.length > 0 && (
+        <div className="mt-4 flex flex-wrap gap-2">
+          {testimonial.passedSubjects.map((subject) => (
+            <span 
+              key={subject} 
+              className="inline-flex items-center gap-1.5 rounded-full border border-emerald-500/30 bg-emerald-500/15 px-2.5 py-1 text-[11px] font-semibold text-emerald-300"
+            >
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" className="text-emerald-400">
+                <path d="M20 6L9 17l-5-5" strokeLinecap="round" strokeLinejoin="round"/>
+              </svg>
+              {subject}
+            </span>
+          ))}
+        </div>
+      )}
 
       <div className="mt-4 flex items-center gap-3">
-        <div className="flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-br from-sky-500 to-blue-600 text-sm font-bold text-white shadow-lg shadow-black/30">
-          {testimonial.avatar}
-        </div>
+        {testimonial.photo ? (
+          <img 
+            src={testimonial.photo} 
+            alt={testimonial.name}
+            className="h-11 w-11 rounded-full object-cover shadow-lg shadow-black/30 ring-2 ring-white/20"
+          />
+        ) : (
+          <div className="flex h-11 w-11 items-center justify-center rounded-full bg-gradient-to-br from-sky-500 to-blue-600 text-sm font-bold text-white shadow-lg shadow-black/30">
+            {testimonial.avatar}
+          </div>
+        )}
         <div className="min-w-0">
-          <h4 className="truncate text-sm font-semibold text-white" title={testimonial.name}>
+          <h4 className="text-sm font-semibold text-white" title={testimonial.name}>
             {testimonial.name}
           </h4>
-          <p className="truncate text-xs text-slate-300/80" title={testimonial.role}>
-            {testimonial.role}
+          <p className="text-xs text-slate-300/80">
+            {testimonial.title}
           </p>
         </div>
       </div>
@@ -108,62 +166,111 @@ function TestimonialCard({ testimonial }: { testimonial: Testimonial }) {
 }
 
 export function TestimonialsMarquee() {
-  const row1Ref = useRef<HTMLDivElement | null>(null);
-  const row2Ref = useRef<HTMLDivElement | null>(null);
+  const rowRef = useRef<HTMLDivElement | null>(null);
   const rafRef = useRef<number | null>(null);
+  const [isPaused, setIsPaused] = useState(false);
+  const [isDragging, setIsDragging] = useState(false);
+  const dragStartX = useRef(0);
+  const scrollStartX = useRef(0);
 
-  // Calculate actual average rating from testimonials
-  const averageRating = DATA.reduce((sum, testimonial) => sum + testimonial.rating, 0) / DATA.length;
-  const formattedRating = averageRating.toFixed(1);
-
-  // Split data into two rows evenly
-  const half = Math.ceil(DATA.length / 2);
-  const rowA = DATA.slice(0, half);
-  const rowB = DATA.slice(half);
-
+  // Auto-scroll animation
   useEffect(() => {
-    const speed1 = 0.8; // px per frame
-    const speed2 = 1.0;
+    const speed = 0.8; // px per frame
 
     function loop() {
-      if (!row1Ref.current || !row2Ref.current) return;
-      const r1 = row1Ref.current;
-      const r2 = row2Ref.current;
-      r1.scrollLeft += speed1;
-      r2.scrollLeft -= speed2;
+      if (!rowRef.current || isPaused) {
+        rafRef.current = requestAnimationFrame(loop);
+        return;
+      }
+      const row = rowRef.current;
+      row.scrollLeft += speed;
       // When auto-scrolling, content is duplicated, so loop at half
-      const max1 = r1.scrollWidth / 2;
-      const max2 = r2.scrollWidth / 2;
-      if (r1.scrollLeft >= max1) r1.scrollLeft = 0;
-      if (r2.scrollLeft <= 0) r2.scrollLeft = max2;
+      const max = row.scrollWidth / 2;
+      if (row.scrollLeft >= max) row.scrollLeft = 0;
       rafRef.current = requestAnimationFrame(loop);
     }
     rafRef.current = requestAnimationFrame(loop);
     return () => {
       if (rafRef.current) cancelAnimationFrame(rafRef.current);
     };
+  }, [isPaused]);
+
+  // Handle mouse down - pause and start drag
+  const handleMouseDown = useCallback((e: React.MouseEvent) => {
+    if (!rowRef.current) return;
+    setIsPaused(true);
+    setIsDragging(true);
+    dragStartX.current = e.clientX;
+    scrollStartX.current = rowRef.current.scrollLeft;
+    e.preventDefault();
+  }, []);
+
+  // Handle mouse move - drag if active
+  const handleMouseMove = useCallback((e: React.MouseEvent) => {
+    if (!isDragging || !rowRef.current) return;
+    const diff = dragStartX.current - e.clientX;
+    rowRef.current.scrollLeft = scrollStartX.current + diff;
+    
+    // Handle infinite loop during drag
+    const max = rowRef.current.scrollWidth / 2;
+    if (rowRef.current.scrollLeft >= max) {
+      rowRef.current.scrollLeft -= max;
+      scrollStartX.current -= max;
+    } else if (rowRef.current.scrollLeft <= 0) {
+      rowRef.current.scrollLeft += max;
+      scrollStartX.current += max;
+    }
+  }, [isDragging]);
+
+  // Handle mouse up - resume auto-scroll
+  const handleMouseUp = useCallback(() => {
+    setIsDragging(false);
+    setIsPaused(false);
+  }, []);
+
+  // Handle mouse leave - resume if was dragging
+  const handleMouseLeave = useCallback(() => {
+    if (isDragging) {
+      setIsDragging(false);
+      setIsPaused(false);
+    }
+  }, [isDragging]);
+
+  // Handle touch events for mobile
+  const handleTouchStart = useCallback((e: React.TouchEvent) => {
+    if (!rowRef.current) return;
+    setIsPaused(true);
+    setIsDragging(true);
+    dragStartX.current = e.touches[0].clientX;
+    scrollStartX.current = rowRef.current.scrollLeft;
+  }, []);
+
+  const handleTouchMove = useCallback((e: React.TouchEvent) => {
+    if (!isDragging || !rowRef.current) return;
+    const diff = dragStartX.current - e.touches[0].clientX;
+    rowRef.current.scrollLeft = scrollStartX.current + diff;
+    
+    // Handle infinite loop during drag
+    const max = rowRef.current.scrollWidth / 2;
+    if (rowRef.current.scrollLeft >= max) {
+      rowRef.current.scrollLeft -= max;
+      scrollStartX.current -= max;
+    } else if (rowRef.current.scrollLeft <= 0) {
+      rowRef.current.scrollLeft += max;
+      scrollStartX.current += max;
+    }
+  }, [isDragging]);
+
+  const handleTouchEnd = useCallback(() => {
+    setIsDragging(false);
+    setIsPaused(false);
   }, []);
 
   const Track = ({ items }: { items: Testimonial[] }) => (
-    <div className="inline-flex gap-6 px-1 align-top" style={{ lineHeight: 0 }}>
+    <div className="inline-flex gap-6 px-1 py-4 align-top">
       {items.map((t, i) => (
-        <TestimonialCard key={`${t.name}-${t.role}-${i}`} testimonial={t} />
+        <TestimonialCard key={`${t.name}-${i}`} testimonial={t} />
       ))}
-    </div>
-  );
-
-  const Row = ({ reverse = false, data }: { reverse?: boolean; data: Testimonial[] }) => (
-    <div className="relative overflow-hidden" style={{ lineHeight: 0 }}>
-      <div
-        ref={reverse ? row2Ref : row1Ref}
-        className="marquee"
-      >
-        {/* Duplicate for seamless loop when auto-scrolling */}
-        <div className="inline-flex align-top">
-          <Track items={data} />
-          <Track items={data} />
-        </div>
-      </div>
     </div>
   );
 
@@ -184,29 +291,25 @@ export function TestimonialsMarquee() {
         </div>
       </div>
 
-      {/* Auto-scrolling Testimonials */}
-      <div className="space-y-6">
-        <Row data={rowA} />
-        <Row reverse data={rowB.length ? rowB : rowA} />
-      </div>
-
-      {/* Trust Indicators */}
-      <div className="mt-16 text-center">
-        <ScrollAnimation animationType="fadeInUp" delay={1000}>
-          <div className="inline-flex items-center gap-8 rounded-2xl border border-white/15 bg-white/[0.08] px-8 py-6 shadow-[0_30px_90px_-55px_rgba(15,23,42,0.85)] backdrop-blur transition-all duration-500 hover:-translate-y-2 hover:border-white/30 hover:shadow-[0_45px_130px_-60px_rgba(56,189,248,0.6)]">
-            <div className="text-center">
-              <div className="text-2xl font-bold text-white">100%</div>
-              <div className="text-sm text-slate-300/80">Satisfaction Rate</div>
-            </div>
-            <div className="h-8 w-px bg-white/15" />
-            <div className="text-center">
-              <div className="text-2xl font-bold text-white">{formattedRating}</div>
-              <div className="text-sm text-slate-300/80">Average Rating</div>
-            </div>
+      {/* Auto-scrolling Testimonials - Single Row */}
+      <div 
+        className="relative overflow-x-hidden overflow-y-visible py-4 -my-4"
+        onMouseDown={handleMouseDown}
+        onMouseMove={handleMouseMove}
+        onMouseUp={handleMouseUp}
+        onMouseLeave={handleMouseLeave}
+        onTouchStart={handleTouchStart}
+        onTouchMove={handleTouchMove}
+        onTouchEnd={handleTouchEnd}
+        style={{ cursor: isDragging ? 'grabbing' : 'grab' }}
+      >
+        <div ref={rowRef} className="marquee select-none">
+          <div className="inline-flex align-top">
+            <Track items={DATA} />
+            <Track items={DATA} />
           </div>
-        </ScrollAnimation>
+        </div>
       </div>
-
     </div>
   );
 }

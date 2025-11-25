@@ -1,7 +1,7 @@
 export const siteConfig = {
-  name: "SkyPrep Aviation Coaching",
+  name: "SkyPrep Aero | DGCA Ground Classes, Pilot Training & Airline Preparation",
   description:
-    "Personalized aviation coaching, courses, and resources for aspiring and professional pilots.",
+    "DGCA-aligned pilot coaching with personalised mentoring, cohorts, analytics, and test series. Clear DGCA exams, train with airline captains, and fast-track your aviation career in India.",
   url: process.env.NEXT_PUBLIC_SITE_URL,
   ogImage: "/skyprep-logo-dark.png",
   logo: "/skyprep-logo-dark.png",

@@ -26,14 +26,14 @@ export function DGCARequirements() {
          <div className="text-center text-white px-4 sm:px-6 lg:px-8 max-w-7xl w-full">
            <ScrollAnimation animationType="fadeInUp" delay={200}>
             <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6">
-              DGCA Requirements
+              DGCA Pilot Licensing Requirements
             </h2>
            </ScrollAnimation>
            
            <ScrollAnimation animationType="fadeInUp" delay={400}>
              <p className="text-base sm:text-lg md:text-xl mb-6 sm:mb-8 lg:mb-10 max-w-4xl mx-auto px-4">
-               Navigate the DGCA licensing process with confidence. Get expert guidance on medical requirements, 
-               written exams, and practical training standards.
+               Navigate DGCA licensing requirements with confidence. Expert guidance on flight training requirements, PIC hours, 
+               instrument flying hours, total flight time, and commercial pilot license India standards.
              </p>
            </ScrollAnimation>
            

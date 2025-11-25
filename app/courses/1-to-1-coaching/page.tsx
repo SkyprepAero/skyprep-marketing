@@ -6,9 +6,51 @@ import Link from "next/link";
 import { getContactUrl, getWhatsAppUrl, getWhatsAppButtonText } from "@/config/services";
 
 export const metadata: Metadata = buildPageMetadata({
-  title: "FocusONE Mentorship Program - Personalized Aviation Training",
-  description: "Get personalized online training with focused attention and help with specific aviation subjects.",
-  canonicalPath: "/services/1-to-1-coaching",
+  title: "FocusONE Mentorship Program | 1:1 DGCA Coaching & Personalized Pilot Training",
+  description: "FocusONE offers personalised 1:1 DGCA coaching with live sessions, flexible scheduling, study materials, and expert mentorship to master all core aviation subjects.",
+  canonicalPath: "/courses/1-to-1-coaching",
+  keywords: [
+    // Primary Keywords
+    "FocusONE mentorship program",
+    "DGCA 1:1 coaching",
+    "one-on-one pilot training",
+    "personalised pilot mentorship",
+    "DGCA online ground classes",
+    "CPL 1:1 coaching India",
+    "aviation mentorship program",
+    "DGCA pilot tutoring online",
+    "airline captain mentoring",
+    "aviation instructor online",
+    // Secondary Keywords
+    "flexible pilot training schedule",
+    "personalised DGCA learning",
+    "aviation subject mentoring",
+    "DGCA subject coaching",
+    "Air Regulation coaching",
+    "Aviation Navigation coaching",
+    "Meteorology coaching DGCA",
+    "pilot doubt-clearing sessions",
+    "online pilot classes India",
+    "aviation study material",
+    // Long-Tail Keywords
+    "best one-on-one DGCA coaching program in India",
+    "personalised pilot training with flexible timing",
+    "online DGCA mentoring by airline professionals",
+    "1:1 aviation mentorship for Air Navigation & Met",
+    "how to study DGCA subjects with personal coaching",
+    "DGCA exam preparation with live individual sessions",
+    "aviation mentorship program with customized schedule",
+    "complete DGCA subject coaching with doubt-clearing",
+    // LSI Keywords
+    "aviation syllabus coaching",
+    "DGCA theory subjects",
+    "aviation meteorology lessons",
+    "aircraft systems basics",
+    "RT & Radio Telephony coaching",
+    "cadet pilot theory guidance",
+    "online aviation tutor",
+    "DGCA individual guidance",
+  ],
 });
 
 export default function OneToOneCoachingPage() {
@@ -35,11 +77,13 @@ export default function OneToOneCoachingPage() {
                 </span>
               </div>
               <h1 className="text-5xl md:text-7xl font-bold text-white drop-shadow-[0_18px_34px_rgba(15,23,42,0.7)] mb-8 leading-tight">
-                FocusONE
-                <span className="block gradient-text-primary leading-tight">Mentorship Program</span>
+                FocusONE Mentorship Program —
+                <span className="block gradient-text-primary leading-tight">Personalized 1:1 DGCA Coaching</span>
               </h1>
               <p className="text-lg md:text-2xl text-white max-w-4xl mx-auto leading-relaxed drop-shadow-[0_12px_30px_rgba(15,23,42,0.65)]">
-                Guiding aspiring pilots with expertise and flexibility, Focused One lets students learn at their own pace, making it the perfect choice for career-focused individuals.
+                India&apos;s best one-on-one DGCA coaching program with personalised pilot mentorship, 
+                flexible scheduling, and expert aviation instructors. Master Air Regulation, Meteorology, 
+                and Navigation with dedicated online pilot classes.
               </p>
             </div>
           </ScrollAnimation>
@@ -58,10 +102,10 @@ export default function OneToOneCoachingPage() {
                 </span>
               </div>
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Key Features of our FocusONE
+                Key Features of the FocusONE Program
               </h2>
               <p className="text-xl text-slate-200/80 max-w-3xl mx-auto">
-                Comprehensive features designed for focused learning
+                Comprehensive features designed for personalised DGCA learning and pilot success
               </p>
             </div>
           </ScrollAnimation>
@@ -77,9 +121,9 @@ export default function OneToOneCoachingPage() {
                   </div>
                   <div className="absolute inset-0 w-20 h-20 mx-auto rounded-2xl border-2 border-white/20 animate-pulse" />
                 </div>
-                <h3 className="text-2xl font-bold text-white mb-4">Individual Live Sessions</h3>
+                <h3 className="text-2xl font-bold text-white mb-4">One-on-One Live Sessions With Experts</h3>
                 <p className="text-slate-200/80 text-lg leading-relaxed flex-grow">
-                  One-on-one live online sessions with experienced instructors for personalized learning.
+                  DGCA 1:1 coaching with experienced aviation instructors online for truly personalised pilot mentorship.
                 </p>
               </div>
             </ScrollAnimation>
@@ -94,9 +138,9 @@ export default function OneToOneCoachingPage() {
                   </div>
                   <div className="absolute inset-0 w-20 h-20 mx-auto rounded-2xl border-2 border-white/20 animate-pulse" />
                 </div>
-                <h3 className="text-2xl font-bold text-white mb-4">Choose Your Time</h3>
+                <h3 className="text-2xl font-bold text-white mb-4">Flexible Scheduling for Busy Cadets</h3>
                 <p className="text-slate-200/80 text-lg leading-relaxed flex-grow">
-                  Flexible scheduling that works with your availability and learning preferences.
+                  Flexible pilot training schedule that works with your availability—personalised pilot training with flexible timing.
                 </p>
               </div>
             </ScrollAnimation>
@@ -111,9 +155,9 @@ export default function OneToOneCoachingPage() {
                   </div>
                   <div className="absolute inset-0 w-20 h-20 mx-auto rounded-2xl border-2 border-white/20 animate-pulse" />
                 </div>
-                <h3 className="text-2xl font-bold text-white mb-4">Additional Learning Material</h3>
+                <h3 className="text-2xl font-bold text-white mb-4">Comprehensive Study Material & Resources</h3>
                 <p className="text-slate-200/80 text-lg leading-relaxed flex-grow">
-                  Comprehensive study materials, notes, and resources to support your learning journey.
+                  Complete aviation study material, notes, and resources to master all DGCA theory subjects.
                 </p>
               </div>
             </ScrollAnimation>
@@ -128,9 +172,9 @@ export default function OneToOneCoachingPage() {
                   </div>
                   <div className="absolute inset-0 w-20 h-20 mx-auto rounded-2xl border-2 border-white/20 animate-pulse" />
                 </div>
-                <h3 className="text-2xl font-bold text-white mb-4">Doubt-Clearing Sessions</h3>
+                <h3 className="text-2xl font-bold text-white mb-4">Dedicated Doubt-Clearing Sessions</h3>
                 <p className="text-slate-200/80 text-lg leading-relaxed flex-grow">
-                  Dedicated time to address your questions and clarify any concepts you find challenging.
+                  Pilot doubt-clearing sessions with DGCA individual guidance to clarify any aviation concepts you find challenging.
                 </p>
               </div>
             </ScrollAnimation>
@@ -158,9 +202,9 @@ export default function OneToOneCoachingPage() {
                   Comprehensive Curriculum
                 </span>
               </div>
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">Subjects Covered</h2>
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">Subjects Covered in FocusONE</h2>
               <p className="text-xl text-slate-200/80 max-w-3xl mx-auto">
-                Master essential aviation subjects with personalized one-on-one instruction
+                Master essential DGCA theory subjects with personalised one-on-one aviation subject mentoring
               </p>
             </div>
           </ScrollAnimation>
@@ -191,7 +235,7 @@ export default function OneToOneCoachingPage() {
                 </div>
                 <h3 className="text-2xl font-bold text-white mb-4 text-center">Air Regulation</h3>
                 <p className="text-slate-200/80 text-center leading-relaxed mb-6 flex-grow">
-                  Master aviation laws, rules, and regulations governing flight operations and safety standards.
+                  Complete Air Regulation DGCA coaching covering aviation laws India, DGCA regulation guidelines, and flight safety standards.
                 </p>
                 <div className="space-y-3">
                   <div className="flex items-center gap-3 text-slate-200/80">
@@ -235,7 +279,7 @@ export default function OneToOneCoachingPage() {
                 </div>
                 <h3 className="text-2xl font-bold text-white mb-4 text-center">Aviation Meteorology</h3>
                 <p className="text-slate-200/80 text-center leading-relaxed mb-6 flex-grow">
-                  Understand weather patterns, atmospheric conditions, and their impact on aviation safety.
+                  Comprehensive DGCA meteorology coaching and aviation weather training covering atmospheric conditions and their impact on flight safety.
                 </p>
                 <div className="space-y-3">
                   <div className="flex items-center gap-3 text-slate-200/80">
@@ -280,7 +324,7 @@ export default function OneToOneCoachingPage() {
                 </div>
                 <h3 className="text-2xl font-bold text-white mb-4 text-center">Air Navigation</h3>
                 <p className="text-slate-200/80 text-center leading-relaxed mb-6 flex-grow">
-                  Master navigation techniques, instruments, and procedures for safe flight planning.
+                  Expert DGCA navigation training covering radio navigation, GPS flight planning, and aviation navigation coaching for safe operations.
                 </p>
                 <div className="space-y-3">
                   <div className="flex items-center gap-3 text-slate-200/80">
@@ -318,7 +362,7 @@ export default function OneToOneCoachingPage() {
               <div className="text-center mb-8">
                 <div className="inline-flex items-center gap-3 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-white rounded-full px-8 py-3 shadow-lg">
                   <div className="w-3 h-3 bg-white rounded-full animate-pulse" />
-                  <span className="text-sm font-semibold">Specialized Subjects</span>
+                  <span className="text-sm font-semibold">Specialized Subjects (Coming Soon)</span>
                 </div>
               </div>
             </div>
@@ -344,9 +388,9 @@ export default function OneToOneCoachingPage() {
                         COMING SOON
                       </span>
                     </div>
-                    <h3 className="text-2xl font-bold text-white mb-3">Technical General</h3>
+                    <h3 className="text-2xl font-bold text-white mb-3">Technical General (TG)</h3>
                     <p className="text-slate-200/80 text-lg leading-relaxed mb-4">
-                      Covers aircraft systems, principles, and operations, providing aspiring pilots with essential technical knowledge for both theory and practical applications.
+                      Aircraft systems training covering TG DGCA syllabus, principles, and operations—essential aircraft systems basics for cadet pilot theory guidance.
                     </p>
                     <div className="flex flex-wrap gap-2">
                       <span className="inline-block bg-white/10 text-indigo-200 px-3 py-1 rounded-full text-xs font-semibold">
@@ -379,7 +423,7 @@ export default function OneToOneCoachingPage() {
                   <div className="flex-1">
                     <h3 className="text-2xl font-bold text-white mb-3">Radio Telephony Restricted (RTR)</h3>
                     <p className="text-slate-200/80 text-lg leading-relaxed mb-4">
-                      Focuses on the rules, procedures, and communication protocols for aviation radio operations. This course equips aspiring pilots with the skills to communicate effectively and safely in the skies.
+                      Complete RTR coaching covering RT communication, ATC procedures, and aviation radio operations—essential RT & Radio Telephony coaching for safe pilot communication.
                     </p>
                   <div className="absolute top-4 right-4">
                     <span className="inline-block bg-gradient-to-r from-orange-500 to-red-500 text-white px-4 py-1.5 rounded-full text-xs font-bold shadow-lg">
@@ -427,8 +471,8 @@ export default function OneToOneCoachingPage() {
                 Start Your FocusONE Mentorship Journey
               </h2>
               <p className="text-xl md:text-2xl text-slate-200/85 mb-12 max-w-4xl mx-auto leading-relaxed">
-                Get personalized online training with focused attention on comprehensive aviation subjects. 
-                Choose your time and start learning with expert guidance today.
+                Join DGCA coaching with India&apos;s best aviation mentorship program. Start your pilot mentorship 
+                with online DGCA mentoring by airline professionals—DGCA exam preparation with live individual sessions.
               </p>
               <ScrollAnimation animationType="scaleIn" delay={400}>
                 <div className="flex flex-col items-center gap-6">

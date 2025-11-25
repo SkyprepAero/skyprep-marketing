@@ -120,13 +120,13 @@ export function MentorsShowcase() {
           <div className="text-center max-w-3xl mx-auto">
             <div className="inline-flex items-center gap-3 rounded-full border border-sky-400/40 bg-sky-500/10 px-8 py-3 mb-6 shadow-[0_20px_45px_-20px_rgba(14,165,233,0.6)] backdrop-blur-md">
               <div className="w-3 h-3 rounded-full bg-gradient-to-r from-sky-400 via-cyan-300 to-sky-500 animate-pulse" />
-              <span className="text-sky-100 text-sm font-semibold uppercase tracking-[0.3em]">Our Mentors</span>
+              <span className="text-sky-100 text-sm font-semibold uppercase tracking-[0.3em]">Airline Pilot Mentors</span>
             </div>
             <h2 className="mt-3 text-3xl md:text-4xl font-semibold tracking-tight text-white">
-              Airline leaders guiding tomorrow’s captains
+              Learn From Airline Leaders & Senior First Officers
             </h2>
             <p className="mt-3 text-sm md:text-base text-slate-300 leading-relaxed">
-              Learn the mindset and precision that keep flight decks composed—through advisory sessions, scenario reviews, and check-ins shaped by real airline operations.
+              Boeing 737 pilot mentorship and aviation leadership training—scenario reviews, professional mindset coaching, and check-ins shaped by real airline operations in India.
             </p>
           </div>
         </ScrollAnimation>

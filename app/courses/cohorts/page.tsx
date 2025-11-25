@@ -6,9 +6,51 @@ import Link from "next/link";
 import { getContactUrl, getWhatsAppUrl, getWhatsAppButtonText } from "@/config/services";
 
 export const metadata: Metadata = buildPageMetadata({
-  title: "Aviation Cohorts - Group Training Programs",
-  description: "Join our structured cohort programs for collaborative learning, peer support, and comprehensive aviation training.",
-  canonicalPath: "/services/cohorts",
+  title: "Aviation Cohorts | DGCA Online Batch Classes & 4-Month Group Learning Program",
+  description: "Join SkyPrep's 4-month DGCA cohort program with live classes, peer learning, revision sessions, and affordable batch coaching to master Air Regulation, Meteorology, and Navigation.",
+  canonicalPath: "/courses/cohorts",
+  keywords: [
+    // Primary Keywords
+    "DGCA online classroom program",
+    "DGCA online batch coaching",
+    "pilot group learning program",
+    "aviation cohorts India",
+    "CPL batch classes India",
+    "DGCA exam preparation batch classes",
+    "aviation group coaching",
+    "DGCA 4-month batch program",
+    "aviation classroom online",
+    "best DGCA batch classes for CPL",
+    // Secondary Keywords
+    "collaborative aviation learning",
+    "peer learning DGCA",
+    "structured aviation curriculum",
+    "aviation revision classes",
+    "doubt-clearing batch classes",
+    "aviation online training program",
+    "DGCA subject batch classes",
+    "affordable pilot coaching",
+    "aviation online collaboration",
+    "pilot learning community",
+    // Long-Tail Keywords
+    "best DGCA batch classes for Air Regulation, Meteorology, Navigation",
+    "4-month aviation cohort program for DGCA exam success",
+    "affordable group DGCA training with high success rates",
+    "cohort-based pilot training in India with peer support",
+    "online DGCA coaching with live instructors and revision sessions",
+    "collaborative aviation learning for DGCA theory exams",
+    "DGCA subject online batch with doubt clearing and study material",
+    "how to study DGCA exams in a structured group environment",
+    // LSI Keywords
+    "aviation study groups",
+    "DGCA exam preparation India",
+    "pilot classroom coaching",
+    "aviation peer support system",
+    "milestone-based learning",
+    "interactive aviation learning",
+    "group accountability",
+    "DGCA syllabus batch classes",
+  ],
 });
 
 export default function CohortsPage() {
@@ -35,14 +77,15 @@ export default function CohortsPage() {
                 </span>
               </div>
               <h1 className="text-5xl md:text-7xl font-bold text-white drop-shadow-[0_20px_36px_rgba(15,23,42,0.75)] mb-8 tracking-tight leading-none">
-                Aviation{" "}
+                Aviation Cohorts —{" "}
                 <span className="bg-gradient-to-r from-amber-400 via-amber-300 to-slate-100 bg-clip-text text-transparent">
-                  Cohorts
+                  4-Month DGCA Group Learning Program
                 </span>
               </h1>
               <p className="text-lg md:text-2xl text-white max-w-4xl mx-auto leading-relaxed drop-shadow-[0_12px_32px_rgba(15,23,42,0.65)]">
-                Join our comprehensive 4-month cohort program designed for collaborative learning, peer support, 
-                and effective DGCA exam preparation. Master key aviation subjects alongside fellow aviators.
+                India&apos;s best DGCA cohort program with collaborative aviation learning, peer support, 
+                and structured curriculum. Master Air Regulation, Meteorology, and Navigation through 
+                affordable group DGCA training with high success rates.
               </p>
             </div>
           </ScrollAnimation>
@@ -60,7 +103,7 @@ export default function CohortsPage() {
               </div>
                   <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 tracking-tight">Why Choose Cohort Learning?</h2>
                   <p className="text-lg md:text-xl text-slate-200/85 max-w-3xl mx-auto">
-                Collaborative learning that accelerates your aviation journey
+                Collaborative aviation learning that accelerates your DGCA exam preparation journey
               </p>
             </div>
           </ScrollAnimation>
@@ -76,9 +119,9 @@ export default function CohortsPage() {
                   </div>
                   <div className="absolute inset-0 w-20 h-20 mx-auto rounded-2xl border-2 border-blue-400/30 animate-pulse" />
                 </div>
-                <h3 className="text-2xl font-bold text-slate-100 mb-4 group-hover:text-blue-400 transition-colors duration-300">Peer Learning</h3>
+                <h3 className="text-2xl font-bold text-slate-100 mb-4 group-hover:text-blue-400 transition-colors duration-300">Peer Learning DGCA</h3>
                 <p className="text-slate-300 text-lg leading-relaxed flex-grow">
-                  Learn from fellow students and share experiences, challenges, and successes in a supportive environment.
+                  Join our pilot learning community with aviation peer support system—share experiences, challenges, and successes together.
                 </p>
               </div>
 
@@ -91,9 +134,9 @@ export default function CohortsPage() {
                   </div>
                   <div className="absolute inset-0 w-20 h-20 mx-auto rounded-2xl border-2 border-sky-400/30 animate-pulse" />
                 </div>
-                <h3 className="text-2xl font-bold text-slate-100 mb-4 group-hover:text-sky-400 transition-colors duration-300">Structured Timeline</h3>
+                <h3 className="text-2xl font-bold text-slate-100 mb-4 group-hover:text-sky-400 transition-colors duration-300">Structured Aviation Curriculum</h3>
                 <p className="text-slate-300 text-lg leading-relaxed flex-grow">
-                  Follow a carefully designed curriculum with clear milestones and regular progress assessments.
+                  Follow our milestone-based learning curriculum with clear goals and regular progress assessments for DGCA syllabus batch classes.
                 </p>
               </div>
 
@@ -106,9 +149,9 @@ export default function CohortsPage() {
                   </div>
                   <div className="absolute inset-0 w-20 h-20 mx-auto rounded-2xl border-2 border-emerald-400/30 animate-pulse" />
                 </div>
-                <h3 className="text-2xl font-bold text-slate-100 mb-4 group-hover:text-emerald-400 transition-colors duration-300">Cost Effective</h3>
+                <h3 className="text-2xl font-bold text-slate-100 mb-4 group-hover:text-emerald-400 transition-colors duration-300">Affordable Pilot Coaching</h3>
                 <p className="text-slate-300 text-lg leading-relaxed flex-grow">
-                  Access high-quality training at a fraction of individual coaching costs while maintaining personalized attention.
+                  Access affordable group DGCA training at a fraction of individual coaching costs while maintaining quality interactive aviation learning.
                 </p>
               </div>
 
@@ -123,7 +166,7 @@ export default function CohortsPage() {
                 </div>
                 <h3 className="text-2xl font-bold text-slate-100 mb-4 group-hover:text-amber-300 transition-colors duration-300">Accelerated Progress</h3>
                 <p className="text-slate-300 text-lg leading-relaxed flex-grow">
-                  Stay motivated and on track with regular group sessions and peer accountability.
+                  Stay motivated and on track with regular group sessions, group accountability, and collaborative aviation learning.
                 </p>
               </div>
 
@@ -138,7 +181,7 @@ export default function CohortsPage() {
                 </div>
                 <h3 className="text-2xl font-bold text-slate-100 mb-4 group-hover:text-purple-300 transition-colors duration-300">Network Building</h3>
                 <p className="text-slate-300 text-lg leading-relaxed flex-grow">
-                  Build lasting relationships with fellow aviation enthusiasts and industry professionals.
+                  Build lasting relationships in our pilot learning community with aviation study groups and industry professionals.
                 </p>
               </div>
 
@@ -153,7 +196,7 @@ export default function CohortsPage() {
                 </div>
                 <h3 className="text-2xl font-bold text-slate-100 mb-4 group-hover:text-emerald-300 transition-colors duration-300">Proven Results</h3>
                 <p className="text-slate-300 text-lg leading-relaxed flex-grow">
-                  Join cohorts with high success rates and proven track records of student achievement.
+                  Join our DGCA cohort program with high success rates—our 4-month aviation cohort program delivers proven DGCA exam success.
                 </p>
               </div>
             </div>
@@ -174,7 +217,7 @@ export default function CohortsPage() {
               </div>
               <h2 className="text-4xl md:text-5xl font-bold text-slate-100 mb-6 tracking-tight">Cohort Program Overview</h2>
               <p className="text-lg md:text-xl text-slate-300/90 max-w-3xl mx-auto">
-                Our comprehensive 4-month program covers essential aviation subjects for DGCA exam preparation
+                Our comprehensive DGCA 4-month batch program covers essential DGCA subject batch classes for exam preparation India
               </p>
             </div>
           </ScrollAnimation>
@@ -186,14 +229,14 @@ export default function CohortsPage() {
                   <div className="w-3 h-3 bg-white rounded-full animate-pulse" />
                   <span className="text-sm font-semibold">DGCA Preparation</span>
                 </div>
-                <h3 className="text-3xl font-bold text-slate-50 mb-6">DGCA Exam Preparation Cohort</h3>
+                <h3 className="text-3xl font-bold text-slate-50 mb-6">DGCA Exam Preparation Batch</h3>
                 <p className="text-lg text-slate-300 max-w-2xl mx-auto leading-relaxed">
-                  We offer a comprehensive online batch course to help you master key aviation subjects and prepare effectively for your DGCA exams.
+                  Our DGCA online batch classes offer comprehensive pilot classroom coaching to master key aviation subjects—best DGCA batch classes for Air Regulation, Meteorology, Navigation.
                 </p>
               </div>
 
               <div className="text-center mb-12">
-                <h4 className="text-2xl font-semibold text-slate-100 mb-6">Subjects Covered:</h4>
+                <h4 className="text-2xl font-semibold text-slate-100 mb-6">Subjects Covered in the Cohort:</h4>
                 <div className="flex flex-wrap justify-center gap-4 text-base md:text-lg text-slate-200/80">
                   <span className="bg-gradient-to-r from-blue-500 to-sky-500 text-white px-6 py-3 rounded-full font-semibold shadow-lg shadow-blue-500/30 hover:shadow-blue-500/50 transition-shadow duration-300">Air Regulation</span>
                   <span className="text-slate-600 text-2xl">|</span>
@@ -210,8 +253,8 @@ export default function CohortsPage() {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
                     </svg>
                   </div>
-                  <h4 className="text-lg font-bold text-slate-100 mb-2 group-hover:text-blue-300 transition-colors duration-300">Interactive Online Classes</h4>
-                  <p className="text-slate-300 text-sm">Live sessions with expert instructors</p>
+                  <h4 className="text-lg font-bold text-slate-100 mb-2 group-hover:text-blue-300 transition-colors duration-300">Live Online Classes</h4>
+                  <p className="text-slate-300 text-sm">Interactive aviation learning with live instructors</p>
                 </div>
 
                 <div className="group text-center p-6 bg-slate-900/80 rounded-xl border border-slate-800 hover:border-sky-500/50 hover:shadow-sky-500/30 transition-all duration-300">
@@ -220,8 +263,8 @@ export default function CohortsPage() {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
                     </svg>
                   </div>
-                  <h4 className="text-lg font-bold text-slate-100 mb-2 group-hover:text-sky-300 transition-colors duration-300">Revision Sessions</h4>
-                  <p className="text-slate-300 text-sm">Comprehensive review of all topics</p>
+                  <h4 className="text-lg font-bold text-slate-100 mb-2 group-hover:text-sky-300 transition-colors duration-300">Aviation Revision Classes</h4>
+                  <p className="text-slate-300 text-sm">Comprehensive DGCA syllabus review sessions</p>
                 </div>
 
                 <div className="group text-center p-6 bg-slate-900/80 rounded-xl border border-slate-800 hover:border-cyan-500/50 hover:shadow-cyan-500/30 transition-all duration-300">
@@ -230,8 +273,8 @@ export default function CohortsPage() {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
                   </div>
-                  <h4 className="text-lg font-bold text-slate-100 mb-2 group-hover:text-cyan-300 transition-colors duration-300">Doubt-Clearing Sessions</h4>
-                  <p className="text-slate-300 text-sm">Dedicated Q&A time with instructors</p>
+                  <h4 className="text-lg font-bold text-slate-100 mb-2 group-hover:text-cyan-300 transition-colors duration-300">Doubt-Clearing Batch</h4>
+                  <p className="text-slate-300 text-sm">Dedicated pilot doubt-clearing sessions with instructors</p>
                 </div>
 
                 <div className="group text-center p-6 bg-slate-900/80 rounded-xl border border-slate-800 hover:border-indigo-500/50 hover:shadow-indigo-500/30 transition-all duration-300">
@@ -287,9 +330,9 @@ export default function CohortsPage() {
                   <div className="w-3 h-3 bg-amber-400 rounded-full animate-pulse" />
                   <span className="text-amber-200 text-sm font-semibold tracking-wide uppercase">Launching Soon</span>
                 </div>
-                <h3 className="text-4xl font-bold text-slate-100 mb-4">Coming Soon</h3>
+                <h3 className="text-4xl font-bold text-slate-100 mb-4">Upcoming Cohort Programs (Launching Soon)</h3>
                 <p className="text-lg md:text-xl text-slate-300/90 max-w-3xl mx-auto">
-                  Exciting new cohort programs launching soon to expand your aviation knowledge
+                  Exciting new DGCA subject batch classes launching soon to expand your aviation knowledge
                 </p>
               </div>
 
@@ -309,22 +352,22 @@ export default function CohortsPage() {
                     <div className="bg-slate-950/80 backdrop-blur-xl rounded-xl p-6 shadow-md border border-amber-400/40 hover:border-amber-300 transition-all duration-300">
                       <h5 className="text-xl font-semibold text-slate-100 mb-3 flex items-center gap-2">
                         <span className="w-2 h-2 bg-amber-400 rounded-full"></span>
-                        Technical General
+                        Technical General (TG DGCA Batch)
                       </h5>
                       <p className="text-slate-300 leading-relaxed">
-                        Covers aircraft systems, principles, and operations, providing aspiring pilots with essential 
-                        technical knowledge for both theory and practical applications.
+                        Aircraft systems batch class covering principles and operations—essential pilot technical general coaching 
+                        for both theory and practical applications.
                       </p>
                     </div>
 
                     <div className="bg-slate-950/80 backdrop-blur-xl rounded-xl p-6 shadow-md border border-amber-400/40 hover:border-amber-300 transition-all duration-300">
                       <h5 className="text-xl font-semibold text-slate-100 mb-3 flex items-center gap-2">
                         <span className="w-2 h-2 bg-amber-400 rounded-full"></span>
-                        Radio Telephony Restricted (RTR)
+                        Radio Telephony Restricted (RTR Coaching Batch)
                       </h5>
                       <p className="text-slate-300 leading-relaxed">
-                        Focuses on the rules, procedures, and communication protocols for aviation radio operations. 
-                        This course equips aspiring pilots with the skills to communicate effectively and safely in the skies.
+                        RTR coaching batch covering radio procedures class and ATC communication batch protocols. 
+                        Equips aspiring pilots with skills to communicate effectively and safely in the skies.
                       </p>
                     </div>
                   </div>
@@ -377,8 +420,8 @@ export default function CohortsPage() {
                 Join Your Aviation Cohort Today
               </h2>
               <p className="text-lg md:text-2xl text-slate-300/90 mb-12 max-w-4xl mx-auto leading-relaxed">
-                Don&apos;t miss out on the next cohort intake. Limited spots available for our 4-month program. 
-                Apply now and start your DGCA exam preparation journey with like-minded aviation enthusiasts.
+                Join DGCA cohort now—limited spots available for our 4-month aviation cohort program. 
+                Apply for aviation batch and enroll in group pilot training with cohort-based pilot training in India with peer support.
               </p>
               <ScrollAnimation animationType="scaleIn" delay={400}>
                 <div className="flex flex-col sm:flex-row gap-6 justify-center">

@@ -52,13 +52,13 @@ export function VideoHero({
           <div className="space-y-5 text-base text-slate-100 md:text-lg">
             <p className="text-slate-100/95">{description}</p>
             <p className="text-slate-100/90">
-              From foundational ground training to advanced simulator sessions, we guide cadets through
-              every stage of their aviation journey, pairing industry-leading mentors with immersive,
-              outcome-focused learning.
+              From DGCA ground classes to advanced CPL preparation, we guide aspiring pilots through
+              every stage of their aviation career—pairing airline captain mentors with personalised coaching
+              and outcome-focused pilot training in India.
             </p>
             <p className="text-slate-100/90">
-              Join a community obsessed with precision, discipline, and sky-high ambition—designed to help
-              you pass DGCA exams, ace airline selections, and step confidently into the cockpit.
+              Join India&apos;s premier aviation coaching institute—designed to help you clear DGCA exams in first attempt,
+              ace airline selections, and step confidently into the cockpit with comprehensive pilot mentorship.
             </p>
           </div>
           <div>

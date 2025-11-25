@@ -6,9 +6,52 @@ import Link from "next/link";
 import { getContactUrl, getWhatsAppUrl, getWhatsAppButtonText } from "@/config/services";
 
 export const metadata: Metadata = buildPageMetadata({
-  title: "eLogbook Filing Assistance - SkyPrep Aero",
-  description: "Simplify your flight logging with complete eLogbook filing assistance on DGCA's portal. Accurate, efficient, and error-free flight record management.",
+  title: "DGCA eLogbook Filing Assistance | Digital Flight Log Support for Pilots",
+  description: "Get expert DGCA eLogbook filing assistance. We handle account setup, flight hour entry, categorization, verification, and compliance support for student and licensed pilots.",
   canonicalPath: "/services/elogbook",
+  keywords: [
+    // Primary Keywords
+    "DGCA eLogbook filing",
+    "eLogbook assistance DGCA",
+    "pilot eLogbook India",
+    "DGCA digital logbook filing",
+    "flight hours documentation DGCA",
+    "DGCA portal eLogbook help",
+    "pilot logbook conversion India",
+    "eLogbook management service",
+    "DGCA flight hours verification",
+    "aviation logbook filing support",
+    // Secondary Keywords
+    "digital flight logging",
+    "online pilot logbook assistance",
+    "DGCA record submission",
+    "flight hours categorization",
+    "pilot logbook error correction",
+    "eLogbook verification support",
+    "DGCA compliance logging",
+    "CPL logbook filing",
+    "ATPL eLogbook filing",
+    "pilot documentation services",
+    // Long-Tail Keywords
+    "how to file eLogbook on DGCA portal for pilots",
+    "eLogbook filing assistance for CPL and ATPL pilots",
+    "DGCA eLogbook support for international conversion students",
+    "digital logbook filing help for Indian pilot license renewal",
+    "pilot logbook correction and DGCA verification process",
+    "convert paper logbook to DGCA digital eLogbook",
+    "accurate flight hour filing for DGCA pilot exams",
+    "DGCA eLogbook help for foreign-trained pilots returning to India",
+    // LSI Keywords
+    "student pilot logbook",
+    "flight time tracking DGCA",
+    "cross-country hours logging",
+    "simulator hours documentation",
+    "dual and solo flight entries",
+    "logbook verification process",
+    "pilot regulatory compliance",
+    "DGCA flight data requirements",
+    "flying school documentation support",
+  ],
 });
 
 export default function ElogbookPage() {
@@ -35,16 +78,16 @@ export default function ElogbookPage() {
                 </span>
               </div>
               <h1 className="text-6xl md:text-7xl font-bold text-white drop-shadow-[0_18px_34px_rgba(15,23,42,0.7)] mb-8 leading-tight">
-                eLogbook Filing
+                DGCA eLogbook Filing Assistance —
                 <span className="block gradient-text-primary leading-tight">
-                  Assistance
+                  Digital Flight Logging Made Simple
                 </span>
               </h1>
               <p className="text-xl md:text-2xl text-white max-w-4xl mx-auto leading-relaxed drop-shadow-[0_12px_30px_rgba(15,23,42,0.65)]">
-                Simplify Your Flight Logging — The Smart Way
+                Simplify Your DGCA eLogbook Filing — Digital Flight Logging India
               </p>
               <p className="text-lg md:text-xl text-white/95 max-w-3xl mx-auto leading-relaxed mt-4 drop-shadow-[0_10px_26px_rgba(15,23,42,0.6)]">
-                Managing your flight records is just as important as flying itself. At SkyPrep Aero, we provide complete assistance for eLogbook filing and management on the DGCA portal.
+                Managing your pilot eLogbook India is crucial. At SkyPrep Aero, we provide complete eLogbook assistance DGCA with flight hours documentation DGCA and DGCA portal eLogbook help.
               </p>
             </div>
           </ScrollAnimation>
@@ -62,14 +105,14 @@ export default function ElogbookPage() {
                   What is the eLogbook?
                 </span>
               </div>
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">Digital Flight Record System</h2>
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">What Is the DGCA eLogbook?</h2>
                   <p className="text-xl text-slate-200/85 max-w-4xl mx-auto leading-relaxed">
-                The eLogbook is a digital flight record system maintained through DGCA&apos;s portal, 
-                designed to store, verify, and track every pilot&apos;s flight hours and experience online.
+                The DGCA digital logbook is a flight time tracking DGCA system maintained through the portal, 
+                designed to store, verify, and track every pilot&apos;s flight hours and online pilot log system experience.
               </p>
                   <p className="text-lg text-slate-200/75 max-w-3xl mx-auto leading-relaxed mt-6">
-                All pilots — from Student Pilots to CPL and ATPL holders — are required to maintain this log 
-                digitally to comply with DGCA regulations.
+                All pilots — from student pilot logbook to CPL logbook filing and ATPL eLogbook filing — are required 
+                to maintain this log digitally for pilot regulatory compliance.
               </p>
             </div>
           </ScrollAnimation>
@@ -96,9 +139,9 @@ export default function ElogbookPage() {
                   Our eLogbook Services
                 </span>
               </div>
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">Complete eLogbook Support</h2>
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">Complete eLogbook Support Services</h2>
               <p className="text-xl text-slate-200/80 max-w-3xl mx-auto">
-                We help you with every aspect of eLogbook management and filing
+                Comprehensive eLogbook management service and aviation logbook filing support for every aspect
               </p>
             </div>
           </ScrollAnimation>
@@ -116,7 +159,7 @@ export default function ElogbookPage() {
                 </div>
                 <h3 className="text-2xl font-bold text-white mb-4">Account Setup</h3>
                 <p className="text-slate-200/80 text-lg leading-relaxed flex-grow">
-                  Creating & setting up your eLogbook account on DGCA portal with proper configuration.
+                  DGCA eLogbook account creation and pilot login setup DGCA portal with proper configuration.
                 </p>
               </div>
             </ScrollAnimation>
@@ -133,7 +176,7 @@ export default function ElogbookPage() {
                 </div>
                 <h3 className="text-2xl font-bold text-white mb-4">Flight Hours Filing</h3>
                 <p className="text-slate-200/80 text-lg leading-relaxed flex-grow">
-                  Filing and uploading flight hours (Solo, Dual, Cross-country, Simulator, etc.) accurately.
+                  Filing solo hours DGCA, dual and solo flight entries, cross-country hours logging, and simulator hours documentation accurately.
                 </p>
               </div>
             </ScrollAnimation>
@@ -150,7 +193,7 @@ export default function ElogbookPage() {
                 </div>
                 <h3 className="text-2xl font-bold text-white mb-4">Flight Categorization</h3>
                 <p className="text-slate-200/80 text-lg leading-relaxed flex-grow">
-                  Categorizing flights correctly as per DGCA format and regulatory requirements.
+                  DGCA flight category formatting and flight hours categorization with DGCA-compliant flight entries.
                 </p>
               </div>
             </ScrollAnimation>
@@ -167,7 +210,7 @@ export default function ElogbookPage() {
                 </div>
                 <h3 className="text-2xl font-bold text-white mb-4">Error Checking</h3>
                 <p className="text-slate-200/80 text-lg leading-relaxed flex-grow">
-                  Checking and correcting data errors to avoid rejections and ensure compliance.
+                  Logbook data error correction and pilot logbook error correction for DGCA rejection prevention.
                 </p>
               </div>
             </ScrollAnimation>
@@ -184,7 +227,7 @@ export default function ElogbookPage() {
                 </div>
                 <h3 className="text-2xl font-bold text-white mb-4">Verification & Submission</h3>
                 <p className="text-slate-200/80 text-lg leading-relaxed flex-grow">
-                  Verification & submission guidance to ensure your log is DGCA-compliant and approved.
+                  DGCA logbook verification process and flight record submission India for eLogbook verification support.
                 </p>
               </div>
             </ScrollAnimation>
@@ -201,7 +244,7 @@ export default function ElogbookPage() {
                 </div>
                 <h3 className="text-2xl font-bold text-white mb-4">Personalized Support</h3>
                 <p className="text-slate-200/80 text-lg leading-relaxed flex-grow">
-                  One-on-One Support with personalized help for students and pilots of all levels.
+                  One-on-one aviation documentation help with personalized pilot documentation services for all levels.
                 </p>
               </div>
             </ScrollAnimation>
@@ -227,9 +270,9 @@ export default function ElogbookPage() {
                   Why Choose SkyPrep Aero
                 </span>
               </div>
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">Your eLogbook Success Partners</h2>
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">Why Choose SkyPrep Aero for eLogbook Filing</h2>
               <p className="text-xl text-slate-200/80 max-w-3xl mx-auto">
-                We ensure your flight records are accurate, verified, and DGCA-ready
+                DGCA compliant filing with accurate flight hour documentation by aviation logbook experts
               </p>
             </div>
           </ScrollAnimation>
@@ -247,7 +290,7 @@ export default function ElogbookPage() {
                 </div>
                 <h3 className="text-2xl font-bold text-white mb-4">Accurate & Verified Filing</h3>
                 <p className="text-slate-200/80 text-lg leading-relaxed">
-                  Every entry is checked per DGCA standards to ensure accuracy and compliance.
+                  Accurate flight hour filing for DGCA pilot exams—every entry checked per DGCA flight data requirements.
                 </p>
               </div>
             </ScrollAnimation>
@@ -264,7 +307,7 @@ export default function ElogbookPage() {
                 </div>
                 <h3 className="text-2xl font-bold text-white mb-4">Time-Saving Process</h3>
                 <p className="text-slate-200/80 text-lg leading-relaxed">
-                  We handle all the technical details so you can focus on your flying hours.
+                  Online pilot logbook assistance—we handle digital flight logging so you can focus on flying hours.
                 </p>
               </div>
             </ScrollAnimation>
@@ -281,7 +324,7 @@ export default function ElogbookPage() {
                 </div>
                 <h3 className="text-2xl font-bold text-white mb-4">Expert Guidance</h3>
                 <p className="text-slate-200/80 text-lg leading-relaxed">
-                  Learn the right way to maintain your logbook from aviation experts.
+                  Flying school documentation support—learn DGCA compliance logging from aviation logbook experts.
                 </p>
               </div>
             </ScrollAnimation>
@@ -298,7 +341,7 @@ export default function ElogbookPage() {
                 </div>
                 <h3 className="text-2xl font-bold text-white mb-4">One-on-One Support</h3>
                 <p className="text-slate-200/80 text-lg leading-relaxed">
-                  Personalized help for students and pilots at every stage of their journey.
+                  Personalized eLogbook filing assistance for CPL and ATPL pilots at every stage of their journey.
                 </p>
               </div>
             </ScrollAnimation>
@@ -324,9 +367,9 @@ export default function ElogbookPage() {
                   Who Can Avail This Service
                 </span>
               </div>
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">For All Pilots and Aspiring Aviators</h2>
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">Who Can Use Our eLogbook Services</h2>
               <p className="text-xl text-slate-200/80 max-w-3xl mx-auto">
-                Our eLogbook services are designed for pilots at every stage of their aviation journey
+                DGCA eLogbook support for international conversion students, CPL/ATPL pilots, and experienced aviators
               </p>
             </div>
           </ScrollAnimation>
@@ -344,7 +387,7 @@ export default function ElogbookPage() {
                   </div>
                   <h3 className="text-2xl font-bold text-white mb-4">Conversion Students</h3>
                   <p className="text-slate-200/80 text-lg leading-relaxed flex-grow">
-                    Are you a pilot returning to India from the USA, New Zealand, South Africa, Canada, UK, Maldives, or the Philippines? Our expert team ensures your eLogbook is accurately filled and fully compliant with DGCA requirements.
+                    DGCA eLogbook help for foreign-trained pilots returning to India from USA, NZ, South Africa, Canada, UK, Maldives, or Philippines. DGCA conversion logbook filing with foreign pilot logbook compliance India.
                   </p>
                 </div>
               </ScrollAnimation>
@@ -361,7 +404,7 @@ export default function ElogbookPage() {
                 </div>
                 <h3 className="text-2xl font-bold text-white mb-4">Commercial Pilot License (CPL)</h3>
                 <p className="text-slate-200/80 text-lg leading-relaxed flex-grow">
-                  Commercial Pilot License (CPL) trainees advancing their careers with comprehensive eLogbook management. We help you maintain accurate flight records throughout your CPL training, ensuring all solo flights, cross-country flights, and instrument training hours are properly documented.
+                  CPL eLogbook support for trainees advancing their careers. We help with DGCA solo/cross-country hours filing, ensuring all solo flights, cross-country flights, and instrument training hours are properly documented.
                 </p>
               </div>
             </ScrollAnimation>
@@ -378,7 +421,7 @@ export default function ElogbookPage() {
                 </div>
                 <h3 className="text-2xl font-bold text-white mb-4">License Renewal</h3>
                 <p className="text-slate-200/80 text-lg leading-relaxed flex-grow">
-                  License renewal candidates maintaining their certifications with proper eLogbook documentation. We assist in organizing and updating your flight records to meet DGCA renewal requirements, ensuring all recent flight hours, recurrent training, and proficiency checks are accurately recorded.
+                  Digital logbook filing help for Indian pilot license renewal—eLogbook for license renewal with DGCA proficiency checks logging. All recent flight hours and recurrent training accurately recorded.
                 </p>
               </div>
             </ScrollAnimation>
@@ -395,7 +438,7 @@ export default function ElogbookPage() {
                 </div>
                 <h3 className="text-2xl font-bold text-white mb-4">Experienced Pilots</h3>
                 <p className="text-slate-200/80 text-lg leading-relaxed flex-grow">
-                  Experienced pilots transitioning to the digital system with comprehensive eLogbook migration and management. We help veteran pilots convert their traditional paper logbooks to digital format, ensuring all historical flight data is accurately transferred and properly categorized.
+                  Migrate paper logbook to DGCA digital with comprehensive historical flight data upload. Convert paper logbook to DGCA digital eLogbook—all historical flight data accurately transferred and categorized.
                 </p>
               </div>
             </ScrollAnimation>
@@ -424,8 +467,8 @@ export default function ElogbookPage() {
                 Get Your eLogbook Filed Today
               </h2>
               <p className="text-xl md:text-2xl text-slate-200/85 mb-12 max-w-4xl mx-auto leading-relaxed">
-                Keep your flight record clean, verified, and DGCA-ready with SkyPrep Aero&apos;s eLogbook support service. 
-                Let us take care of the technical side — while you focus on your flying hours!
+                Start eLogbook filing with DGCA logbook submission and pilot documentation support. 
+                Keep your flight record clean, verified, and DGCA-ready while you focus on flying hours!
               </p>
               <ScrollAnimation animationType="scaleIn" delay={400}>
                 <div className="flex flex-col items-center gap-6">

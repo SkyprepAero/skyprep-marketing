@@ -65,7 +65,9 @@ export function NavDropdown({
       onMouseLeave={handleMouseLeave}
     >
       <button
-        className="flex items-center gap-1 lg:gap-2 px-2 lg:px-4 py-2 rounded-full hover:bg-white/10 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-white/20 text-[14px] lg:text-[15px] font-medium text-slate-300 hover:text-white whitespace-nowrap"
+        className={`flex items-center gap-1.5 px-2 lg:px-3 py-1.5 rounded-full hover:bg-white/10 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-white/20 font-medium text-slate-300 hover:text-white whitespace-nowrap ${
+          isScrolled ? 'text-sm' : 'text-[14px] lg:text-[15px]'
+        }`}
         aria-haspopup="menu"
         aria-expanded={open}
         onClick={handleClick}

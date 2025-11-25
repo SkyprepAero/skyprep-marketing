@@ -115,17 +115,12 @@ export function Navbar() {
           width: isMobile 
             ? '100%' 
             : isScrolled 
-              ? 'auto' 
+              ? 'calc(100% - 40px)' 
               : '100%',
           maxWidth: isMobile 
             ? 'none' 
             : isScrolled 
-              ? '95vw' 
-              : 'none',
-          minWidth: isMobile 
-            ? 'none' 
-            : isScrolled 
-              ? '320px' 
+              ? '1400px' 
               : 'none',
           left: isMobile 
             ? 'auto' 
@@ -144,15 +139,15 @@ export function Navbar() {
           isMobile 
             ? 'container mx-auto px-4 h-16' 
             : isScrolled 
-              ? 'px-4 sm:px-8 md:px-12 lg:px-16 xl:px-20 h-16' 
+              ? 'w-full px-6 h-16' 
               : 'container mx-auto px-6 h-24'
-        } flex items-center justify-between gap-2 sm:gap-4 md:gap-6 lg:gap-8 xl:gap-12 transition-all duration-800 ease-[cubic-bezier(0.25,0.46,0.45,0.94)]`}>
-          <div className="flex items-center transition-all duration-800 ease-[cubic-bezier(0.25,0.46,0.45,0.94)]">
-            <Logo  size={isMobile ? 32 : isScrolled ? 55: 70} withText={false} />
+        } flex items-center justify-between transition-all duration-800 ease-[cubic-bezier(0.25,0.46,0.45,0.94)]`}>
+          <div className="flex items-center flex-shrink-0 mr-4 transition-all duration-800 ease-[cubic-bezier(0.25,0.46,0.45,0.94)]">
+            <Logo size={isMobile ? 32 : isScrolled ? 42 : 70} withText={false} />
           </div>
           
           {/* Desktop nav */}
-          <div className="hidden md:flex items-center gap-2 sm:gap-3 md:gap-4 lg:gap-6 xl:gap-8 transition-all duration-800 ease-[cubic-bezier(0.25,0.46,0.45,0.94)]">
+          <div className="hidden md:flex items-center flex-1 justify-end gap-4 lg:gap-6 transition-all duration-800 ease-[cubic-bezier(0.25,0.46,0.45,0.94)]">
             {!isScrolled && (
               <nav
                 className="flex items-center gap-1 lg:gap-2 text-[14px] lg:text-[15px] px-2 lg:px-3 py-2 transition-all duration-800 ease-[cubic-bezier(0.25,0.46,0.45,0.94)]"
@@ -191,10 +186,10 @@ export function Navbar() {
               </nav>
             )}
             {isScrolled && (
-              <nav className="flex items-center gap-2 sm:gap-3 md:gap-4 lg:gap-6 xl:gap-8 transition-all duration-800 ease-[cubic-bezier(0.25,0.46,0.45,0.94)]" aria-label="Primary">
+              <nav className="flex items-center gap-5 lg:gap-7 transition-all duration-800 ease-[cubic-bezier(0.25,0.46,0.45,0.94)]" aria-label="Primary">
                 <Link
                   href="/"
-                  className={`text-[14px] lg:text-[15px] font-medium transition-all duration-300 hover:text-white ${
+                  className={`text-sm font-medium transition-all duration-300 hover:text-white whitespace-nowrap ${
                     isActive("/") ? "text-white" : "text-slate-300"
                   }`}
                 >
@@ -202,11 +197,11 @@ export function Navbar() {
                 </Link>
                 <Link
                   href="/about"
-                  className={`text-[14px] lg:text-[15px] font-medium transition-all duration-300 hover:text-white whitespace-nowrap ${
+                  className={`text-sm font-medium transition-all duration-300 hover:text-white whitespace-nowrap ${
                     isActive("/about") ? "text-white" : "text-slate-300"
                   }`}
                 >
-                  About Us
+                  About
                 </Link>
                 <NavDropdown 
                   title="Courses" 
@@ -222,18 +217,30 @@ export function Navbar() {
                 />
                 <Link
                   href="/contact"
-                  className={`text-[14px] lg:text-[15px] font-medium transition-all duration-300 hover:text-white whitespace-nowrap ${
+                  className={`text-sm font-medium transition-all duration-300 hover:text-white whitespace-nowrap ${
                     isActive("/contact") ? "text-white" : "text-slate-300"
                   }`}
                 >
-                  Contact Us
+                  Contact
                 </Link>
               </nav>
             )}
             
+            <a
+              href="https://classroom.skyprepaero.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={`${isScrolled ? 'px-5 py-2 text-sm' : 'px-6 py-2.5 text-sm'} rounded-full font-semibold transition-all duration-300 hover:scale-105 hover:shadow-lg text-white whitespace-nowrap flex-shrink-0`}
+              style={{
+                background: "linear-gradient(135deg, #0ea5e9, #38bdf8)",
+                boxShadow: "0 4px 14px 0 rgba(14, 165, 233, 0.35)",
+              }}
+            >
+              Test Series
+            </a>
             <Link
               href="/enquiry"
-              className={`px-6 py-2.5 rounded-full font-semibold text-sm transition-all duration-700 ease-out hover:scale-105 hover:shadow-lg ${
+              className={`${isScrolled ? 'px-5 py-2 text-sm' : 'px-6 py-2.5 text-sm'} rounded-full font-semibold transition-all duration-300 hover:scale-105 hover:shadow-lg whitespace-nowrap flex-shrink-0 ${
                 isActive("/enquiry") ? "ring-2 ring-amber-300" : ""
               }`}
               style={{
@@ -321,9 +328,22 @@ export function Navbar() {
             >
               Services
             </Link>
+            <a
+              href="https://classroom.skyprepaero.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-2 px-6 py-3 rounded-full font-semibold text-center text-white"
+              style={{
+                background: "linear-gradient(135deg, #0ea5e9, #38bdf8)",
+                boxShadow: "0 4px 14px 0 rgba(14, 165, 233, 0.35)",
+              }}
+              onClick={() => setMobileOpen(false)}
+            >
+              Test Series
+            </a>
             <Link
               href="/enquiry"
-              className="mt-2 px-6 py-3 rounded-full font-semibold text-center"
+              className="px-6 py-3 rounded-full font-semibold text-center"
               style={{ 
                 background: "linear-gradient(135deg, #f59e0b, #fbbf24)", 
                 color: "#0f172a",

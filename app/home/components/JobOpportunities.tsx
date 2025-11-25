@@ -67,15 +67,15 @@ export function JobOpportunities() {
         <ScrollAnimation animationType="fadeInUp" delay={150}>
           <div className="mx-auto max-w-3xl text-center">
             <span className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/10 px-6 py-2 text-xs font-semibold uppercase tracking-[0.35em] text-slate-100/80">
-              Job Opportunities
+              Pilot Job Opportunities
               <span className="h-2 w-2 rounded-full bg-emerald-400 animate-pulse" />
             </span>
             <h2 className="mt-6 text-3xl font-semibold leading-tight text-white md:text-4xl">
-              Flight decks and ops our cadets move into
+              Job Opportunities for SkyPrep Cadets
             </h2>
             <p className="mt-3 text-base text-slate-200/80 md:text-lg">
-              Cohorts graduate toward airline first officer roles, charter ops, instructor tracks, and specialist aviation teams.
-              We keep their network warm while they stay mission ready.
+              Pilot job roles India: airline first officer, charter pilot jobs, flight instructor pathways, and cadet pilot program placements.
+              We support your aviation career development from training to cockpit.
             </p>
           </div>
         </ScrollAnimation>

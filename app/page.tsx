@@ -13,15 +13,28 @@ import { siteConfig } from "@/config/site";
 import { generateMetadata, buildUrl } from "@/lib/seo";
 
 export const metadata = generateMetadata({
-  title: "Professional Pilot Training | Expert Flight School",
+  title: "DGCA Ground Classes, Pilot Training & Airline Preparation",
   description:
-    "Master your aviation journey with SkyPrep's expert pilot training programs. Professional flight school offering comprehensive pilot courses, ground training, and career guidance for aspiring pilots.",
+    "DGCA-aligned pilot coaching with personalised mentoring, cohorts, analytics, and test series. Clear DGCA exams, train with airline captains, and fast-track your aviation career.",
   keywords: [
-    "aviation training",
-    "pilot training",
-    "flight school",
-    "aviation education",
-    "pilot certification",
+    "DGCA ground classes",
+    "DGCA exam coaching",
+    "pilot training India",
+    "CPL ground classes",
+    "aviation coaching institute",
+    "airline preparation classes",
+    "DGCA test series",
+    "pilot mentorship India",
+    "DGCA online classes",
+    "pilot coaching institute",
+    "personalised DGCA coaching",
+    "aviation cohorts India",
+    "DGCA mock tests",
+    "pilot exam preparation",
+    "best DGCA coaching institute",
+    "DGCA navigation meteorology regulation preparation",
+    "commercial pilot license India",
+    "cadet pilot program India",
   ],
   canonicalPath: "/",
 });
@@ -40,19 +53,21 @@ export default function Home() {
     "@type": "EducationalOrganization",
     name: siteConfig.name,
     description:
-      "Professional pilot training excellence with comprehensive aviation programs. Expert flight school offering professional guidance from ground school to checkride.",
+      "DGCA-aligned pilot coaching institute offering personalised mentoring, cohort-based ground classes, test series with analytics, and airline preparation. India's trusted aviation coaching for CPL and DGCA exam success.",
     url: siteConfig.url,
     logo: buildUrl(siteConfig.logo),
     sameAs: socialLinks,
     "hasOfferCatalog": {
       "@type": "OfferCatalog",
-      "name": "Aviation Training Programs",
+      "name": "DGCA Ground Classes & Pilot Training Programs",
       "itemListElement": offerCatalogItems,
     },
     "address": {
       "@type": "PostalAddress",
       "addressCountry": "IN",
     },
+    "areaServed": "India",
+    "knowsAbout": ["DGCA exam preparation", "CPL ground classes", "pilot training", "aviation coaching", "airline preparation"],
   };
 
   return (
@@ -71,8 +86,8 @@ export default function Home() {
         <div className="relative z-10">
           <VideoHero
             sharedBackground
-            title="Shaping Aviators With Precision"
-            description="Accelerate your aviation career with DGCA-aligned coaching, live mentorship, and analytics-driven training support."
+            title="Shaping Aviators With Precision — DGCA-Aligned Pilot Coaching"
+            description="Accelerate your aviation career with DGCA ground classes, personalised pilot mentorship from airline captains, and analytics-driven training support for CPL exam success."
             buttonText="Start Your Aviation Journey"
             buttonHref="/enquiry"
           />
@@ -186,10 +201,10 @@ export default function Home() {
         <div className="container-wide relative">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-6xl font-bold tracking-tight gradient-text-primary mb-6 leading-tight">
-Success Stories
+              Success Stories From Real Aviators
             </h2>
             <p className="text-xl md:text-2xl text-slate-200/80 max-w-4xl mx-auto leading-relaxed">
-              Real outcomes from real aviators.
+              DGCA exam success stories and pilot placement achievements from our students.
             </p>
           </div>
           <TestimonialsMarquee />
