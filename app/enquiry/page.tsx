@@ -164,8 +164,8 @@ export default function EnquiryPage() {
                 </h1>
                 <div className="space-y-5 text-lg leading-relaxed text-slate-200/85">
                   <p>
-                    Map your personalised flight training plan. Share where you're starting from, the DGCA milestones you're preparing for, and the runway you have
-                    ahead. We'll respond with a pilot training action plan—covering CPL preparation modules, simulator hours mapping, and
+                    Map your personalised flight training plan. Share where you&apos;re starting from, the DGCA milestones you&apos;re preparing for, and the runway you have
+                    ahead. We&apos;ll respond with a pilot training action plan—covering CPL preparation modules, simulator hours mapping, and
                     aviation timeline planning—so you know exactly what comes next.
                   </p>
                   <p className="text-slate-200/75">
@@ -531,7 +531,7 @@ export default function EnquiryPage() {
                     <svg className="h-4 w-4 text-emerald-400" viewBox="0 0 24 24" fill="currentColor" aria-hidden>
                       <path d="M20.285 6.708l-11.4 11.401-5.657-5.657 1.414-1.414 4.243 4.243 9.986-9.986z" />
                     </svg>
-                    DGCA flight plan delivery and aviation roadmap within 24 hours. Guidance is always complimentary until you're ready to enrol.
+                    DGCA flight plan delivery and aviation roadmap within 24 hours. Guidance is always complimentary until you&apos;re ready to enrol.
                   </div>
                 </div>
 
