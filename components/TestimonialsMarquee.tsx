@@ -1,5 +1,6 @@
 "use client";
 import { useEffect, useRef, useState, useCallback } from "react";
+import Image from "next/image";
 
 type Testimonial = {
   name: string;
@@ -142,9 +143,11 @@ function TestimonialCard({ testimonial }: { testimonial: Testimonial }) {
 
       <div className="mt-4 flex items-center gap-3">
         {testimonial.photo ? (
-          <img 
+          <Image 
             src={testimonial.photo} 
             alt={testimonial.name}
+            width={44}
+            height={44}
             className="h-11 w-11 rounded-full object-cover shadow-lg shadow-black/30 ring-2 ring-white/20"
           />
         ) : (
