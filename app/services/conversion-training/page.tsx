@@ -3,7 +3,7 @@ import { generateMetadata as buildPageMetadata } from "@/lib/seo";
 import { AviationBackground } from "@/components/AviationBackground";
 import { ScrollAnimation } from "@/app/home/components/ScrollAnimation";
 import Link from "next/link";
-import { getContactUrl, getWhatsAppUrl, getWhatsAppButtonText } from "@/config/services";
+import { getContactUrl, getWhatsAppUrl } from "@/config/services";
 
 export const metadata: Metadata = buildPageMetadata({
   title: "Conversion Flying India | Foreign Pilot License to DGCA Conversion Support",

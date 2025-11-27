@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { generateMetadata as buildPageMetadata, jsonLdBreadcrumb, buildUrl } from "@/lib/seo";
+import { generateMetadata as buildPageMetadata, jsonLdBreadcrumb } from "@/lib/seo";
 import { CourseJsonLd } from "./schema";
 import { AviationBackground } from "@/components/AviationBackground";
 import Link from "next/link";

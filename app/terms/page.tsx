@@ -31,7 +31,7 @@ export default function TermsConditionsPage() {
 
         <section className="mb-8">
           <p className="text-lg text-slate-700 leading-relaxed">
-            Welcome to SkyPrep Aero. These Terms & Conditions ("Terms") govern your access to and use of our online aviation training platform, courses, and services. By enrolling in our courses, creating an account, or accessing our platform, you agree to be bound by these Terms.
+            Welcome to SkyPrep Aero. These Terms & Conditions (&quot;Terms&quot;) govern your access to and use of our online aviation training platform, courses, and services. By enrolling in our courses, creating an account, or accessing our platform, you agree to be bound by these Terms.
           </p>
           <p className="text-lg text-slate-700 leading-relaxed mt-4">
             Please read these Terms carefully before using our services. If you do not agree with any part of these Terms, you must not use our platform or services.
@@ -44,7 +44,7 @@ export default function TermsConditionsPage() {
             By enrolling in any course, creating an account, accessing online classes, or using any of our services, you acknowledge that you have read, understood, and agree to be bound by these Terms & Conditions and our Privacy Policy.
           </p>
           <p className="text-slate-700 mb-4">
-            These Terms constitute a legally binding agreement between you ("Student," "User," or "You") and SkyPrep Aero ("Company," "We," "Us," or "Our"). If you are enrolling on behalf of a minor, you represent that you are the parent or legal guardian and agree to these Terms on their behalf.
+            These Terms constitute a legally binding agreement between you (&quot;Student,&quot; &quot;User,&quot; or &quot;You&quot;) and SkyPrep Aero (&quot;Company,&quot; &quot;We,&quot; &quot;Us,&quot; or &quot;Our&quot;). If you are enrolling on behalf of a minor, you represent that you are the parent or legal guardian and agree to these Terms on their behalf.
           </p>
         </section>
 
@@ -128,7 +128,7 @@ export default function TermsConditionsPage() {
             <li><strong>Subscription Access:</strong> Continuous access while subscription is active and payments are current</li>
           </ul>
           <p className="text-slate-700 mb-4">
-            Access terms are clearly stated at the time of enrollment. We reserve the right to modify access terms with 30 days' notice.
+            Access terms are clearly stated at the time of enrollment. We reserve the right to modify access terms with 30 days&apos; notice.
           </p>
         </section>
 
@@ -144,8 +144,8 @@ export default function TermsConditionsPage() {
             <li><strong>Account Sharing:</strong> Allowing others to access your account or course materials</li>
             <li><strong>Reverse Engineering:</strong> Attempting to extract, decompile, or reverse engineer any platform technology or content</li>
             <li><strong>Commercial Use:</strong> Using course content for commercial purposes, resale, or creating derivative works</li>
-            <li><strong>Disruption:</strong> Interfering with or disrupting live classes, platform functionality, or other students' learning experience</li>
-            <li><strong>Unauthorized Access:</strong> Attempting to access restricted areas, other students' accounts, or platform systems</li>
+            <li><strong>Disruption:</strong> Interfering with or disrupting live classes, platform functionality, or other students&apos; learning experience</li>
+            <li><strong>Unauthorized Access:</strong> Attempting to access restricted areas, other students&apos; accounts, or platform systems</li>
             <li><strong>Misrepresentation:</strong> Providing false information, impersonating others, or misrepresenting your identity</li>
           </ul>
           <p className="text-slate-700 mb-4">
@@ -409,9 +409,9 @@ export default function TermsConditionsPage() {
             We reserve the right to modify these Terms & Conditions at any time. When we make changes:
           </p>
           <ul className="list-disc pl-6 mb-4 text-slate-700 space-y-2">
-            <li>We will update the "Last Updated" date at the top of this document</li>
+            <li>We will update the &quot;Last Updated&quot; date at the top of this document</li>
             <li>We will notify you via email or through our platform about significant changes</li>
-            <li>We will provide at least 30 days' notice for material changes that affect your rights</li>
+            <li>We will provide at least 30 days&apos; notice for material changes that affect your rights</li>
             <li>Continued use of our services after changes constitutes acceptance of the updated Terms</li>
           </ul>
           <p className="text-slate-700 mb-4">
@@ -464,7 +464,7 @@ export default function TermsConditionsPage() {
 
         <div className="mt-12 pt-8 border-t border-slate-200">
           <p className="text-sm text-slate-500">
-            By using SkyPrep Aero's services, you acknowledge that you have read, understood, and agree to be bound by these Terms & Conditions. If you do not agree, please do not use our services.
+            By using SkyPrep Aero&apos;s services, you acknowledge that you have read, understood, and agree to be bound by these Terms & Conditions. If you do not agree, please do not use our services.
           </p>
         </div>
       </div>
