@@ -249,7 +249,7 @@ export function MentorsShowcase() {
                               <div className="absolute inset-0 bg-gradient-to-br from-sky-400/40 via-blue-500/35 to-slate-900/80 mix-blend-screen transition-opacity duration-500 group-hover:opacity-90" />
                               <Image
                                 src="/media/images/soniya.png"
-                                alt={mentor.imageAlt ?? mentor.name}
+                                alt={mentor.imageAlt ?? `${mentor.name} - ${mentor.title} and SkyPrep Aero aviation mentor`}
                                 fill
                                 className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.04]"
                                 priority

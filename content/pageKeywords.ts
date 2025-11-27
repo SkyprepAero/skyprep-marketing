@@ -33,6 +33,12 @@ export const pageKeywords: Record<string, string[]> = {
     "dgca cohort program",
     "pilot group training",
   ],
+  "/courses/test-series": [
+    "dgca test series",
+    "dgca mock tests",
+    "pilot exam practice",
+    "aviation test series",
+  ],
   "/services": [
     "aviation services",
     "pilot documentation assistance",

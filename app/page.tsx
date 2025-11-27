@@ -64,10 +64,45 @@ export default function Home() {
     },
     "address": {
       "@type": "PostalAddress",
+      "addressLocality": "Pune",
+      "addressRegion": "Maharashtra",
       "addressCountry": "IN",
     },
     "areaServed": "India",
     "knowsAbout": ["DGCA exam preparation", "CPL ground classes", "pilot training", "aviation coaching", "airline preparation"],
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5.0",
+      "reviewCount": "10",
+      "bestRating": "5",
+      "worstRating": "1",
+    },
+  };
+
+  const localBusinessData = {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "@id": buildUrl(),
+    name: siteConfig.name,
+    description: siteConfig.description,
+    url: siteConfig.url,
+    logo: buildUrl(siteConfig.logo),
+    image: buildUrl(siteConfig.logo),
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: "Pune",
+      addressRegion: "Maharashtra",
+      addressCountry: "IN",
+    },
+    email: siteConfig.contactEmail,
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: 5.0,
+      reviewCount: 10,
+      bestRating: 5,
+      worstRating: 1,
+    },
+    sameAs: Object.values(siteConfig.social),
   };
 
   return (
@@ -75,6 +110,10 @@ export default function Home() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessData) }}
       />
       <section
         className="relative full-bleed overflow-hidden bg-cover bg-center bg-no-repeat bg-fixed"

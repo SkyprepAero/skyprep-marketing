@@ -33,7 +33,7 @@ export function VideoHero({
           <div className="absolute inset-0">
             <Image
               src="/media/images/background.jpg"
-              alt="SkyPrep cadets preparing for takeoff"
+              alt="SkyPrep Aero aviation training students and cadets preparing for DGCA exams and pilot certification"
               fill
               priority
               className="object-cover object-center"

@@ -35,8 +35,7 @@ const DATA: Testimonial[] = [
     quote: "Very good instructors, they're really helpful and knowledgeable.", 
     rating: 5, 
     passedSubjects: ["Meteorology", "Regulations", "Navigation"],
-    avatar: "MK",
-    photo: "https://drive.google.com/thumbnail?id=1mDpnSteO5XBonCvGtthtUDutKa-oSqxO"
+    avatar: "MK"
   },
   { 
     name: "Vipin Memane",

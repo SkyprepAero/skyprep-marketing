@@ -219,7 +219,7 @@ export default function AboutPage() {
                   <div className="relative h-full w-full overflow-hidden rounded-4xl transition-transform duration-500 group-hover:scale-105">
                     <Image
                       src="/media/images/aboutusplane.jpg"
-                      alt="SkyPrep Aero aircraft in flight"
+                      alt="SkyPrep Aero aviation training aircraft and pilot education facility showcasing DGCA ground classes"
                       fill
                       className="object-cover"
                       sizes="(max-width: 1024px) 100vw, 50vw"

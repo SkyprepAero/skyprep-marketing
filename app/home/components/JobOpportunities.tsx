@@ -133,7 +133,7 @@ export function JobOpportunities() {
                             <span className="relative inline-flex h-[68px] w-32 items-center justify-center overflow-hidden">
                               <Image
                                 src={company.logo}
-                                alt={company.name}
+                                alt={`${company.name} - Airline partner of SkyPrep Aero pilot training program`}
                                 fill
                                 sizes="150px"
                                 className="object-contain transition duration-300 opacity-90 group-hover:opacity-100"

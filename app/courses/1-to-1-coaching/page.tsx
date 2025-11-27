@@ -82,8 +82,7 @@ export default function OneToOneCoachingPage() {
               </h1>
               <p className="text-lg md:text-2xl text-white max-w-4xl mx-auto leading-relaxed drop-shadow-[0_12px_30px_rgba(15,23,42,0.65)]">
                 India&apos;s best one-on-one DGCA coaching program with personalised pilot mentorship, 
-                flexible scheduling, and expert aviation instructors. Master Air Regulation, Meteorology, 
-                and Navigation with dedicated online pilot classes.
+                flexible scheduling, and expert aviation instructors.                 Master Air Regulation, Meteorology, Navigation, and Technical General with dedicated online pilot classes.
               </p>
             </div>
           </ScrollAnimation>
@@ -221,7 +220,7 @@ export default function OneToOneCoachingPage() {
             </div>
           </ScrollAnimation>
 
-          <div className="grid md:grid-cols-3 gap-8 mb-16">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
             {/* Air Regulation */}
             <ScrollAnimation animationType="scaleIn" delay={400}>
               <div className="group bg-white/[0.08] backdrop-blur-xl rounded-3xl p-8 shadow-[0_45px_110px_-60px_rgba(15,23,42,1)] border border-white/12 hover:-translate-y-2 hover:border-white/25 hover:shadow-[0_55px_140px_-70px_rgba(56,189,248,0.65)] transition-all duration-500 h-full flex flex-col">
@@ -354,6 +353,51 @@ export default function OneToOneCoachingPage() {
                 </div>
               </div>
             </ScrollAnimation>
+
+            {/* Technical General */}
+            <ScrollAnimation animationType="scaleIn" delay={1000}>
+              <div className="group bg-white/[0.08] backdrop-blur-xl rounded-3xl p-8 shadow-[0_45px_110px_-60px_rgba(15,23,42,1)] border border-white/12 hover:-translate-y-2 hover:border-white/25 hover:shadow-[0_55px_140px_-70px_rgba(56,189,248,0.65)] transition-all duration-500 h-full flex flex-col">
+                <div className="relative mb-6">
+                  <div className="w-20 h-20 mx-auto rounded-2xl bg-gradient-to-br from-indigo-500 to-purple-500 flex items-center justify-center shadow-xl group-hover:scale-110 transition-transform duration-300">
+                    <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                    </svg>
+                  </div>
+                  <div className="absolute inset-0 w-20 h-20 mx-auto rounded-2xl border-2 border-white/20 animate-pulse" />
+                </div>
+                <h3 className="text-2xl font-bold text-white mb-4 text-center">Technical General (TG)</h3>
+                <p className="text-slate-200/80 text-center leading-relaxed mb-6 flex-grow">
+                  Aircraft systems training covering TG DGCA syllabus, principles, and operations—essential aircraft systems basics for cadet pilot theory guidance.
+                </p>
+                <div className="space-y-3">
+                  <div className="flex items-center gap-3 text-slate-200/80">
+                    <div className="w-6 h-6 rounded-full bg-white/10 flex items-center justify-center flex-shrink-0">
+                      <svg className="w-3 h-3 text-indigo-300" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                      </svg>
+                    </div>
+                    <span className="text-sm">Aircraft Systems</span>
+                  </div>
+                  <div className="flex items-center gap-3 text-slate-200/80">
+                    <div className="w-6 h-6 rounded-full bg-white/10 flex items-center justify-center flex-shrink-0">
+                      <svg className="w-3 h-3 text-indigo-300" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                      </svg>
+                    </div>
+                    <span className="text-sm">Engine Operations</span>
+                  </div>
+                  <div className="flex items-center gap-3 text-slate-200/80">
+                    <div className="w-6 h-6 rounded-full bg-white/10 flex items-center justify-center flex-shrink-0">
+                      <svg className="w-3 h-3 text-indigo-300" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                      </svg>
+                    </div>
+                    <span className="text-sm">Flight Principles</span>
+                  </div>
+                </div>
+              </div>
+            </ScrollAnimation>
           </div>
 
           {/* Additional Specialized Subjects */}
@@ -362,51 +406,13 @@ export default function OneToOneCoachingPage() {
               <div className="text-center mb-8">
                 <div className="inline-flex items-center gap-3 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-white rounded-full px-8 py-3 shadow-lg">
                   <div className="w-3 h-3 bg-white rounded-full animate-pulse" />
-                  <span className="text-sm font-semibold">Specialized Subjects (Coming Soon)</span>
+                  <span className="text-sm font-semibold">Specialized Subjects</span>
                 </div>
               </div>
             </div>
           </ScrollAnimation>
 
           <div className="grid md:grid-cols-2 gap-8">
-            {/* Technical General */}
-            <ScrollAnimation animationType="fadeInLeft" delay={1000}>
-              <div className="group bg-white/[0.07] rounded-3xl p-10 shadow-[0_45px_110px_-60px_rgba(15,23,42,1)] border border-white/12 hover:-translate-y-2 hover:border-white/25 hover:shadow-[0_55px_140px_-70px_rgba(56,189,248,0.65)] transition-all duration-500 relative">
-                <div className="flex items-start gap-6">
-                  <div className="relative">
-                    <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-indigo-500 to-blue-500 flex items-center justify-center flex-shrink-0 shadow-xl group-hover:scale-110 transition-transform duration-300">
-                      <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-                      </svg>
-                    </div>
-                    <div className="absolute inset-0 w-16 h-16 rounded-2xl border-2 border-white/20 animate-pulse" />
-                  </div>
-                  <div className="flex-1 relative pt-6">
-                    <div className="absolute top-0 right-0">
-                      <span className="inline-block bg-gradient-to-r from-orange-500 to-red-500 text-white px-4 py-1.5 rounded-full text-xs font-bold shadow-lg">
-                        COMING SOON
-                      </span>
-                    </div>
-                    <h3 className="text-2xl font-bold text-white mb-3">Technical General (TG)</h3>
-                    <p className="text-slate-200/80 text-lg leading-relaxed mb-4">
-                      Aircraft systems training covering TG DGCA syllabus, principles, and operations—essential aircraft systems basics for cadet pilot theory guidance.
-                    </p>
-                    <div className="flex flex-wrap gap-2">
-                      <span className="inline-block bg-white/10 text-indigo-200 px-3 py-1 rounded-full text-xs font-semibold">
-                        Aircraft Systems
-                      </span>
-                      <span className="inline-block bg-white/10 text-indigo-200 px-3 py-1 rounded-full text-xs font-semibold">
-                        Engine Operations
-                      </span>
-                      <span className="inline-block bg-white/10 text-indigo-200 px-3 py-1 rounded-full text-xs font-semibold">
-                        Flight Principles
-                      </span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </ScrollAnimation>
 
             {/* RTR */}
             <ScrollAnimation animationType="fadeInRight" delay={1100}>

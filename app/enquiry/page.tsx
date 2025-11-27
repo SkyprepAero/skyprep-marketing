@@ -132,9 +132,9 @@ export default function EnquiryPage() {
 
   return (
     <div className="full-bleed relative bg-slate-950 text-slate-100 overflow-x-hidden">
-      {/* Hero */}
+      {/* Hero - Compact */}
       <section
-        className="relative full-bleed overflow-hidden py-24 md:py-32 bg-fixed bg-cover bg-center bg-no-repeat"
+        className="relative full-bleed overflow-hidden py-16 md:py-20 bg-fixed bg-cover bg-center bg-no-repeat"
         style={{ backgroundImage: "url('/media/images/enquiry.jpg')" }}
       >
         <div className="pointer-events-none absolute inset-0">
@@ -142,134 +142,27 @@ export default function EnquiryPage() {
           <div className="absolute inset-0 bg-slate-950/25" />
           <div className="absolute -top-32 left-0 h-[420px] w-[420px] rounded-full bg-sky-500/25 blur-[160px]" />
           <div className="absolute -bottom-36 right-0 h-[420px] w-[420px] rounded-full bg-emerald-400/18 blur-[170px]" />
-          <div
-            className="absolute inset-0 opacity-45"
-            style={{
-              backgroundImage:
-                "radial-gradient(circle at 18% 22%, rgba(56,189,248,0.32) 0%, transparent 55%), radial-gradient(circle at 82% 78%, rgba(16,185,129,0.24) 0%, transparent 60%), radial-gradient(circle at 50% 50%, rgba(15,23,42,0.9) 0%, transparent 70%)",
-            }}
-          />
         </div>
         <AviationBackground className="opacity-12" />
         <div className="container-wide relative z-10">
           <ScrollAnimation animationType="fadeInUp" delay={150}>
-            <div className="grid gap-10 md:grid-cols-[minmax(0,1.1fr)_minmax(0,0.9fr)] md:items-center">
-              <div className="space-y-7 text-left text-slate-100">
-                <div className="inline-flex items-center gap-3 rounded-full bg-white/10 px-6 py-3 text-xs font-semibold uppercase tracking-[0.35em] text-slate-100/80 shadow-[0_25px_60px_-40px_rgba(56,189,248,0.45)] border border-white/15">
-                  <span className="h-2 w-2 rounded-full bg-emerald-400 animate-pulse" />
-                  Enquiry Desk
-                </div>
-                <h1 className="text-5xl font-bold leading-tight text-white md:text-7xl md:leading-[1.05]">
-                  Enquiry Desk — Your Personalised DGCA Training Roadmap
-                </h1>
-                <div className="space-y-5 text-lg leading-relaxed text-slate-200/85">
-                  <p>
-                    Map your personalised flight training plan. Share where you&apos;re starting from, the DGCA milestones you&apos;re preparing for, and the runway you have
-                    ahead. We&apos;ll respond with a pilot training action plan—covering CPL preparation modules, simulator hours mapping, and
-                    aviation timeline planning—so you know exactly what comes next.
-                  </p>
-                  <p className="text-slate-200/75">
-                    Aviation training enquiry with senior mentors—not bots—so the DGCA guidance and counselling you receive is
-                    contextual, actionable, and tailored to cadet pilot planning.
-                  </p>
-                </div>
-                <div className="flex flex-wrap items-center gap-4 text-xs font-semibold uppercase tracking-[0.35em] text-slate-200/80">
-                  <span className="inline-flex items-center gap-2 rounded-full border border-white/20 px-4 py-2 bg-white/5">
-                    DGCA Roadmap Consultation
-                  </span>
-                  <span className="inline-flex items-center gap-2 rounded-full border border-white/20 px-4 py-2 bg-white/5">
-                    Airline Readiness Mentorship
-                  </span>
-                  <span className="inline-flex items-center gap-2 rounded-full border border-white/20 px-4 py-2 bg-white/5">
-                    Confidential Consultation
-                  </span>
-                </div>
-                <div className="flex flex-wrap items-center gap-3 pt-4">
-                  <a
-                    href="#enquiry-form"
-                    className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-amber-400 via-amber-500 to-amber-600 px-8 py-3 text-xs font-semibold uppercase tracking-[0.35em] text-slate-900 shadow-[0_18px_38px_-26px_rgba(245,158,11,0.65)] transition-all duration-300 hover:scale-[1.02] hover:from-amber-500 hover:via-amber-600 hover:to-amber-700"
-                  >
-                    Start Enquiry
-                    <svg className="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-                      <path d="M5 12h14" />
-                      <path d="M12 5l7 7-7 7" />
-                    </svg>
-                  </a>
-                  <div className="flex items-center gap-2 rounded-full bg-white/10 px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.3em] text-slate-100/85">
-                    <span className="h-2 w-2 rounded-full bg-emerald-400 animate-pulse" />
-                    No spam, just clarity
-                  </div>
-                </div>
+            <div className="text-center max-w-4xl mx-auto">
+              <div className="inline-flex items-center gap-3 rounded-full bg-white/10 px-6 py-3 text-xs font-semibold uppercase tracking-[0.35em] text-slate-100/80 shadow-[0_25px_60px_-40px_rgba(56,189,248,0.45)] border border-white/15 mb-6">
+                <span className="h-2 w-2 rounded-full bg-emerald-400 animate-pulse" />
+                Enquiry Desk
               </div>
-
-              <div className="relative rounded-4xl border border-white/15 bg-white/[0.08] p-8 text-slate-50 shadow-[0_35px_90px_-60px_rgba(15,23,42,0.85)] backdrop-blur-xl">
-                <div className="absolute -left-6 top-10 h-16 w-16 rounded-full bg-sky-400/30 blur-3xl" aria-hidden />
-                <div className="absolute -right-10 bottom-6 h-20 w-20 rounded-full bg-amber-300/30 blur-3xl" aria-hidden />
-                <div className="relative space-y-6">
-                  <div className="inline-flex items-center gap-2 rounded-full bg-white/15 px-4 py-2 text-xs font-semibold uppercase tracking-[0.35em] text-emerald-200">
-                    Flightpath outline
-                  </div>
-                  <div className="space-y-5">
-                    {heroPillars.map((pillar, index) => (
-                      <div
-                        key={pillar.title}
-                        className="flex gap-4 rounded-3xl border border-white/15 bg-white/10 p-5 shadow-[0_20px_55px_-45px_rgba(15,23,42,0.9)]"
-                      >
-                        <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-2xl bg-emerald-400/90 text-base font-semibold text-slate-900 shadow-lg">
-                          {index + 1}
-                        </div>
-                        <div className="space-y-1">
-                          <div className="text-xs font-semibold uppercase tracking-[0.3em] text-emerald-100/90">
-                            {pillar.subtitle}
-                          </div>
-                          <h3 className="text-lg font-semibold text-white">{pillar.title}</h3>
-                          <p className="text-sm leading-relaxed text-slate-200/85">{pillar.description}</p>
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                  <div className="rounded-3xl border border-white/15 bg-white/10 p-5 text-xs font-semibold uppercase tracking-[0.3em] text-slate-100/80">
-                    We dedicate a mentor the moment your submission lands. Expect a human response, not a bot.
-                  </div>
-                </div>
-              </div>
+              <h1 className="text-4xl md:text-6xl font-bold leading-tight text-white mb-6">
+                Enquiry Desk — Your Personalised DGCA Training Roadmap
+              </h1>
+              <p className="text-lg md:text-xl leading-relaxed text-slate-200/85 max-w-3xl mx-auto">
+                Map your personalised flight training plan. Share where you&apos;re starting from, the DGCA milestones you&apos;re preparing for, and the runway you have ahead.
+              </p>
             </div>
           </ScrollAnimation>
         </div>
       </section>
 
-      {/* Highlights */}
-      <section className="relative full-bleed overflow-hidden bg-gradient-to-br from-slate-950 via-slate-950/92 to-blue-950/70 pb-12 pt-0 md:pb-16">
-        <div className="absolute inset-0 pointer-events-none">
-          <div className="absolute top-16 left-20 h-72 w-72 rounded-full bg-sky-500/18 blur-[140px]" />
-          <div className="absolute bottom-12 right-16 h-80 w-80 rounded-full bg-emerald-400/14 blur-[150px]" />
-        </div>
-        <div className="container-wide relative z-10 mt-10 md:mt-12">
-          <ScrollAnimation animationType="fadeInUp" delay={250}>
-            <div className="grid gap-6 md:grid-cols-3">
-              {responseHighlights.map((item) => (
-                <div
-                  key={item.title}
-                  className="group rounded-3xl border border-white/12 bg-white/[0.08] p-8 text-slate-100 shadow-[0_35px_90px_-55px_rgba(15,23,42,0.95)] backdrop-blur-lg transition-all duration-500 hover:-translate-y-2 hover:border-white/25 hover:shadow-[0_55px_140px_-70px_rgba(56,189,248,0.6)]"
-                >
-                  <div
-                    className={`mb-6 inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br ${item.gradient} text-white shadow-lg shadow-slate-900/50`}
-                    aria-hidden
-                  >
-                    <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor">
-                      <path d="M12 2a10 10 0 1010 10A10.011 10.011 0 0012 2zm-.5 15l-5-5 1.41-1.41L11.5 13.17l6.59-6.59L19.5 8z" />
-                    </svg>
-                  </div>
-                  <h2 className="text-lg font-semibold text-white">How Our Enquiry Desk Works: {item.title}</h2>
-                  <p className="mt-3 text-sm leading-relaxed text-slate-200/85">{item.description}</p>
-                </div>
-              ))}
-            </div>
-          </ScrollAnimation>
-        </div>
-      </section>
-
-      {/* Form + Info */}
+      {/* Form + Info - Now at Top */}
       <section className="relative full-bleed overflow-hidden py-20 md:py-28">
         <div className="pointer-events-none absolute inset-0">
           <div className="absolute inset-0 bg-gradient-to-br from-slate-950 via-slate-950/95 to-blue-950/75" />
@@ -550,6 +443,82 @@ export default function EnquiryPage() {
               </div>
             </ScrollAnimation>
           </div>
+        </div>
+      </section>
+
+      {/* Highlights */}
+      <section className="relative full-bleed overflow-hidden bg-gradient-to-br from-slate-950 via-slate-950/92 to-blue-950/70 py-16 md:py-20">
+        <div className="absolute inset-0 pointer-events-none">
+          <div className="absolute top-16 left-20 h-72 w-72 rounded-full bg-sky-500/18 blur-[140px]" />
+          <div className="absolute bottom-12 right-16 h-80 w-80 rounded-full bg-emerald-400/14 blur-[150px]" />
+        </div>
+        <div className="container-wide relative z-10">
+          <ScrollAnimation animationType="fadeInUp" delay={250}>
+            <div className="grid gap-6 md:grid-cols-3">
+              {responseHighlights.map((item) => (
+                <div
+                  key={item.title}
+                  className="group rounded-3xl border border-white/12 bg-white/[0.08] p-8 text-slate-100 shadow-[0_35px_90px_-55px_rgba(15,23,42,0.95)] backdrop-blur-lg transition-all duration-500 hover:-translate-y-2 hover:border-white/25 hover:shadow-[0_55px_140px_-70px_rgba(56,189,248,0.6)]"
+                >
+                  <div
+                    className={`mb-6 inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br ${item.gradient} text-white shadow-lg shadow-slate-900/50`}
+                    aria-hidden
+                  >
+                    <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M12 2a10 10 0 1010 10A10.011 10.011 0 0012 2zm-.5 15l-5-5 1.41-1.41L11.5 13.17l6.59-6.59L19.5 8z" />
+                    </svg>
+                  </div>
+                  <h2 className="text-lg font-semibold text-white">How Our Enquiry Desk Works: {item.title}</h2>
+                  <p className="mt-3 text-sm leading-relaxed text-slate-200/85">{item.description}</p>
+                </div>
+              ))}
+            </div>
+          </ScrollAnimation>
+        </div>
+      </section>
+
+      {/* Hero Info Cards */}
+      <section className="relative full-bleed overflow-hidden py-16 md:py-20 bg-gradient-to-br from-slate-950 via-slate-950/95 to-blue-950/75">
+        <div className="pointer-events-none absolute inset-0">
+          <div className="absolute -top-24 left-20 h-80 w-80 rounded-full bg-sky-500/22 blur-[150px]" />
+          <div className="absolute bottom-10 right-24 h-96 w-96 rounded-full bg-amber-400/18 blur-[180px]" />
+        </div>
+        <div className="container-wide relative z-10">
+          <ScrollAnimation animationType="fadeInUp" delay={200}>
+            <div className="max-w-4xl mx-auto">
+              <div className="relative rounded-4xl border border-white/15 bg-white/[0.08] p-8 md:p-10 text-slate-50 shadow-[0_35px_90px_-60px_rgba(15,23,42,0.85)] backdrop-blur-xl">
+                <div className="absolute -left-6 top-10 h-16 w-16 rounded-full bg-sky-400/30 blur-3xl" aria-hidden />
+                <div className="absolute -right-10 bottom-6 h-20 w-20 rounded-full bg-amber-300/30 blur-3xl" aria-hidden />
+                <div className="relative space-y-6">
+                  <div className="inline-flex items-center gap-2 rounded-full bg-white/15 px-4 py-2 text-xs font-semibold uppercase tracking-[0.35em] text-emerald-200">
+                    Flightpath outline
+                  </div>
+                  <div className="space-y-5">
+                    {heroPillars.map((pillar, index) => (
+                      <div
+                        key={pillar.title}
+                        className="flex gap-4 rounded-3xl border border-white/15 bg-white/10 p-5 shadow-[0_20px_55px_-45px_rgba(15,23,42,0.9)]"
+                      >
+                        <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-2xl bg-emerald-400/90 text-base font-semibold text-slate-900 shadow-lg">
+                          {index + 1}
+                        </div>
+                        <div className="space-y-1">
+                          <div className="text-xs font-semibold uppercase tracking-[0.3em] text-emerald-100/90">
+                            {pillar.subtitle}
+                          </div>
+                          <h3 className="text-lg font-semibold text-white">{pillar.title}</h3>
+                          <p className="text-sm leading-relaxed text-slate-200/85">{pillar.description}</p>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                  <div className="rounded-3xl border border-white/15 bg-white/10 p-5 text-xs font-semibold uppercase tracking-[0.3em] text-slate-100/80">
+                    We dedicate a mentor the moment your submission lands. Expect a human response, not a bot.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </ScrollAnimation>
         </div>
       </section>
 

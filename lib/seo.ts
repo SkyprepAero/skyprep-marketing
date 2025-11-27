@@ -161,4 +161,121 @@ export function jsonLdProduct(product: {
   };
 }
 
+export function jsonLdBreadcrumb(items: { name: string; url: string }[]) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: items.map((item, index) => ({
+      "@type": "ListItem",
+      position: index + 1,
+      name: item.name,
+      item: buildUrl(item.url),
+    })),
+  };
+}
 
+export function jsonLdFAQ(questions: { question: string; answer: string }[]) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: questions.map((qa) => ({
+      "@type": "Question",
+      name: qa.question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: qa.answer,
+      },
+    })),
+  };
+}
+
+export function jsonLdReview(review: {
+  author: string;
+  datePublished?: string;
+  reviewBody: string;
+  reviewRating: {
+    ratingValue: number;
+    bestRating?: number;
+    worstRating?: number;
+  };
+  itemReviewed?: {
+    name: string;
+    type?: string;
+  };
+}) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Review",
+    author: {
+      "@type": "Person",
+      name: review.author,
+    },
+    datePublished: review.datePublished,
+    reviewBody: review.reviewBody,
+    reviewRating: {
+      "@type": "Rating",
+      ratingValue: review.reviewRating.ratingValue,
+      bestRating: review.reviewRating.bestRating || 5,
+      worstRating: review.reviewRating.worstRating || 1,
+    },
+    ...(review.itemReviewed && {
+      itemReviewed: {
+        "@type": review.itemReviewed.type || "Service",
+        name: review.itemReviewed.name,
+      },
+    }),
+  };
+}
+
+// LocalBusiness schema generator
+export function jsonLdLocalBusiness(business: {
+  name?: string;
+  description?: string;
+  address?: {
+    streetAddress?: string;
+    addressLocality?: string;
+    addressRegion?: string;
+    postalCode?: string;
+    addressCountry?: string;
+  };
+  telephone?: string;
+  email?: string;
+  priceRange?: string;
+  openingHours?: string[];
+  image?: string;
+  aggregateRating?: {
+    ratingValue: number;
+    reviewCount: number;
+  };
+}) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "@id": buildUrl(),
+    name: business.name || siteConfig.name,
+    description: business.description || siteConfig.description,
+    url: siteConfig.url,
+    logo: buildUrl(siteConfig.logo),
+    image: business.image ? buildUrl(business.image) : buildUrl(siteConfig.logo),
+    ...(business.address && {
+      address: {
+        "@type": "PostalAddress",
+        ...business.address,
+      },
+    }),
+    ...(business.telephone && { telephone: business.telephone }),
+    ...(business.email && { email: business.email }),
+    ...(business.priceRange && { priceRange: business.priceRange }),
+    ...(business.openingHours && { openingHoursSpecification: business.openingHours.map((hours) => ({ "@type": "OpeningHoursSpecification", dayOfWeek: hours })) }),
+    ...(business.aggregateRating && {
+      aggregateRating: {
+        "@type": "AggregateRating",
+        ratingValue: business.aggregateRating.ratingValue,
+        reviewCount: business.aggregateRating.reviewCount,
+        bestRating: 5,
+        worstRating: 1,
+      },
+    }),
+    sameAs: Object.values(siteConfig.social),
+  };
+}

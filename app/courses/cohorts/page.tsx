@@ -7,7 +7,7 @@ import { getContactUrl, getWhatsAppUrl, getWhatsAppButtonText } from "@/config/s
 
 export const metadata: Metadata = buildPageMetadata({
   title: "Aviation Cohorts | DGCA Online Batch Classes & 4-Month Group Learning Program",
-  description: "Join SkyPrep's 4-month DGCA cohort program with live classes, peer learning, revision sessions, and affordable batch coaching to master Air Regulation, Meteorology, and Navigation.",
+  description: "Join SkyPrep's 4-month DGCA cohort program with live classes, peer learning, revision sessions, and affordable batch coaching to master Air Regulation, Meteorology, Navigation, and Technical General.",
   canonicalPath: "/courses/cohorts",
   keywords: [
     // Primary Keywords
@@ -33,7 +33,7 @@ export const metadata: Metadata = buildPageMetadata({
     "aviation online collaboration",
     "pilot learning community",
     // Long-Tail Keywords
-    "best DGCA batch classes for Air Regulation, Meteorology, Navigation",
+    "best DGCA batch classes for Air Regulation, Meteorology, Navigation, Technical General",
     "4-month aviation cohort program for DGCA exam success",
     "affordable group DGCA training with high success rates",
     "cohort-based pilot training in India with peer support",
@@ -84,7 +84,7 @@ export default function CohortsPage() {
               </h1>
               <p className="text-lg md:text-2xl text-white max-w-4xl mx-auto leading-relaxed drop-shadow-[0_12px_32px_rgba(15,23,42,0.65)]">
                 India&apos;s best DGCA cohort program with collaborative aviation learning, peer support, 
-                and structured curriculum. Master Air Regulation, Meteorology, and Navigation through 
+                and structured curriculum. Master Air Regulation, Meteorology, Navigation, and Technical General through 
                 affordable group DGCA training with high success rates.
               </p>
             </div>
@@ -231,7 +231,7 @@ export default function CohortsPage() {
                 </div>
                 <h3 className="text-3xl font-bold text-slate-50 mb-6">DGCA Exam Preparation Batch</h3>
                 <p className="text-lg text-slate-300 max-w-2xl mx-auto leading-relaxed">
-                  Our DGCA online batch classes offer comprehensive pilot classroom coaching to master key aviation subjects—best DGCA batch classes for Air Regulation, Meteorology, Navigation.
+                  Our DGCA online batch classes offer comprehensive pilot classroom coaching to master key aviation subjects—best DGCA batch classes for Air Regulation, Meteorology, Navigation, and Technical General.
                 </p>
               </div>
 
@@ -243,6 +243,8 @@ export default function CohortsPage() {
                   <span className="bg-gradient-to-r from-sky-500 to-cyan-500 text-white px-6 py-3 rounded-full font-semibold shadow-lg shadow-cyan-500/30 hover:shadow-cyan-500/50 transition-shadow duration-300">Aviation Meteorology</span>
                   <span className="text-slate-600 text-2xl">|</span>
                   <span className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-6 py-3 rounded-full font-semibold shadow-lg shadow-blue-500/30 hover:shadow-blue-500/50 transition-shadow duration-300">Air Navigation</span>
+                  <span className="text-slate-600 text-2xl">|</span>
+                  <span className="bg-gradient-to-r from-indigo-500 to-purple-500 text-white px-6 py-3 rounded-full font-semibold shadow-lg shadow-indigo-500/30 hover:shadow-indigo-500/50 transition-shadow duration-300">Technical General</span>
                 </div>
               </div>
 
@@ -338,34 +340,23 @@ export default function CohortsPage() {
 
               <div className="grid md:grid-cols-2 gap-10">
                 {/* Aviation Subject */}
-                <div className="bg-gradient-to-br from-amber-500/15 via-amber-500/5 to-transparent rounded-3xl p-10 shadow-xl border border-amber-500/40 hover:border-amber-300 hover:shadow-amber-500/30 transition-all duration-500 hover:scale-105">
-                  <div className="text-center mb-8">
-                    <div className="inline-block px-6 py-2 bg-gradient-to-r from-amber-500 to-orange-500 rounded-full mb-6 shadow-lg shadow-amber-500/40">
-                      <span className="text-slate-950 font-bold text-sm tracking-wide uppercase">Coming Soon</span>
+                <div className="bg-gradient-to-br from-amber-500/15 via-amber-500/5 to-transparent rounded-3xl p-8 md:p-10 shadow-xl border border-amber-500/40 hover:border-amber-300 hover:shadow-amber-500/30 transition-all duration-500 hover:scale-105 overflow-hidden">
+                  <div className="text-center mb-6 md:mb-8">
+                    <div className="inline-block px-4 md:px-6 py-2 bg-gradient-to-r from-amber-500 to-orange-500 rounded-full mb-4 md:mb-6 shadow-lg shadow-amber-500/40">
+                      <span className="text-slate-950 font-bold text-xs md:text-sm tracking-wide uppercase">Coming Soon</span>
                     </div>
-                    <h4 className="text-3xl font-bold text-slate-50 mb-6">
+                    <h4 className="text-2xl md:text-3xl font-bold text-slate-50 mb-4 md:mb-6">
                       Aviation Subject
                     </h4>
                   </div>
 
-                  <div className="space-y-6">
-                    <div className="bg-slate-950/80 backdrop-blur-xl rounded-xl p-6 shadow-md border border-amber-400/40 hover:border-amber-300 transition-all duration-300">
-                      <h5 className="text-xl font-semibold text-slate-100 mb-3 flex items-center gap-2">
-                        <span className="w-2 h-2 bg-amber-400 rounded-full"></span>
-                        Technical General (TG DGCA Batch)
+                  <div className="space-y-4 md:space-y-6">
+                    <div className="bg-slate-950/80 backdrop-blur-xl rounded-xl p-4 md:p-6 shadow-md border border-amber-400/40 hover:border-amber-300 transition-all duration-300">
+                      <h5 className="text-lg md:text-xl font-semibold text-slate-100 mb-2 md:mb-3 flex items-center gap-2">
+                        <span className="w-2 h-2 bg-amber-400 rounded-full flex-shrink-0"></span>
+                        <span>Radio Telephony Restricted (RTR Coaching Batch)</span>
                       </h5>
-                      <p className="text-slate-300 leading-relaxed">
-                        Aircraft systems batch class covering principles and operations—essential pilot technical general coaching 
-                        for both theory and practical applications.
-                      </p>
-                    </div>
-
-                    <div className="bg-slate-950/80 backdrop-blur-xl rounded-xl p-6 shadow-md border border-amber-400/40 hover:border-amber-300 transition-all duration-300">
-                      <h5 className="text-xl font-semibold text-slate-100 mb-3 flex items-center gap-2">
-                        <span className="w-2 h-2 bg-amber-400 rounded-full"></span>
-                        Radio Telephony Restricted (RTR Coaching Batch)
-                      </h5>
-                      <p className="text-slate-300 leading-relaxed">
+                      <p className="text-sm md:text-base text-slate-300 leading-relaxed">
                         RTR coaching batch covering radio procedures class and ATC communication batch protocols. 
                         Equips aspiring pilots with skills to communicate effectively and safely in the skies.
                       </p>
@@ -374,27 +365,27 @@ export default function CohortsPage() {
                 </div>
 
                 {/* Additional Coming Soon Programs */}
-                <div className="bg-gradient-to-br from-blue-500/15 via-blue-500/10 to-transparent rounded-3xl p-10 shadow-xl border border-blue-500/40 hover:border-blue-300 hover:shadow-blue-500/30 transition-all duration-500 hover:scale-105">
-                  <div className="text-center mb-8">
-                    <div className="inline-block px-6 py-2 bg-gradient-to-r from-blue-500 to-sky-500 rounded-full mb-6 shadow-lg shadow-blue-500/40">
-                      <span className="text-slate-950 font-bold text-sm tracking-wide uppercase">Stay Tuned</span>
+                <div className="bg-gradient-to-br from-blue-500/15 via-blue-500/10 to-transparent rounded-3xl p-8 md:p-10 shadow-xl border border-blue-500/40 hover:border-blue-300 hover:shadow-blue-500/30 transition-all duration-500 hover:scale-105 overflow-hidden flex flex-col">
+                  <div className="text-center mb-6 md:mb-8">
+                    <div className="inline-block px-4 md:px-6 py-2 bg-gradient-to-r from-blue-500 to-sky-500 rounded-full mb-4 md:mb-6 shadow-lg shadow-blue-500/40">
+                      <span className="text-slate-950 font-bold text-xs md:text-sm tracking-wide uppercase">Stay Tuned</span>
                     </div>
-                    <h4 className="text-3xl font-bold text-slate-50 mb-6">
+                    <h4 className="text-2xl md:text-3xl font-bold text-slate-50 mb-4 md:mb-6">
                       More Programs
                     </h4>
                   </div>
 
-                  <div className="flex items-center justify-center h-full">
-                    <div className="text-center">
-                      <div className="relative inline-block mb-6">
-                        <div className="w-24 h-24 mx-auto rounded-2xl bg-gradient-to-br from-blue-500 to-sky-500 flex items-center justify-center shadow-xl shadow-blue-500/40">
-                          <svg className="w-12 h-12 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <div className="flex items-center justify-center flex-1 min-h-0">
+                    <div className="text-center w-full">
+                      <div className="relative inline-block mb-4 md:mb-6">
+                        <div className="w-20 h-20 md:w-24 md:h-24 mx-auto rounded-2xl bg-gradient-to-br from-blue-500 to-sky-500 flex items-center justify-center shadow-xl shadow-blue-500/40">
+                          <svg className="w-10 h-10 md:w-12 md:h-12 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
                           </svg>
                         </div>
-                        <div className="absolute inset-0 w-24 h-24 mx-auto rounded-2xl border-2 border-blue-400/40 animate-pulse" />
+                        <div className="absolute inset-0 w-20 h-20 md:w-24 md:h-24 mx-auto rounded-2xl border-2 border-blue-400/40 animate-pulse" />
                       </div>
-                      <p className="text-lg text-slate-300 max-w-sm mx-auto leading-relaxed">
+                      <p className="text-base md:text-lg text-slate-300 max-w-sm mx-auto leading-relaxed px-2">
                         We&apos;re continuously expanding our cohort offerings. Check back soon for more specialized aviation programs!
                       </p>
                     </div>

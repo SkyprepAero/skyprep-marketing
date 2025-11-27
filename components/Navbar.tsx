@@ -226,10 +226,8 @@ export function Navbar() {
               </nav>
             )}
             
-            <a
-              href="https://classroom.skyprepaero.com"
-              target="_blank"
-              rel="noopener noreferrer"
+            <Link
+              href="/courses/test-series"
               className={`${isScrolled ? 'px-5 py-2 text-sm' : 'px-6 py-2.5 text-sm'} rounded-full font-semibold transition-all duration-300 hover:scale-105 hover:shadow-lg text-white whitespace-nowrap flex-shrink-0`}
               style={{
                 background: "linear-gradient(135deg, #0ea5e9, #38bdf8)",
@@ -237,7 +235,7 @@ export function Navbar() {
               }}
             >
               Test Series
-            </a>
+            </Link>
             <Link
               href="/enquiry"
               className={`${isScrolled ? 'px-5 py-2 text-sm' : 'px-6 py-2.5 text-sm'} rounded-full font-semibold transition-all duration-300 hover:scale-105 hover:shadow-lg whitespace-nowrap flex-shrink-0 ${
@@ -328,10 +326,8 @@ export function Navbar() {
             >
               Services
             </Link>
-            <a
-              href="https://classroom.skyprepaero.com"
-              target="_blank"
-              rel="noopener noreferrer"
+            <Link
+              href="/courses/test-series"
               className="mt-2 px-6 py-3 rounded-full font-semibold text-center text-white"
               style={{
                 background: "linear-gradient(135deg, #0ea5e9, #38bdf8)",
@@ -340,7 +336,7 @@ export function Navbar() {
               onClick={() => setMobileOpen(false)}
             >
               Test Series
-            </a>
+            </Link>
             <Link
               href="/enquiry"
               className="px-6 py-3 rounded-full font-semibold text-center"

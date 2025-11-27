@@ -24,11 +24,10 @@ const trainingOptions = [
     name: "Test Series",
     description:
       "DGCA test series with analytics and debriefs—mock tests for navigation, meteorology, and regulations to clear exams in first attempt.",
-    href: "https://classroom.skyprepaero.com",
+    href: "/courses/test-series",
     badge: "DGCA Mock Tests",
     gradient: "from-amber-400 via-amber-500 to-orange-500",
     Icon: PiClipboardTextBold,
-    external: true,
   },
 ];
 
