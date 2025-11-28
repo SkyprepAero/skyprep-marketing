@@ -10,14 +10,14 @@ export const services: Service[] = [
   {
     id: "1-to-1-coaching",
     name: "FocusONE",
-    href: "/services/1-to-1-coaching",
+    href: "/courses/1-to-1-coaching",
     description: "Personalized one-on-one aviation coaching",
     whatsappMessage: "Hi SkyPrep Aero! I'm interested in your FocusONE program. Can you please provide more details?"
   },
   {
     id: "cohorts",
     name: "Cohorts",
-    href: "/services/cohorts",
+    href: "/courses/cohorts",
     description: "Group training programs with structured learning",
     whatsappMessage: "Hi SkyPrep Aero! I'm interested in joining your Cohorts program. Can you please provide more details?"
   },

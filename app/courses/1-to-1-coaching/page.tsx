@@ -498,7 +498,7 @@ export default function OneToOneCoachingPage() {
                       </span>
                     </Link>
                     <Link
-                      href="/services/cohorts"
+                      href="/courses/cohorts"
                       className="group px-12 py-5 rounded-xl font-semibold border-2 border-white/25 text-slate-100 hover:bg-white/10 transition-all duration-300 text-lg hover:scale-105"
                     >
                       <span className="flex items-center gap-3">

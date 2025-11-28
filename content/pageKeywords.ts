@@ -24,14 +24,19 @@ export const pageKeywords: Record<string, string[]> = {
     "dgca exam coaching",
   ],
   "/courses/1-to-1-coaching": [
+    "focusone",
     "focusone mentorship",
     "one to one aviation coaching",
     "personalized pilot training",
+    "pilot mentorship india",
   ],
   "/courses/cohorts": [
     "aviation cohort classes",
+    "aviation cohort training",
     "dgca cohort program",
+    "dgca cohort classes",
     "pilot group training",
+    "pilot exam batches",
   ],
   "/courses/test-series": [
     "dgca test series",
@@ -43,16 +48,6 @@ export const pageKeywords: Record<string, string[]> = {
     "aviation services",
     "pilot documentation assistance",
     "dgca support services",
-  ],
-  "/services/1-to-1-coaching": [
-    "focusone",
-    "one to one aviation coaching",
-    "pilot mentorship india",
-  ],
-  "/services/cohorts": [
-    "aviation cohort training",
-    "pilot exam batches",
-    "dgca cohort classes",
   ],
   "/services/medical": [
     "dgca medical assistance",
