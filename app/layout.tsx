@@ -10,6 +10,7 @@ import GlobalLoader from "@/components/GlobalLoader";
 import { siteConfig } from "@/config/site";
 import { generateMetadata } from "@/lib/seo";
 import { AnalyticsTracker } from "./analytics-tracker";
+import { Toaster } from "react-hot-toast";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -72,6 +73,31 @@ export default function RootLayout({
           <Footer />
           <WhatsAppButton />
           <GlobalLoader />
+          <Toaster
+            position="top-right"
+            toastOptions={{
+              duration: 4000,
+              style: {
+                background: "#1e293b",
+                color: "#f1f5f9",
+                border: "1px solid rgba(255, 255, 255, 0.1)",
+                borderRadius: "12px",
+                padding: "16px",
+              },
+              success: {
+                iconTheme: {
+                  primary: "#10b981",
+                  secondary: "#f1f5f9",
+                },
+              },
+              error: {
+                iconTheme: {
+                  primary: "#ef4444",
+                  secondary: "#f1f5f9",
+                },
+              },
+            }}
+          />
         </LoaderProvider>
       </body>
     </html>

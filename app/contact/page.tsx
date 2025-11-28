@@ -180,7 +180,7 @@ export default function ContactPage() {
                       </div>
                       <div>
                         <div className="font-semibold text-slate-100 text-lg mb-1">Schedule a Call — Book Aviation Call India</div>
-                        <a href="https://calendly.com/theskyprep/new-meeting" target="_blank" rel="noopener noreferrer" className="text-amber-300 hover:text-amber-200 underline-offset-4 hover:underline text-lg">Book Pilot Training Appointment via Calendly</a>
+                        <a href={process.env.NEXT_PUBLIC_CALENDLY_URL} target="_blank" rel="noopener noreferrer" className="text-amber-300 hover:text-amber-200 underline-offset-4 hover:underline text-lg">Book Pilot Training Appointment via Calendly</a>
                       </div>
                     </li>
                   </ul>

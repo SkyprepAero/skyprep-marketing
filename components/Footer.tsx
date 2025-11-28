@@ -172,7 +172,7 @@ export function Footer() {
                     className="text-sm text-slate-300/80 hover:text-blue-300 transition-colors duration-200 group flex items-center gap-2"
                   >
                     <span className="w-0 group-hover:w-1.5 h-0.5 bg-blue-400 transition-all duration-200 rounded-full" />
-                    DGCA Portal
+                    eGCA Portal
                   </a>
                   <a
                     href="https://www.dgca.gov.in/digigov-portal/?page=jsp/dgca/InventoryList/personal/medical/class1/Class1.pdf"
