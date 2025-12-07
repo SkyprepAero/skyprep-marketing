@@ -8,6 +8,7 @@ const nextConfig: NextConfig = {
       { protocol: "https", hostname: "cdn.skyprepaero.com" },
     ],
   },
+  allowedDevOrigins: ["172.18.192.1"],
 };
 
 export default nextConfig;
