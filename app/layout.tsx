@@ -11,6 +11,7 @@ import { siteConfig } from "@/config/site";
 import { generateMetadata } from "@/lib/seo";
 import { AnalyticsTracker } from "./analytics-tracker";
 import { Toaster } from "react-hot-toast";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -73,6 +74,7 @@ export default function RootLayout({
           <Footer />
           <WhatsAppButton />
           <GlobalLoader />
+          <SpeedInsights />
           <Toaster
             position="top-right"
             toastOptions={{
