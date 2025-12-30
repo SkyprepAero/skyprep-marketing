@@ -55,15 +55,26 @@ export function generateMetadata(input: BaseSEOInput = {}): Metadata {
     }
   }
 
+  // Add cache-busting version to force Google to fetch new icons
+  const iconVersion = "?v=2";
+  const faviconUrl = buildUrl("/favicon.ico") + iconVersion;
+  const icon192Url = buildUrl("/favicon-192x192.png") + iconVersion;
+  const icon512Url = buildUrl("/favicon-512x512.png") + iconVersion;
+  const appleIconUrl = buildUrl("/apple-icon.png") + iconVersion;
+
   return {
     title,
     description,
     keywords,
     alternates: { canonical },
     icons: {
-      icon: iconUrl,
-      shortcut: iconUrl,
-      apple: iconUrl,
+      icon: [
+        { url: faviconUrl, sizes: "any" },
+        { url: icon192Url, sizes: "192x192", type: "image/png" },
+        { url: icon512Url, sizes: "512x512", type: "image/png" },
+      ],
+      shortcut: faviconUrl,
+      apple: appleIconUrl,
     },
     openGraph: {
       title,
