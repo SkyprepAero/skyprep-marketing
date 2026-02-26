@@ -64,7 +64,7 @@ export function WhyChooseSkyPrep() {
   const stats = [
     { number: "360°", label: "Training coverage" },
     { number: "Custom", label: "Learning Path" },
-    { number: "DGCA On Demand", label: "1:1 Coaching" },
+    { number: "FocusONE", label: "1:1 Coaching" },
     { number: "Flexible", label: "Your Schedule" },
   ];
 
