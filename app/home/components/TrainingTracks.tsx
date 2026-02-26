@@ -3,11 +3,11 @@ import { PiUsersThreeBold, PiUserFocusBold, PiClipboardTextBold } from "react-ic
 
 const trainingOptions = [
   {
-    name: "FocusONE",
+    name: "DGCA On Demand Sessions",
     description:
-      "Personalised 1:1 DGCA coaching with airline captain mentorship—tailored study plans, progress tracking, and exam strategy for pilot training success.",
-    href: "/courses/1-to-1-coaching",
-    badge: "1:1 Airline Captain Mentorship",
+      "Flexible 1:1 DGCA coaching—book sessions anytime with expert aviation instructors. Personal mentorship for Air Regulation, Meteorology, Navigation, and Technical General.",
+    href: "/courses/dgca-on-demand-sessions",
+    badge: "1:1 On-Demand Coaching",
     gradient: "from-sky-500/90 via-blue-500 to-indigo-500",
     Icon: PiUserFocusBold,
   },

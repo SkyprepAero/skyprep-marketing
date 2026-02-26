@@ -158,17 +158,17 @@ export default function TestSeriesPage() {
             Can&apos;t Wait? Start Preparing Now
           </h2>
           <p className="text-lg text-slate-300/80 max-w-2xl mx-auto mb-8">
-            While our Test Series is launching soon, you can start your DGCA preparation with our FocusONE mentorship or Cohorts program.
+            While our Test Series is launching soon, you can start your DGCA preparation with our <Link href="/courses/dgca-on-demand-sessions" className="text-amber-300 hover:text-amber-200 underline">DGCA On Demand Sessions</Link> or Cohorts program.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
-              href="/courses/1-to-1-coaching"
+              href="/courses/dgca-on-demand-sessions"
               className="px-10 py-4 rounded-xl font-semibold text-slate-950 shadow-lg hover:shadow-amber-500/30 transition-all duration-300 hover:scale-[1.02]"
               style={{
                 background: "linear-gradient(90deg, #f59e0b, #fbbf24)",
               }}
             >
-              Explore FocusONE
+              DGCA On Demand Sessions
             </Link>
             <Link
               href="/courses/cohorts"

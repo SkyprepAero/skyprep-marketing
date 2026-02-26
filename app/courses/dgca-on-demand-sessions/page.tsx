@@ -6,12 +6,16 @@ import Link from "next/link";
 import { getContactUrl, getWhatsAppUrl, getWhatsAppButtonText } from "@/config/services";
 
 export const metadata: Metadata = buildPageMetadata({
-  title: "FocusONE Mentorship Program | 1:1 DGCA Coaching & Personalized Pilot Training",
-  description: "FocusONE offers personalised 1:1 DGCA coaching with live sessions, flexible scheduling, study materials, and expert mentorship to master all core aviation subjects.",
-  canonicalPath: "/courses/1-to-1-coaching",
+  title: "DGCA On Demand Sessions | 1:1 Online DGCA Coaching in India",
+  description: "Join India's top DGCA On Demand Sessions with expert 1:1 coaching. Flexible scheduling, personal mentorship, and complete DGCA exam preparation online.",
+  canonicalPath: "/courses/dgca-on-demand-sessions",
   keywords: [
     // Primary Keywords
-    "FocusONE mentorship program",
+    "DGCA On Demand Sessions",
+    "DGCA on demand classes",
+    "DGCA on demand coaching",
+    "online DGCA on demand sessions",
+    "DGCA flexible coaching",
     "DGCA 1:1 coaching",
     "one-on-one pilot training",
     "personalised pilot mentorship",
@@ -53,7 +57,7 @@ export const metadata: Metadata = buildPageMetadata({
   ],
 });
 
-export default function OneToOneCoachingPage() {
+export default function DGCAOnDemandSessionsPage() {
   return (
     <div className="full-bleed relative bg-slate-950 text-slate-100">
       {/* Hero + Benefits Shared Background */}
@@ -73,20 +77,34 @@ export default function OneToOneCoachingPage() {
               <div className="inline-flex items-center gap-3 bg-black/45 backdrop-blur rounded-full px-8 py-3 mb-6 shadow-[0_25px_60px_-38px_rgba(15,23,42,0.8)] border border-white/30">
                 <div className="w-3 h-3 bg-sky-400 rounded-full animate-pulse" />
                 <span className="text-sm font-semibold uppercase tracking-[0.35em] text-white">
-                  FocusONE Program
+                  DGCA ON-DEMAND SESSIONS
                 </span>
               </div>
               <h1 className="text-5xl md:text-7xl font-bold text-white drop-shadow-[0_18px_34px_rgba(15,23,42,0.7)] mb-8 leading-tight">
-                FocusONE Mentorship Program —
-                <span className="block gradient-text-primary leading-tight">Personalized 1:1 DGCA Coaching</span>
+                DGCA On-Demand 1:1 Coaching Sessions
               </h1>
               <p className="text-lg md:text-2xl text-white max-w-4xl mx-auto leading-relaxed drop-shadow-[0_12px_30px_rgba(15,23,42,0.65)]">
-                India&apos;s best one-on-one DGCA coaching program with personalised pilot mentorship, 
-                flexible scheduling, and expert aviation instructors.                 Master Air Regulation, Meteorology, Navigation, and Technical General with dedicated online pilot classes.
+                India&apos;s leading DGCA On-Demand coaching program offering flexible 1:1 pilot mentorship. Book sessions anytime and prepare for Air Regulation, Meteorology, Navigation, and Technical General with expert aviation instructors.
               </p>
             </div>
           </ScrollAnimation>
         </div>
+
+      {/* What Are DGCA On Demand Sessions? */}
+        <section className="relative z-10 py-12">
+          <div className="container-wide">
+            <ScrollAnimation animationType="fadeInUp" delay={200}>
+              <div className="text-center max-w-4xl mx-auto">
+                <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">What Are DGCA On Demand Sessions?</h2>
+                <p className="text-lg md:text-xl text-slate-200/90 leading-relaxed">
+                  DGCA On Demand Sessions are flexible 1:1 online coaching sessions designed for aspiring pilots in India.
+                  You book sessions anytime that suit your schedule and learn from expert aviation instructors—covering Air Regulation,
+                  Meteorology, Navigation, and Technical General. No fixed batches; just personal mentorship when you need it.
+                </p>
+              </div>
+            </ScrollAnimation>
+          </div>
+        </section>
 
       {/* Benefits Section */}
         <section className="relative z-10 py-20">
@@ -101,7 +119,7 @@ export default function OneToOneCoachingPage() {
                 </span>
               </div>
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Key Features of the FocusONE Program
+                Benefits of On Demand DGCA Coaching
               </h2>
               <p className="text-xl text-slate-200/80 max-w-3xl mx-auto">
                 Comprehensive features designed for personalised DGCA learning and pilot success
@@ -201,7 +219,7 @@ export default function OneToOneCoachingPage() {
                   Comprehensive Curriculum
                 </span>
               </div>
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">Subjects Covered in FocusONE</h2>
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">Subjects Covered in Our DGCA On Demand Classes</h2>
               <p className="text-xl text-slate-200/80 max-w-3xl mx-auto">
                 Master essential DGCA theory subjects with personalised one-on-one aviation subject mentoring
               </p>
@@ -456,6 +474,42 @@ export default function OneToOneCoachingPage() {
       </section>
 
 
+      {/* Why Choose Our DGCA On Demand Classes? */}
+      <section className="py-20 full-bleed relative overflow-hidden">
+        <div className="pointer-events-none absolute inset-0">
+          <div className="absolute inset-0 bg-gradient-to-br from-slate-950 via-slate-900/94 to-blue-950/75" />
+          <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.028)_1px,transparent_1px)] bg-[size:100px_100px]" />
+        </div>
+        <div className="container-wide relative z-10">
+          <ScrollAnimation animationType="fadeInUp" delay={200}>
+            <div className="text-center mb-12">
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">Why Choose Our DGCA On Demand Classes?</h2>
+              <p className="text-xl text-slate-200/80 max-w-3xl mx-auto">
+                India&apos;s leading DGCA On Demand coaching with 1:1 live sessions, flexible scheduling, and expert aviation instructors.
+                Book sessions anytime, get study materials and doubt-clearing support, and prepare for DGCA exams with personal mentorship.
+              </p>
+            </div>
+          </ScrollAnimation>
+          <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+            <ScrollAnimation animationType="fadeInUp" delay={300}>
+              <div className="text-center p-6 rounded-2xl bg-white/[0.06] border border-white/10">
+                <p className="text-slate-200/90 font-medium">Expert 1:1 instruction from aviation professionals</p>
+              </div>
+            </ScrollAnimation>
+            <ScrollAnimation animationType="fadeInUp" delay={400}>
+              <div className="text-center p-6 rounded-2xl bg-white/[0.06] border border-white/10">
+                <p className="text-slate-200/90 font-medium">Book sessions anytime—no fixed batch dates</p>
+              </div>
+            </ScrollAnimation>
+            <ScrollAnimation animationType="fadeInUp" delay={500}>
+              <div className="text-center p-6 rounded-2xl bg-white/[0.06] border border-white/10">
+                <p className="text-slate-200/90 font-medium">Complete DGCA exam preparation online</p>
+              </div>
+            </ScrollAnimation>
+          </div>
+        </div>
+      </section>
+
       {/* Call to Action */}
       <section className="py-20 relative overflow-hidden full-bleed bg-gradient-to-br from-slate-950 via-slate-900/95 to-blue-950/80">
         <div className="pointer-events-none absolute inset-0">
@@ -474,10 +528,10 @@ export default function OneToOneCoachingPage() {
                 </span>
               </div>
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-8">
-                Start Your FocusONE Mentorship Journey
+                Book Your DGCA On Demand Session Today
               </h2>
               <p className="text-xl md:text-2xl text-slate-200/85 mb-12 max-w-4xl mx-auto leading-relaxed">
-                Join DGCA coaching with India&apos;s best aviation mentorship program. Start your pilot mentorship 
+                Join DGCA coaching with India&apos;s best aviation mentorship program. Start your pilot mentorship
                 with online DGCA mentoring by airline professionals—DGCA exam preparation with live individual sessions.
               </p>
               <ScrollAnimation animationType="scaleIn" delay={400}>
@@ -491,7 +545,7 @@ export default function OneToOneCoachingPage() {
                       }}
                     >
                       <span className="flex items-center gap-3">
-                        Start Mentorship Program
+                        Book DGCA On Demand Session
                         <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" fill="currentColor" viewBox="0 0 24 24">
                           <path d="M12 2l9 4.9V17c0 .55-.45 1-1 1h-1v-6l-7 3.8L5 12v6H4c-.55 0-1-.45-1-1V6.9L12 2z"/>
                         </svg>

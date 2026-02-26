@@ -23,9 +23,12 @@ export const pageKeywords: Record<string, string[]> = {
     "aviation ground school",
     "dgca exam coaching",
   ],
-  "/courses/1-to-1-coaching": [
-    "focusone",
-    "focusone mentorship",
+  "/courses/dgca-on-demand-sessions": [
+    "dgca on demand sessions",
+    "dgca on demand classes",
+    "dgca on demand coaching",
+    "online dgca on demand sessions",
+    "dgca flexible coaching",
     "one to one aviation coaching",
     "personalized pilot training",
     "pilot mentorship india",

@@ -15,7 +15,7 @@ const isValidEmail = (email: string): boolean => {
 
 const topicOptions = [
   "General",
-  "FocusONE",
+  "DGCA On Demand Sessions",
   "Cohorts",
   "DGCA Medical Assistance",
   "DGCA Computer Number Assistance",

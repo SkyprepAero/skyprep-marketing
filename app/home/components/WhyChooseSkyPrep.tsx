@@ -64,7 +64,7 @@ export function WhyChooseSkyPrep() {
   const stats = [
     { number: "360°", label: "Training coverage" },
     { number: "Custom", label: "Learning Path" },
-    { number: "FocusONE", label: "Personalized Coaching" },
+    { number: "DGCA On Demand", label: "1:1 Coaching" },
     { number: "Flexible", label: "Your Schedule" },
   ];
 
@@ -158,8 +158,8 @@ export function WhyChooseSkyPrep() {
             <div className="grid gap-6">
               {[
                 {
-                  title: "FocusONE: Personalised 1:1 Airline Captain Mentorship",
-                  copy: "Elite 1:1 DGCA coaching with airline captains mapping every sortie, sim and exam milestone.",
+                  title: "DGCA On Demand Sessions: 1:1 Coaching When You Need It",
+                  copy: "Flexible 1:1 DGCA coaching—book sessions anytime with expert aviation instructors for Air Regulation, Meteorology, Navigation, and Technical General.",
                   gradient: "from-sky-500/25 via-blue-500/10 to-sky-500/5",
                 },
                 {

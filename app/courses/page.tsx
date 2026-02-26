@@ -7,9 +7,9 @@ import { services, getWhatsAppUrl, getWhatsAppButtonText } from "@/config/servic
 
 export const metadata: Metadata = buildPageMetadata({
   title: "Aviation Training Courses - SkyPrep Aero",
-  description: "Explore our comprehensive aviation training programs including FocusONE coaching, cohort programs, and individual subject training.",
+  description: "Explore our comprehensive aviation training programs including DGCA On Demand Sessions, cohort programs, and individual subject training.",
   canonicalPath: "/courses",
-  keywords: ["aviation courses", "pilot coaching", "flight training", "FocusONE coaching", "aviation cohorts", "individual subject training"],
+  keywords: ["aviation courses", "pilot coaching", "flight training", "DGCA On Demand Sessions", "aviation cohorts", "individual subject training"],
 });
 
 export default function CoursesPage() {
@@ -20,8 +20,8 @@ export default function CoursesPage() {
 
   const courseDetails = {
     "1-to-1-coaching": {
-      title: "FocusONE Mentorship Program",
-      description: "Personalized online training perfect for students needing focused attention or help with specific subjects.",
+      title: "DGCA On Demand Sessions",
+      description: "Flexible 1:1 DGCA coaching—book sessions anytime. Personal mentorship for Air Regulation, Meteorology, Navigation, and Technical General with expert aviation instructors.",
       features: ["Individual Live Sessions", "Choose Your Time", "Additional Learning Material", "Doubt-Clearing Sessions"],
       subjects: ["Air Regulation", "Air Meteorology", "Air Navigation", "Technical General"],
       icon: (
@@ -164,7 +164,7 @@ export default function CoursesPage() {
                        href={service.href}
                        className="block w-full px-6 py-3 rounded-xl font-semibold border border-white/15 text-slate-900 bg-gradient-to-r from-amber-400 via-amber-500 to-amber-600 hover:shadow-[0_25px_60px_-35px_rgba(245,158,11,0.7)] transition-all duration-300 hover:scale-[1.02]"
                      >
-                       Learn More & Enroll
+                       {service.id === "1-to-1-coaching" ? "DGCA On Demand Sessions" : "Learn More & Enroll"}
                      </Link>
                     <a
                       href={getWhatsAppUrl(service.id)}
