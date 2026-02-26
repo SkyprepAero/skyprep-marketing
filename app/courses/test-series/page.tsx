@@ -158,7 +158,7 @@ export default function TestSeriesPage() {
             Can&apos;t Wait? Start Preparing Now
           </h2>
           <p className="text-lg text-slate-300/80 max-w-2xl mx-auto mb-8">
-            While our Test Series is launching soon, you can start your DGCA preparation with our <Link href="/courses/dgca-on-demand-sessions" className="text-amber-300 hover:text-amber-200 underline">DGCA On Demand Sessions</Link> or Cohorts program.
+            While our Test Series is launching soon, you can start your DGCA preparation with our <Link href="/courses/dgca-on-demand-sessions" className="text-amber-300 hover:text-amber-200 underline">FocusONE</Link> or Cohorts program.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
@@ -168,7 +168,7 @@ export default function TestSeriesPage() {
                 background: "linear-gradient(90deg, #f59e0b, #fbbf24)",
               }}
             >
-              DGCA On Demand Sessions
+              FocusONE
             </Link>
             <Link
               href="/courses/cohorts"

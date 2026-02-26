@@ -2,7 +2,7 @@
 
 import { FormEvent, Suspense, useEffect, useRef, useState } from "react";
 import { useSearchParams } from "next/navigation";
-import { services, courses, getServiceById } from "@/config/services";
+import { services, getServiceById } from "@/config/services";
 import { submitContactForm, type LeadFormData } from "@/lib/api";
 import toast from "react-hot-toast";
 import { PhoneInput } from "@/components/PhoneInput";
@@ -135,15 +135,6 @@ function ContactFormContent() {
             defaultValue={selectedService?.name || "General"}
           >
             <option className="bg-slate-900 text-slate-100">General</option>
-            {courses.map((course) => (
-              <option
-                key={course.id}
-                value={course.name}
-                className="bg-slate-900 text-slate-100"
-              >
-                {course.name}
-              </option>
-            ))}
             {services.map((service) => (
               <option
                 key={service.id}
@@ -290,11 +281,6 @@ export function ContactForm() {
               defaultValue="General"
             >
               <option>General</option>
-              {courses.map((course) => (
-                <option key={course.id} value={course.name}>
-                  {course.name}
-                </option>
-              ))}
               {services.map((service) => (
                 <option key={service.id} value={service.name}>
                   {service.name}

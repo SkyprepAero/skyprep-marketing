@@ -158,7 +158,7 @@ export function WhyChooseSkyPrep() {
             <div className="grid gap-6">
               {[
                 {
-                  title: "DGCA On Demand Sessions: 1:1 Coaching When You Need It",
+                  title: "FocusONE: 1:1 Coaching When You Need It",
                   copy: "Flexible 1:1 DGCA coaching—book sessions anytime with expert aviation instructors for Air Regulation, Meteorology, Navigation, and Technical General.",
                   gradient: "from-sky-500/25 via-blue-500/10 to-sky-500/5",
                 },

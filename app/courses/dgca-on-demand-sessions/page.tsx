@@ -4,18 +4,25 @@ import { AviationBackground } from "@/components/AviationBackground";
 import { ScrollAnimation } from "@/app/home/components/ScrollAnimation";
 import Link from "next/link";
 import { getContactUrl, getWhatsAppUrl, getWhatsAppButtonText } from "@/config/services";
+import { FAQAccordion } from "./FAQAccordion";
 
 export const metadata: Metadata = buildPageMetadata({
   title: "DGCA On Demand Sessions | 1:1 Online DGCA Coaching in India",
   description: "Join India's top DGCA On Demand Sessions with expert 1:1 coaching. Flexible scheduling, personal mentorship, and complete DGCA exam preparation online.",
   canonicalPath: "/courses/dgca-on-demand-sessions",
   keywords: [
-    // Primary Keywords
+    // Primary
     "DGCA On Demand Sessions",
     "DGCA on demand classes",
     "DGCA on demand coaching",
     "online DGCA on demand sessions",
     "DGCA flexible coaching",
+    // Secondary
+    "DGCA online coaching",
+    "DGCA 1:1 classes",
+    "DGCA flexible classes",
+    "Online DGCA ground classes",
+    "DGCA exam preparation online",
     "DGCA 1:1 coaching",
     "one-on-one pilot training",
     "personalised pilot mentorship",
@@ -77,53 +84,89 @@ export default function DGCAOnDemandSessionsPage() {
               <div className="inline-flex items-center gap-3 bg-black/45 backdrop-blur rounded-full px-8 py-3 mb-6 shadow-[0_25px_60px_-38px_rgba(15,23,42,0.8)] border border-white/30">
                 <div className="w-3 h-3 bg-sky-400 rounded-full animate-pulse" />
                 <span className="text-sm font-semibold uppercase tracking-[0.35em] text-white">
-                  DGCA ON-DEMAND SESSIONS
+                  Focus One - DGCA On Demand Sessions
                 </span>
               </div>
               <h1 className="text-5xl md:text-7xl font-bold text-white drop-shadow-[0_18px_34px_rgba(15,23,42,0.7)] mb-8 leading-tight">
-                DGCA On-Demand 1:1 Coaching Sessions
+                Focus One: Flexible 1:1 Online
+                <br />
+                DGCA On Demand Sessions
               </h1>
-              <p className="text-lg md:text-2xl text-white max-w-4xl mx-auto leading-relaxed drop-shadow-[0_12px_30px_rgba(15,23,42,0.65)]">
-                India&apos;s leading DGCA On-Demand coaching program offering flexible 1:1 pilot mentorship. Book sessions anytime and prepare for Air Regulation, Meteorology, Navigation, and Technical General with expert aviation instructors.
+              <p className="text-lg md:text-2xl text-white max-w-4xl mx-auto leading-relaxed drop-shadow-[0_12px_30px_rgba(15,23,42,0.65)] mb-10">
+                Our Focus One program delivers DGCA On Demand with flexible scheduling and 1:1 mentorship. Join our online DGCA classes—book when it suits you and prepare with expert instructors.
               </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link
+                  href={getContactUrl("1-to-1-coaching")}
+                  className="inline-flex items-center justify-center gap-2 px-10 py-4 rounded-xl font-semibold text-slate-950 shadow-[0_25px_60px_-35px_rgba(245,158,11,0.8)] transition-all duration-300 hover:scale-105"
+                  style={{ background: "linear-gradient(90deg, #fbbf24, #f59e0b)" }}
+                >
+                  Book a Session
+                  <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l9 4.9V17c0 .55-.45 1-1 1h-1v-6l-7 3.8L5 12v6H4c-.55 0-1-.45-1-1V6.9L12 2z"/></svg>
+                </Link>
+                <Link
+                  href="/contact?service=1-to-1-coaching"
+                  className="inline-flex items-center justify-center gap-2 px-10 py-4 rounded-xl font-semibold border-2 border-white/30 text-white hover:bg-white/10 transition-all duration-300"
+                >
+                  Enquire Now
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
+                </Link>
+              </div>
             </div>
           </ScrollAnimation>
         </div>
 
       {/* What Are DGCA On Demand Sessions? */}
-        <section className="relative z-10 py-12">
+        <section className="relative z-10 py-12" id="what-are-dgca-on-demand-sessions">
           <div className="container-wide">
             <ScrollAnimation animationType="fadeInUp" delay={200}>
               <div className="text-center max-w-4xl mx-auto">
                 <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">What Are DGCA On Demand Sessions?</h2>
-                <p className="text-lg md:text-xl text-slate-200/90 leading-relaxed">
-                  DGCA On Demand Sessions are flexible 1:1 online coaching sessions designed for aspiring pilots in India.
-                  You book sessions anytime that suit your schedule and learn from expert aviation instructors—covering Air Regulation,
-                  Meteorology, Navigation, and Technical General. No fixed batches; just personal mentorship when you need it.
+                <p className="text-lg md:text-xl text-slate-200/90 leading-relaxed mb-6">
+                  <strong className="text-white">DGCA On Demand Sessions</strong> are part of SkyPrep Aero&apos;s <strong className="text-white">Focus One</strong> program—flexible online DGCA classes where you <strong className="text-white">book anytime</strong>, <strong className="text-white">learn at your pace</strong>, and get <strong className="text-white">one-on-one mentoring</strong> from expert instructors. Every learner gets a <strong className="text-white">customized study plan</strong> for Air Regulation, Meteorology, Navigation, and Technical General—no fixed batches, just DGCA exam preparation when you need it.
+                </p>
+                <p className="text-slate-200/80">
+                  Whether you need a single subject or full DGCA on demand coaching, you choose the time and we deliver the session.
                 </p>
               </div>
             </ScrollAnimation>
           </div>
         </section>
 
-      {/* Benefits Section */}
-        <section className="relative z-10 py-20">
+      {/* Why Choose DGCA On Demand Coaching at SkyPrep Aero? */}
+        <section className="relative z-10 py-20" id="why-choose">
           <div className="container-wide">
             <div className="rounded-3xl border border-white/12 bg-slate-950/70 px-6 py-16 backdrop-blur-xl shadow-[0_45px_120px_-60px_rgba(15,23,42,0.85)] md:px-14">
           <ScrollAnimation animationType="fadeInUp" delay={200}>
-            <div className="text-center mb-16">
-              <div className="inline-flex items-center gap-3 bg-white/10 backdrop-blur rounded-full px-8 py-3 mb-6 shadow-[0_25px_60px_-40px_rgba(56,189,248,0.45)] border border-white/15">
-                <div className="w-3 h-3 bg-sky-400 rounded-full animate-pulse" />
-                <span className="text-sm font-semibold uppercase tracking-[0.35em] text-slate-100/80">
-                  Program Features
-                </span>
-              </div>
+            <div className="text-center mb-12">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Benefits of On Demand DGCA Coaching
+                Why Choose DGCA Focus One at SkyPrep Aero?
               </h2>
-              <p className="text-xl text-slate-200/80 max-w-3xl mx-auto">
-                Comprehensive features designed for personalised DGCA learning and pilot success
+              <p className="text-xl text-slate-200/80 max-w-3xl mx-auto mb-10">
+                India&apos;s structured DGCA on demand learning platform with benefits built for serious exam preparation.
               </p>
+              <ul className="text-left max-w-2xl mx-auto space-y-4 text-lg text-slate-200/90">
+                <li className="flex items-start gap-3">
+                  <span className="text-sky-400 mt-0.5">✓</span>
+                  <span><strong className="text-white">Flexible time slots</strong> — Pick mornings, evenings or weekends; we adapt to you.</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-sky-400 mt-0.5">✓</span>
+                  <span><strong className="text-white">Expert DGCA instructors</strong> — Learn from aviation professionals who know the syllabus and exam pattern.</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-sky-400 mt-0.5">✓</span>
+                  <span><strong className="text-white">Recorded session access</strong> — Revise anytime with recordings of your 1:1 classes.</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-sky-400 mt-0.5">✓</span>
+                  <span><strong className="text-white">Personal performance tracking</strong> — Know where you stand and what to focus on next.</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-sky-400 mt-0.5">✓</span>
+                  <span><strong className="text-white">Exam-focused preparation</strong> — Content aligned to DGCA exam preparation online and first-attempt success.</span>
+                </li>
+              </ul>
             </div>
           </ScrollAnimation>
 
@@ -201,8 +244,8 @@ export default function DGCAOnDemandSessionsPage() {
         </section>
       </section>
 
-      {/* Subjects Covered */}
-      <section className="py-20 full-bleed relative overflow-hidden">
+      {/* Subjects Covered in DGCA On Demand Classes */}
+      <section className="py-20 full-bleed relative overflow-hidden" id="subjects-covered">
         <div className="pointer-events-none absolute inset-0">
           <div className="absolute inset-0 bg-gradient-to-br from-slate-950 via-slate-900/94 to-blue-950/75" />
           <div className="absolute top-12 left-14 h-72 w-72 rounded-full bg-sky-500/20 blur-[140px]" />
@@ -219,7 +262,7 @@ export default function DGCAOnDemandSessionsPage() {
                   Comprehensive Curriculum
                 </span>
               </div>
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">Subjects Covered in Our DGCA On Demand Classes</h2>
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">Subjects Covered in DGCA On Demand Classes</h2>
               <p className="text-xl text-slate-200/80 max-w-3xl mx-auto">
                 Master essential DGCA theory subjects with personalised one-on-one aviation subject mentoring
               </p>
@@ -241,7 +284,7 @@ export default function DGCAOnDemandSessionsPage() {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
             {/* Air Regulation */}
             <ScrollAnimation animationType="scaleIn" delay={400}>
-              <div className="group bg-white/[0.08] backdrop-blur-xl rounded-3xl p-8 shadow-[0_45px_110px_-60px_rgba(15,23,42,1)] border border-white/12 hover:-translate-y-2 hover:border-white/25 hover:shadow-[0_55px_140px_-70px_rgba(56,189,248,0.65)] transition-all duration-500 h-full flex flex-col">
+              <div id="air-regulation" className="group bg-white/[0.08] backdrop-blur-xl rounded-3xl p-8 shadow-[0_45px_110px_-60px_rgba(15,23,42,1)] border border-white/12 hover:-translate-y-2 hover:border-white/25 hover:shadow-[0_55px_140px_-70px_rgba(56,189,248,0.65)] transition-all duration-500 h-full flex flex-col">
                 <div className="relative mb-6">
                   <div className="w-20 h-20 mx-auto rounded-2xl bg-gradient-to-br from-blue-500 to-sky-500 flex items-center justify-center shadow-xl group-hover:scale-110 transition-transform duration-300">
                     <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -250,7 +293,7 @@ export default function DGCAOnDemandSessionsPage() {
                   </div>
                   <div className="absolute inset-0 w-20 h-20 mx-auto rounded-2xl border-2 border-white/20 animate-pulse" />
                 </div>
-                <h3 className="text-2xl font-bold text-white mb-4 text-center">Air Regulation</h3>
+                <h3 className="text-2xl font-bold text-white mb-4 text-center"><Link href="/courses/dgca-on-demand-sessions#air-regulation" className="hover:text-sky-300 transition-colors">Air Regulation</Link></h3>
                 <p className="text-slate-200/80 text-center leading-relaxed mb-6 flex-grow">
                   Complete Air Regulation DGCA coaching covering aviation laws India, DGCA regulation guidelines, and flight safety standards.
                 </p>
@@ -285,7 +328,7 @@ export default function DGCAOnDemandSessionsPage() {
 
             {/* Aviation Meteorology */}
             <ScrollAnimation animationType="scaleIn" delay={600}>
-              <div className="group bg-white/[0.08] backdrop-blur-xl rounded-3xl p-8 shadow-[0_45px_110px_-60px_rgba(15,23,42,1)] border border-white/12 hover:-translate-y-2 hover:border-white/25 hover:shadow-[0_55px_140px_-70px_rgba(56,189,248,0.65)] transition-all duration-500 h-full flex flex-col">
+              <div id="aviation-meteorology" className="group bg-white/[0.08] backdrop-blur-xl rounded-3xl p-8 shadow-[0_45px_110px_-60px_rgba(15,23,42,1)] border border-white/12 hover:-translate-y-2 hover:border-white/25 hover:shadow-[0_55px_140px_-70px_rgba(56,189,248,0.65)] transition-all duration-500 h-full flex flex-col">
                 <div className="relative mb-6">
                   <div className="w-20 h-20 mx-auto rounded-2xl bg-gradient-to-br from-sky-500 to-cyan-500 flex items-center justify-center shadow-xl group-hover:scale-110 transition-transform duration-300">
                     <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -294,7 +337,7 @@ export default function DGCAOnDemandSessionsPage() {
                   </div>
                   <div className="absolute inset-0 w-20 h-20 mx-auto rounded-2xl border-2 border-white/20 animate-pulse" />
                 </div>
-                <h3 className="text-2xl font-bold text-white mb-4 text-center">Aviation Meteorology</h3>
+                <h3 className="text-2xl font-bold text-white mb-4 text-center"><Link href="/courses/dgca-on-demand-sessions#aviation-meteorology" className="hover:text-sky-300 transition-colors">Aviation Meteorology</Link></h3>
                 <p className="text-slate-200/80 text-center leading-relaxed mb-6 flex-grow">
                   Comprehensive DGCA meteorology coaching and aviation weather training covering atmospheric conditions and their impact on flight safety.
                 </p>
@@ -329,7 +372,7 @@ export default function DGCAOnDemandSessionsPage() {
 
             {/* Air Navigation */}
             <ScrollAnimation animationType="scaleIn" delay={800}>
-              <div className="group bg-white/[0.08] backdrop-blur-xl rounded-3xl p-8 shadow-[0_45px_110px_-60px_rgba(15,23,42,1)] border border-white/12 hover:-translate-y-2 hover:border-white/25 hover:shadow-[0_55px_140px_-70px_rgba(56,189,248,0.65)] transition-all duration-500 h-full flex flex-col">
+              <div id="air-navigation" className="group bg-white/[0.08] backdrop-blur-xl rounded-3xl p-8 shadow-[0_45px_110px_-60px_rgba(15,23,42,1)] border border-white/12 hover:-translate-y-2 hover:border-white/25 hover:shadow-[0_55px_140px_-70px_rgba(56,189,248,0.65)] transition-all duration-500 h-full flex flex-col">
                 <div className="relative mb-6">
                   <div className="w-20 h-20 mx-auto rounded-2xl bg-gradient-to-br from-emerald-500 to-green-500 flex items-center justify-center shadow-xl group-hover:scale-110 transition-transform duration-300">
                     <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -339,7 +382,7 @@ export default function DGCAOnDemandSessionsPage() {
                   </div>
                   <div className="absolute inset-0 w-20 h-20 mx-auto rounded-2xl border-2 border-white/20 animate-pulse" />
                 </div>
-                <h3 className="text-2xl font-bold text-white mb-4 text-center">Air Navigation</h3>
+                <h3 className="text-2xl font-bold text-white mb-4 text-center"><Link href="/courses/dgca-on-demand-sessions#air-navigation" className="hover:text-sky-300 transition-colors">Air Navigation</Link></h3>
                 <p className="text-slate-200/80 text-center leading-relaxed mb-6 flex-grow">
                   Expert DGCA navigation training covering radio navigation, GPS flight planning, and aviation navigation coaching for safe operations.
                 </p>
@@ -374,7 +417,7 @@ export default function DGCAOnDemandSessionsPage() {
 
             {/* Technical General */}
             <ScrollAnimation animationType="scaleIn" delay={1000}>
-              <div className="group bg-white/[0.08] backdrop-blur-xl rounded-3xl p-8 shadow-[0_45px_110px_-60px_rgba(15,23,42,1)] border border-white/12 hover:-translate-y-2 hover:border-white/25 hover:shadow-[0_55px_140px_-70px_rgba(56,189,248,0.65)] transition-all duration-500 h-full flex flex-col">
+              <div id="technical-general" className="group bg-white/[0.08] backdrop-blur-xl rounded-3xl p-8 shadow-[0_45px_110px_-60px_rgba(15,23,42,1)] border border-white/12 hover:-translate-y-2 hover:border-white/25 hover:shadow-[0_55px_140px_-70px_rgba(56,189,248,0.65)] transition-all duration-500 h-full flex flex-col">
                 <div className="relative mb-6">
                   <div className="w-20 h-20 mx-auto rounded-2xl bg-gradient-to-br from-indigo-500 to-purple-500 flex items-center justify-center shadow-xl group-hover:scale-110 transition-transform duration-300">
                     <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -384,7 +427,7 @@ export default function DGCAOnDemandSessionsPage() {
                   </div>
                   <div className="absolute inset-0 w-20 h-20 mx-auto rounded-2xl border-2 border-white/20 animate-pulse" />
                 </div>
-                <h3 className="text-2xl font-bold text-white mb-4 text-center">Technical General (TG)</h3>
+                <h3 className="text-2xl font-bold text-white mb-4 text-center"><Link href="/courses/dgca-on-demand-sessions#technical-general" className="hover:text-sky-300 transition-colors">Technical General</Link></h3>
                 <p className="text-slate-200/80 text-center leading-relaxed mb-6 flex-grow">
                   Aircraft systems training covering TG DGCA syllabus, principles, and operations—essential aircraft systems basics for cadet pilot theory guidance.
                 </p>
@@ -474,8 +517,8 @@ export default function DGCAOnDemandSessionsPage() {
       </section>
 
 
-      {/* Why Choose Our DGCA On Demand Classes? */}
-      <section className="py-20 full-bleed relative overflow-hidden">
+      {/* Who Should Enroll? */}
+      <section className="py-20 full-bleed relative overflow-hidden" id="who-should-enroll">
         <div className="pointer-events-none absolute inset-0">
           <div className="absolute inset-0 bg-gradient-to-br from-slate-950 via-slate-900/94 to-blue-950/75" />
           <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.028)_1px,transparent_1px)] bg-[size:100px_100px]" />
@@ -483,34 +526,104 @@ export default function DGCAOnDemandSessionsPage() {
         <div className="container-wide relative z-10">
           <ScrollAnimation animationType="fadeInUp" delay={200}>
             <div className="text-center mb-12">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">Why Choose Our DGCA On Demand Classes?</h2>
-              <p className="text-xl text-slate-200/80 max-w-3xl mx-auto">
-                India&apos;s leading DGCA On Demand coaching with 1:1 live sessions, flexible scheduling, and expert aviation instructors.
-                Book sessions anytime, get study materials and doubt-clearing support, and prepare for DGCA exams with personal mentorship.
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">Who Should Enroll?</h2>
+              <p className="text-xl text-slate-200/80 max-w-3xl mx-auto mb-10">
+                DGCA On Demand Sessions are ideal for anyone who needs flexible, high-quality DGCA exam preparation online.
               </p>
             </div>
           </ScrollAnimation>
-          <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
             <ScrollAnimation animationType="fadeInUp" delay={300}>
-              <div className="text-center p-6 rounded-2xl bg-white/[0.06] border border-white/10">
-                <p className="text-slate-200/90 font-medium">Expert 1:1 instruction from aviation professionals</p>
+              <div className="h-full min-h-[160px] flex flex-col justify-center p-6 rounded-2xl bg-white/[0.06] border border-white/10 text-center">
+                <p className="text-slate-100 font-semibold">Working professionals</p>
+                <p className="text-slate-200/80 text-sm mt-1">Who can&apos;t commit to fixed batch timings</p>
               </div>
             </ScrollAnimation>
             <ScrollAnimation animationType="fadeInUp" delay={400}>
-              <div className="text-center p-6 rounded-2xl bg-white/[0.06] border border-white/10">
-                <p className="text-slate-200/90 font-medium">Book sessions anytime—no fixed batch dates</p>
+              <div className="h-full min-h-[160px] flex flex-col justify-center p-6 rounded-2xl bg-white/[0.06] border border-white/10 text-center">
+                <p className="text-slate-100 font-semibold">Cadet pilots</p>
+                <p className="text-slate-200/80 text-sm mt-1">Building strong DGCA theory foundations</p>
               </div>
             </ScrollAnimation>
             <ScrollAnimation animationType="fadeInUp" delay={500}>
-              <div className="text-center p-6 rounded-2xl bg-white/[0.06] border border-white/10">
-                <p className="text-slate-200/90 font-medium">Complete DGCA exam preparation online</p>
+              <div className="h-full min-h-[160px] flex flex-col justify-center p-6 rounded-2xl bg-white/[0.06] border border-white/10 text-center">
+                <p className="text-slate-100 font-semibold">Students preparing for upcoming DGCA exams</p>
+                <p className="text-slate-200/80 text-sm mt-1">Who want focused revision and doubt-clearing</p>
+              </div>
+            </ScrollAnimation>
+            <ScrollAnimation animationType="fadeInUp" delay={600}>
+              <div className="h-full min-h-[160px] flex flex-col justify-center p-6 rounded-2xl bg-white/[0.06] border border-white/10 text-center">
+                <p className="text-slate-100 font-semibold">Repeat attempt candidates</p>
+                <p className="text-slate-200/80 text-sm mt-1">Targeting weak subjects with 1:1 support</p>
               </div>
             </ScrollAnimation>
           </div>
         </div>
       </section>
 
-      {/* Call to Action */}
+      {/* How Our On Demand DGCA Sessions Work */}
+      <section className="py-20 full-bleed relative overflow-hidden" id="how-it-works">
+        <div className="pointer-events-none absolute inset-0">
+          <div className="absolute inset-0 bg-gradient-to-br from-slate-950 via-slate-900/94 to-blue-950/75" />
+        </div>
+        <div className="container-wide relative z-10">
+          <ScrollAnimation animationType="fadeInUp" delay={200}>
+            <div className="text-center mb-14">
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">How Our On Demand DGCA Sessions Work</h2>
+              <p className="text-xl text-slate-200/80 max-w-2xl mx-auto">Four simple steps to start your DGCA on demand classes.</p>
+            </div>
+          </ScrollAnimation>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 max-w-5xl mx-auto">
+            <ScrollAnimation animationType="fadeInUp" delay={300}>
+              <div className="text-center">
+                <div className="w-14 h-14 rounded-full bg-sky-500/20 border border-sky-400/40 flex items-center justify-center text-2xl font-bold text-sky-300 mx-auto mb-4">1</div>
+                <h3 className="text-xl font-bold text-white mb-2">Choose subject</h3>
+                <p className="text-slate-200/80 text-sm">Pick Air Regulation, Meteorology, Navigation, or Technical General—or multiple.</p>
+              </div>
+            </ScrollAnimation>
+            <ScrollAnimation animationType="fadeInUp" delay={400}>
+              <div className="text-center">
+                <div className="w-14 h-14 rounded-full bg-sky-500/20 border border-sky-400/40 flex items-center justify-center text-2xl font-bold text-sky-300 mx-auto mb-4">2</div>
+                <h3 className="text-xl font-bold text-white mb-2">Select time slot</h3>
+                <p className="text-slate-200/80 text-sm">Book a slot that fits your schedule. Flexible time slots across the week.</p>
+              </div>
+            </ScrollAnimation>
+            <ScrollAnimation animationType="fadeInUp" delay={500}>
+              <div className="text-center">
+                <div className="w-14 h-14 rounded-full bg-sky-500/20 border border-sky-400/40 flex items-center justify-center text-2xl font-bold text-sky-300 mx-auto mb-4">3</div>
+                <h3 className="text-xl font-bold text-white mb-2">Attend live 1:1 class</h3>
+                <p className="text-slate-200/80 text-sm">Join your online DGCA class with an expert instructor. Recordings available.</p>
+              </div>
+            </ScrollAnimation>
+            <ScrollAnimation animationType="fadeInUp" delay={600}>
+              <div className="text-center">
+                <div className="w-14 h-14 rounded-full bg-sky-500/20 border border-sky-400/40 flex items-center justify-center text-2xl font-bold text-sky-300 mx-auto mb-4">4</div>
+                <h3 className="text-xl font-bold text-white mb-2">Get revision plan</h3>
+                <p className="text-slate-200/80 text-sm">Personalized follow-up and revision plan so you stay exam-ready.</p>
+              </div>
+            </ScrollAnimation>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQs Section - Critical for ranking; schema markup can be added later */}
+      <section className="py-20 full-bleed relative overflow-hidden" id="faqs">
+        <div className="pointer-events-none absolute inset-0">
+          <div className="absolute inset-0 bg-gradient-to-br from-slate-950 via-slate-900/94 to-blue-950/75" />
+          <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.028)_1px,transparent_1px)] bg-[size:100px_100px]" />
+        </div>
+        <div className="container-wide relative z-10">
+          <ScrollAnimation animationType="fadeInUp" delay={200}>
+            <div className="text-center mb-14">
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">Frequently Asked Questions</h2>
+              <p className="text-xl text-slate-200/80 max-w-2xl mx-auto">Common questions about DGCA On Demand Sessions and online DGCA classes.</p>
+            </div>
+          </ScrollAnimation>
+          <FAQAccordion />
+        </div>
+      </section>
+
+      {/* Call to Action - Book Your DGCA On Demand Session Today */}
       <section className="py-20 relative overflow-hidden full-bleed bg-gradient-to-br from-slate-950 via-slate-900/95 to-blue-950/80">
         <div className="pointer-events-none absolute inset-0">
           <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.04)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.035)_1px,transparent_1px)] bg-[size:90px_90px]" />
@@ -531,8 +644,7 @@ export default function DGCAOnDemandSessionsPage() {
                 Book Your DGCA On Demand Session Today
               </h2>
               <p className="text-xl md:text-2xl text-slate-200/85 mb-12 max-w-4xl mx-auto leading-relaxed">
-                Join DGCA coaching with India&apos;s best aviation mentorship program. Start your pilot mentorship
-                with online DGCA mentoring by airline professionals—DGCA exam preparation with live individual sessions.
+                Ready for DGCA exam preparation online? Book your <strong className="text-white">DGCA On Demand Session</strong> now—flexible 1:1 online DGCA coaching, expert instructors, and a plan built for your schedule. Join India&apos;s structured DGCA on demand learning platform and start your DGCA on demand classes.
               </p>
               <ScrollAnimation animationType="scaleIn" delay={400}>
                 <div className="flex flex-col items-center gap-6">
@@ -545,20 +657,20 @@ export default function DGCAOnDemandSessionsPage() {
                       }}
                     >
                       <span className="flex items-center gap-3">
-                        Book DGCA On Demand Session
+                        Book a Session
                         <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" fill="currentColor" viewBox="0 0 24 24">
                           <path d="M12 2l9 4.9V17c0 .55-.45 1-1 1h-1v-6l-7 3.8L5 12v6H4c-.55 0-1-.45-1-1V6.9L12 2z"/>
                         </svg>
                       </span>
                     </Link>
                     <Link
-                      href="/courses/cohorts"
+                      href="/contact?service=1-to-1-coaching"
                       className="group px-12 py-5 rounded-xl font-semibold border-2 border-white/25 text-slate-100 hover:bg-white/10 transition-all duration-300 text-lg hover:scale-105"
                     >
                       <span className="flex items-center gap-3">
-                        Explore Cohorts
+                        Enquire Now
                         <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                         </svg>
                       </span>
                     </Link>

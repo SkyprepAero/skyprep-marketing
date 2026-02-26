@@ -9,10 +9,10 @@ export interface Service {
 export const services: Service[] = [
   {
     id: "1-to-1-coaching",
-    name: "DGCA On Demand Sessions",
+    name: "FocusONE",
     href: "/courses/dgca-on-demand-sessions",
     description: "Flexible 1:1 DGCA coaching—book sessions anytime with expert aviation instructors.",
-    whatsappMessage: "Hi SkyPrep Aero! I'm interested in your DGCA On Demand Sessions. Can you please provide more details?"
+    whatsappMessage: "Hi SkyPrep Aero! I'm interested in your FocusONE program. Can you please provide more details?"
   },
   {
     id: "cohorts",
@@ -64,10 +64,10 @@ export const services: Service[] = [
 export const courses: Service[] = [
   {
     id: "1-to-1-coaching",
-    name: "DGCA On Demand Sessions",
+    name: "FocusONE",
     href: "/courses/dgca-on-demand-sessions",
     description: "Flexible 1:1 DGCA coaching—book sessions anytime with expert aviation instructors.",
-    whatsappMessage: "Hi SkyPrep Aero! I'm interested in your DGCA On Demand Sessions. Can you please provide more details?"
+    whatsappMessage: "Hi SkyPrep Aero! I'm interested in your FocusONE program. Can you please provide more details?"
   },
   {
     id: "cohorts",

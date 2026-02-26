@@ -1,15 +1,38 @@
 import Link from "next/link";
-import { PiUsersThreeBold, PiUserFocusBold, PiClipboardTextBold } from "react-icons/pi";
+
+function IconUserFocus({ className, ...props }: React.SVGProps<SVGSVGElement>) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden {...props}>
+      <path d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+    </svg>
+  );
+}
+
+function IconUsersThree({ className, ...props }: React.SVGProps<SVGSVGElement>) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden {...props}>
+      <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2M9 11a4 4 0 100-8 4 4 0 000 8zM23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75" />
+    </svg>
+  );
+}
+
+function IconClipboard({ className, ...props }: React.SVGProps<SVGSVGElement>) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden {...props}>
+      <path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
+    </svg>
+  );
+}
 
 const trainingOptions = [
   {
-    name: "DGCA On Demand Sessions",
+    name: "FocusONE",
     description:
       "Flexible 1:1 DGCA coaching—book sessions anytime with expert aviation instructors. Personal mentorship for Air Regulation, Meteorology, Navigation, and Technical General.",
     href: "/courses/dgca-on-demand-sessions",
     badge: "1:1 On-Demand Coaching",
     gradient: "from-sky-500/90 via-blue-500 to-indigo-500",
-    Icon: PiUserFocusBold,
+    Icon: IconUserFocus,
   },
   {
     name: "Cohorts",
@@ -18,7 +41,7 @@ const trainingOptions = [
     href: "/courses/cohorts",
     badge: "DGCA Ground School",
     gradient: "from-emerald-400 via-emerald-500 to-teal-500",
-    Icon: PiUsersThreeBold,
+    Icon: IconUsersThree,
   },
   {
     name: "Test Series",
@@ -27,7 +50,7 @@ const trainingOptions = [
     href: "/courses/test-series",
     badge: "DGCA Mock Tests",
     gradient: "from-amber-400 via-amber-500 to-orange-500",
-    Icon: PiClipboardTextBold,
+    Icon: IconClipboard,
   },
 ];
 
