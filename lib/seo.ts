@@ -185,6 +185,22 @@ export function jsonLdBreadcrumb(items: { name: string; url: string }[]) {
   };
 }
 
+/** ItemList schema for service/category listing pages (SEO). */
+export function jsonLdItemList(items: { name: string; url: string; description?: string }[], listName?: string) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    name: listName,
+    itemListElement: items.map((item, index) => ({
+      "@type": "ListItem",
+      position: index + 1,
+      name: item.name,
+      url: buildUrl(item.url),
+      description: item.description,
+    })),
+  };
+}
+
 export function jsonLdFAQ(questions: { question: string; answer: string }[]) {
   return {
     "@context": "https://schema.org",

@@ -48,6 +48,13 @@ export const services: Service[] = [
     href: "/services/conversion-training",
     description: "Convert your foreign flight training to DGCA-approved licenses",
     whatsappMessage: "Hi SkyPrep Aero! I'm interested in your Conversion Training service. Can you please provide more details?"
+  },
+  {
+    id: "nios-assistance",
+    name: "NIOS Assistance for CPL Eligibility",
+    href: "/services/nios-assistance",
+    description: "NIOS assistance for Commerce, Arts & other streams—meet DGCA 10+2 (Physics & Maths) for CPL in India.",
+    whatsappMessage: "Hi SkyPrep Aero! I passed from Commerce/Arts and need NIOS assistance for CPL eligibility. Can you please provide more details?"
   }
    
   // Temporarily commented out - will be needed later

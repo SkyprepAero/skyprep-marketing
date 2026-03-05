@@ -10,13 +10,14 @@ import {
   getWhatsAppButtonText,
   getContactUrl,
 } from "@/config/services";
-import { generateMetadata } from "@/lib/seo";
+import { generateMetadata, jsonLdBreadcrumb, jsonLdItemList } from "@/lib/seo";
 
 const curatedServiceIds = [
   "medical",
   "computer-number",
   "elogbook",
   "conversion-training",
+  "nios-assistance",
 ] as const;
 
 type CuratedServiceId = (typeof curatedServiceIds)[number];
@@ -141,19 +142,49 @@ const serviceDetails: Record<
       </svg>
     ),
   },
+  "nios-assistance": {
+    badge: "CPL Eligibility — India",
+    summary:
+      "NIOS assistance for Commerce, Arts & other streams—meet DGCA 10+2 Physics & Maths for CPL through NIOS.",
+    highlights: [
+      "NIOS registration & subject guidance",
+      "Physics & Maths for CPL eligibility",
+      "DGCA-ready documentation support",
+    ],
+    icon: (
+      <svg
+        className="w-8 h-8"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="1.8"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      >
+        <path d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+      </svg>
+    ),
+  },
 };
 
 export const metadata: Metadata = generateMetadata({
-  title: "Aviation Services",
+  title: "DGCA Aviation Services | Medical, Computer Number, eLogbook, NIOS & Conversion",
   description:
-    "Comprehensive aviation services from DGCA medicals to conversion training, crafted to support pilots at every career stage.",
+    "DGCA aviation services in India: medical clearance, Computer Number assistance, eLogbook filing, NIOS for CPL eligibility (Commerce/Arts), and conversion training. Expert support for pilots at every stage.",
   canonicalPath: "/services",
   keywords: [
-    "dgca medical assistance",
-    "pilot documentation",
-    "elogbook support",
-    "conversion training",
-    "aviation services",
+    "DGCA aviation services India",
+    "DGCA medical assistance",
+    "DGCA Computer Number assistance",
+    "eLogbook filing DGCA",
+    "NIOS assistance CPL eligibility",
+    "Commerce Arts to pilot India",
+    "conversion training DGCA",
+    "pilot documentation India",
+    "aviation regulatory services",
+    "DGCA compliance support",
+    "pilot medical Class 1 Class 2",
+    "DGCA CN application",
   ],
 });
 
@@ -162,8 +193,26 @@ export default function ServicesOverviewPage() {
     .map((id) => services.find((service) => service.id === id))
     .filter((service): service is NonNullable<typeof service> => Boolean(service));
 
+  const breadcrumbData = jsonLdBreadcrumb([
+    { name: "Home", url: "/" },
+    { name: "Aviation Services", url: "/services" },
+  ]);
+  const itemListData = jsonLdItemList(
+    curatedServices.map((s) => ({ name: s.name, url: s.href, description: s.description })),
+    "DGCA Aviation Services India",
+  );
+
   return (
-    <div className="full-bleed relative bg-slate-950 text-slate-100 overflow-x-hidden">
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbData) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListData) }}
+      />
+      <main className="full-bleed relative bg-slate-950 text-slate-100 overflow-x-hidden" aria-label="DGCA aviation services overview">
       {/* Hero */}
       <section className="relative py-24 md:py-32 overflow-hidden full-bleed">
         <div className="pointer-events-none absolute inset-0">
@@ -324,7 +373,8 @@ export default function ServicesOverviewPage() {
           </ScrollAnimation>
         </div>
       </section>
-    </div>
+    </main>
+    </>
   );
 }
 

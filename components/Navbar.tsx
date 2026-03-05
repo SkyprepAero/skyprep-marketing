@@ -27,7 +27,12 @@ const servicesItems = [
     id: "conversion-training",
     name: "Conversion Training",
     href: "/services/conversion-training",
-  }
+  },
+  {
+    id: "nios-assistance",
+    name: "NIOS Assistance (CPL)",
+    href: "/services/nios-assistance",
+  },
 ];
 
 export function Navbar() {
