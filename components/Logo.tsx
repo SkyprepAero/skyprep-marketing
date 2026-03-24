@@ -12,7 +12,14 @@ type LogoProps = {
 export function Logo({ href = "/", size = 45, withText = true, className }: LogoProps) {
   const image = (
     <div className={`flex items-center gap-2 ${className || ""}`}>
-      <Image src={siteConfig.logo} alt="SkyPrep Aero - DGCA Ground Classes and Pilot Training Institute Logo" width={size} height={size} priority />
+      <Image
+        src={siteConfig.logo}
+        alt="SkyPrep Aero - DGCA Ground Classes and Pilot Training Institute Logo"
+        width={size}
+        height={size}
+        priority
+        style={{ width: "auto", height: "auto" }}
+      />
       {withText && <span className="font-semibold text-[--color-foreground]">SkyPrep</span>}
     </div>
   );

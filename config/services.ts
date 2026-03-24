@@ -55,6 +55,13 @@ export const services: Service[] = [
     href: "/services/nios-assistance",
     description: "NIOS assistance for Commerce, Arts & other streams—meet DGCA 10+2 (Physics & Maths) for CPL in India.",
     whatsappMessage: "Hi SkyPrep Aero! I passed from Commerce/Arts and need NIOS assistance for CPL eligibility. Can you please provide more details?"
+  },
+  {
+    id: "dgca-offline-classes-pune",
+    name: "Offline Classes — Pune",
+    href: "/courses/dgca-offline-classes-pune",
+    description: "In-person DGCA ground classes in Pune. Classroom coaching for CPL/ATPL theory subjects.",
+    whatsappMessage: "Hi SkyPrep Aero! I'm interested in your offline DGCA classes in Pune. Please share batch schedule and fee details."
   }
    
   // Temporarily commented out - will be needed later
@@ -82,6 +89,13 @@ export const courses: Service[] = [
     href: "/courses/cohorts",
     description: "Group training programs with structured learning",
     whatsappMessage: "Hi SkyPrep Aero! I'm interested in joining your Cohorts program. Can you please provide more details?"
+  },
+  {
+    id: "dgca-offline-classes-pune",
+    name: "Offline Classes — Pune",
+    href: "/courses/dgca-offline-classes-pune",
+    description: "In-person DGCA ground classes in Pune. Classroom coaching for CPL/ATPL theory subjects.",
+    whatsappMessage: "Hi SkyPrep Aero! I'm interested in your offline DGCA classes in Pune. Please share batch schedule and fee details."
   }
 ];
 
