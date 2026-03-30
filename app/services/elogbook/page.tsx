@@ -2,8 +2,52 @@ import type { Metadata } from "next";
 import { generateMetadata as buildPageMetadata } from "@/lib/seo";
 import { AviationBackground } from "@/components/AviationBackground";
 import { ScrollAnimation } from "@/app/home/components/ScrollAnimation";
+import { TestimonialsMarquee, type Testimonial } from "@/components/TestimonialsMarquee";
 import Link from "next/link";
 import { getContactUrl, getWhatsAppUrl } from "@/config/services";
+
+const ELOGBOOK_TESTIMONIALS: Testimonial[] = [
+  {
+    name: "Nikunj",
+    title: "Corporate Pilot",
+    quote:
+      "Skyprep Aero made my logbook and documentation process extremely smooth. As a student pilot, I had a lot of confusion regarding entries and DGCA requirements, but their team guided me step by step. Their attention to detail is excellent. Highly recommended for anyone starting their aviation journey.",
+    rating: 5,
+    passedSubjects: ["Logbook Assistance", "DGCA Documentation"],
+  },
+  {
+    name: "Musafir",
+    title: "FAA CPL Holder",
+    quote:
+      "I approached Skyprep Aero for my logbook verification and corrections, and I must say their service is very professional. They understand DGCA standards perfectly and ensure everything is done accurately. It saved me a lot of time and stress. Great support for CPL holders.",
+    rating: 5,
+    passedSubjects: ["Verification", "Corrections"],
+  },
+  {
+    name: "Prasad",
+    title: "Airline Pilot",
+    quote:
+      "Even at the airline level, maintaining accurate records is crucial. Skyprep Aero provided exceptional assistance with my logbook review and formatting. Their precision and professionalism stand out. I would definitely recommend their services to both aspiring and experienced pilots.",
+    rating: 5,
+    passedSubjects: ["Review", "Formatting"],
+  },
+  {
+    name: "Swapnil",
+    title: "Conversion ",
+    quote:
+      "The team at Skyprep Aero is highly reliable when it comes to logbook assistance. Their knowledge of aviation documentation and DGCA procedures is impressive. They ensure everything is accurate, compliant, and professionally maintained.",
+    rating: 5,
+    passedSubjects: ["EASA CPL Holder TO DGCA CPL", "DGCA Compliance"],
+  },
+  {
+    name: "Ayush",
+    title: "FAA CPL Holder",
+    quote:
+      "Professional, accurate, and reliable - Skyprep Aero made my logbook process completely hassle-free.",
+    rating: 5,
+    passedSubjects: ["End-to-End Filing"],
+  },
+];
 
 export const metadata: Metadata = buildPageMetadata({
   title: "DGCA eLogbook Filing Assistance | Digital Flight Log Support for Pilots",
@@ -554,6 +598,33 @@ export default function ElogbookPage() {
               </div>
             </ScrollAnimation>
           </div>
+        </div>
+      </section>
+
+      {/* Testimonials */}
+      <section className="py-20 full-bleed relative overflow-hidden">
+        <div className="pointer-events-none absolute inset-0">
+          <div className="absolute inset-0 bg-gradient-to-br from-slate-950 via-slate-900/94 to-blue-950/78" />
+          <div className="absolute top-16 right-12 h-72 w-72 rounded-full bg-sky-500/20 blur-[140px]" />
+          <div className="absolute bottom-16 left-12 h-80 w-80 rounded-full bg-emerald-400/15 blur-[150px]" />
+        </div>
+
+        <div className="container-wide relative z-10">
+          <ScrollAnimation animationType="fadeInUp" delay={200}>
+            <div className="text-center mb-14">
+              <div className="inline-flex items-center gap-3 bg-white/10 backdrop-blur rounded-full px-8 py-3 mb-6 border border-white/15">
+                <div className="w-3 h-3 bg-emerald-400 rounded-full animate-pulse" />
+                <span className="text-sm font-semibold uppercase tracking-[0.35em] text-slate-100/80">
+                  Client Reviews
+                </span>
+              </div>
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">What Pilots Say About Our Logbook Service</h2>
+              <p className="text-xl text-slate-200/80 max-w-3xl mx-auto">
+                Trusted by student pilots, CPL holders, conversion candidates, and airline pilots for accurate DGCA-compliant logbook support.
+              </p>
+            </div>
+          </ScrollAnimation>
+          <TestimonialsMarquee testimonials={ELOGBOOK_TESTIMONIALS} />
         </div>
       </section>
 

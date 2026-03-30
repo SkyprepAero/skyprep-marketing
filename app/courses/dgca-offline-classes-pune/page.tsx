@@ -4,7 +4,7 @@ import { AviationBackground } from "@/components/AviationBackground";
 import { ScrollAnimation } from "@/app/home/components/ScrollAnimation";
 import Link from "next/link";
 import { getContactUrl, getWhatsAppUrl } from "@/config/services";
-// import { CentreGalleryCarousel } from "./CentreGalleryCarousel";
+import { CentreGalleryCarousel } from "./CentreGalleryCarousel";
 import { InstructorCard } from "./InstructorCard";
 
 // ——— Placeholders: replace with actual information ———
@@ -25,13 +25,13 @@ const PLACEHOLDERS = {
     },
     {
       name: "Prathmesh Shinde",
-      role: "Founder, SkyPrep Aero",
-      image: "/media/images/instructors/prathmesh-shinde.jpg",
-      bio: "The mind behind SkyPrep Aero—building a student-first platform for DGCA training across India, with structured guidance, smart tools, and personalised support.",
+      role: "Ground Instructor",
+      image: "/media/images/instructors/prathmesh-shinde.png",
+      bio: "I’m Prathmesh Shinde, a Ground Instructor at SkyPrep Aero. I specialize in DGCA subjects like Air Navigation and Air Regulation, focusing on clear concepts and exam-oriented preparation. My aim is to help students build strong fundamentals and confidently progress toward their careers as professional pilots.",
       highlights: [
-        "Deep DGCA subject expertise & understanding of student challenges",
-        "Vision: simpler aviation training with clarity and direction",
-        "Hands-on approach so every learner gets confidence to succeed",
+        "Specialized in Air Navigation and Air Regulation",
+        "Concept clarity with exam-oriented preparation",
+        "Focus on strong fundamentals for pilot careers",
       ] as const,
     },
     {
@@ -46,12 +46,38 @@ const PLACEHOLDERS = {
       ] as const,
     },
   ] as const,
-  // Classroom & centre gallery — uncomment when re-enabling the section below + CentreGalleryCarousel import
-  // centres: [
-  //   { image: "/media/images/pune-centre/board.jpeg", title: "[Pune centre / Classroom name]", description: "[e.g. Spacious, AC classroom with whiteboard and projector. Easy to reach, parking available.]" },
-  //   { image: "/media/images/pune-centre/classroom.jpg", title: "[Second classroom or location]", description: "[Short description for this space.]" },
-  //   { image: "/media/images/pune-centre/session.jpg", title: "[e.g. Teaching / Session]", description: "[Optional: e.g. DGCA CPL classes in session at Pune.]" },
-  // ] as const,
+  centres: [
+    {
+      image: "/media/classroom/tilekarnagar/CLASSROOM1.jpeg",
+      title: "Classroom — teaching wall",
+      description:
+        "Our offline DGCA CPL batch runs in this single, dedicated classroom. This angle highlights the teaching wall and board so you can see how concepts and problems are presented during sessions.",
+    },
+    {
+      image: "/media/classroom/tilekarnagar/classroom2.jpeg",
+      title: "Same classroom — side view",
+      description:
+        "Another perspective of the same room—not a separate hall. Same seating and teaching setup, shown from the side so you get a feel for the layout before you walk in.",
+    },
+    {
+      image: "/media/classroom/tilekarnagar/classroom5.jpeg",
+      title: "Same classroom — wide angle",
+      description:
+        "A wider look at the same training space: where your batch sits for structured theory, doubt clearing, and peer discussion across all five DGCA subjects.",
+    },
+    {
+      image: "/media/classroom/tilekarnagar/classroom7.jpeg",
+      title: "Same classroom — across the room",
+      description:
+        "One more view of the same classroom from a different corner—useful for picturing sightlines, comfort, and how the room is organised for full-day study.",
+    },
+    {
+      image: "/media/classroom/tilekarnagar/LOBBY.jpeg",
+      title: "Reception & lobby",
+      description:
+        "The centre’s entrance and waiting area—arrive here before class, meet the team, and head into the classroom when your batch begins.",
+    },
+  ] as const,
 } as const;
 
 export const metadata: Metadata = buildPageMetadata({
@@ -161,34 +187,37 @@ export default function DGCAOfflineClassesPunePage() {
         </div>
       </section>
 
-      {/* Our centre & gallery — uncomment when classroom photos are ready (see PLACEHOLDERS.centres + CentreGalleryCarousel import)
+      {/* Our centre & gallery */}
       <section className="py-20 full-bleed relative overflow-hidden">
         <div className="pointer-events-none absolute inset-0">
           <div className="absolute inset-0 bg-gradient-to-br from-slate-950 via-slate-900/94 to-blue-950/78" />
           <div className="absolute top-20 right-12 h-72 w-72 rounded-full bg-sky-500/20 blur-[140px]" />
           <div className="absolute bottom-14 left-16 h-80 w-80 rounded-full bg-emerald-400/15 blur-[150px]" />
         </div>
-        <div className="container-wide relative z-10">
-          <ScrollAnimation animationType="fadeInUp" delay={200}>
-            <div className="text-center mb-12">
-              <div className="inline-flex items-center gap-3 bg-white/10 backdrop-blur rounded-full px-8 py-3 mb-6 border border-white/15">
-                <div className="w-3 h-3 bg-sky-400 rounded-full animate-pulse" />
-                <span className="text-sm font-semibold uppercase tracking-[0.35em] text-slate-100/80">
-                  The centre
-                </span>
+        <div className="relative z-10">
+          <div className="container-wide">
+            <ScrollAnimation animationType="fadeInUp" delay={200}>
+              <div className="text-center mb-12">
+                <div className="inline-flex items-center gap-3 bg-white/10 backdrop-blur rounded-full px-8 py-3 mb-6 border border-white/15">
+                  <div className="w-3 h-3 bg-sky-400 rounded-full animate-pulse" />
+                  <span className="text-sm font-semibold uppercase tracking-[0.35em] text-slate-100/80">
+                    The centre
+                  </span>
+                </div>
+                <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">Our Pune centre & classroom</h2>
+                <p className="text-xl text-slate-200/80 max-w-2xl mx-auto">
+                  A look around our Pune offline DGCA centre: the photos below show the same classroom from different angles (plus the lobby)—so you know exactly where you&apos;ll learn. Spacious, air-conditioned, with whiteboard and projector. Easy to reach; parking available.
+                </p>
               </div>
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">Our Pune centre & classrooms</h2>
-              <p className="text-xl text-slate-200/80 max-w-2xl mx-auto">
-                DGCA classes Pune centre—spacious, AC classrooms with whiteboard and projector. Easy to reach, parking available.
-              </p>
-            </div>
-          </ScrollAnimation>
-          <ScrollAnimation animationType="fadeInUp" delay={300}>
-            <CentreGalleryCarousel items={PLACEHOLDERS.centres} />
-          </ScrollAnimation>
+            </ScrollAnimation>
+          </div>
+          <div className="mx-auto w-full max-w-[min(1600px,calc(100vw-1.5rem))] px-3 sm:px-4">
+            <ScrollAnimation animationType="fadeInUp" delay={300}>
+              <CentreGalleryCarousel items={PLACEHOLDERS.centres} />
+            </ScrollAnimation>
+          </div>
         </div>
       </section>
-      */}
 
       {/* Instructors */}
       <section className="relative overflow-hidden py-20 full-bleed">

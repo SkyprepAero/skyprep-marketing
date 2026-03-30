@@ -2,13 +2,13 @@
 import { useEffect, useRef, useState, useCallback } from "react";
 import Image from "next/image";
 
-type Testimonial = {
+export type Testimonial = {
   name: string;
   title: string;
   quote: string;
   rating: number;
-  passedSubjects: string[];
-  avatar: string;
+  passedSubjects?: string[];
+  avatar?: string;
   photo?: string;
 };
 
@@ -104,6 +104,9 @@ const DATA: Testimonial[] = [
 ];
 
 function TestimonialCard({ testimonial }: { testimonial: Testimonial }) {
+  const avatar = testimonial.avatar ?? testimonial.name.split(" ").map((part) => part[0]).join("").slice(0, 2).toUpperCase();
+  const tags = testimonial.passedSubjects ?? [];
+
   return (
     <div className="group relative flex w-[400px] flex-col overflow-visible rounded-3xl border border-white/12 bg-white/[0.08] p-6 text-slate-100 shadow-[0_30px_90px_-55px_rgba(15,23,42,0.85)] backdrop-blur transition-all duration-500 hover:-translate-y-2 hover:border-white/30 hover:shadow-[0_45px_130px_-60px_rgba(56,189,248,0.6)]">
       <div className="absolute top-4 right-4 w-6 h-6 text-amber-300/50">
@@ -124,9 +127,9 @@ function TestimonialCard({ testimonial }: { testimonial: Testimonial }) {
         &ldquo;{testimonial.quote}&rdquo;
       </blockquote>
 
-      {testimonial.passedSubjects.length > 0 && (
+      {tags.length > 0 && (
         <div className="mt-4 flex flex-wrap gap-2">
-          {testimonial.passedSubjects.map((subject) => (
+          {tags.map((subject) => (
             <span 
               key={subject} 
               className="inline-flex items-center gap-1.5 rounded-full border border-emerald-500/30 bg-emerald-500/15 px-2.5 py-1 text-[11px] font-semibold text-emerald-300"
@@ -152,6 +155,7 @@ function TestimonialCard({ testimonial }: { testimonial: Testimonial }) {
         ) : (
           <div className="flex h-11 w-11 items-center justify-center rounded-full bg-gradient-to-br from-sky-500 to-blue-600 text-sm font-bold text-white shadow-lg shadow-black/30">
             {testimonial.avatar}
+            {avatar}
           </div>
         )}
         <div className="min-w-0">
@@ -167,8 +171,10 @@ function TestimonialCard({ testimonial }: { testimonial: Testimonial }) {
   );
 }
 
-export function TestimonialsMarquee() {
+export function TestimonialsMarquee({ testimonials }: { testimonials?: Testimonial[] }) {
   const rowRef = useRef<HTMLDivElement | null>(null);
+  const data = testimonials && testimonials.length > 0 ? testimonials : DATA;
+
   const rafRef = useRef<number | null>(null);
   const [isPaused, setIsPaused] = useState(false);
   const [isDragging, setIsDragging] = useState(false);
@@ -307,8 +313,8 @@ export function TestimonialsMarquee() {
       >
         <div ref={rowRef} className="marquee select-none">
           <div className="inline-flex align-top">
-            <Track items={DATA} />
-            <Track items={DATA} />
+            <Track items={data} />
+            <Track items={data} />
           </div>
         </div>
       </div>
